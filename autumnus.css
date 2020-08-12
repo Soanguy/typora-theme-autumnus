@@ -485,15 +485,6 @@ blockquote p {
 	line-height: 1.75rem;
 }
 
-blockquote::first-letter {
-	font-size: 2em;
-}
-
-blockquote blockquote::first-letter {
-	font-size: 1em;
-}
-
-/* 显示样式1 */
 blockquote {
 	background: var(--quota-bg);
 	margin: 2rem -3.8rem;
@@ -506,31 +497,6 @@ blockquote blockquote {
 	padding-left: 2rem;
 	border-left: 4px solid #fb5555;
 }
-
-/* 显示样式2 */
-
-/* blockquote {
-	position: relative;
-	margin: 2em 1em;
-	padding: 1.5em;
-	background: var(--quota-bg);
-} */
-
-/* 引用样式2 */
-
-/* 
-blockquote {
-	border: 2px solid #FB5555;
-	background-color: #f0f0f0;
-	border-radius: 5px;
-} */
-
-/* 引用样式3 */
-
-/* blockquote {
-	border: 2px dotted #FB5555;
-	border-radius: 5px;
-} */
 
 /* 一致化 horizontal rule */
 hr {
