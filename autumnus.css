@@ -1,163 +1,86 @@
 @charset "utf-8";
 
 /* 
-基础颜色：
-黑色： #111；#333；#555；#777；#999；
-白色：#fff;#fcfcfc;#f8f8f8;#f5f5f5;#f0f0f0;
-红色：#ff4d4d；
-黄色：#FFFF00;#F6EFA6;
-蓝色：#80aaff;
+基础颜色参考
+
+黑白色：hsl(0，0，？%)
+		5 20 35 50 90 95 99 100
+
+红色：hsl(0,100%,65%)
+蓝色：hsl(215,100%,65%)
 */
 
 :root {
-	--bg-color: #ffffff;
-	/*change background*/
-	--text-color: #333;
-	/* 默认字体颜色 */
-	--md-char-color: #ff4d4d;
-	/*markdown 符号的颜色，诸如 # * 等 */
-	--meta-content-color: #5b808d;
-	/*change color of meta contents like image text or link address in markdown */
 
-	--window-border: 1px solid #eee;
+	--window-border: 1px solid hsl(0, 0%, 95%);
 	/*border for sidebar, etc*/
 
 	--monospace: 'sarasa term sc';
 	/*monospace font for codes, fences*/
 
-	--write-bg: #fff;
+	--bg-color: hsl(0, 0%, 100%);
+	/*change background*/
+	--write-bg: hsl(0, 0%, 100%);
 	/* 写作背景色 */
 	--link-bg: transparent;
 	/* 超链接背景色 */
-	--mark-bg: #333;
+	--mark-bg: hsl(0, 0%, 20%);
 	/* 高亮背景色 */
-	--code-bg: #f0f0f0;
+	--code-bg: hsl(0, 0%, 90%);
 	/* 代码背景色 */
-	--codeb-bg: #f8f8f8;
+	--codeb-bg: hsl(0, 0%, 95%);
 	/* 代码块背景色 */
-	--quota-bg: #f8f8f8;
+	--quota-bg: hsl(0, 0%, 95%);
 	/* 引用背景色 */
-	--thead-bg: #f0f0f0;
+	--thead-bg: hsl(0, 0%, 90%);
 	/* 表格表头背景色 */
-	--tbody-bg: #f8f8f8;
+	--tbody-bg: hsl(0, 0%, 95%);
 	/* 表格表体背景色 */
 
-	--text-color: #333;
+	--text-color: hsl(0, 0%, 20%);
 	/* 默认字体颜色：正文等 */
-	--title-color: #111;
+	--title-color: hsl(0, 0%, 5%);
 	/* 强调颜色：标题；加强等 */
-	--link-color: #2979FF;
+	--link-color: hsl(215, 100%, 65%);
 	/* 超链接字体色 */
-	--mark-color: #fff;
+	--mark-color: hsl(0, 0%, 100%);
 	/* 高亮字体色 */
-	--code-color: #333;
+	--code-color: hsl(0, 0%, 20%);
 	/* 代码字体色 */
-	--quota-color: #555;
+	--quota-color: hsl(0, 0%, 35%);
 	/* 引用字体色 */
-	--footer-color: #999;
+	--footer-color: hsl(0, 0%, 50%);
 	/* 脚注字体色 */
 
-	--link-hover: #ff4d4d;
+	--md-char-color: hsl(0, 100%, 65%);
+	/*markdown 符号的颜色，诸如 # * 等 */
+	--meta-content-color: hsl(0, 0%, 50%);
+	/*change color of meta contents like image text or link address in markdown */
+
+	--link-hover: hsl(0, 100%, 65%);
 	/* 默认hover色：划过小标题；链接时的颜色 */
-	--thead-hover: #fcfcfc;
+	--thead-hover: hsl(0, 0%, 99%);
 	/* 表格hover色：表头 */
-	--tbody-hover: #fcfcfc;
+	--tbody-hover: hsl(0, 0%, 99%);
 	/* 表格hover色：表体 */
 
+
+	/* 字体样式援引自 font.css */
 	--base-font: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+
 	--title-font: Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK TC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+
 	--em-font: Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
-	--code-font: "Sarasa Term SC", Consolas, "Lucida Console";
 
+	--quota-font: Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
 
-}
-
-/* 字体设置 */
-
-/* 默认字体：黑体 */
-html,
-body,
-#write {
-	font-family: var(--base-font);
-	font-weight: 400;
-	font-size: 16px;
-	font-size: 1em;
-	line-height: 1.75rem;
-}
-
-#write h3,
-#write h4,
-#write h5,
-#write h6 {
-	font-family: var(--base-font);
-	font-weight: 600;
-	line-height: 2rem;
-}
-
-#write strong,
-#write em {
-	font-family: var(--base-font);
-	font-weight: 800 !important;
-	color: var(--title-color);
-}
-
-/* 标题字体：明朝体 */
-#write h1,
-#write h2 {
-	font-family: var(--title-font);
-	font-weight: 800;
-	line-height: 3rem;
-	text-align: center;
-	text-transform: uppercase;
-}
-
-#write em,
-#write blockquote {
-	font-family: var(--em-font);
-	font-style: italic;
-}
-
-/* 代码字体：等宽字体 */
-.CodeMirror pre,
-pre,
-code,
-pre tt,
-.md-fences {
-	font-family: var(--code-font);
-	font-size: 1em;
-	line-height: 1rem;
-}
-
-/* 标题字号 */
-
-#write h1 {
-	font-size: 3em;
-}
-
-#write h2 {
-	font-size: 2em;
-	margin: 2em auto;
-}
-
-#write h3 {
-	font-size: 1.6em;
-}
-
-#write h4 {
-	font-size: 1.4em;
-}
-
-#write h5 {
-	font-size: 1.25em;
-}
-
-#write h6 {
-	font-size: 1em;
+	--code-font: "Sarasa Term SC", Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono", Courier;
 }
 
 
-
-
+/* 部分样式，如重置元素样式等援自 typo.css */
+/* 部分样式，如 -webkit、-moz 等援自 han.css */
+/* 目录自动编码样式根据官网范例进行些许改动 */
 html {
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
@@ -168,6 +91,11 @@ html {
 html,
 body,
 #write {
+	font-family: var(--base-font);
+	font-weight: 400;
+	font-size: 16px;
+	font-size: 1em;
+	line-height: 1.75rem;
 	background: var(--write-bg);
 	color: var(--text-color);
 }
@@ -183,7 +111,6 @@ content {
 	min-width: calc(100vw - 45em);
 	padding: 3rem 4rem;
 	text-align: justify;
-	border-radius: 5px;
 }
 
 .typora-node #write {
@@ -192,45 +119,62 @@ content {
 
 /* 目录自动编号 */
 
+.md-toc {
+	font-size: 1em;
+	line-height: 1.5em;
+}
+
 .md-toc::before {
 	content: "Contents";
 	font-size: 2em;
-	color: #555;
 	text-align: center;
 	display: block;
 	margin: 2rem auto;
-	font-weight: 600;
+	font-weight: 800;
 	text-transform: uppercase;
+	letter-spacing: 5px;
 }
 
-.md-toc-content {
-	margin: 1em 10em;
-	padding: 0 20px;
+.md-toc-item {
+	display: flex;
 }
 
 .md-toc-h1,
 .md-toc-h2,
 .md-toc-h3,
 .md-toc-h4 {
-	font-size: 18px;
-	color: #555;
 	margin: .75rem;
 }
 
+.md-toc-h3,
+.md-toc-h4 {
+	margin-left: 4em;
+}
+
+.md-toc-item a {
+	text-decoration: none;
+	color: var(--text-color);
+	border-bottom: none !important;
+}
+
+.md-toc-h1 .md-toc-inner,
 .md-toc-h2 .md-toc-inner,
 .md-toc-h3 .md-toc-inner,
 .md-toc-h4 .md-toc-inner {
-	margin-left: 2em;
-	white-space: nowrap;
+	margin-left: 1em !important;
+	word-wrap: normal;
+	word-break: break-all;
 }
 
 .md-toc-h1 {
+	font: 600 1.25em var(--title-font);
+
 	counter-increment: counter_md-toc-h1;
 	counter-reset: counter_md-toc-h2;
 }
 
-.md-toc-h1::before {
-	content: counter(counter_md-toc-h1)".";
+.md-toc-h1:before {
+	content: "第"counter(counter_md-toc-h1, cjk-ideographic)"章";
 }
 
 .md-toc-h2 {
@@ -239,7 +183,7 @@ content {
 }
 
 .md-toc-h2::before {
-	content: counter(counter_md-toc-h1)"."counter(counter_md-toc-h2);
+	content: "第"counter(counter_md-toc-h2, cjk-ideographic)"节";
 }
 
 .md-toc-h3 {
@@ -248,22 +192,34 @@ content {
 }
 
 .md-toc-h3::before {
-	content: counter(counter_md-toc-h1)"."counter(counter_md-toc-h2)"."counter(counter_md-toc-h3);
+	content: counter(counter_md-toc-h3);
 }
 
 .md-toc-h4 {
 	counter-increment: counter_md-toc-h4;
-	counter-reset: counter_md-toc-h4;
+	counter-reset: counter_md-toc-h5;
 }
 
 .md-toc-h4::before {
-	content: counter(counter_md-toc-h1)"."counter(counter_md-toc-h2)"."counter(counter_md-toc-h3)"."counter(counter_md-toc-h4);
+	content: counter(counter_md-toc-h3)"."counter(counter_md-toc-h4);
 }
 
-.md-toc-h2 .md-toc-inner,
-.md-toc-h3 .md-toc-inner,
-.md-toc-h4 .md-toc-inner {
-	margin-left: 2em;
+.md-toc-h5 {
+	counter-increment: counter_md-toc-h5;
+	counter-reset: counter_md-toc-h6;
+}
+
+.md-toc-h5::before {
+	content: counter(counter_md-toc-h3)"."counter(counter_md-toc-h4)"."counter(counter_md-toc-h5);
+}
+
+.md-toc-h6 {
+	counter-increment: counter_md-toc-h6;
+	counter-reset: counter_md-toc-h7;
+}
+
+.md-toc-h6::before {
+	content: counter(counter_md-toc-h3)"."counter(counter_md-toc-h4)"."counter(counter_md-toc-h5)"."counter(counter_md-toc-h6);
 }
 
 .md-toc-h5,
@@ -271,8 +227,108 @@ content {
 	display: none;
 }
 
-/* 标题样式 */
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+	margin: 0;
+	padding: 0;
+}
 
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+	display: block;
+}
+
+/* HTML5 媒体文件跟 img 保持一致 */
+audio,
+canvas,
+video {
+	display: inline-block;
+}
+
+/* 要注意表单元素并不继承父级 font 的问题 */
+body,
+button,
+input,
+select,
+textarea {
+	font: 400 1em/1.75 var(--base-font);
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+/* 去掉各Table cell 的边距并让其边重合 */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 去除默认边框 */
+fieldset,
+img {
+	border: 0;
+}
+
+/* 让行内代码等保持不换行。
+注意，此时的代码不可以超过一行，否则将会溢出。
+如果要输入超过一行的代码，可以使用 pre 来标记。 */
+
+code,
+kbd,
+samp,
+tt,
+var {
+	white-space: nowrap;
+}
+
+/* 标题样式 */
 h1,
 h2,
 h3,
@@ -280,6 +336,89 @@ h4,
 h5,
 h6 {
 	color: var(--title-color);
+}
+
+#write h1 {
+	font-size: 3em;
+	margin-top: 2em;
+	margin-bottom: 1em;
+	padding-bottom: .5em;
+}
+
+#write h1:after {
+	content: "";
+	border: 1px solid var(--footer-color);
+	display: block;
+	position: relative;
+	top: .75em;
+	width: 70%;
+	margin: 0 auto;
+}
+
+#write h1,
+#write h2 {
+	font-family: var(--title-font);
+	font-weight: 800;
+	line-height: 3rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#write h2 {
+	font-size: 2em;
+	margin: 2em auto;
+}
+
+#write h3 {
+	font-size: 1.75em;
+}
+
+#write h4 {
+	font-size: 1.5em;
+}
+
+#write h5,
+#write h6 {
+	font-size: 1.25em;
+}
+
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+	font-family: var(--base-font);
+	font-weight: 600;
+	line-height: 2rem;
+	margin: 1.5em 0;
+}
+
+#write h3::before,
+#write h4::before,
+#write h5::before,
+#write h6::before {
+	font-size: 14px !important;
+	vertical-align: bottom;
+	margin-right: .5em;
+	padding: 2px;
+	border-radius: 3px;
+	background: var(--text-color);
+	color: var(--write-bg);
+}
+
+#write h3::before {
+	content: "H3";
+}
+
+#write h4::before {
+	content: "H4";
+}
+
+#write h5::before {
+	content: "H5";
+}
+
+#write h6::before {
+	content: "H6";
 }
 
 #write h1 a,
@@ -291,38 +430,9 @@ h6 {
 	color: var(--title-color);
 }
 
-#write h3 span,
-#write h4 span,
-#write h5 span,
-#write h6 span {
-	padding: .2em;
-}
-
-#write h3 span:hover,
-#write h4 span:hover,
-#write h5 span:hover,
-#write h6 span:hover {
-	color: var(--link-hover);
-	border: 1.5px dotted #fb5555;
-}
-
-#write h3::before,
-#write h4::before,
-#write h5::before,
-#write h6::before {
-	content: "# ";
-	color: #999;
-}
-
-#write h1 {
-	font-size: 3em;
-	margin-top: 3em;
-	padding-bottom: 1.5em;
-	border-bottom: 4px double #777;
-}
-
 p {
 	line-height: 1.75em;
+	margin-bottom: 1em;
 }
 
 /* 超链接样式 */
@@ -349,6 +459,19 @@ a {
 }
 
 /* em & strong style */
+
+#write strong,
+#write em {
+	font-family: var(--base-font);
+	font-weight: 800 !important;
+	color: var(--title-color);
+}
+
+#write em,
+#write blockquote {
+	font-family: var(--em-font);
+	font-style: italic;
+}
 
 #write strong,
 #write em {
@@ -386,6 +509,9 @@ pre,
 code,
 pre tt,
 .md-fences {
+	font-family: var(--code-font);
+	font-size: 1em;
+	line-height: 1rem;
 	padding: .25em;
 	border-radius: 5px;
 	background-color: var(--codeb-bg);
@@ -404,11 +530,14 @@ code {
 }
 
 /* 列表样式 */
-#write ul,
-#write ol,
-#write li {
-	margin: 0;
-	padding: 0;
+ul,
+ol {
+	margin: 1.5em auto;
+}
+
+ul ol,
+ol ul {
+	margin: .75em auto;
 }
 
 #write ul {
@@ -461,12 +590,6 @@ code {
 
 /* 块/段落引用 */
 
-/* 清除默认样式 */
-blockquote {
-	margin: 0;
-	padding: 0;
-}
-
 blockquote p {
 	color: var(--quota-color);
 	line-height: 1.75rem;
@@ -489,15 +612,15 @@ blockquote blockquote {
 hr {
 	border: none;
 	border-bottom: 1px solid #999;
-	margin-bottom: 0.8em;
+	margin: 3em auto;
 	height: 15px;
 }
 
 /* img */
 
-img {
+#write img {
+	box-shadow: 4px 4px 20px 2px hsla(0, 0%, 0%, 0.5), 2px 2px 10px 0px rgba(0, 0, 0, .2);
 	border-radius: 5px;
-	border-right: 2px solid transparent;
 }
 
 /* 脚注样式 脚注内的文字颜色应当较原字稍淡 */
@@ -521,15 +644,14 @@ sup.md-footnote {
 }
 
 .footnotes a {
-	color: #64B5F6;
+	color: hsl(215, 100%, 75%);
 }
 
 /* 表格样式 */
 
 table {
-	margin-top: 20px;
-	margin-bottom: 20px;
-	width: 99.99%;
+	margin: 1.5em auto;
+	width: 98%;
 }
 
 #write table th,
@@ -581,6 +703,7 @@ table {
 @media screen and (min-width: 1300px) {
 	#write {
 		box-shadow: 0px 2px 2px 2px hsla(0, 0%, 95%, 0.1), 1px 3px 5px 2px hsla(0, 0%, 85%, 0.2), 2px 4px 5px 2px hsla(0, 0%, 75%, 0.3), 3px 5px 10px 2px hsla(0, 0%, 65%, 0.4);
+		border-radius: 5px;
 	}
 }
 
@@ -614,6 +737,10 @@ table {
 		padding-right: 60px;
 	}
 
+	.md-toc-item {
+		max-width: 75%;
+	}
+
 	footer {
 		background-color: transparent;
 	}
@@ -635,6 +762,10 @@ table {
 		margin: 3em auto 3em;
 		border: 1px solid #ddd;
 		border-width: 0 1px;
+	}
+
+	.md-toc-item {
+		max-width: 75%;
 	}
 
 	.pin-outline footer {
@@ -748,6 +879,10 @@ p.mathjax-block,
 	background-clip: padding-box;
 }
 
+[draggable] {
+	cursor: move;
+}
+
 #md-searchpanel {
 	border-bottom: 1px solid #ccc;
 }
@@ -761,27 +896,30 @@ p.mathjax-block,
 }
 
 #md-notification {
-	background: #f0f0f0;
+	background: hsl(0, 0%, 90%);
 }
 
 /* 侧边栏 文件概览和大纲列表 */
 
 :root {
-	--active-file-bg-color: #fcfcfc;
+	--active-file-bg-color: hsl(0, 0%, 99%);
 	/* 文件列表 当前文件激活 背景色*/
-	--active-file-text-color: #80aaff;
-	--active-file-border-color: #80aaff;
+	--active-file-text-color: hsl(215, 100%, 75%);
+	--active-file-border-color: hsl(215, 100%, 75%);
 	/* 树形结构下文件激活边框色 */
-	--side-bar-bg-color: #f8f8f8;
+	--side-bar-bg-color: hsl(0, 0%, 95%);
 	/*文件 大纲 侧边栏 背景色*/
-	--item-hover-bg-color: #f0f0f0;
+	--item-hover-bg-color: hsl(0, 0%, 90%);
 	/* 打开文文件夹、正文菜单、最近使用 hover 效果 */
 	--item-hover-text-color: inherit;
 
-	--primary-color: #80aaff;
+	--primary-color: hsl(215, 100%, 75%);
 	/* color of primary buttons */
-	--primary-btn-border-color: #80aaff;
-	--primary-btn-text-color: #fff;
+	--primary-btn-border-color: hsl(215, 100%, 75%);
+	--primary-btn-text-color: hsl(0, 0%, 100%);
+
+	--select-text-bg-color: hsl(0, 100%, 65%);
+	--select-text-font-color: hsl(0, 0%, 100%);
 }
 
 /* 侧边栏文档大纲tab标签 激活 */
@@ -810,6 +948,63 @@ p.mathjax-block,
 .file-list-item:hover {
 	background-color: var(--bg-color);
 	color: var(--primary-color);
+}
+
+
+/* 大纲目录自动编号 */
+
+.sidebar-content {
+	counter-reset: h1
+}
+
+.outline-h1 {
+	counter-reset: h2
+}
+
+.outline-h2 {
+	counter-reset: h3
+}
+
+.outline-h3 {
+	counter-reset: h4
+}
+
+.outline-h4 {
+	counter-reset: h5
+}
+
+.outline-h5 {
+	counter-reset: h6
+}
+
+.outline-h1>.outline-item>.outline-label:before {
+	counter-increment: h1;
+	content: "章"counter(h1) " "
+}
+
+.outline-h2>.outline-item>.outline-label:before {
+	counter-increment: h2;
+	content: "节"counter(h2) " "
+}
+
+.outline-h3>.outline-item>.outline-label:before {
+	counter-increment: h3;
+	content: counter(h3) " "
+}
+
+.outline-h4>.outline-item>.outline-label:before {
+	counter-increment: h4;
+	content: counter(h3) "."counter(h4) " "
+}
+
+.outline-h5>.outline-item>.outline-label:before {
+	counter-increment: h5;
+	content: counter(h3) "."counter(h4) "."counter(h5) " "
+}
+
+.outline-h6>.outline-item>.outline-label:before {
+	counter-increment: h6;
+	content: counter(h3) "."counter(h4) "."counter(h5) "."counter(h6) " "
 }
 
 /* 书写区右键菜单 */
@@ -918,7 +1113,7 @@ a.menu-style-btn:hover {
 
 /* fix */
 .about-content-meta {
-	font-family: noto serif cjk sc;
+	font-family: var(--title-font);
 }
 
 
