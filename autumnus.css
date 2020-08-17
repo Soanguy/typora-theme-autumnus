@@ -23,13 +23,13 @@
 	/* 高亮背景色 */
 	--code-bg: hsl(0, 0%, 90%);
 	/* 代码背景色 */
-	--codeb-bg: hsl(0, 0%, 95%);
+	--codeb-bg: hsl(0, 0%, 96%);
 	/* 代码块背景色 */
 	--quota-bg: hsl(0, 0%, 95%);
 	/* 引用背景色 */
 	--thead-bg: hsl(0, 0%, 90%);
 	/* 表格表头背景色 */
-	--tbody-bg: hsl(0, 0%, 95%);
+	--tbody-bg: hsl(0, 0%, 96%);
 	/* 表格表体背景色 */
 
 	--text-color: hsl(0, 0%, 20%);
@@ -118,7 +118,7 @@ content {
 	font-size: 1em;
 	line-height: 1.5rem;
 	display: table;
-	margin: 2rem 4rem 2rem;
+	margin: auto;
 }
 
 .md-toc::before {
@@ -575,6 +575,13 @@ code {
 	background-color: var(--code-bg);
 }
 
+kbd,
+samp,
+tt,
+var {
+	font-family: var(--code-font);
+}
+
 #write .md-fences {
 	border: 1px solid #f0f0f0;
 	margin: 2rem auto;
@@ -758,12 +765,12 @@ table {
 /* 不同的宽度的设备上的字数统计样式 */
 @media screen and (max-width: 600px) {
 	#write {
-		margin: 1rem 2rem;
 		padding: 2rem 1rem;
 	}
 
 	.md-toc {
 		padding: 0;
+		margin: auto;
 	}
 
 	blockquote {
