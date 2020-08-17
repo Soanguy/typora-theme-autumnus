@@ -1,4 +1,3 @@
-@charset "utf-8";
 /* 
 基础颜色参考
 
@@ -9,146 +8,11 @@
 蓝色：hsl(215,100%,65%)
 */
 
-/* 注释掉下面的代码以启用 Fleunt */
-/* 
 :root {
-	--write-bg: transparent !important;
-	--codeb-bg: #f8f8f880 !important;
-	--quota-bg: #f8f8f880 !important;
-	--thead-bg: #f0f0f080 !important;
-	--tbody-bg: #f8f8f880 !important;
-}
-
-
-content {
-	background-color: var(--write-bg);
-	min-width: 640px;
-	background: url(./Fluent/2.png);
-	background-size: cover;
-}
-
-
-
-#write {
-	width: 100%;
-	background: transparent!important;
-	font-size: 18px!important;
-}
-
-#write:after {
-	content: "";
-	background: rgba(221, 221, 221, 0.5);
-	backdrop-filter: saturate(180%) blur(20px);
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	z-index: -99;
-	min-height: 100%;
-	border-radius: 5px;
-}
-
-.md-toc {
-	background: #f0f0f080;
-	padding: 1em;
-	margin: 1em -3.9em;
-	border-radius: 0;
-	border-left: 4px solid #fb5555;
-	border-right: 4px solid #fb5555;
-}
-
-#write div.md-toc-tooltip {
-	left: 0em;
-}
-
-#write h3::before,
-#write h4::before,
-#write h5::before,
-#write h6::before {
-	background: var(--quota-bg) !important;
-	color: var(--text-color) !important;
-}
-
-#write .md-fences * {
-	background: transparent !important;
-}
-
-#write .code-tooltip:after {
-	content: "";
-	width: 180px;
-	background: hsl(0, 100%, 99%);
-	height: 25px;
-	display: block;
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	border-radius: 5px;
-	z-index: -1;
-}
-
-blockquote blockquote {
-	background: transparent !important;
-}
-
-.footnotes,
-.footnotes em,
-.footnotes strong {
-	color: var(--text-color) !important;
-}
-
-#footer-word-count-info,
-#spell-check-panel {
-	background: var(--bg-color) !important;
-}
-
-@media screen and (max-width: 1300px) {
-	footer.ty-footer {
-		background: #fff !important;
-	}
-}
-
-@media screen and (min-width: 1300px) {
-
-	#write {
-		box-shadow: none !important;
-	}
-
-	div.footer-item {
-		background: var(--bg-color);
-	}
-
-}
-
-@media print {
-	#write {
-		background-color: #f0f0f0;
-		box-shadow: 0px 0px 0px 0px transparent;
-		border-radius: 0px;
-	}
-}
-
-#top-titlebar,
-#top-titlebar * {
-	background-color: var(--bg-color);
-}
-
-footer.ty-footer {
-	background: var(--bg-color);
-}
-
-#footer-word-count-info.dropdown-menu {
-	background: var(--bg-color);
-} */
-
-:root {
-
 	--window-border: 1px solid hsl(0, 0%, 95%);
 	/*border for sidebar, etc*/
-
 	--monospace: 'sarasa term sc';
 	/*monospace font for codes, fences*/
-
 	--bg-color: hsl(0, 0%, 100%);
 	/*change background*/
 	--write-bg: hsl(0, 0%, 100%);
@@ -197,11 +61,11 @@ footer.ty-footer {
 
 
 	/* 字体样式援引自 font.css */
-	--base-font: -apple-system, "Noto Sans CJK SC", "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+	--base-font: -apple-system, "Noto Sans CJK SC", "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
 
-	--title-font: "Noto Serif CJK TC", Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+	--title-font: "Noto Serif CJK TC", Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
 
-	--em-font: "Noto Serif CJK SC", Georgia, "Nimbus Roman No9 L", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+	--em-font: Georgia, "Noto Serif CJK SC", "Nimbus Roman No9 L", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
 
 	--quota-font: "Noto Serif CJK SC", Georgia, "Nimbus Roman No9 L", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
 
@@ -242,8 +106,8 @@ content {
 
 #write {
 	max-width: 960px;
-	min-height: calc(100vh - 6em);
-	min-width: calc(100vw - 45em);
+	min-height: calc(100vh - 6rem);
+	min-width: calc(100vw - 45rem);
 	padding: 3rem 4rem;
 	text-align: justify;
 }
@@ -252,8 +116,9 @@ content {
 
 .md-toc {
 	font-size: 1em;
-	line-height: 1.5em;
-	padding: 1em 6em;
+	line-height: 1.5rem;
+	display: table;
+	margin: 2rem 4rem 2rem;
 }
 
 .md-toc::before {
@@ -269,6 +134,10 @@ content {
 
 .md-toc-item {
 	display: flex;
+	display: table-row;
+	width: 100%;
+	height: 2.5rem;
+	vertical-align: baseline;
 }
 
 .md-toc-h1,
@@ -278,22 +147,32 @@ content {
 	margin: .75rem;
 }
 
+.md-toc-h2 {
+	margin-left: 1rem;
+}
+
 .md-toc-h3,
 .md-toc-h4 {
-	margin-left: 4em;
+	margin-left: 4rem;
 }
 
 .md-toc-item a {
 	text-decoration: none;
 	color: var(--text-color);
 	border-bottom: none !important;
+	display: table-cell;
+	vertical-align: baseline;
+	padding-left: 3rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .md-toc-h1 .md-toc-inner,
 .md-toc-h2 .md-toc-inner,
 .md-toc-h3 .md-toc-inner,
 .md-toc-h4 .md-toc-inner {
-	margin-left: 1em !important;
+	margin-left: 1rem !important;
 	word-wrap: normal;
 	word-break: break-all;
 }
@@ -362,6 +241,20 @@ content {
 .md-toc-h5::before,
 .md-toc-h6::before {
 	color: initial;
+	display: table-cell;
+	vertical-align: baseline;
+}
+
+.md-toc-h1:before,
+.md-toc-h2::before {
+	text-align-last: justify;
+}
+
+.md-toc-h3::before,
+.md-toc-h4::before,
+.md-toc-h5::before,
+.md-toc-h6::before {
+	text-align: right;
 }
 
 .md-toc-h5,
@@ -480,21 +373,39 @@ h6 {
 	color: var(--title-color);
 }
 
-#write h1 {
-	font-size: 3em;
-	margin-top: 2em;
-	margin-bottom: 1em;
-	padding-bottom: .5em;
+#write h1 *,
+#write h2 *,
+#write h3 *,
+#write h4 *,
+#write h5 *,
+#write h6 * {
+	text-decoration: none !important;
+	border-bottom: none !important;
 }
 
+#write h1 {
+	font-size: 3em;
+	margin-top: 6rem;
+	margin-bottom: 4rem;
+}
+
+#write h1:before,
 #write h1:after {
 	content: "";
-	border: 1px solid var(--footer-color);
 	display: block;
 	position: relative;
-	top: .75em;
-	width: 70%;
-	margin: 0 auto;
+	width: 50%;
+	margin: 1rem auto;
+}
+
+#write h1::before {
+	top: -1.5rem;
+	border-bottom: 1px dashed var(--link-color);
+}
+
+#write h1::after {
+	top: 1.5rem;
+	border-bottom: 1px dashed var(--link-hover);
 }
 
 #write h1,
@@ -508,7 +419,8 @@ h6 {
 
 #write h2 {
 	font-size: 2em;
-	margin: 2em auto;
+	margin: 2rem auto;
+	margin-bottom: 3rem;
 }
 
 #write h3 {
@@ -531,7 +443,7 @@ h6 {
 	font-family: var(--base-font);
 	font-weight: 600;
 	line-height: 2rem;
-	margin: 1.5em 0;
+	margin: 1.5rem 0;
 }
 
 #write h3::before,
@@ -540,7 +452,7 @@ h6 {
 #write h6::before {
 	font-size: 14px !important;
 	vertical-align: bottom;
-	margin-right: .5em;
+	margin-right: .5rem;
 	padding: 2px;
 	border-radius: 3px;
 	background: var(--text-color);
@@ -573,8 +485,8 @@ h6 {
 }
 
 p {
-	line-height: 1.75em;
-	margin-bottom: 1em;
+	line-height: 1.75rem;
+	margin-bottom: 1rem;
 }
 
 /* 超链接样式 */
@@ -611,7 +523,7 @@ a {
 
 #write em {
 	font-family: var(--em-font);
-    text-decoration: underline dotted;
+	text-decoration: underline dotted;
 }
 
 #write blockquote {
@@ -623,7 +535,8 @@ a {
 mark {
 	margin: 0 5px;
 	color: var(--mark-color);
-	padding: 2px 4px;
+	font-size: .95em;
+	padding: 1px 2px;
 	border-radius: 5px;
 	background-color: var(--mark-bg);
 }
@@ -637,9 +550,9 @@ mark {
 	font-weight: 300;
 	font-size: 1em;
 	position: sticky;
-	padding: 1.5em;
-	margin-top: -1.5em;
-	margin-bottom: 2em;
+	padding: 1.5rem;
+	margin-top: -1.5rem;
+	margin-bottom: 2rem;
 	border-radius: 5px;
 	line-height: 1.25rem;
 }
@@ -664,8 +577,8 @@ code {
 
 #write .md-fences {
 	border: 1px solid #f0f0f0;
-	margin: 2em auto;
-	padding: 1em 0.5em;
+	margin: 2rem auto;
+	padding: 1rem 0.5rem;
 	display: block;
 	-webkit-overflow-scrolling: touch;
 }
@@ -679,22 +592,22 @@ code {
 /* 列表样式 */
 ul,
 ol {
-	margin: 1.5em auto;
+	margin: 1.5rem auto;
 }
 
 ul ol,
 ol ul {
-	margin: .75em auto;
+	margin: .75rem auto;
 }
 
 #write ul {
-	margin-left: 1.5em;
+	margin-left: 1.5rem;
 	list-style: disc;
 }
 
 #write ol {
 	list-style: decimal-leading-zero;
-	margin-left: 1.5em;
+	margin-left: 1.5rem;
 }
 
 #write ol ol {
@@ -707,7 +620,7 @@ ol ul {
 #write li ol,
 #write ul ul,
 #write ol ol {
-	margin-bottom: 0.8em;
+	margin-bottom: 0.8rem;
 	margin-left: 1rem;
 }
 
@@ -760,7 +673,7 @@ blockquote blockquote {
 hr {
 	border: none;
 	border-bottom: 1px solid #999;
-	margin: 3em auto;
+	margin: 3rem auto;
 	height: 15px;
 }
 
@@ -774,7 +687,7 @@ hr {
 /* 脚注样式 脚注内的文字颜色应当较原字稍淡 */
 
 sup.md-footnote {
-	padding: 4px;
+	padding: 2px;
 	background-color: hsla(0, 100%, 85%, 1);
 	color: #555;
 	cursor: pointer;
@@ -794,7 +707,7 @@ sup.md-footnote {
 /* 表格样式 */
 
 table {
-	margin: 1.5em auto;
+	margin: 1.5rem auto;
 	width: 98%;
 }
 
@@ -803,7 +716,7 @@ table {
 #write table thead th,
 #write-table thead th {
 	background: var(--thead-bg);
-	padding: .5em 1em;
+	padding: .5rem 1rem;
 }
 
 #write table caption {
@@ -813,7 +726,7 @@ table {
 #write table td {
 	background-color: var(--tbody-bg);
 	border: 1px solid #f0f0f0;
-	padding: 0.5em 1em;
+	padding: 0.5rem 1rem;
 	color: var(--text-color);
 }
 
@@ -843,6 +756,53 @@ table {
 }
 
 /* 不同的宽度的设备上的字数统计样式 */
+@media screen and (max-width: 600px) {
+	#write {
+		margin: 1rem 2rem;
+		padding: 2rem 1rem;
+	}
+
+	.md-toc {
+		padding: 0;
+	}
+
+	blockquote {
+		background: var(--quota-bg);
+		margin: 2rem -4rem;
+		padding: 2rem 4rem;
+	}
+
+	blockquote blockquote {
+		padding-left: 1rem;
+	}
+
+	#writte figure {
+		position: relative;
+		left: -2rem;
+		min-width: calc(100% + 4rem);
+	}
+
+	#write table {
+		width: 100%;
+	}
+
+	#write h1 {
+		font-size: 2.5rem;
+	}
+
+	#write h3:before,
+	#write h4:before,
+	#write h5:before,
+	#write h6:before {
+		color: var(--bg-color);
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.md-toc-inner {
+		max-width: 20rem;
+	}
+}
 
 @media screen and (min-width: 1300px) {
 	#write {
@@ -865,7 +825,7 @@ table {
 
 
 	.typora-node #write {
-		min-height: calc(100% - 6em);
+		min-height: calc(100% - 6rem);
 	}
 
 
@@ -873,7 +833,7 @@ table {
 		max-width: 1000px;
 		padding: 40px 60px;
 		background: var(--write-bg);
-		margin: 3em auto 3em;
+		margin: 3rem auto 3rem;
 		border-width: 0 1px;
 	}
 
@@ -884,10 +844,6 @@ table {
 		border: 0;
 		padding-left: 60px;
 		padding-right: 60px;
-	}
-
-	.md-toc-item {
-		max-width: 75%;
 	}
 
 	footer {
@@ -905,21 +861,17 @@ table {
 	}
 
 	.typora-node #write {
-		min-height: calc(100% - 6em);
+		min-height: calc(100% - 6rem);
 	}
 
 	.pin-outline #write {
 		min-width: 1100px;
 		padding: 40px 60px;
 		background: var(--write-bg);
-		margin: 3em auto 3em;
+		margin: 3rem auto 3rem;
 		border: 1px solid #ddd;
 		border-width: 0 1px;
 		border-radius: 5px;
-	}
-
-	.md-toc-item {
-		max-width: 75%;
 	}
 
 	.pin-outline footer {
@@ -941,27 +893,55 @@ table {
 		page-break-before: avoid;
 	}
 
+	.md-toc {
+		page-break-after: always;
+		padding: 1rem 2rem;
+	}
+
+	.md-toc:before {
+		margin-bottom: 4rem;
+	}
+
 	#write {
 		box-shadow: 0px 0px 0px 0px transparent;
 		border-radius: 0px;
 	}
 
-	#write h1,
+	#write h1 {
+		margin: 3rem auto;
+		page-break-before: always;
+	}
+
+	#write h1:before,
+	#write h1:after {
+		border: none;
+		height: 0;
+	}
+
+	#write h1:first-of-type {
+		page-break-before: avoid;
+	}
+
 	#write h2 {
-		margin-top: 1rem;
-		margin-bottom: 1rem;
-		border-bottom: 0px;
+		margin: 2rem auto;
+	}
+
+	code,
+	mark {
+		padding: 2px;
+	}
+
+	mark {
+		color: var(--text-color);
+		background: hsl(60, 100%, 50%);
 	}
 
 	blockquote {
 		position: relative;
-		margin: 2em 1em;
-		padding: 1.5em;
+		margin: 2rem 1rem;
+		padding: 1.5rem;
 		background: var(--quota-bg);
 		border: 0px solid transparent;
-	}
-
-	blockquote {
 		border: 2px dotted #ff4d4d;
 		border-radius: 5px;
 	}
@@ -981,7 +961,7 @@ table {
 
 .MathJax_Display {
 	font-size: 0.9em;
-	margin-top: 0.5em;
+	margin-top: 0.5rem;
 	margin-bottom: 0;
 }
 
@@ -996,8 +976,8 @@ p.mathjax-block,
 }
 
 .md-image>.md-meta {
-	padding-left: 0.5em;
-	padding-right: 0.5em;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 }
 
 .md-image>img {
@@ -1017,7 +997,7 @@ p.mathjax-block,
 }
 
 #typora-source pre {
-	line-height: 1.5em;
+	line-height: 1.5rem;
 	border-radius: 0px !important;
 }
 

@@ -8,15 +8,17 @@
 
 ## 安装
 
-> > 建议安装的字体：思源黑体、思源宋体、更纱黑体（term sc），苍耳今楷05。
-> 
->  <br/>
-> 
-> > ！！！请不要在非一体化模式下使用本主题。
+>  建议安装的字体：思源黑体、思源宋体、更纱黑体（term sc），苍耳今楷05。
 
-下载该主题后，将主题的 `css` 文件和 `fluent` 文件夹置于 `C:\Users\{UserName}\AppData\Roaming\Typora\themes` 目录下，重启 Typora 即可在主题选项下启用该主题。
+下载该主题后，将主题的 `autumnus.css` 文件和 `fluent` 文件夹置于 `C:\Users\{UserName}\AppData\Roaming\Typora\themes` 目录下，重启 Typora 即可在主题选项下启用该主题。若要启用 `fluent` 将 `autumnus.user.css` 一同置于目录下即可启用。
 
 ## 更新日志
+
+2020-08-17——`UPDATE`
+
++ 调整了导出格式的样式，包括 `PDF`、`HTML`。样式预览：[HTML 格式预览](./typora-theme-review/lorem-ipsum.html)、[PDF 格式预览](./typora-theme-review/lorem-ipsum.pdf)、[fluent 样式的 HTML 格式预览](./typora-theme-review/lorem-ipsum-fluent.html)。
++ 调整了在较小宽度下的显示样式。
++ 取出 `fluent` 样式，在使用时，将 `autumnus.user.css` 置于主题目录下即可。此时的 `fluent` 做为 `autumnus` 的补丁存在。
 
 2020-08-16——`UPDATE`
 
@@ -50,15 +52,15 @@
 `已知问题`：
 
 - [x] 在引用中，光标显示会滞后一格（删除了引用首字下沉导致的光标异常）。
-- [ ] 在选中一段长文字后，尤其是当前文字超过一段，选中背景色会在行末存续 1s 左右。
+- [x] 在选中一段长文字后，尤其是当前文字超过一段，选中背景色会在行末存续 1s 左右。
+- [ ] 若启用 `fluent` 样式，当开启和关闭文件侧边栏、开启和关闭源代码模式时，侧边栏出现短暂的黑边。
 
 `待完成部分`：
 
 - [x] 目录样式优化。
 - [x] 黑夜模式（已创建，[typora-theme-autumnus_dark](https://github.com/Soanguy/typora-theme-autumnus_dark)）
-- [ ] 若启用 `fluent` 样式，当开启和关闭文件侧边栏、开启和关闭源代码模式时，侧边栏出现短暂的黑边。
 
-样式预览：
+## 样式预览
 
 ![](typora-theme-review/ui.png)
 
