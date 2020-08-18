@@ -4,13 +4,43 @@
 
 > ❕注意❕
 >
-> > 该主题主要测试于  `Windows` 平台，尚未经过其他平台测试，但应能正常工作。如果出现任何显示错误，请联系我。
+> > 该主题主要测试于  `Windows` 和 `Ubuntu`，尚未经过 `Mac` 平台测试，但应能正常工作。如果出现任何显示错误，请联系我。
 
 ## 安装
 
 >  建议安装的字体：思源黑体、思源宋体、更纱黑体（term sc），苍耳今楷05。
 
 下载该主题后，将主题的 `autumnus.css` 文件和 `fluent` 文件夹置于 `C:\Users\{UserName}\AppData\Roaming\Typora\themes` 目录下，重启 Typora 即可在主题选项下启用该主题。若要启用 `fluent` 将 `autumnus.user.css` 一同置于目录下即可启用。
+
+## 推荐配色
+
+<div style="display:flex;flex-wrap:wrap;">
+<div style="background:rgb(235,235,235);height:6rem;width:15rem;"><p>rgb(235,235,235)</p></div>
+<div style="background:#fffafa;height:6rem;width:15rem;"><p>#fffafa</p></div>
+<div style="background:rgb(45,36,31);height:6rem;width:15rem;color:rgb(238,229,248)"><p>rgb(45,36,31)</p></div>
+</div>
+<div style="display:flex;flex-wrap:wrap;">
+<div style="background:hsl(0,0%,5%);height:6rem;width:15rem;color:rgb(238,229,248)"><p>hsl(0,0%,5%)</p></div>
+<div style="background:hsl(0,0%,20%);height:6rem;width:15rem;color:rgb(238,229,248)"><p>hsl(0,0%,20%)</p></div>
+<div style="background:hsl(0,0%,35%);height:6rem;width:15rem;color:rgb(238,229,248)"><p>hsl(0,0%,35%)</p></div>
+<div style="background:hsl(0,0%,50%);height:6rem;width:15rem;color:rgb(238,229,248)"><p>hsl(0,0%,50%)</p></div>
+<div style="background:hsl(0,0%,75%);height:6rem;width:15rem;"><p>hsl(0,0%,75%)</p></div>
+<div style="background:hsl(0,0%,80%);height:6rem;width:15rem;"><p>hsl(0,0%,80%)</p></div>
+<div style="background:hsl(0,0%,90%);height:6rem;width:15rem;"><p>hsl(0,0%,90%)</p></div>
+<div style="background:hsl(0,0%,95%);height:6rem;width:15rem;"><p>hsl(0,0%,95%)</p></div>
+<div style="background:hsl(0,0%,98%);height:6rem;width:15rem;"><p>hsl(0,0%,98%)</p></div>
+<div style="background:hsl(0,0%,99%);height:6rem;width:15rem;"><p>hsl(0,0%,99%)</p></div>
+<div style="background:hsl(0,0%,100%);height:6rem;width:15rem;"><p>hsl(0,0%,100%)</p></div>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;">
+<div style="background:hsl(0,100%,65%);height:6rem;width:15rem;"><p>hsl(0,100%,65%)</p></div>
+<div style="background:hsl(0,100%,75%);height:6rem;width:15rem;"><p>hsl(0,100%,75%)</p></div>
+<div style="background:hsl(215,100%,65%);height:6rem;width:15rem;"><p>hsl(215,100%,65%)</p></div>
+<div style="background:hsl(215,100%,75%);height:6rem;width:15rem;"><p>hsl(215,100%,75%)</p></div>
+<div style="background:hsl(70, 100%, 65%);height:6rem;width:15rem;"><p>hsl(70, 100%, 65%)</p></div>
+<div style="background:hsl(70, 100%, 75%);height:6rem;width:15rem;"><p>hsl(70, 100%, 75%)</p></div>
+</div>
 
 ## 更新日志
 

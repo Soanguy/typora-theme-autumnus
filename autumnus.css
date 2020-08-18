@@ -546,7 +546,7 @@ mark {
 #write pre.md-meta-block {
 	min-height: 30px;
 	background: var(--codeb-bg);
-	color: #999;
+	color: hsl(0, 0%, 60%);
 	font-weight: 300;
 	font-size: 1em;
 	position: sticky;
@@ -583,7 +583,7 @@ var {
 }
 
 #write .md-fences {
-	border: 1px solid #f0f0f0;
+	border: 1px solid hsl(0, 0%, 94%);
 	margin: 2rem auto;
 	padding: 1rem 0.5rem;
 	display: block;
@@ -732,7 +732,7 @@ table {
 
 #write table td {
 	background-color: var(--tbody-bg);
-	border: 1px solid #f0f0f0;
+	border: 1px solid hsl(0, 0%, 94%);
 	padding: 0.5rem 1rem;
 	color: var(--text-color);
 }
@@ -876,7 +876,7 @@ table {
 		padding: 40px 60px;
 		background: var(--write-bg);
 		margin: 3rem auto 3rem;
-		border: 1px solid #ddd;
+		border: 1px solid hsl(0, 0%, 87%);
 		border-width: 0 1px;
 		border-radius: 5px;
 	}
@@ -949,14 +949,14 @@ table {
 		padding: 1.5rem;
 		background: var(--quota-bg);
 		border: 0px solid transparent;
-		border: 2px dotted #ff4d4d;
+		border: 2px dotted hsl(0, 100%, 65%);
 		border-radius: 5px;
 	}
 
 	blockquote blockquote {
 		border-radius: 0px;
 		border: 0px solid transparent;
-		border-left: 4px solid #ff4d4d;
+		border-left: 4px solid hsl(0, 100%, 65%);
 	}
 
 	.typora-export * {
@@ -999,7 +999,7 @@ p.mathjax-block,
 
 #typora-source {
 	background: var(--bg-color);
-	color: #555;
+	color: hsl(0, 0%, 33%);
 	font-family: var(--code-font);
 }
 
@@ -1219,7 +1219,7 @@ a.menu-style-btn:hover {
 }
 
 #recent-file-panel tbody tr:nth-child(2n-1) {
-	background-color: #f0f0f0;
+	background-color: hsl(0, 0%, 94%);
 }
 
 .megamenu-menu-panel tr:hover,
