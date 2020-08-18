@@ -9,12 +9,7 @@
 */
 
 :root {
-	--window-border: 1px solid hsl(0, 0%, 95%);
-	/*border for sidebar, etc*/
-	--monospace: 'sarasa term sc';
-	/*monospace font for codes, fences*/
 	--bg-color: hsl(0, 0%, 100%);
-	/*change background*/
 	--write-bg: hsl(0, 0%, 100%);
 	/* 写作背景色 */
 	--link-bg: transparent;
@@ -41,6 +36,7 @@
 	--mark-color: hsl(0, 0%, 100%);
 	/* 高亮字体色 */
 	--code-color: hsl(0, 0%, 20%);
+	--codeb-color: hsl(0, 0%, 50%);
 	/* 代码字体色 */
 	--quota-color: hsl(0, 0%, 35%);
 	/* 引用字体色 */
@@ -59,6 +55,11 @@
 	--tbody-hover: hsl(0, 0%, 99%);
 	/* 表格hover色：表体 */
 
+	--window-border: 1px solid hsl(0, 0%, 95%);
+	--base-border: 1px solid hsl(0, 100%, 65%);
+	--base-borderl: 4px solid hsl(0, 100%, 65%);
+	--base-borderb: 1px dashed hsl(0, 100%, 65%);
+	--opt-borderb: 1px dashed hsl(215, 100%, 65%);
 
 	/* 字体样式援引自 font.css */
 	--base-font: -apple-system, "Noto Sans CJK SC", "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
@@ -67,11 +68,9 @@
 
 	--em-font: Georgia, "Noto Serif CJK SC", "Nimbus Roman No9 L", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
 
-	--quota-font: "Noto Serif CJK SC", Georgia, "Nimbus Roman No9 L", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+	/* --quota-font: "Noto Serif CJK SC", Georgia, "Nimbus Roman No9 L", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif; */
 
-	/* 注释掉下面的代码来使 引用 使用楷体显示 */
-
-	/* --quota-font: '仓耳今楷05-6763', Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif; */
+	--quota-font: '仓耳今楷05-6763', Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
 
 	--code-font: "Sarasa Term SC", Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono", Courier;
 }
@@ -93,7 +92,7 @@ body,
 	font-family: var(--base-font);
 	font-weight: 400;
 	font-size: 16px;
-	font-size: 1em;
+	font-size: 1rem;
 	line-height: 1.75rem;
 	background: var(--write-bg);
 	color: var(--text-color);
@@ -115,7 +114,7 @@ content {
 /* 目录自动编号 */
 
 .md-toc {
-	font-size: 1em;
+	font-size: 1rem;
 	line-height: 1.5rem;
 	display: table;
 	margin: auto;
@@ -123,7 +122,7 @@ content {
 
 .md-toc::before {
 	content: "Contents";
-	font-size: 2em;
+	font-size: 2rem;
 	text-align: center;
 	display: block;
 	margin: 2rem auto;
@@ -384,7 +383,7 @@ h6 {
 }
 
 #write h1 {
-	font-size: 3em;
+	font-size: 3rem;
 	margin-top: 6rem;
 	margin-bottom: 4rem;
 }
@@ -400,12 +399,12 @@ h6 {
 
 #write h1::before {
 	top: -1.5rem;
-	border-bottom: 1px dashed var(--link-color);
+	border-bottom: var(--opt-borderb);
 }
 
 #write h1::after {
 	top: 1.5rem;
-	border-bottom: 1px dashed var(--link-hover);
+	border-bottom: var(--base-borderb);
 }
 
 #write h1,
@@ -418,22 +417,22 @@ h6 {
 }
 
 #write h2 {
-	font-size: 2em;
+	font-size: 2rem;
 	margin: 2rem auto;
 	margin-bottom: 3rem;
 }
 
 #write h3 {
-	font-size: 1.75em;
+	font-size: 1.75rem;
 }
 
 #write h4 {
-	font-size: 1.5em;
+	font-size: 1.5rem;
 }
 
 #write h5,
 #write h6 {
-	font-size: 1.25em;
+	font-size: 1.25rem;
 }
 
 #write h3,
@@ -450,7 +449,7 @@ h6 {
 #write h4::before,
 #write h5::before,
 #write h6::before {
-	font-size: 14px !important;
+	font-size: .9rem !important;
 	vertical-align: bottom;
 	margin-right: .5rem;
 	padding: 2px;
@@ -503,11 +502,11 @@ a {
 }
 
 #write a {
-	border-bottom: 1px solid var(--link-color);
+	border-bottom: var(--base-borderb);
 }
 
 #write a:hover {
-	border-bottom-color: var(--link-hover);
+	border-bottom-color: var(--link-color);
 	color: var(--link-hover);
 	text-decoration: none;
 }
@@ -526,16 +525,12 @@ a {
 	text-decoration: underline dotted;
 }
 
-#write blockquote {
-	font-family: var(--quota-font);
-}
-
 /* mark style */
 
 mark {
 	margin: 0 5px;
 	color: var(--mark-color);
-	font-size: .95em;
+	font-size: .95rem;
 	padding: 1px 2px;
 	border-radius: 5px;
 	background-color: var(--mark-bg);
@@ -546,9 +541,9 @@ mark {
 #write pre.md-meta-block {
 	min-height: 30px;
 	background: var(--codeb-bg);
-	color: hsl(0, 0%, 60%);
+	color: var(--codeb-color);
 	font-weight: 300;
-	font-size: 1em;
+	font-size: 1rem;
 	position: sticky;
 	padding: 1.5rem;
 	margin-top: -1.5rem;
@@ -563,7 +558,7 @@ code,
 pre tt,
 .md-fences {
 	font-family: var(--code-font);
-	font-size: 1em;
+	font-size: 1rem;
 	line-height: 1rem;
 	padding: 2px 4px;
 	border-radius: 5px;
@@ -583,7 +578,7 @@ var {
 }
 
 #write .md-fences {
-	border: 1px solid hsl(0, 0%, 94%);
+	border: 1px solid var(--codeb-bg);
 	margin: 2rem auto;
 	padding: 1rem 0.5rem;
 	display: block;
@@ -593,7 +588,7 @@ var {
 /* 代码块下的标题颜色过深。修改为浅蓝 */
 .cm-s-inner .cm-header,
 .cm-s-inner.cm-header {
-	color: hsl(215, 100%, 55%);
+	color: hsl(215, 100%, 75%);
 }
 
 /* 列表样式 */
@@ -657,23 +652,42 @@ ol ul {
 
 /* 块/段落引用 */
 
-blockquote p {
-	color: var(--quota-color);
-	line-height: 1.75rem;
-}
+
 
 blockquote {
 	background: var(--quota-bg);
 	margin: 2rem -3.8rem;
 	padding: 2rem 6rem;
+	font-size: 1.2rem;
 }
 
 blockquote blockquote {
 	padding: 0;
 	margin: 0;
 	padding-left: 2rem;
-	border-left: 4px solid #ff4d4d;
-	font-size: inherit;
+	border-left: var(--base-borderl);
+}
+
+blockquote,
+blockquote p {
+	font-family: var(--quota-font);
+}
+
+blockquote p {
+	color: var(--quota-color);
+	line-height: 1.75rem;
+}
+
+blockquote h1,
+blockquote h2,
+blockquote h3,
+blockquote h4,
+blockquote h5,
+blockquote h6,
+blockquote em,
+blockquote strong,
+blockquote code {
+	font-family: var(--quota-font) !important;
 }
 
 /* 一致化 horizontal rule */
@@ -695,10 +709,10 @@ hr {
 
 sup.md-footnote {
 	padding: 2px;
-	background-color: hsla(0, 100%, 85%, 1);
+	background-color: hsla(0, 100%, 85%);
 	color: #555;
 	cursor: pointer;
-	font-size: .75em;
+	font-size: .75rem;
 }
 
 .footnotes,
@@ -732,7 +746,7 @@ table {
 
 #write table td {
 	background-color: var(--tbody-bg);
-	border: 1px solid hsl(0, 0%, 94%);
+	border: 1px solid var(--thead-bg);
 	padding: 0.5rem 1rem;
 	color: var(--text-color);
 }
@@ -967,7 +981,7 @@ table {
 
 
 .MathJax_Display {
-	font-size: 0.9em;
+	font-size: 0.9rem;
 	margin-top: 0.5rem;
 	margin-bottom: 0;
 }
@@ -999,7 +1013,7 @@ p.mathjax-block,
 
 #typora-source {
 	background: var(--bg-color);
-	color: hsl(0, 0%, 33%);
+	color: var(--code-color);
 	font-family: var(--code-font);
 }
 
@@ -1026,11 +1040,11 @@ p.mathjax-block,
 }
 
 #md-searchpanel {
-	border-bottom: 1px solid #ccc;
+	border-bottom: var(--base-borderb);
 }
 
 #md-searchpanel .btn {
-	border: 1px solid #ccc;
+	border: var(--base-border);
 }
 
 #md-notification:before {
@@ -1038,7 +1052,7 @@ p.mathjax-block,
 }
 
 #md-notification {
-	background: hsl(0, 0%, 95%);
+	background: var(--code-bg);
 }
 
 /* 侧边栏 文件概览和大纲列表 */
@@ -1063,6 +1077,7 @@ p.mathjax-block,
 
 	--select-text-bg-color: hsl(0, 100%, 75%);
 	--select-text-font-color: hsl(0, 0%, 100%);
+	--active-bg: hsl(0, 0%, 95%);
 }
 
 /* 侧边栏文档大纲tab标签 激活 */
@@ -1154,7 +1169,7 @@ p.mathjax-block,
 /* control-menu */
 
 .context-menu.dropdown-menu>li>a:focus {
-	background-color: #f0f0f0;
+	background-color: var(--active-bg);
 }
 
 .context-menu.dropdown-menu>.active>a,
@@ -1178,7 +1193,7 @@ p.mathjax-block,
 /* 侧边栏item激活 */
 .megamenu-menu-list:not(.saved) li a:hover,
 .megamenu-menu-list li a.active {
-	background-color: #f0f0f0;
+	background-color: var(--active-bg);
 	color: var(--primary-color);
 	display: block !important;
 }
@@ -1193,7 +1208,7 @@ p.mathjax-block,
 }
 
 a.menu-style-btn:hover {
-	background: #f0f0f0;
+	background: var(--active-bg);
 }
 
 /* 标题 */
@@ -1209,17 +1224,17 @@ a.menu-style-btn:hover {
 }
 
 .megamenu-menu-panel .btn {
-	border: 1px solid #ccc;
+	border: var(--base-border);
 }
 
 /* 最近文档 */
 
 .megamenu-menu-panel table tr {
-	background: #f8f8f8;
+	background: hsl(0, 0%, 99%);
 }
 
 #recent-file-panel tbody tr:nth-child(2n-1) {
-	background-color: hsl(0, 0%, 94%);
+	background-color: hsl(0, 0%, 95%);
 }
 
 .megamenu-menu-panel tr:hover,
@@ -1254,6 +1269,10 @@ a.menu-style-btn:hover {
 
 /* 关于页 */
 
+table#typora-help-md-table tr {
+	background: transparent;
+}
+
 /* fix */
 .about-content-meta {
 	font-family: var(--title-font);
@@ -1279,4 +1298,46 @@ a.menu-style-btn:hover {
 
 footer.stopselect.ty-footer {
 	right: 0;
+}
+
+/* animation */
+
+td,
+.file-list-item,
+.megamenu-menu li,
+.btn,
+.long-btn {
+	position: relative;
+	overflow: hidden;
+}
+
+td:after,
+.file-list-item:after,
+.megamenu-menu li:after,
+.btn:after,
+.long-btn:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	background-image: radial-gradient(circle, #666 10%, transparent 10.01%);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	transform: scale(10, 10);
+	opacity: 0;
+	transition: transform .3s, opacity .5s;
+}
+
+td:active:after,
+.file-list-item:active:after,
+.megamenu-menu li:active:after,
+.btn:active:after,
+.long-btn:active:after {
+	transform: scale(0, 0);
+	opacity: .3;
+	transition: 0s;
 }
