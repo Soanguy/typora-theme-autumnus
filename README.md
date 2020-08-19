@@ -2,6 +2,12 @@
 
 根据默认主题和 han.css 改动的 Typora 主题。
 
++ 🔠 目录自动编号
++ 🍻 添加 `autumnus.user.css` 于主题目录下让写作区域 高斯模糊
++ 🔍 显著区分各层级标题
++ 📷 `![no-shadow](图片路径)` 添加 `no-shadow` 可以为不想添加阴影的图片去掉阴影
++ 导出为 PDF 时，目录页会独占一页；每层一级标题也都会在其前自动添加分页符。
+
 > ❕注意❕
 >
 > > 该主题主要测试于  `Windows` 和 `Ubuntu`，尚未经过 `Mac` 平台测试，但应能正常工作。如果出现任何显示错误，请联系我。
@@ -12,37 +18,24 @@
 
 下载该主题后，将主题的 `autumnus.css` 文件和 `fluent` 文件夹置于 `C:\Users\{UserName}\AppData\Roaming\Typora\themes` 目录下，重启 Typora 即可在主题选项下启用该主题。若要启用 `fluent` 将 `autumnus.user.css` 一同置于目录下即可启用。
 
-## 推荐配色
+## 主题配色
 
-<div style="display:flex;flex-wrap:wrap;">
-<div style="background:rgb(235,235,235);height:6rem;width:15rem;"><p>rgb(235,235,235)</p></div>
-<div style="background:#fffafa;height:6rem;width:15rem;"><p>#fffafa</p></div>
-<div style="background:rgb(45,36,31);height:6rem;width:15rem;color:rgb(238,229,248)"><p>rgb(45,36,31)</p></div>
-</div>
-<div style="display:flex;flex-wrap:wrap;">
-<div style="background:hsl(0,0%,5%);height:6rem;width:15rem;color:rgb(238,229,248)"><p>hsl(0,0%,5%)</p></div>
-<div style="background:hsl(0,0%,20%);height:6rem;width:15rem;color:rgb(238,229,248)"><p>hsl(0,0%,20%)</p></div>
-<div style="background:hsl(0,0%,35%);height:6rem;width:15rem;color:rgb(238,229,248)"><p>hsl(0,0%,35%)</p></div>
-<div style="background:hsl(0,0%,50%);height:6rem;width:15rem;color:rgb(238,229,248)"><p>hsl(0,0%,50%)</p></div>
-<div style="background:hsl(0,0%,75%);height:6rem;width:15rem;"><p>hsl(0,0%,75%)</p></div>
-<div style="background:hsl(0,0%,80%);height:6rem;width:15rem;"><p>hsl(0,0%,80%)</p></div>
-<div style="background:hsl(0,0%,90%);height:6rem;width:15rem;"><p>hsl(0,0%,90%)</p></div>
-<div style="background:hsl(0,0%,95%);height:6rem;width:15rem;"><p>hsl(0,0%,95%)</p></div>
-<div style="background:hsl(0,0%,98%);height:6rem;width:15rem;"><p>hsl(0,0%,98%)</p></div>
-<div style="background:hsl(0,0%,99%);height:6rem;width:15rem;"><p>hsl(0,0%,99%)</p></div>
-<div style="background:hsl(0,0%,100%);height:6rem;width:15rem;"><p>hsl(0,0%,100%)</p></div>
-</div>
+（备忘）
 
-<div style="display:flex;flex-wrap:wrap;">
-<div style="background:hsl(0,100%,65%);height:6rem;width:15rem;"><p>hsl(0,100%,65%)</p></div>
-<div style="background:hsl(0,100%,75%);height:6rem;width:15rem;"><p>hsl(0,100%,75%)</p></div>
-<div style="background:hsl(215,100%,65%);height:6rem;width:15rem;"><p>hsl(215,100%,65%)</p></div>
-<div style="background:hsl(215,100%,75%);height:6rem;width:15rem;"><p>hsl(215,100%,75%)</p></div>
-<div style="background:hsl(70, 100%, 65%);height:6rem;width:15rem;"><p>hsl(70, 100%, 65%)</p></div>
-<div style="background:hsl(70, 100%, 75%);height:6rem;width:15rem;"><p>hsl(70, 100%, 75%)</p></div>
-</div>
+![](typora-theme-review/color.png)
 
+<div style="display:none">
+<div style="display:flex;flex-wrap:wrap;color:#333;"><div style="background:rgb(235,235,235);height:6rem;width:15rem;"><p>rgb(235,235,235)</p></div><div style="background:#fffafa;height:6rem;width:15rem;"><p>#fffafa</p></div><div style="background:rgb(45,36,31);height:6rem;width:15rem;color:rgb(238,229,248)"><p>rgb(45,36,31)</p></div></div>
+<div style="display:flex;flex-wrap:wrap;color:#333;"><div style="background:hsl(0,0%,5%);height:6rem;width:15rem;color:rgb(238,229,248)"><p>hsl(0,0%,5%)</p></div><div style="background:hsl(0,0%,20%);height:6rem;width:15rem;color:rgb(238,229,248)"><p>hsl(0,0%,20%)</p></div><div style="background:hsl(0,0%,35%);height:6rem;width:15rem;color:rgb(238,229,248)"><p>hsl(0,0%,35%)</p></div><div style="background:hsl(0,0%,50%);height:6rem;width:15rem;color:rgb(238,229,248)"><p>hsl(0,0%,50%)</p></div><div style="background:hsl(0,0%,75%);height:6rem;width:15rem;"><p>hsl(0,0%,75%)</p></div><div style="background:hsl(0,0%,80%);height:6rem;width:15rem;"><p>hsl(0,0%,80%)</p></div><div style="background:hsl(0,0%,90%);height:6rem;width:15rem;"><p>hsl(0,0%,90%)</p></div><div style="background:hsl(0,0%,95%);height:6rem;width:15rem;"><p>hsl(0,0%,95%)</p></div><div style="background:hsl(0,0%,98%);height:6rem;width:15rem;"><p>hsl(0,0%,98%)</p></div><div style="background:hsl(0,0%,99%);height:6rem;width:15rem;"><p>hsl(0,0%,99%)</p></div><div style="background:hsl(0,0%,100%);height:6rem;width:15rem;"><p>hsl(0,0%,100%)</p></div></div>
+<div style="display:flex;flex-wrap:wrap;color:#333;"><div style="background:hsl(0,100%,65%);height:6rem;width:15rem;"><p>hsl(0,100%,65%)</p></div><div style="background:hsl(0,100%,75%);height:6rem;width:15rem;"><p>hsl(0,100%,75%)</p></div><div style="background:hsl(215,100%,65%);height:6rem;width:15rem;"><p>hsl(215,100%,65%)</p></div><div style="background:hsl(215,100%,75%);height:6rem;width:15rem;"><p>hsl(215,100%,75%)</p></div><div style="background:hsl(70, 100%, 65%);height:6rem;width:15rem;"><p>hsl(70, 100%, 65%)</p></div><div style="background:hsl(70, 100%, 75%);height:6rem;width:15rem;"><p>hsl(70, 100%, 75%)</p></div></div></div>
 ## 更新日志
+
+2020-08-19——`UPDATE`
+
++ 调整了部分样式（链接、图片）。
++ 添加图片时，可选去掉阴影。（例：![no-shadow](图片地址)）
++ 为部分元素添加点击动画。（表格、按钮）
++ 将 引用 字体正式替换为 **楷体**。（在样式表内注释掉相关代码可替换回宋体或者黑体）
 
 2020-08-17——`UPDATE`
 

@@ -31,7 +31,7 @@
 	/* 默认字体颜色：正文等 */
 	--title-color: hsl(0, 0%, 5%);
 	/* 强调颜色：标题；加强等 */
-	--link-color: hsl(215, 100%, 65%);
+	--link-color: hsl(0, 100%, 75%);
 	/* 超链接字体色 */
 	--mark-color: hsl(0, 0%, 100%);
 	/* 高亮字体色 */
@@ -70,7 +70,7 @@
 
 	/* --quota-font: "Noto Serif CJK SC", Georgia, "Nimbus Roman No9 L", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif; */
 
-	--quota-font: '仓耳今楷05-6763', Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+	--quota-font: Baskerville, Georgia, "Liberation Serif", '仓耳今楷05-6763', "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
 
 	--code-font: "Sarasa Term SC", Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono", Courier;
 }
@@ -93,7 +93,7 @@ body,
 	font-weight: 400;
 	font-size: 16px;
 	font-size: 1rem;
-	line-height: 1.75rem;
+	line-height: 2rem;
 	background: var(--write-bg);
 	color: var(--text-color);
 }
@@ -155,7 +155,7 @@ content {
 	margin-left: 4rem;
 }
 
-.md-toc-item a {
+.md-toc-item .md-toc-inner {
 	text-decoration: none;
 	color: var(--text-color);
 	border-bottom: none !important;
@@ -178,7 +178,6 @@ content {
 
 .md-toc-h1 {
 	font: 600 1.25em var(--title-font);
-
 	counter-increment: counter_md-toc-h1;
 	counter-reset: counter_md-toc-h2;
 }
@@ -372,16 +371,19 @@ h6 {
 	color: var(--title-color);
 }
 
+/* 使标题下所有的元素显示为标题样式 */
 #write h1 *,
 #write h2 *,
 #write h3 *,
 #write h4 *,
 #write h5 *,
 #write h6 * {
+	color: var(--title-color) !important;
 	text-decoration: none !important;
 	border-bottom: none !important;
 }
 
+/* 让每一级标题更加明显，添加标注 */
 #write h1 {
 	font-size: 3rem;
 	margin-top: 6rem;
@@ -441,7 +443,6 @@ h6 {
 #write h6 {
 	font-family: var(--base-font);
 	font-weight: 600;
-	line-height: 2rem;
 	margin: 1.5rem 0;
 }
 
@@ -474,30 +475,15 @@ h6 {
 	content: "H6";
 }
 
-#write h1 a,
-#write h2 a,
-#write h3 a,
-#write h4 a,
-#write h5 a,
-#write h6 a {
-	color: var(--title-color);
-}
-
 p {
-	line-height: 1.75rem;
 	margin-bottom: 1rem;
 }
 
 /* 超链接样式 */
 
 a,
-.md-def-url {
+ins {
 	color: var(--link-color);
-	text-decoration: none;
-}
-
-ins,
-a {
 	text-decoration: none;
 }
 
@@ -515,13 +501,12 @@ a {
 
 #write strong,
 #write em {
-	font-family: var(--base-font);
+	font-family: var(--em-font);
 	font-weight: 800 !important;
 	color: var(--title-color);
 }
 
 #write em {
-	font-family: var(--em-font);
 	text-decoration: underline dotted;
 }
 
@@ -530,42 +515,52 @@ a {
 mark {
 	margin: 0 5px;
 	color: var(--mark-color);
-	font-size: .95rem;
-	padding: 1px 2px;
+	padding: 1px 4px;
 	border-radius: 5px;
 	background-color: var(--mark-bg);
 }
 
 /* code style */
 
+/* yaml style */
 #write pre.md-meta-block {
 	min-height: 30px;
 	background: var(--codeb-bg);
 	color: var(--codeb-color);
 	font-weight: 300;
-	font-size: 1rem;
 	position: sticky;
 	padding: 1.5rem;
 	margin-top: -1.5rem;
 	margin-bottom: 2rem;
 	border-radius: 5px;
-	line-height: 1.25rem;
+	line-height: 1.5rem;
 }
 
-.CodeMirror pre,
+
+/* code & codeblock style */
+
+/* codeblock */
+#write pre.md-fences {
+	border: 1px solid var(--codeb-bg);
+	margin: 2rem auto;
+	padding: 1rem 0.5rem;
+	display: block;
+	-webkit-overflow-scrolling: touch;
+}
+
 pre,
 code,
 pre tt,
-.md-fences {
+.md-fences,
+.CodeMirror pre {
 	font-family: var(--code-font);
-	font-size: 1rem;
-	line-height: 1rem;
+	line-height: 1.5rem;
 	padding: 2px 4px;
 	border-radius: 5px;
 	background-color: var(--codeb-bg);
-	line-height: 1rem;
 }
 
+/* code style */
 code {
 	background-color: var(--code-bg);
 }
@@ -575,14 +570,6 @@ samp,
 tt,
 var {
 	font-family: var(--code-font);
-}
-
-#write .md-fences {
-	border: 1px solid var(--codeb-bg);
-	margin: 2rem auto;
-	padding: 1rem 0.5rem;
-	display: block;
-	-webkit-overflow-scrolling: touch;
 }
 
 /* 代码块下的标题颜色过深。修改为浅蓝 */
@@ -595,11 +582,6 @@ var {
 ul,
 ol {
 	margin: 1.5rem auto;
-}
-
-ul ol,
-ol ul {
-	margin: .75rem auto;
 }
 
 #write ul {
@@ -622,17 +604,14 @@ ol ul {
 #write li ol,
 #write ul ul,
 #write ol ol {
-	margin-bottom: 0.8rem;
 	margin-left: 1rem;
 }
+
+/* todo list */
 
 .task-list {
 	list-style: none !important;
 	padding-left: 0;
-}
-
-.task-list-item {
-	padding-left: 2.125rem;
 }
 
 .task-list-item input {
@@ -651,8 +630,6 @@ ol ul {
 }
 
 /* 块/段落引用 */
-
-
 
 blockquote {
 	background: var(--quota-bg);
@@ -678,6 +655,8 @@ blockquote p {
 	line-height: 1.75rem;
 }
 
+/* 统一引用下其他元素的样式 */
+
 blockquote h1,
 blockquote h2,
 blockquote h3,
@@ -701,9 +680,17 @@ hr {
 /* img */
 
 #write img {
-	box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, .2), 2px 4px 5px 0px hsla(0, 0%, 0%, 0.5);
+	margin: 40px auto;
+	box-shadow: 0px 20px 40px 1px hsla(0, 0%, 0%, 0.3);
 	border-radius: 5px;
 }
+
+/* 使图片去掉阴影 */
+
+img[alt="no-shadow"] {
+	box-shadow: none !important;
+}
+
 
 /* 脚注样式 脚注内的文字颜色应当较原字稍淡 */
 
@@ -733,9 +720,7 @@ table {
 }
 
 #write table th,
-#write-table th,
-#write table thead th,
-#write-table thead th {
+#write table thead th{
 	background: var(--thead-bg);
 	padding: .5rem 1rem;
 }
@@ -831,8 +816,6 @@ table {
 		border-radius: 5px;
 	}
 }
-
-
 
 @media screen and (min-width: 1100px) {
 
@@ -1080,6 +1063,13 @@ p.mathjax-block,
 	--active-bg: hsl(0, 0%, 95%);
 }
 
+/* 语法标记样式 */
+
+.md-meta.md-before,.md-meta.md-after{
+	padding-left: 0.2rem;
+	padding-right: 0.2rem;
+}
+
 /* 侧边栏文档大纲tab标签 激活 */
 
 .info-panel-tab:hover {
@@ -1301,8 +1291,8 @@ footer.stopselect.ty-footer {
 }
 
 /* animation */
-
-td,
+#write td,
+#megamenu-content td,
 .file-list-item,
 .megamenu-menu li,
 .btn,
@@ -1311,7 +1301,8 @@ td,
 	overflow: hidden;
 }
 
-td:after,
+#write td:after,
+#megamenu-content td:after,
 .file-list-item:after,
 .megamenu-menu li:after,
 .btn:after,
@@ -1332,7 +1323,8 @@ td:after,
 	transition: transform .3s, opacity .5s;
 }
 
-td:active:after,
+#write td:active:after,
+#megamenu-content td:active:after,
 .file-list-item:active:after,
 .megamenu-menu li:active:after,
 .btn:active:after,

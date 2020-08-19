@@ -1,14 +1,14 @@
 # Markdown 语法测试
 
-以下内容都是参考自 [Markdown Syntax](http://markdown.tw)项目。
+按照顺序，首先应该知道的是如何插入**目录**。
 
 接下来的内容将向您展示如何使用 `markdown` 语法以及其结果样式。
 
-按照顺序，首先应该知道的是如何插入**目录**。
+以下内容都是参考自 [Markdown Syntax](http://markdown.tw)项目。
 
 ## 向 `markdown` 内插入目录
 
-只需要在你想插入目录的地方输入 `[toc]` 即可。下面是本文的目录。
+只需要在你想插入目录的地方输入 `[toc]`，即可。下面是本文的目录。
 
 > [toc]
 
@@ -16,14 +16,16 @@
 
 ```markdown
 目录
-[如何输入标题][#节一]
+[特殊符号](#special)
 
 
-标题
-# <a id="节一">如何输入标题</a>
+标题三
+### <span id="special">特殊符号</span>
 ```
 
-## <a id="节一">如何输入标题</a>
+点击这个链接，将跳转到本页的[特殊符号](#special)一节（诸多编辑器可能并没有支持这一功能，将文件导出为 `HTML` 即可跳转）。
+
+## 如何输入标题
 
 标题的输入有两种方式，可以通过使用 `=`、`#` 来标记标题。例如，如果你想输入一个一级标题，在你输入标题之前，先输入一个 `#` + **空格** 即可。如果是二级标题，那么就输入两个 `#`。当然，`markdown` 可以支持的输入层级是有限制的。用 `#` 来标记的话，一般只能输入到六级标题。如果你想使用 `=` 来标记的话，只支持两级。下面是使用 `=` 来标记标题的示例。
 
@@ -33,7 +35,14 @@
 
 二级标题
 --------
+
+# 一级标题
+### 三级标题
 ```
+
+> # 示例一级标题
+>
+> ### 示例三级标题
 
 ## 如何输入段落
 
@@ -53,17 +62,20 @@
 
 + 加粗。在想要加粗的文字前后各输入两个 `*` 或者`_` 即可加粗。
 + 强调。在想要强调的文字前后各输入一个 `*` 或者`_` 即可强调。
-+ 高亮。在想要强调的文字前后各输入两个 `=`  即可高亮。
++ 高亮。在想要高亮的文字前后各输入两个 `=`  即可高亮。
++ 下划线。在想要下划的文字前后输入 `<u></u>` 即可添加下划线。
++ 删除线。在想要删除的文字前后各输入两个 `~`  即可添加删除线。
++ 上标和下标。在 `^^` 输入想要上标的文字。在 `~~` 输入想要下标的文字。 
 
 示例：
 
 ```markdown
-**加粗**、*强调*、==高亮==
+**加粗**、*强调*、==高亮==、<u>下划线</u>、~~删除~~、H~2~O、Autumnus^TM^
 ```
 
 这是标记后的效果：
 
-> **加粗**、*强调*、==高亮==
+> **加粗**、*强调*、==高亮==、<u>下划线</u>、~~删除~~、H~2~O、Autumnus^TM^
 
 ## 如何输入列表、代办事项
 
@@ -115,22 +127,21 @@
     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
 ```
 
-1. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+> 1. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+>
+>    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+>    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+>
+> 2. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+>
+>    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+>    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
 
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+代办事项的输入标记是 `- [ ] `。注意，在右方括号后和短横线后各有一个空格。
+待办事项完成后的输入标记是 `- [×] `。同样的右方括号后和短横线后各有一个空格。
 
-2. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-    
-    代办事项的输入标记是 `- [ ] `。注意，在右方括号后和短横线后各有一个空格。
-    
-    待办事项完成后的输入标记是 `- [×] `。同样的右方括号后和短横线后各有一个空格。
-    
-    - [ ] 代办
-    - [x] 代办完成
+> - [ ] 代办
+> - [x] 代办完成
 
 ## 如何输入链接、图片、链接文件
 
@@ -230,6 +241,16 @@
 
 你既可以只在第一行开头处加入一个  `>` 来标记引用，也可以在每一行之前都加入一个。这两者的结果是一样的。
 
+### 脚注
+
+和标记链接的方式相似。使用`[^辨识脚注的文字]`来在想要标注的地方标注。使用 `[^辨识脚注的文字]: 脚注内容`来说明脚注内容。需要注意的是，冒号后面有一个空格。
+
+正文正文正文[^1]
+
+
+
+[^1]: 脚注脚注。
+
 ### 代码和代码块
 
 在 \`（代码）\` 之中可以输入行内代码，在 \`\`\`（代码）\`\`\` 之中可以输入代码块。
@@ -268,7 +289,7 @@
 
 ***
 
-### 特殊符号
+### <span id="special">特殊符号</span>
 
 在 `markdown` 文档中，所有的星号、减号、加号、井号等等，都可能会被渲染成相对应的格式，如果你想要单纯的输入这个符号，只需要在相应的符号前面输入一个反斜杠 `\` 即可。
 
