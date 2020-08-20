@@ -30,7 +30,7 @@
 	--text-color: hsl(0, 0%, 20%);
 	/* 默认字体颜色：正文等 */
 	--title-color: hsl(0, 0%, 5%);
-	/* 强调颜色：标题；加强等 */
+	/* 强调颜色：标题;加强等 */
 	--link-color: hsl(0, 100%, 75%);
 	/* 超链接字体色 */
 	--mark-color: hsl(0, 0%, 100%);
@@ -49,7 +49,7 @@
 	/*change color of meta contents like image text or link address in markdown */
 
 	--link-hover: hsl(0, 100%, 65%);
-	/* 默认hover色：划过小标题；链接时的颜色 */
+	/* 默认hover色：划过小标题;链接时的颜色 */
 	--thead-hover: hsl(0, 0%, 99%);
 	/* 表格hover色：表头 */
 	--tbody-hover: hsl(0, 0%, 99%);
@@ -83,7 +83,7 @@ html {
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 	text-rendering: optimizelegibility;
-	-webkit-font-smoothing: initial；
+	-webkit-font-smoothing: initial;
 }
 
 html,
@@ -720,7 +720,7 @@ table {
 }
 
 #write table th,
-#write table thead th{
+#write table thead th {
 	background: var(--thead-bg);
 	padding: .5rem 1rem;
 }
@@ -1065,7 +1065,8 @@ p.mathjax-block,
 
 /* 语法标记样式 */
 
-.md-meta.md-before,.md-meta.md-after{
+.md-meta.md-before,
+.md-meta.md-after {
 	padding-left: 0.2rem;
 	padding-right: 0.2rem;
 }
@@ -1102,57 +1103,58 @@ p.mathjax-block,
 /* 大纲目录自动编号 */
 
 .sidebar-content {
-	counter-reset: h1
+
+	counter-reset: h1;
 }
 
 .outline-h1 {
-	counter-reset: h2
+	counter-increment: h1;
+	counter-reset: h2;
 }
 
 .outline-h2 {
-	counter-reset: h3
+	counter-increment: h2;
+	counter-reset: h3;
 }
 
 .outline-h3 {
-	counter-reset: h4
+	counter-increment: h3;
+	counter-reset: h4;
 }
 
 .outline-h4 {
-	counter-reset: h5
+	counter-increment: h4;
+	counter-reset: h5;
 }
 
 .outline-h5 {
-	counter-reset: h6
+	counter-increment: h5;
+	counter-reset: h6;
 }
 
 .outline-h1>.outline-item>.outline-label:before {
-	counter-increment: h1;
-	content: "章"counter(h1) " "
+	content: "章"counter(h1) " ";
 }
 
 .outline-h2>.outline-item>.outline-label:before {
-	counter-increment: h2;
-	content: "节"counter(h2) " "
+	content: "节"counter(h2) " ";
 }
 
 .outline-h3>.outline-item>.outline-label:before {
-	counter-increment: h3;
-	content: counter(h3) " "
+	content: counter(h3) " ";
 }
 
 .outline-h4>.outline-item>.outline-label:before {
-	counter-increment: h4;
-	content: counter(h3) "."counter(h4) " "
+	content: counter(h3) "."counter(h4) " ";
 }
 
 .outline-h5>.outline-item>.outline-label:before {
-	counter-increment: h5;
-	content: counter(h3) "."counter(h4) "."counter(h5) " "
+	content: counter(h3) "."counter(h4) "."counter(h5) " ";
 }
 
 .outline-h6>.outline-item>.outline-label:before {
 	counter-increment: h6;
-	content: counter(h3) "."counter(h4) "."counter(h5) "."counter(h6) " "
+	content: counter(h3) "."counter(h4) "."counter(h5) "."counter(h6) " ";
 }
 
 /* 书写区右键菜单 */
