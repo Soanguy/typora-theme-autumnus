@@ -236,145 +236,8 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
 蓝色：hsl(215,100%,65%)
 */
 
-/* 注释掉下面的代码以启用 Fleunt */
-/* 
 :root {
-	--write-bg: transparent !important;
-	--codeb-bg: #f8f8f880 !important;
-	--quota-bg: #f8f8f880 !important;
-	--thead-bg: #f0f0f080 !important;
-	--tbody-bg: #f8f8f880 !important;
-}
-
-
-content {
-	background-color: var(--write-bg);
-	min-width: 640px;
-	background: url(file:///C://Users//Autumnus//AppData//Roaming//Typora/themes/Fluent/2.png);
-	background-size: cover;
-}
-
-
-
-#write {
-	width: 100%;
-	background: transparent!important;
-	font-size: 18px!important;
-}
-
-#write:after {
-	content: "";
-	background: rgba(221, 221, 221, 0.5);
-	backdrop-filter: saturate(180%) blur(20px);
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	z-index: -99;
-	min-height: 100%;
-	border-radius: 5px;
-}
-
-.md-toc {
-	background: #f0f0f080;
-	padding: 1rem;
-	margin: 1rem -3.4rem;
-	border-radius: 0;
-	border-left: 4px solid #fb5555;
-	border-right: 4px solid #fb5555;
-}
-
-#write div.md-toc-tooltip {
-	left: 0em;
-}
-
-#write h3::before,
-#write h4::before,
-#write h5::before,
-#write h6::before {
-	background: var(--quota-bg) !important;
-	color: var(--text-color) !important;
-}
-
-#write .md-fences * {
-	background: transparent !important;
-}
-
-#write .code-tooltip:after {
-	content: "";
-	width: 180px;
-	background: hsl(0, 100%, 99%);
-	height: 25px;
-	display: block;
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	border-radius: 5px;
-	z-index: -1;
-}
-
-blockquote blockquote {
-	background: transparent !important;
-}
-
-.footnotes,
-.footnotes em,
-.footnotes strong {
-	color: var(--text-color) !important;
-}
-
-#footer-word-count-info,
-#spell-check-panel {
-	background: var(--bg-color) !important;
-}
-
-@media screen and (max-width: 1300px) {
-	footer.ty-footer {
-		background: #fff !important;
-	}
-}
-
-@media screen and (min-width: 1300px) {
-
-	#write {
-		box-shadow: none !important;
-	}
-
-	div.footer-item {
-		background: var(--bg-color);
-	}
-
-}
-
-@media print {
-	#write {
-		background-color: #f0f0f0;
-		box-shadow: 0px 0px 0px 0px transparent;
-		border-radius: 0px;
-	}
-}
-
-#top-titlebar,
-#top-titlebar * {
-	background-color: var(--bg-color);
-}
-
-footer.ty-footer {
-	background: var(--bg-color);
-}
-
-#footer-word-count-info.dropdown-menu {
-	background: var(--bg-color);
-} */
-
-:root {
-	--window-border: 1px solid hsl(0, 0%, 95%);
-	/*border for sidebar, etc*/
-	--monospace: 'sarasa term sc';
-	/*monospace font for codes, fences*/
 	--bg-color: hsl(0, 0%, 100%);
-	/*change background*/
 	--write-bg: hsl(0, 0%, 100%);
 	/* 写作背景色 */
 	--link-bg: transparent;
@@ -383,24 +246,25 @@ footer.ty-footer {
 	/* 高亮背景色 */
 	--code-bg: hsl(0, 0%, 90%);
 	/* 代码背景色 */
-	--codeb-bg: hsl(0, 0%, 95%);
+	--codeb-bg: hsl(0, 0%, 96%);
 	/* 代码块背景色 */
 	--quota-bg: hsl(0, 0%, 95%);
 	/* 引用背景色 */
 	--thead-bg: hsl(0, 0%, 90%);
 	/* 表格表头背景色 */
-	--tbody-bg: hsl(0, 0%, 95%);
+	--tbody-bg: hsl(0, 0%, 96%);
 	/* 表格表体背景色 */
 
 	--text-color: hsl(0, 0%, 20%);
 	/* 默认字体颜色：正文等 */
 	--title-color: hsl(0, 0%, 5%);
-	/* 强调颜色：标题；加强等 */
-	--link-color: hsl(215, 100%, 65%);
+	/* 强调颜色：标题;加强等 */
+	--link-color: hsl(0, 100%, 75%);
 	/* 超链接字体色 */
 	--mark-color: hsl(0, 0%, 100%);
 	/* 高亮字体色 */
 	--code-color: hsl(0, 0%, 20%);
+	--codeb-color: hsl(0, 0%, 50%);
 	/* 代码字体色 */
 	--quota-color: hsl(0, 0%, 35%);
 	/* 引用字体色 */
@@ -413,12 +277,17 @@ footer.ty-footer {
 	/*change color of meta contents like image text or link address in markdown */
 
 	--link-hover: hsl(0, 100%, 65%);
-	/* 默认hover色：划过小标题；链接时的颜色 */
+	/* 默认hover色：划过小标题;链接时的颜色 */
 	--thead-hover: hsl(0, 0%, 99%);
 	/* 表格hover色：表头 */
 	--tbody-hover: hsl(0, 0%, 99%);
 	/* 表格hover色：表体 */
 
+	--window-border: 1px solid hsl(0, 0%, 95%);
+	--base-border: 1px solid hsl(0, 100%, 65%);
+	--base-borderl: 4px solid hsl(0, 100%, 65%);
+	--base-borderb: 1px dashed hsl(0, 100%, 65%);
+	--opt-borderb: 1px dashed hsl(215, 100%, 65%);
 
 	/* 字体样式援引自 font.css */
 	--base-font: -apple-system, "Noto Sans CJK SC", "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
@@ -427,11 +296,9 @@ footer.ty-footer {
 
 	--em-font: Georgia, "Noto Serif CJK SC", "Nimbus Roman No9 L", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
 
-	--quota-font: "Noto Serif CJK SC", Georgia, "Nimbus Roman No9 L", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+	/* --quota-font: "Noto Serif CJK SC", Georgia, "Nimbus Roman No9 L", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif; */
 
-	/* 注释掉下面的代码来使 引用 使用楷体显示 */
-
-	/* --quota-font: '仓耳今楷05-6763', Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif; */
+	--quota-font: Baskerville, Georgia, "Liberation Serif", '仓耳今楷05-6763', "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
 
 	--code-font: "Sarasa Term SC", Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono", Courier;
 }
@@ -444,7 +311,7 @@ html {
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 	text-rendering: optimizelegibility;
-	-webkit-font-smoothing: initial；
+	-webkit-font-smoothing: initial;
 }
 
 html,
@@ -453,8 +320,8 @@ body,
 	font-family: var(--base-font);
 	font-weight: 400;
 	font-size: 16px;
-	font-size: 1em;
-	line-height: 1.75rem;
+	font-size: 1rem;
+	line-height: 2rem;
 	background: var(--write-bg);
 	color: var(--text-color);
 }
@@ -475,15 +342,15 @@ content {
 /* 目录自动编号 */
 
 .md-toc {
-	font-size: 1em;
+	font-size: 1rem;
 	line-height: 1.5rem;
 	display: table;
-	margin: 2rem 4rem 2rem;
+	margin: auto;
 }
 
 .md-toc::before {
 	content: "Contents";
-	font-size: 2em;
+	font-size: 2rem;
 	text-align: center;
 	display: block;
 	margin: 2rem auto;
@@ -516,7 +383,7 @@ content {
 	margin-left: 4rem;
 }
 
-.md-toc-item a {
+.md-toc-item .md-toc-inner {
 	text-decoration: none;
 	color: var(--text-color);
 	border-bottom: none !important;
@@ -539,7 +406,6 @@ content {
 
 .md-toc-h1 {
 	font: 600 1.25em var(--title-font);
-
 	counter-increment: counter_md-toc-h1;
 	counter-reset: counter_md-toc-h2;
 }
@@ -605,8 +471,9 @@ content {
 	vertical-align: baseline;
 }
 
-.md-toc-h1:before, .md-toc-h2::before {
-    text-align-last: justify;
+.md-toc-h1:before,
+.md-toc-h2::before {
+	text-align-last: justify;
 }
 
 .md-toc-h3::before,
@@ -732,18 +599,21 @@ h6 {
 	color: var(--title-color);
 }
 
+/* 使标题下所有的元素显示为标题样式 */
 #write h1 *,
 #write h2 *,
 #write h3 *,
 #write h4 *,
 #write h5 *,
 #write h6 * {
+	color: var(--title-color) !important;
 	text-decoration: none !important;
 	border-bottom: none !important;
 }
 
+/* 让每一级标题更加明显，添加标注 */
 #write h1 {
-	font-size: 3em;
+	font-size: 3rem;
 	margin-top: 6rem;
 	margin-bottom: 4rem;
 }
@@ -759,12 +629,12 @@ h6 {
 
 #write h1::before {
 	top: -1.5rem;
-	border-bottom: 1px dashed var(--link-color);
+	border-bottom: var(--opt-borderb);
 }
 
 #write h1::after {
 	top: 1.5rem;
-	border-bottom: 1px dashed var(--link-hover);
+	border-bottom: var(--base-borderb);
 }
 
 #write h1,
@@ -777,22 +647,22 @@ h6 {
 }
 
 #write h2 {
-	font-size: 2em;
+	font-size: 2rem;
 	margin: 2rem auto;
 	margin-bottom: 3rem;
 }
 
 #write h3 {
-	font-size: 1.75em;
+	font-size: 1.75rem;
 }
 
 #write h4 {
-	font-size: 1.5em;
+	font-size: 1.5rem;
 }
 
 #write h5,
 #write h6 {
-	font-size: 1.25em;
+	font-size: 1.25rem;
 }
 
 #write h3,
@@ -801,7 +671,6 @@ h6 {
 #write h6 {
 	font-family: var(--base-font);
 	font-weight: 600;
-	line-height: 2rem;
 	margin: 1.5rem 0;
 }
 
@@ -809,7 +678,7 @@ h6 {
 #write h4::before,
 #write h5::before,
 #write h6::before {
-	font-size: 14px !important;
+	font-size: .9rem !important;
 	vertical-align: bottom;
 	margin-right: .5rem;
 	padding: 2px;
@@ -834,39 +703,24 @@ h6 {
 	content: "H6";
 }
 
-#write h1 a,
-#write h2 a,
-#write h3 a,
-#write h4 a,
-#write h5 a,
-#write h6 a {
-	color: var(--title-color);
-}
-
 p {
-	line-height: 1.75rem;
 	margin-bottom: 1rem;
 }
 
 /* 超链接样式 */
 
 a,
-.md-def-url {
+ins {
 	color: var(--link-color);
 	text-decoration: none;
 }
 
-ins,
-a {
-	text-decoration: none;
-}
-
 #write a {
-	border-bottom: 1px solid var(--link-color);
+	border-bottom: var(--base-borderb);
 }
 
 #write a:hover {
-	border-bottom-color: var(--link-hover);
+	border-bottom-color: var(--link-color);
 	color: var(--link-hover);
 	text-decoration: none;
 }
@@ -875,18 +729,13 @@ a {
 
 #write strong,
 #write em {
-	font-family: var(--base-font);
+	font-family: var(--em-font);
 	font-weight: 800 !important;
 	color: var(--title-color);
 }
 
 #write em {
-	font-family: var(--em-font);
 	text-decoration: underline dotted;
-}
-
-#write blockquote {
-	font-family: var(--quota-font);
 }
 
 /* mark style */
@@ -894,68 +743,73 @@ a {
 mark {
 	margin: 0 5px;
 	color: var(--mark-color);
-	padding: 2px 4px;
+	padding: 1px 4px;
 	border-radius: 5px;
 	background-color: var(--mark-bg);
 }
 
 /* code style */
 
+/* yaml style */
 #write pre.md-meta-block {
 	min-height: 30px;
 	background: var(--codeb-bg);
-	color: #999;
+	color: var(--codeb-color);
 	font-weight: 300;
-	font-size: 1em;
 	position: sticky;
 	padding: 1.5rem;
 	margin-top: -1.5rem;
 	margin-bottom: 2rem;
 	border-radius: 5px;
-	line-height: 1.25rem;
+	line-height: 1.5rem;
 }
 
-.CodeMirror pre,
-pre,
-code,
-pre tt,
-.md-fences {
-	font-family: var(--code-font);
-	font-size: 1em;
-	line-height: 1rem;
-	padding: 2px 4px;
-	border-radius: 5px;
-	background-color: var(--codeb-bg);
-	line-height: 1rem;
-}
 
-code {
-	background-color: var(--code-bg);
-}
+/* code & codeblock style */
 
-#write .md-fences {
-	border: 1px solid #f0f0f0;
+/* codeblock */
+#write pre.md-fences {
+	border: 1px solid var(--codeb-bg);
 	margin: 2rem auto;
 	padding: 1rem 0.5rem;
 	display: block;
 	-webkit-overflow-scrolling: touch;
 }
 
+pre,
+code,
+pre tt,
+.md-fences,
+.CodeMirror pre {
+	font-family: var(--code-font);
+	line-height: 1.5rem;
+	padding: 2px 4px;
+	border-radius: 5px;
+	background-color: var(--codeb-bg);
+}
+
+/* code style */
+code {
+	background-color: var(--code-bg);
+}
+
+kbd,
+samp,
+tt,
+var {
+	font-family: var(--code-font);
+}
+
 /* 代码块下的标题颜色过深。修改为浅蓝 */
 .cm-s-inner .cm-header,
 .cm-s-inner.cm-header {
-	color: hsl(215, 100%, 55%);
+	color: hsl(215, 100%, 75%);
 }
 
 /* 列表样式 */
 ul,
 ol {
 	margin: 1.5rem auto;
-}
-
-ul ol,
-ol ul {
-	margin: .75rem auto;
 }
 
 #write ul {
@@ -978,17 +832,14 @@ ol ul {
 #write li ol,
 #write ul ul,
 #write ol ol {
-	margin-bottom: 0.8rem;
 	margin-left: 1rem;
 }
+
+/* todo list */
 
 .task-list {
 	list-style: none !important;
 	padding-left: 0;
-}
-
-.task-list-item {
-	padding-left: 2.125rem;
 }
 
 .task-list-item input {
@@ -1008,23 +859,42 @@ ol ul {
 
 /* 块/段落引用 */
 
-blockquote p {
-	color: var(--quota-color);
-	line-height: 1.75rem;
-}
-
 blockquote {
 	background: var(--quota-bg);
 	margin: 2rem -3.8rem;
 	padding: 2rem 6rem;
+	font-size: 1.2rem;
 }
 
 blockquote blockquote {
 	padding: 0;
 	margin: 0;
 	padding-left: 2rem;
-	border-left: 4px solid #ff4d4d;
-	font-size: inherit;
+	border-left: var(--base-borderl);
+}
+
+blockquote,
+blockquote p {
+	font-family: var(--quota-font);
+}
+
+blockquote p {
+	color: var(--quota-color);
+	line-height: 1.75rem;
+}
+
+/* 统一引用下其他元素的样式 */
+
+blockquote h1,
+blockquote h2,
+blockquote h3,
+blockquote h4,
+blockquote h5,
+blockquote h6,
+blockquote em,
+blockquote strong,
+blockquote code {
+	font-family: var(--quota-font) !important;
 }
 
 /* 一致化 horizontal rule */
@@ -1038,18 +908,31 @@ hr {
 /* img */
 
 #write img {
-	box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, .2), 2px 4px 5px 0px hsla(0, 0%, 0%, 0.5);
+	margin: 40px auto;
+	box-shadow: 0px 20px 40px 1px hsla(0, 0%, 0%, 0.3);
 	border-radius: 5px;
 }
+
+/* 使图片去掉阴影 */
+img[alt="no-shadow"] {
+	box-shadow: none !important;
+}
+
+/* 使图片去掉所有效果 */
+img[alt="normal"] {
+	margin: 0 !important;
+	box-shadow: none !important;
+}
+
 
 /* 脚注样式 脚注内的文字颜色应当较原字稍淡 */
 
 sup.md-footnote {
 	padding: 2px;
-	background-color: hsla(0, 100%, 85%, 1);
+	background-color: hsla(0, 100%, 85%);
 	color: #555;
 	cursor: pointer;
-	font-size: .75em;
+	font-size: .75rem;
 }
 
 .footnotes,
@@ -1070,9 +953,7 @@ table {
 }
 
 #write table th,
-#write-table th,
-#write table thead th,
-#write-table thead th {
+#write table thead th {
 	background: var(--thead-bg);
 	padding: .5rem 1rem;
 }
@@ -1083,7 +964,7 @@ table {
 
 #write table td {
 	background-color: var(--tbody-bg);
-	border: 1px solid #f0f0f0;
+	border: 1px solid var(--thead-bg);
 	padding: 0.5rem 1rem;
 	color: var(--text-color);
 }
@@ -1116,12 +997,12 @@ table {
 /* 不同的宽度的设备上的字数统计样式 */
 @media screen and (max-width: 600px) {
 	#write {
-		margin: 1rem 2rem;
 		padding: 2rem 1rem;
 	}
 
 	.md-toc {
 		padding: 0;
+		margin: auto;
 	}
 
 	blockquote {
@@ -1168,8 +1049,6 @@ table {
 		border-radius: 5px;
 	}
 }
-
-
 
 @media screen and (min-width: 1100px) {
 
@@ -1227,7 +1106,7 @@ table {
 		padding: 40px 60px;
 		background: var(--write-bg);
 		margin: 3rem auto 3rem;
-		border: 1px solid #ddd;
+		border: 1px solid hsl(0, 0%, 87%);
 		border-width: 0 1px;
 		border-radius: 5px;
 	}
@@ -1270,6 +1149,7 @@ table {
 		page-break-before: always;
 	}
 
+	#write h1:before,
 	#write h1:after {
 		border: none;
 		height: 0;
@@ -1299,14 +1179,14 @@ table {
 		padding: 1.5rem;
 		background: var(--quota-bg);
 		border: 0px solid transparent;
-		border: 2px dotted #ff4d4d;
+		border: 2px dotted hsl(0, 100%, 65%);
 		border-radius: 5px;
 	}
 
 	blockquote blockquote {
 		border-radius: 0px;
 		border: 0px solid transparent;
-		border-left: 4px solid #ff4d4d;
+		border-left: 4px solid hsl(0, 100%, 65%);
 	}
 
 	.typora-export * {
@@ -1317,7 +1197,7 @@ table {
 
 
 .MathJax_Display {
-	font-size: 0.9em;
+	font-size: 0.9rem;
 	margin-top: 0.5rem;
 	margin-bottom: 0;
 }
@@ -1349,7 +1229,7 @@ p.mathjax-block,
 
 #typora-source {
 	background: var(--bg-color);
-	color: #555;
+	color: var(--code-color);
 	font-family: var(--code-font);
 }
 
@@ -1376,11 +1256,11 @@ p.mathjax-block,
 }
 
 #md-searchpanel {
-	border-bottom: 1px solid #ccc;
+	border-bottom: var(--base-borderb);
 }
 
 #md-searchpanel .btn {
-	border: 1px solid #ccc;
+	border: var(--base-border);
 }
 
 #md-notification:before {
@@ -1388,7 +1268,7 @@ p.mathjax-block,
 }
 
 #md-notification {
-	background: hsl(0, 0%, 95%);
+	background: var(--code-bg);
 }
 
 /* 侧边栏 文件概览和大纲列表 */
@@ -1413,6 +1293,15 @@ p.mathjax-block,
 
 	--select-text-bg-color: hsl(0, 100%, 75%);
 	--select-text-font-color: hsl(0, 0%, 100%);
+	--active-bg: hsl(0, 0%, 95%);
+}
+
+/* 语法标记样式 */
+
+.md-meta.md-before,
+.md-meta.md-after {
+	padding-left: 0.2rem;
+	padding-right: 0.2rem;
 }
 
 /* 侧边栏文档大纲tab标签 激活 */
@@ -1447,64 +1336,65 @@ p.mathjax-block,
 /* 大纲目录自动编号 */
 
 .sidebar-content {
-	counter-reset: h1
+
+	counter-reset: h1;
 }
 
 .outline-h1 {
-	counter-reset: h2
+	counter-increment: h1;
+	counter-reset: h2;
 }
 
 .outline-h2 {
-	counter-reset: h3
+	counter-increment: h2;
+	counter-reset: h3;
 }
 
 .outline-h3 {
-	counter-reset: h4
+	counter-increment: h3;
+	counter-reset: h4;
 }
 
 .outline-h4 {
-	counter-reset: h5
+	counter-increment: h4;
+	counter-reset: h5;
 }
 
 .outline-h5 {
-	counter-reset: h6
+	counter-increment: h5;
+	counter-reset: h6;
 }
 
 .outline-h1>.outline-item>.outline-label:before {
-	counter-increment: h1;
-	content: "章"counter(h1) " "
+	content: "章"counter(h1) " ";
 }
 
 .outline-h2>.outline-item>.outline-label:before {
-	counter-increment: h2;
-	content: "节"counter(h2) " "
+	content: "节"counter(h2) " ";
 }
 
 .outline-h3>.outline-item>.outline-label:before {
-	counter-increment: h3;
-	content: counter(h3) " "
+	content: counter(h3) " ";
 }
 
 .outline-h4>.outline-item>.outline-label:before {
-	counter-increment: h4;
-	content: counter(h3) "."counter(h4) " "
+	content: counter(h3) "."counter(h4) " ";
 }
 
 .outline-h5>.outline-item>.outline-label:before {
-	counter-increment: h5;
-	content: counter(h3) "."counter(h4) "."counter(h5) " "
+	content: counter(h3) "."counter(h4) "."counter(h5) " ";
 }
 
 .outline-h6>.outline-item>.outline-label:before {
 	counter-increment: h6;
-	content: counter(h3) "."counter(h4) "."counter(h5) "."counter(h6) " "
+	content: counter(h3) "."counter(h4) "."counter(h5) "."counter(h6) " ";
 }
 
 /* 书写区右键菜单 */
 /* control-menu */
 
 .context-menu.dropdown-menu>li>a:focus {
-	background-color: #f0f0f0;
+	background-color: var(--active-bg);
 }
 
 .context-menu.dropdown-menu>.active>a,
@@ -1528,7 +1418,7 @@ p.mathjax-block,
 /* 侧边栏item激活 */
 .megamenu-menu-list:not(.saved) li a:hover,
 .megamenu-menu-list li a.active {
-	background-color: #f0f0f0;
+	background-color: var(--active-bg);
 	color: var(--primary-color);
 	display: block !important;
 }
@@ -1543,7 +1433,7 @@ p.mathjax-block,
 }
 
 a.menu-style-btn:hover {
-	background: #f0f0f0;
+	background: var(--active-bg);
 }
 
 /* 标题 */
@@ -1559,17 +1449,17 @@ a.menu-style-btn:hover {
 }
 
 .megamenu-menu-panel .btn {
-	border: 1px solid #ccc;
+	border: var(--base-border);
 }
 
 /* 最近文档 */
 
 .megamenu-menu-panel table tr {
-	background: #f8f8f8;
+	background: hsl(0, 0%, 99%);
 }
 
 #recent-file-panel tbody tr:nth-child(2n-1) {
-	background-color: #f0f0f0;
+	background-color: hsl(0, 0%, 95%);
 }
 
 .megamenu-menu-panel tr:hover,
@@ -1604,6 +1494,10 @@ a.menu-style-btn:hover {
 
 /* 关于页 */
 
+table#typora-help-md-table tr {
+	background: transparent;
+}
+
 /* fix */
 .about-content-meta {
 	font-family: var(--title-font);
@@ -1631,13 +1525,55 @@ footer.stopselect.ty-footer {
 	right: 0;
 }
 
+/* animation */
+#write td,
+#megamenu-content td,
+.file-list-item,
+.megamenu-menu li,
+.btn,
+.long-btn {
+	position: relative;
+	overflow: hidden;
+}
+
+#write td:after,
+#megamenu-content td:after,
+.file-list-item:after,
+.megamenu-menu li:after,
+.btn:after,
+.long-btn:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	background-image: radial-gradient(circle, #666 10%, transparent 10.01%);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	transform: scale(10, 10);
+	opacity: 0;
+	transition: transform .3s, opacity .5s;
+}
+
+#write td:active:after,
+#megamenu-content td:active:after,
+.file-list-item:active:after,
+.megamenu-menu li:active:after,
+.btn:active:after,
+.long-btn:active:after {
+	transform: scale(0, 0);
+	opacity: .3;
+	transition: 0s;
+}
+
 
 </style>
 </head>
 <body class='typora-export os-windows' >
-<div  id='write'  class = 'is-node'><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n3"><a class="md-toc-inner" href="#英文预览">英文预览</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n4"><a class="md-toc-inner" href="#heading-2">Heading 2</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n7"><a class="md-toc-inner" href="#heading-3">Heading 3</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n8"><a class="md-toc-inner" href="#heading-4">Heading 4</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n9"><a class="md-toc-inner" href="#heading-5">Heading 5</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n10"><a class="md-toc-inner" href="#heading-6">Heading 6</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n19"><a class="md-toc-inner" href="#中文预览">中文预览</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n20"><a class="md-toc-inner" href="#二级目录">二级目录</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n67"><a class="md-toc-inner" href="#二级目录-n67">二级目录</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n68"><a class="md-toc-inner" href="#三级目录">三级目录</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n69"><a class="md-toc-inner" href="#四级目录">四级目录</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n70"><a class="md-toc-inner" href="#二级目录-n70">二级目录</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n71"><a class="md-toc-inner" href="#三级目录-n71">三级目录</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n72"><a class="md-toc-inner" href="#四级目录-n72">四级目录</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n73"><a class="md-toc-inner" href="#四级目录-n73">四级目录</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n74"><a class="md-toc-inner" href="#四级目录-n74">四级目录</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n75"><a class="md-toc-inner" href="#五级目录">五级目录</a></span></p></div><h1><a name="英文预览" class="md-header-anchor"></a><span>英文预览</span></h1><h2><a name="heading-2" class="md-header-anchor"></a><span>Heading 2</span></h2><p><span>In </span><a href='https://www.wikiwand.com/en/Publishing'><span>publishing</span></a><span> and </span><a href='https://www.wikiwand.com/en/Graphic_design'><span>graphic design</span></a><span>, </span><strong><span>lorem ipsum</span></strong><span> (</span><del><span>is</span></del><span> derived from Latin </span><em><span>dolorem psum</span></em><span>, translated as &quot;</span><u><span>pain itself</span></u><span>&quot;) is a </span><a href='https://www.wikiwand.com/en/Filler_text'><span>filler text</span></a><span> commonly used to demonstrate the graphic elements of a document or visual </span><mark><span>presentation</span></mark><span>. </span><sup class='md-footnote'><a href='#dfref-footnote-1' name='ref-footnote-1'>1</a></sup></p><p><span>In </span><a href='https://www.wikiwand.com/en/Publishing'><span>publishing</span></a><span> and </span><a href='https://www.wikiwand.com/en/Graphic_design'><span>graphic design</span></a><span>, </span><strong><span>lorem ipsum</span></strong><span> (</span><del><span>is</span></del><span> derived from Latin </span><em><span>dolorem ipsum</span></em><span>, translated as &quot;</span><u><span>pain itself</span></u><span>&quot;) is a </span><a href='https://www.wikiwand.com/en/Filler_text'><span>filler text</span></a><span> commonly used to demonstrate the graphic elements of a document or visual </span><mark><span>presentation</span></mark><span>. </span><sup class='md-footnote'><a href='#dfref-footnote-2' name='ref-footnote-2'>2</a></sup></p><h3><a name="heading-3" class="md-header-anchor"></a><span>Heading 3</span></h3><h4><a name="heading-4" class="md-header-anchor"></a><span>Heading 4</span></h4><h5><a name="heading-5" class="md-header-anchor"></a><span>Heading 5</span></h5><h6><a name="heading-6" class="md-header-anchor"></a><span>Heading 6</span></h6><p><span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.46ex" height="2.413ex" viewBox="0 -767.1 2781.3 1039.1" role="img" focusable="false" style="vertical-align: -0.632ex;"><defs><path stroke-width="0" id="E3-MJMATHI-4C" d="M228 637Q194 637 192 641Q191 643 191 649Q191 673 202 682Q204 683 217 683Q271 680 344 680Q485 680 506 683H518Q524 677 524 674T522 656Q517 641 513 637H475Q406 636 394 628Q387 624 380 600T313 336Q297 271 279 198T252 88L243 52Q243 48 252 48T311 46H328Q360 46 379 47T428 54T478 72T522 106T564 161Q580 191 594 228T611 270Q616 273 628 273H641Q647 264 647 262T627 203T583 83T557 9Q555 4 553 3T537 0T494 -1Q483 -1 418 -1T294 0H116Q32 0 32 10Q32 17 34 24Q39 43 44 45Q48 46 59 46H65Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Q285 635 228 637Z"></path><path stroke-width="0" id="E3-MJMATHI-41" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path><path stroke-width="0" id="E3-MJMATHI-54" d="M40 437Q21 437 21 445Q21 450 37 501T71 602L88 651Q93 669 101 677H569H659Q691 677 697 676T704 667Q704 661 687 553T668 444Q668 437 649 437Q640 437 637 437T631 442L629 445Q629 451 635 490T641 551Q641 586 628 604T573 629Q568 630 515 631Q469 631 457 630T439 622Q438 621 368 343T298 60Q298 48 386 46Q418 46 427 45T436 36Q436 31 433 22Q429 4 424 1L422 0Q419 0 415 0Q410 0 363 1T228 2Q99 2 64 0H49Q43 6 43 9T45 27Q49 40 55 46H83H94Q174 46 189 55Q190 56 191 56Q196 59 201 76T241 233Q258 301 269 344Q339 619 339 625Q339 630 310 630H279Q212 630 191 624Q146 614 121 583T67 467Q60 445 57 441T43 437H40Z"></path><path stroke-width="0" id="E3-MJMATHI-45" d="M492 213Q472 213 472 226Q472 230 477 250T482 285Q482 316 461 323T364 330H312Q311 328 277 192T243 52Q243 48 254 48T334 46Q428 46 458 48T518 61Q567 77 599 117T670 248Q680 270 683 272Q690 274 698 274Q718 274 718 261Q613 7 608 2Q605 0 322 0H133Q31 0 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H757Q764 676 764 669Q764 664 751 557T737 447Q735 440 717 440H705Q698 445 698 453L701 476Q704 500 704 528Q704 558 697 578T678 609T643 625T596 632T532 634H485Q397 633 392 631Q388 629 386 622Q385 619 355 499T324 377Q347 376 372 376H398Q464 376 489 391T534 472Q538 488 540 490T557 493Q562 493 565 493T570 492T572 491T574 487T577 483L544 351Q511 218 508 216Q505 213 492 213Z"></path><path stroke-width="0" id="E3-MJMATHI-58" d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E3-MJMATHI-4C" x="0" y="0"></use><g transform="translate(356,0)"><use transform="scale(0.707)" xlink:href="#E3-MJMATHI-41" x="0" y="296"></use></g><use xlink:href="#E3-MJMATHI-54" x="716" y="0"></use><g transform="translate(1280,0)"><use xlink:href="#E3-MJMATHI-45" x="0" y="-216"></use></g><use xlink:href="#E3-MJMATHI-58" x="1929" y="0"></use></g></svg></span><script type="math/tex">\LaTeX</script><span>, X</span><sup><span>2</span></sup><span>, H</span><sub><span>2</span></sub><span>O. 拼音</span><sup><span>pīnyīn</span></sup><span>，拼音</span><sub><span>pīnyīn</span></sub><span>，</span><ruby><span>拼音</span><rt><rp><span>(</span></rp><span>pīnyīn</span><rp><span>)</span></rp></rt><span> </span></ruby><span>。</span></p><blockquote><p><span>In </span><a href='https://www.wikiwand.com/en/Publishing'><span>publishing</span></a><span> and </span><a href='https://www.wikiwand.com/en/Graphic_design'><span>graphic design</span></a><span>, </span><strong><span>lorem ipsum</span></strong><span> (</span><del><span>is</span></del><span> derived from Latin </span><em><span>dolorem  ipsum</span></em><span>, translated as &quot;</span><u><span>pain itself</span></u><span>&quot;) is a </span><a href='https://www.wikiwand.com/en/Filler_text'><span>filler text</span></a><span> commonly used to demonstrate the graphic elements of a document or visual </span><mark><span>presentation</span></mark><span>. </span></p><p><span>In </span><a href='https://www.wikiwand.com/en/Publishing'><span>publishing</span></a><span> and </span><a href='https://www.wikiwand.com/en/Graphic_design'><span>graphic design</span></a><span>, </span><strong><span>lorem ipsum</span></strong><span> (</span><del><span>is</span></del><span> derived from Latin </span><em><span>dolorem  ipsum</span></em><span>, translated as &quot;</span><u><span>pain itself</span></u><span>&quot;) is a </span><a href='https://www.wikiwand.com/en/Filler_text'><span>filler text</span></a><span> commonly used to demonstrate the graphic elements of a document or visual </span><mark><span>presentation</span></mark><span>. </span></p><blockquote><p><span>In </span><a href='https://www.wikiwand.com/en/Publishing'><span>publishing</span></a><span> and </span><a href='https://www.wikiwand.com/en/Graphic_design'><span>graphic design</span></a><span>, </span><strong><span>lorem ipsum</span></strong><span> (</span><del><span>is</span></del><span> derived from Latin </span><em><span>dolorem  ipsum</span></em><span>, translated as &quot;</span><u><span>pain itself</span></u><span>&quot;) is a </span><a href='https://www.wikiwand.com/en/Filler_text'><span>filler text</span></a><span> commonly used to demonstrate the graphic elements of a document or visual </span><mark><span>presentation</span></mark><span>. </span></p><blockquote><p><span>In </span><a href='https://www.wikiwand.com/en/Publishing'><span>publishing</span></a><span> and </span><a href='https://www.wikiwand.com/en/Graphic_design'><span>graphic design</span></a><span>, </span><strong><span>lorem ipsum</span></strong><span> (</span><del><span>is</span></del><span> derived from Latin </span><em><span>dolorem  ipsum</span></em><span>, translated as &quot;</span><u><span>pain itself</span></u><span>&quot;) is a </span><a href='https://www.wikiwand.com/en/Filler_text'><span>filler text</span></a><span> commonly used to demonstrate the graphic elements of a document or visual </span><mark><span>presentation</span></mark><span>. </span></p></blockquote></blockquote></blockquote><h1><a name="中文预览" class="md-header-anchor"></a><span>中文预览</span></h1><h2><a name="二级目录" class="md-header-anchor"></a><span>二级目录</span></h2><p><strong><span>Lorem ipsum</span></strong><span>，中文又称“</span><em><span>乱数假文</span></em><span>”，是指一篇常用于</span><mark><span>排版设计</span></mark><span>领域的</span><a href='https://zh.wiktionary.org/wiki/Category:拉丁语'><span>拉丁文</span></a><span>文章 </span><sup class='md-footnote'><a href='#dfref-footnote-3' name='ref-footnote-3'>3</a></sup><span> ，主要的目的为</span><code>测试</code><span>文章或文字在</span><u><span>不同字型、版型</span></u><span>下看起来的效果，通常网站还没建</span><del><span>设</span></del><span>好时会出现这段文字。</span></p><p><strong><span>Lorem ipsum</span></strong><span>，中文又称“</span><em><span>乱数假文</span></em><span>”，是指一篇常用于</span><mark><span>排版设计</span></mark><span>领域的</span><a href='https://zh.wiktionary.org/wiki/Category:拉丁语'><span>拉丁文</span></a><span>文章 </span><span>[^4]</span><span> ，主要的目的为</span><code>测试</code><span>文章或文字在</span><u><span>不同字型、版型</span></u><span>下看起来的效果，通常网站还没建</span><del><span>设</span></del><span>好时会出现这段文字。</span></p><p><span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.46ex" height="2.413ex" viewBox="0 -767.1 2781.3 1039.1" role="img" focusable="false" style="vertical-align: -0.632ex;"><defs><path stroke-width="0" id="E3-MJMATHI-4C" d="M228 637Q194 637 192 641Q191 643 191 649Q191 673 202 682Q204 683 217 683Q271 680 344 680Q485 680 506 683H518Q524 677 524 674T522 656Q517 641 513 637H475Q406 636 394 628Q387 624 380 600T313 336Q297 271 279 198T252 88L243 52Q243 48 252 48T311 46H328Q360 46 379 47T428 54T478 72T522 106T564 161Q580 191 594 228T611 270Q616 273 628 273H641Q647 264 647 262T627 203T583 83T557 9Q555 4 553 3T537 0T494 -1Q483 -1 418 -1T294 0H116Q32 0 32 10Q32 17 34 24Q39 43 44 45Q48 46 59 46H65Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Q285 635 228 637Z"></path><path stroke-width="0" id="E3-MJMATHI-41" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path><path stroke-width="0" id="E3-MJMATHI-54" d="M40 437Q21 437 21 445Q21 450 37 501T71 602L88 651Q93 669 101 677H569H659Q691 677 697 676T704 667Q704 661 687 553T668 444Q668 437 649 437Q640 437 637 437T631 442L629 445Q629 451 635 490T641 551Q641 586 628 604T573 629Q568 630 515 631Q469 631 457 630T439 622Q438 621 368 343T298 60Q298 48 386 46Q418 46 427 45T436 36Q436 31 433 22Q429 4 424 1L422 0Q419 0 415 0Q410 0 363 1T228 2Q99 2 64 0H49Q43 6 43 9T45 27Q49 40 55 46H83H94Q174 46 189 55Q190 56 191 56Q196 59 201 76T241 233Q258 301 269 344Q339 619 339 625Q339 630 310 630H279Q212 630 191 624Q146 614 121 583T67 467Q60 445 57 441T43 437H40Z"></path><path stroke-width="0" id="E3-MJMATHI-45" d="M492 213Q472 213 472 226Q472 230 477 250T482 285Q482 316 461 323T364 330H312Q311 328 277 192T243 52Q243 48 254 48T334 46Q428 46 458 48T518 61Q567 77 599 117T670 248Q680 270 683 272Q690 274 698 274Q718 274 718 261Q613 7 608 2Q605 0 322 0H133Q31 0 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H757Q764 676 764 669Q764 664 751 557T737 447Q735 440 717 440H705Q698 445 698 453L701 476Q704 500 704 528Q704 558 697 578T678 609T643 625T596 632T532 634H485Q397 633 392 631Q388 629 386 622Q385 619 355 499T324 377Q347 376 372 376H398Q464 376 489 391T534 472Q538 488 540 490T557 493Q562 493 565 493T570 492T572 491T574 487T577 483L544 351Q511 218 508 216Q505 213 492 213Z"></path><path stroke-width="0" id="E3-MJMATHI-58" d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E3-MJMATHI-4C" x="0" y="0"></use><g transform="translate(356,0)"><use transform="scale(0.707)" xlink:href="#E3-MJMATHI-41" x="0" y="296"></use></g><use xlink:href="#E3-MJMATHI-54" x="716" y="0"></use><g transform="translate(1280,0)"><use xlink:href="#E3-MJMATHI-45" x="0" y="-216"></use></g><use xlink:href="#E3-MJMATHI-58" x="1929" y="0"></use></g></svg></span><script type="math/tex">\LaTeX</script><span>, X</span><sup><span>2</span></sup><span>, H</span><sub><span>2</span></sub><span>O. 拼音</span><sup><span>pīnyīn</span></sup><span>，拼音</span><sub><span>pīnyīn</span></sub><span>，</span><ruby><span>拼音</span><rt><rp><span>(</span></rp><span>pīnyīn</span><rp><span>)</span></rp></rt><span> </span></ruby><span>。</span></p><blockquote><p><span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.46ex" height="2.413ex" viewBox="0 -767.1 2781.3 1039.1" role="img" focusable="false" style="vertical-align: -0.632ex;"><defs><path stroke-width="0" id="E3-MJMATHI-4C" d="M228 637Q194 637 192 641Q191 643 191 649Q191 673 202 682Q204 683 217 683Q271 680 344 680Q485 680 506 683H518Q524 677 524 674T522 656Q517 641 513 637H475Q406 636 394 628Q387 624 380 600T313 336Q297 271 279 198T252 88L243 52Q243 48 252 48T311 46H328Q360 46 379 47T428 54T478 72T522 106T564 161Q580 191 594 228T611 270Q616 273 628 273H641Q647 264 647 262T627 203T583 83T557 9Q555 4 553 3T537 0T494 -1Q483 -1 418 -1T294 0H116Q32 0 32 10Q32 17 34 24Q39 43 44 45Q48 46 59 46H65Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Q285 635 228 637Z"></path><path stroke-width="0" id="E3-MJMATHI-41" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path><path stroke-width="0" id="E3-MJMATHI-54" d="M40 437Q21 437 21 445Q21 450 37 501T71 602L88 651Q93 669 101 677H569H659Q691 677 697 676T704 667Q704 661 687 553T668 444Q668 437 649 437Q640 437 637 437T631 442L629 445Q629 451 635 490T641 551Q641 586 628 604T573 629Q568 630 515 631Q469 631 457 630T439 622Q438 621 368 343T298 60Q298 48 386 46Q418 46 427 45T436 36Q436 31 433 22Q429 4 424 1L422 0Q419 0 415 0Q410 0 363 1T228 2Q99 2 64 0H49Q43 6 43 9T45 27Q49 40 55 46H83H94Q174 46 189 55Q190 56 191 56Q196 59 201 76T241 233Q258 301 269 344Q339 619 339 625Q339 630 310 630H279Q212 630 191 624Q146 614 121 583T67 467Q60 445 57 441T43 437H40Z"></path><path stroke-width="0" id="E3-MJMATHI-45" d="M492 213Q472 213 472 226Q472 230 477 250T482 285Q482 316 461 323T364 330H312Q311 328 277 192T243 52Q243 48 254 48T334 46Q428 46 458 48T518 61Q567 77 599 117T670 248Q680 270 683 272Q690 274 698 274Q718 274 718 261Q613 7 608 2Q605 0 322 0H133Q31 0 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H757Q764 676 764 669Q764 664 751 557T737 447Q735 440 717 440H705Q698 445 698 453L701 476Q704 500 704 528Q704 558 697 578T678 609T643 625T596 632T532 634H485Q397 633 392 631Q388 629 386 622Q385 619 355 499T324 377Q347 376 372 376H398Q464 376 489 391T534 472Q538 488 540 490T557 493Q562 493 565 493T570 492T572 491T574 487T577 483L544 351Q511 218 508 216Q505 213 492 213Z"></path><path stroke-width="0" id="E3-MJMATHI-58" d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E3-MJMATHI-4C" x="0" y="0"></use><g transform="translate(356,0)"><use transform="scale(0.707)" xlink:href="#E3-MJMATHI-41" x="0" y="296"></use></g><use xlink:href="#E3-MJMATHI-54" x="716" y="0"></use><g transform="translate(1280,0)"><use xlink:href="#E3-MJMATHI-45" x="0" y="-216"></use></g><use xlink:href="#E3-MJMATHI-58" x="1929" y="0"></use></g></svg></span><script type="math/tex">\LaTeX</script><span>, X</span><sup><span>2</span></sup><span>, H</span><sub><span>2</span></sub><span>O. 拼音</span><sup><span>pīnyīn</span></sup><span>，拼音</span><sub><span>pīnyīn</span></sub><span>，</span><ruby><span>拼音</span><rt><rp><span>(</span></rp><span>pīnyīn</span><rp><span>)</span></rp></rt><span> </span></ruby><span>。</span></p><p><strong><span>Lorem ipsum</span></strong><span>，中文又称“</span><em><span>乱数假文</span></em><span>”，是指一篇常用于</span><mark><span>排版设计</span></mark><span>领域的</span><a href='https://zh.wiktionary.org/wiki/Category:拉丁语'><span>拉丁文</span></a><span>文章，主要的目的为</span><code>测试</code><span>文章或文字在</span><u><span>不同字型、版型</span></u><span>下看起来的效果，通常网站还没建</span><del><span>设</span></del><span>好时会出现这段文字。</span></p><p><strong><span>Lorem ipsum</span></strong><span>，中文又称“</span><em><span>乱数假文</span></em><span>”，是指一篇常用于</span><mark><span>排版设计</span></mark><span>领域的</span><a href='https://zh.wiktionary.org/wiki/Category:拉丁语'><span>拉丁文</span></a><span>文章，主要的目的为</span><code>测试</code><span>文章或文字在</span><u><span>不同字型、版型</span></u><span>下看起来的效果，通常网站还没建</span><del><span>设</span></del><span>好时会出现这段文字。</span></p><blockquote><p><strong><span>Lorem ipsum</span></strong><span>，中文又称“</span><em><span>乱数假文</span></em><span>”，是指一篇常用于</span><mark><span>排版设计</span></mark><span>领域的</span><a href='https://zh.wiktionary.org/wiki/Category:拉丁语'><span>拉丁文</span></a><span>文章，主要的目的为</span><code>测试</code><span>文章或文字在</span><u><span>不同字型、版型</span></u><span>下看起来的效果，通常网站还没建</span><del><span>设</span></del><span>好时会出现这段文字。</span></p><blockquote><p><strong><span>Lorem ipsum</span></strong><span>，中文又称“</span><em><span>乱数假文</span></em><span>”，是指一篇常用于</span><mark><span>排版设计</span></mark><span>领域的</span><a href='https://zh.wiktionary.org/wiki/Category:拉丁语'><span>拉丁文</span></a><span>文章，主要的目的为</span><code>测试</code><span>文章或文字在</span><u><span>不同字型、版型</span></u><span>下看起来的效果，通常网站还没建</span><del><span>设</span></del><span>好时会出现这段文字。</span></p></blockquote></blockquote></blockquote><figure><table><thead><tr><th style='text-align:left;' ><span>Left-Aligned</span></th><th style='text-align:center;' ><span>Center Aligned</span></th><th style='text-align:right;' ><span>Right Aligned</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>col 3 is</span></td><td style='text-align:center;' ><span>some wordy text</span></td><td style='text-align:right;' ><span>$1600</span></td></tr><tr><td style='text-align:left;' ><span>col 2 is</span></td><td style='text-align:center;' ><span>centered</span></td><td style='text-align:right;' ><span>$12</span></td></tr><tr><td style='text-align:left;' ><span>zebra stripes</span></td><td style='text-align:center;' ><span>are neat</span></td><td style='text-align:right;' ><span>$1</span></td></tr></tbody></table></figure><ol start='' ><li><p><span>ordered list item 1.</span></p></li><li><p><span>ordered list item 2.</span></p><ul><li><p><span>sub-unordered list item 1.</span></p></li><li><p><span>sub-unordered list item 2.</span></p><ul><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' disabled='disabled' checked/><p><span>something is DONE.</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' disabled='disabled' /><p><span>something is not TODO.</span></p></li></ul></li></ul></li></ol><hr /><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang="html"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 31px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 27px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>7</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style="text-rendering: auto;"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -27px; width: 27px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 18px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">&lt;!DOCTYPE html&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">html</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span>The *= Operator<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">id</span>=<span class="cm-string">"demo"</span><span class="cm-tag cm-bracket">&gt;&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 18px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">html</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 140px;"></div><div class="CodeMirror-gutters" style="height: 140px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 26px;"></div></div></div></div></pre><p><img src="C:/Users/Autumnus/OneDrive/%E5%9B%BE%E7%89%87/Windows%E8%81%9A%E7%84%A6%E5%A3%81%E7%BA%B8/RE26puD_1920x1080.jpg" style="zoom:33%;" /></p><h2><a name="二级目录-n67" class="md-header-anchor"></a><span>二级目录</span></h2><h3><a name="三级目录" class="md-header-anchor"></a><span>三级目录</span></h3><h4><a name="四级目录" class="md-header-anchor"></a><span>四级目录</span></h4><h2><a name="二级目录-n70" class="md-header-anchor"></a><span>二级目录</span></h2><h3><a name="三级目录-n71" class="md-header-anchor"></a><span>三级目录</span></h3><h4><a name="四级目录-n72" class="md-header-anchor"></a><span>四级目录</span></h4><h4><a name="四级目录-n73" class="md-header-anchor"></a><span>四级目录</span></h4><h4><a name="四级目录-n74" class="md-header-anchor"></a><span>四级目录</span></h4><h5><a name="五级目录" class="md-header-anchor"></a><span>五级目录</span></h5><div class='footnotes-area'  ><hr/>
-<div class='footnote-line'><span class='md-fn-count'>1</span> <em><span>Forked</span></em><span> from </span><a href='https://en.wikipedia.org/wiki/Lorem_ipsum' target='_blank' class='url'>https://en.wikipedia.org/wiki/Lorem_ipsum</a> <a name='dfref-footnote-1' href='#ref-footnote-1' title='回到文档' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>2</span> <em><span>Forked</span></em><span> from </span><a href='https://en.wikipedia.org/wiki/Lorem_ipsum' target='_blank' class='url'>https://en.wikipedia.org/wiki/Lorem_ipsum</a> <a name='dfref-footnote-2' href='#ref-footnote-2' title='回到文档' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>3</span> <em><span>Forked</span></em><span> from </span><a href='https://en.wikipedia.org/wiki/Lorem_ipsum' target='_blank' class='url'>https://en.wikipedia.org/wiki/Lorem_ipsum</a> <a name='dfref-footnote-3' href='#ref-footnote-3' title='回到文档' class='reversefootnote' >↩</a></div></div></div>
+<div  id='write'  class = 'is-node'><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n3"><a class="md-toc-inner" href="#中文预览">中文预览</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n4"><a class="md-toc-inner" href="#二级目录">二级目录</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n5"><a class="md-toc-inner" href="#三级目录">三级目录</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n6"><a class="md-toc-inner" href="#四级目录">四级目录</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n7"><a class="md-toc-inner" href="#五级目录">五级目录</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n8"><a class="md-toc-inner" href="#六级目录">六级目录</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n55"><a class="md-toc-inner" href="#二级目录-n55">二级目录</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n56"><a class="md-toc-inner" href="#三级目录-n56">三级目录</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n59"><a class="md-toc-inner" href="#四级目录-n59">四级目录</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n62"><a class="md-toc-inner" href="#五级目录-n62">五级目录</a></span></p></div><h1><a name="中文预览" class="md-header-anchor"></a><span>中文预览</span></h1><h2><a name="二级目录" class="md-header-anchor"></a><span>二级目录</span></h2><h3><a name="三级目录" class="md-header-anchor"></a><span>三级目录</span></h3><h4><a name="四级目录" class="md-header-anchor"></a><span>四级目录</span></h4><h5><a name="五级目录" class="md-header-anchor"></a><span>五级目录</span></h5><h6><a name="六级目录" class="md-header-anchor"></a><span>六级目录</span></h6><p><strong><span>Lorem ipsum</span></strong><span>，中文又称“</span><em><span>乱数假文</span></em><span>”，是指一篇常用于</span><mark><span>排版设计</span></mark><span>领域的</span><a href='https://zh.wiktionary.org/wiki/Category:拉丁语'><span>拉丁文</span></a><span>文章 </span><sup class='md-footnote'><a href='#dfref-footnote-1' name='ref-footnote-1'>1</a></sup><span> ，主要的目的为</span><code>测试</code><span>文章或文字在</span><u><span>不同字型、版型</span></u><span>下看起来的效果，通常网站还没建</span><del><span>设</span></del><span>好时会出现这段文字。</span></p><p><strong><span>Lorem ipsum</span></strong><span>，中文又称“</span><em><span>乱数假文</span></em><span>”，是指一篇常用于</span><mark><span>排版设计</span></mark><span>领域的</span><a href='https://zh.wiktionary.org/wiki/Category:拉丁语'><span>拉丁文</span></a><span>文章 </span><span>[^4]</span><span> ，主要的目的为</span><code>测试</code><span>文章或文字在</span><u><span>不同字型、版型</span></u><span>下看起来的效果，通常网站还没建</span><del><span>设</span></del><span>好时会出现这段文字。</span></p><p><span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.46ex" height="2.538ex" viewBox="0 -793.8 2781.3 1092.8" role="img" focusable="false" style="vertical-align: -0.694ex;"><defs><path stroke-width="0" id="E1-MJMATHI-4C" d="M228 637Q194 637 192 641Q191 643 191 649Q191 673 202 682Q204 683 217 683Q271 680 344 680Q485 680 506 683H518Q524 677 524 674T522 656Q517 641 513 637H475Q406 636 394 628Q387 624 380 600T313 336Q297 271 279 198T252 88L243 52Q243 48 252 48T311 46H328Q360 46 379 47T428 54T478 72T522 106T564 161Q580 191 594 228T611 270Q616 273 628 273H641Q647 264 647 262T627 203T583 83T557 9Q555 4 553 3T537 0T494 -1Q483 -1 418 -1T294 0H116Q32 0 32 10Q32 17 34 24Q39 43 44 45Q48 46 59 46H65Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Q285 635 228 637Z"></path><path stroke-width="0" id="E1-MJMATHI-41" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path><path stroke-width="0" id="E1-MJMATHI-54" d="M40 437Q21 437 21 445Q21 450 37 501T71 602L88 651Q93 669 101 677H569H659Q691 677 697 676T704 667Q704 661 687 553T668 444Q668 437 649 437Q640 437 637 437T631 442L629 445Q629 451 635 490T641 551Q641 586 628 604T573 629Q568 630 515 631Q469 631 457 630T439 622Q438 621 368 343T298 60Q298 48 386 46Q418 46 427 45T436 36Q436 31 433 22Q429 4 424 1L422 0Q419 0 415 0Q410 0 363 1T228 2Q99 2 64 0H49Q43 6 43 9T45 27Q49 40 55 46H83H94Q174 46 189 55Q190 56 191 56Q196 59 201 76T241 233Q258 301 269 344Q339 619 339 625Q339 630 310 630H279Q212 630 191 624Q146 614 121 583T67 467Q60 445 57 441T43 437H40Z"></path><path stroke-width="0" id="E1-MJMATHI-45" d="M492 213Q472 213 472 226Q472 230 477 250T482 285Q482 316 461 323T364 330H312Q311 328 277 192T243 52Q243 48 254 48T334 46Q428 46 458 48T518 61Q567 77 599 117T670 248Q680 270 683 272Q690 274 698 274Q718 274 718 261Q613 7 608 2Q605 0 322 0H133Q31 0 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H757Q764 676 764 669Q764 664 751 557T737 447Q735 440 717 440H705Q698 445 698 453L701 476Q704 500 704 528Q704 558 697 578T678 609T643 625T596 632T532 634H485Q397 633 392 631Q388 629 386 622Q385 619 355 499T324 377Q347 376 372 376H398Q464 376 489 391T534 472Q538 488 540 490T557 493Q562 493 565 493T570 492T572 491T574 487T577 483L544 351Q511 218 508 216Q505 213 492 213Z"></path><path stroke-width="0" id="E1-MJMATHI-58" d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E1-MJMATHI-4C" x="0" y="0"></use><g transform="translate(356,0)"><use transform="scale(0.707)" xlink:href="#E1-MJMATHI-41" x="0" y="296"></use></g><use xlink:href="#E1-MJMATHI-54" x="716" y="0"></use><g transform="translate(1280,0)"><use xlink:href="#E1-MJMATHI-45" x="0" y="-216"></use></g><use xlink:href="#E1-MJMATHI-58" x="1929" y="0"></use></g></svg></span><script type="math/tex">\LaTeX</script><span>, X</span><sup><span>2</span></sup><span>, H</span><sub><span>2</span></sub><span>O. 拼音</span><sup><span>pīnyīn</span></sup><span>，拼音</span><sub><span>pīnyīn</span></sub><span>，</span><ruby><span>拼音</span><rt><rp><span>(</span></rp><span>pīnyīn</span><rp><span>)</span></rp></rt><span> </span></ruby><span>。</span></p><blockquote><p><strong><span>Lorem ipsum</span></strong><span>，中文又称“</span><em><span>乱数假文</span></em><span>”，是指一篇常用于</span><mark><span>排版设计</span></mark><span>领域的</span><a href='https://zh.wiktionary.org/wiki/Category:拉丁语'><span>拉丁文</span></a><span>文章，主要的目的为</span><code>测试</code><span>文章或文字在</span><u><span>不同字型、版型</span></u><span>下看起来的效果，通常网站还没建</span><del><span>设</span></del><span>好时会出现这段文字。</span></p><p><strong><span>Lorem ipsum</span></strong><span>，中文又称“</span><em><span>乱数假文</span></em><span>”，是指一篇常用于</span><mark><span>排版设计</span></mark><span>领域的</span><a href='https://zh.wiktionary.org/wiki/Category:拉丁语'><span>拉丁文</span></a><span>文章，主要的目的为</span><code>测试</code><span>文章或文字在</span><u><span>不同字型、版型</span></u><span>下看起来的效果，通常网站还没建</span><del><span>设</span></del><span>好时会出现这段文字。</span></p><blockquote><p><strong><span>Lorem ipsum</span></strong><span>，中文又称“</span><em><span>乱数假文</span></em><span>”，是指一篇常用于</span><mark><span>排版设计</span></mark><span>领域的</span><a href='https://zh.wiktionary.org/wiki/Category:拉丁语'><span>拉丁文</span></a><span>文章，主要的目的为</span><code>测试</code><span>文章或文字在</span><u><span>不同字型、版型</span></u><span>下看起来的效果，通常网站还没建</span><del><span>设</span></del><span>好时会出现这段文字。</span></p><blockquote><p><strong><span>Lorem ipsum</span></strong><span>，中文又称“</span><em><span>乱数假文</span></em><span>”，是指一篇常用于</span><mark><span>排版设计</span></mark><span>领域的</span><a href='https://zh.wiktionary.org/wiki/Category:拉丁语'><span>拉丁文</span></a><span>文章，主要的目的为</span><code>测试</code><span>文章或文字在</span><u><span>不同字型、版型</span></u><span>下看起来的效果，通常网站还没建</span><del><span>设</span></del><span>好时会出现这段文字。</span></p></blockquote></blockquote></blockquote><figure><table><thead><tr><th style='text-align:left;' ><span>Left-Aligned</span></th><th style='text-align:center;' ><span>Center Aligned</span></th><th style='text-align:right;' ><span>Right Aligned</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>col 3 is</span></td><td style='text-align:center;' ><span>some wordy text</span></td><td style='text-align:right;' ><span>$1600</span></td></tr><tr><td style='text-align:left;' ><span>col 2 is</span></td><td style='text-align:center;' ><span>centered</span></td><td style='text-align:right;' ><span>$12</span></td></tr><tr><td style='text-align:left;' ><span>zebra stripes</span></td><td style='text-align:center;' ><span>are neat</span></td><td style='text-align:right;' ><span>$1</span></td></tr></tbody></table></figure><ol start='' ><li><p><span>ordered list item 1.</span></p></li><li><p><span>ordered list item 2.</span></p><ul><li><p><span>sub-unordered list item 1.</span></p></li><li><p><span>sub-unordered list item 2.</span></p><ul><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' disabled='disabled' checked/><p><span>something is DONE.</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' disabled='disabled' /><p><span>something is not TODO.</span></p></li></ul></li></ul></li></ol><hr /><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang="html"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 30px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 26px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style="text-rendering: auto;"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -26px; width: 26px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -26px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 17px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">&lt;!DOCTYPE html&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -26px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 17px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">html</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -26px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 17px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -26px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 17px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span>The *= Operator<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -26px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 17px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">id</span>=<span class="cm-string">"demo"</span><span class="cm-tag cm-bracket">&gt;&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -26px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 17px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -26px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 17px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">html</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 196px;"></div><div class="CodeMirror-gutters" style="height: 196px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 25px;"></div></div></div></div></pre><p><img src="C:/Users/Autumnus/OneDrive/%E5%9B%BE%E7%89%87/%E6%9C%AC%E6%9C%BA%E7%85%A7%E7%89%87/20200725_112537000_iOS.jpg" style="zoom: 25%;" /></p><p><span>这是添加了 </span><code>nomal</code><span> 后的图片，可以在行内显示。</span><img src="C:/Users/Autumnus/OneDrive/%E5%9B%BE%E7%89%87/Windows%E8%81%9A%E7%84%A6%E5%A3%81%E7%BA%B8/RE26puD_1920x1080.jpg" alt="normal" style="zoom:25%;" /></p><h2><a name="二级目录-n55" class="md-header-anchor"></a><span>二级目录</span></h2><h3><a name="三级目录-n56" class="md-header-anchor"></a><span>三级目录</span></h3><p><strong><span>Lorem ipsum</span></strong><span>，中文又称“</span><em><span>乱数假文</span></em><span>”，是指一篇常用于</span><mark><span>排版设计</span></mark><span>领域的</span><a href='https://zh.wiktionary.org/wiki/Category:拉丁语'><span>拉丁文</span></a><span>文章，主要的目的为</span><code>测试</code><span>文章或文字在</span><u><span>不同字型、版型</span></u><span>下看起来的效果，通常网站还没建</span><del><span>设</span></del><span>好时会出现这段文字。</span></p><p><strong><span>Lorem ipsum</span></strong><span>，中文又称“</span><em><span>乱数假文</span></em><span>”，是指一篇常用于</span><mark><span>排版设计</span></mark><span>领域的</span><a href='https://zh.wiktionary.org/wiki/Category:拉丁语'><span>拉丁文</span></a><span>文章，主要的目的为</span><code>测试</code><span>文章或文字在</span><u><span>不同字型、版型</span></u><span>下看起来的效果，通常网站还没建</span><del><span>设</span></del><span>好时会出现这段文字。</span></p><h4><a name="四级目录-n59" class="md-header-anchor"></a><span>四级目录</span></h4><p><strong><span>Lorem ipsum</span></strong><span>，中文又称“</span><em><span>乱数假文</span></em><span>”，是指一篇常用于</span><mark><span>排版设计</span></mark><span>领域的</span><a href='https://zh.wiktionary.org/wiki/Category:拉丁语'><span>拉丁文</span></a><span>文章，主要的目的为</span><code>测试</code><span>文章或文字在</span><u><span>不同字型、版型</span></u><span>下看起来的效果，通常网站还没建</span><del><span>设</span></del><span>好时会出现这段文字。</span></p><p><strong><span>Lorem ipsum</span></strong><span>，中文又称“</span><em><span>乱数假文</span></em><span>”，是指一篇常用于</span><mark><span>排版设计</span></mark><span>领域的</span><a href='https://zh.wiktionary.org/wiki/Category:拉丁语'><span>拉丁文</span></a><span>文章，主要的目的为</span><code>测试</code><span>文章或文字在</span><u><span>不同字型、版型</span></u><span>下看起来的效果，通常网站还没建</span><del><span>设</span></del><span>好时会出现这段文字。</span></p><h5><a name="五级目录-n62" class="md-header-anchor"></a><span>五级目录</span></h5><p><strong><span>Lorem ipsum</span></strong><span>，中文又称“</span><em><span>乱数假文</span></em><span>”，是指一篇常用于</span><mark><span>排版设计</span></mark><span>领域的</span><a href='https://zh.wiktionary.org/wiki/Category:拉丁语'><span>拉丁文</span></a><span>文章，主要的目的为</span><code>测试</code><span>文章或文字在</span><u><span>不同字型、版型</span></u><span>下看起来的效果，通常网站还没建</span><del><span>设</span></del><span>好时会出现这段文字。</span></p><p><strong><span>Lorem ipsum</span></strong><span>，中文又称“</span><em><span>乱数假文</span></em><span>”，是指一篇常用于</span><mark><span>排版设计</span></mark><span>领域的</span><a href='https://zh.wiktionary.org/wiki/Category:拉丁语'><span>拉丁文</span></a><span>文章，主要的目的为</span><code>测试</code><span>文章或文字在</span><u><span>不同字型、版型</span></u><span>下看起来的效果，通常网站还没建</span><del><span>设</span></del><span>好时会出现这段文字。</span></p><div class='footnotes-area'  ><hr/>
+<div class='footnote-line'><span class='md-fn-count'>1</span> <em><span>Forked</span></em><span> from </span><a href='https://en.wikipedia.org/wiki/Lorem_ipsum' target='_blank' class='url'>https://en.wikipedia.org/wiki/Lorem_ipsum</a> <a name='dfref-footnote-1' href='#ref-footnote-1' title='回到文档' class='reversefootnote' >↩</a></div></div></div>
 </body>
 </html>
