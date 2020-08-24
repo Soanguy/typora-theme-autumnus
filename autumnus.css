@@ -14,11 +14,11 @@
 	/* 写作背景色 */
 	--link-bg: transparent;
 	/* 超链接背景色 */
-	--mark-bg: hsl(0, 0%, 20%);
+	--mark-bg: hsl(0, 100%, 85%);
 	/* 高亮背景色 */
-	--code-bg: hsl(0, 0%, 90%);
+	--code-bg: hsl(0, 100%, 95%);
 	/* 代码背景色 */
-	--codeb-bg: hsl(0, 0%, 96%);
+	--codeb-bg: hsl(0, 0%, 95%);
 	/* 代码块背景色 */
 	--quota-bg: hsl(0, 0%, 95%);
 	/* 引用背景色 */
@@ -33,7 +33,7 @@
 	/* 强调颜色：标题;加强等 */
 	--link-color: hsl(0, 100%, 75%);
 	/* 超链接字体色 */
-	--mark-color: hsl(0, 0%, 100%);
+	--mark-color: hsl(0, 0%, 20%);
 	/* 高亮字体色 */
 	--code-color: hsl(0, 0%, 20%);
 	--codeb-color: hsl(0, 0%, 50%);
@@ -70,7 +70,7 @@
 
 	/* --quota-font: "Noto Serif CJK SC", Georgia, "Nimbus Roman No9 L", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif; */
 
-	--quota-font: Georgia, Baskerville, "Liberation Serif", '仓耳今楷05-6763', "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+	--quota-font: Georgia, Baskerville, "Liberation Serif", "TW-Kai", '仓耳今楷05-6763', "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
 
 	--code-font: "Cascadia code", "Sarasa Term SC", Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono", Courier;
 }
@@ -1082,10 +1082,10 @@ p.mathjax-block,
 
 /* 语法标记样式 */
 
-.md-meta.md-before,
-.md-meta.md-after {
-	padding-left: 0.2rem;
-	padding-right: 0.2rem;
+.md-expand .md-meta.md-before,
+.md-expand .md-meta.md-after {
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 /* 侧边栏文档大纲tab标签 激活 */
