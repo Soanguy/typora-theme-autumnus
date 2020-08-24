@@ -70,9 +70,9 @@
 
 	/* --quota-font: "Noto Serif CJK SC", Georgia, "Nimbus Roman No9 L", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif; */
 
-	--quota-font: Baskerville, Georgia, "Liberation Serif", '仓耳今楷05-6763', "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+	--quota-font: Georgia, Baskerville, "Liberation Serif", '仓耳今楷05-6763', "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
 
-	--code-font: "Sarasa Term SC", Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono", Courier;
+	--code-font: "Cascadia code", "Sarasa Term SC", Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono", Courier;
 }
 
 
@@ -387,7 +387,7 @@ h6 {
 #write h1 {
 	font-size: 3rem;
 	margin-top: 6rem;
-	margin-bottom: 4rem;
+	margin-bottom: 3rem;
 }
 
 #write h1:before,
@@ -420,8 +420,8 @@ h6 {
 
 #write h2 {
 	font-size: 2rem;
-	margin: 2rem auto;
-	margin-bottom: 3rem;
+	margin: 4rem auto;
+	margin-bottom: 2rem;
 }
 
 #write h3 {
@@ -443,7 +443,8 @@ h6 {
 #write h6 {
 	font-family: var(--base-font);
 	font-weight: 600;
-	margin: 1.5rem 0;
+	margin: 3rem 0;
+	margin-bottom: 1.5rem;
 }
 
 #write h3::before,
@@ -554,6 +555,7 @@ pre tt,
 .md-fences,
 .CodeMirror pre {
 	font-family: var(--code-font);
+	font-size: 1rem;
 	line-height: 1.5rem;
 	padding: 2px 4px;
 	border-radius: 5px;
@@ -596,6 +598,17 @@ ol {
 
 #write ol ol {
 	list-style-type: lower-roman;
+}
+
+#write ul ul {
+	list-style-type: circle;
+}
+
+#write ol ol,
+#write ul ul,
+#write ul ol,
+#write ol ul {
+	margin-top: .5rem;
 }
 
 #write ul li,
@@ -664,8 +677,7 @@ blockquote h4,
 blockquote h5,
 blockquote h6,
 blockquote em,
-blockquote strong,
-blockquote code {
+blockquote strong {
 	font-family: var(--quota-font) !important;
 }
 
