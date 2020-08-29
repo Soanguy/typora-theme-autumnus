@@ -540,14 +540,35 @@ mark {
 
 /* code & codeblock style */
 
-/* codeblock */
-#write pre.md-fences {
-	border: 1px solid var(--codeb-bg);
+/* #write pre.md-fences {
+	border-top: 1px solid var(--codeb-bg);
 	margin: 2rem auto;
 	padding: 1rem 0.5rem;
 	display: block;
 	-webkit-overflow-scrolling: touch;
+} */
+
+/* codeblock mac style */
+#write pre.md-fences {
+	border-top: 2rem solid var(--mark-color);
+	margin: 2rem auto;
+	padding: 1rem 0.5rem 1rem;
+	display: block;
+	-webkit-overflow-scrolling: touch;
+	box-shadow: 0 10px 30px 0 rgba(0,0,0,0.4);
 }
+
+pre.md-fences:before {
+    background: #fc625d;
+    box-shadow: 23px 0 #fdbc40, 45px 0 #35cd4b;
+    left: 15px;
+    margin-top: -2.3rem;
+    position: absolute;
+    border-radius: 50%;
+    content: ' ';
+    height: 12px;
+    width: 12px;
+} 
 
 pre,
 code,
