@@ -349,18 +349,6 @@ img {
 	border: 0;
 }
 
-/* 让行内代码等保持不换行。
-注意，此时的代码不可以超过一行，否则将会溢出。
-如果要输入超过一行的代码，可以使用 pre 来标记。 */
-
-code,
-kbd,
-samp,
-tt,
-var {
-	white-space: nowrap;
-}
-
 /* 标题样式 */
 h1,
 h2,
@@ -643,25 +631,62 @@ ol {
 
 /* todo list */
 
-.task-list {
-	list-style: none !important;
-	padding-left: 0;
+/* Chrome 29+ */
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+	.task-list-item input:before {
+		margin-top:.3rem;
+	}
+
+	.task-list-item input:checked:before,
+	.task-list-item input[checked]:before {
+		margin-top: .3rem;
+	}
 }
 
-.task-list-item input {
-	top: 3px;
-}
-
-.task-list-done {
-	/* styles for completed tasks */
+.md-task-list-item > input::before {
+	content: "";
+	position: absolute;
+	top: -5px;
+	left: -4px;
+	border-radius: 50%;
+	width: 1.1rem;
+	height: 1.1rem;
+	border: var(--base-border);
+	background: #fff;
+	-webkit-transition: background-color 200ms ease-in-out;
+	transition: background-color 200ms ease-in-out;
+  }
+  
+  .md-task-list-item > input::after {
+	content: "";
+	position: absolute;
+	top: 4px;
+	left: 0px;
+	width: 0.6rem;
+	height: 0.3rem;
+	border: 2px solid #fff;
+	border-top: 0;
+	border-right: 0;
+	-webkit-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+	opacity: 0;
+	-webkit-transition: opacity 200ms ease-in-out;
+	transition: opacity 200ms ease-in-out;
+  }
+  
+  .md-task-list-item > input:checked::before {
+	background-color: var(--link-color);
+	border: none;
+  }
+  
+  .md-task-list-item > input:checked::after {
+	opacity: 1;
+  }
+  
+  .md-task-list-item.task-list-done {
 	text-decoration: line-through;
 	color: var(--footer-color);
-}
-
-.task-list-not-done {
-	/* styles for incomplete tasks */
-	color: var(--text-color);
-}
+  }
 
 /* 块/段落引用 */
 
@@ -787,17 +812,7 @@ table {
 	color: var(--link-hover);
 }
 
-/* Chrome 29+ */
-@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
-	.task-list-item input:before {
-		margin-top: -0.2rem;
-	}
 
-	.task-list-item input:checked:before,
-	.task-list-item input[checked]:before {
-		margin-top: -0.2rem;
-	}
-}
 
 /* 不同的宽度的设备上的字数统计样式 */
 @media screen and (max-width: 600px) {
@@ -1057,7 +1072,7 @@ p.mathjax-block,
 }
 
 [draggable] {
-	cursor: move;
+	cursor: pointer;
 }
 
 #md-searchpanel {
