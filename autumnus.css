@@ -60,7 +60,12 @@
 	--base-borderl: 4px solid hsl(0, 100%, 65%);
 	--base-borderb: 1px dashed hsl(0, 100%, 65%);
 	--opt-borderb: 1px dashed hsl(215, 100%, 65%);
-
+	
+    --box-shadow: 0px 20px 40px 1px hsla(0, 0%, 0%, 0.3);
+    --img-shadow: 0px 20px 40px 1px hsla(0, 0%, 0%, 0.3);
+    --code-shadow: 0px 20px 40px 1px hsla(0, 0%, 0%, 0.3);
+    --quota-shadow: 0px 20px 40px 1px hsla(0, 0%, 0%, 0.3);
+	
 	/* 字体样式援引自 font.css */
 	--base-font: -apple-system, "Noto Sans CJK SC", "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
 
@@ -114,7 +119,7 @@ content {
 /* 目录自动编号 */
 
 .md-toc {
-	font-size: 1rem;
+	font-size: 1.25rem;
 	line-height: 1.5rem;
 	display: table;
 	margin: auto;
@@ -177,7 +182,7 @@ content {
 }
 
 .md-toc-h1 {
-	font: 600 1.25em var(--title-font);
+	font: 600 1.5rem var(--title-font);
 	counter-increment: counter_md-toc-h1;
 	counter-reset: counter_md-toc-h2;
 }
@@ -389,12 +394,12 @@ h6 {
 
 #write h1::before {
 	top: -1.5rem;
-	border-bottom: var(--opt-borderb);
+	border-top: var(--opt-borderb);
 }
 
 #write h1::after {
 	top: 1.5rem;
-	border-bottom: var(--base-borderb);
+	border-top: var(--base-borderb);
 }
 
 #write h1,
@@ -539,11 +544,11 @@ mark {
 /* codeblock mac style */
 #write pre.md-fences {
 	border-top: 2rem solid var(--mark-color);
-	margin: 2rem auto;
+	margin: 3rem auto;
 	padding: 1rem 0.5rem 1rem;
 	display: block;
 	-webkit-overflow-scrolling: touch;
-	box-shadow: 0 10px 30px 0 rgba(0,0,0,0.4);
+	box-shadow: var(--code-shadow);
 }
 
 pre.md-fences:before {
@@ -634,7 +639,7 @@ ol {
 /* Chrome 29+ */
 @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
 	.task-list-item input:before {
-		margin-top:.3rem;
+		margin-top: .3rem;
 	}
 
 	.task-list-item input:checked:before,
@@ -643,25 +648,30 @@ ol {
 	}
 }
 
-.md-task-list-item > input::before {
+.md-task-list-item > input {
+	margin-left: -1.5rem;
+	top: 5px;
+}
+
+.md-task-list-item>input::before {
 	content: "";
 	position: absolute;
-	top: -5px;
+	top: -10px;
 	left: -4px;
 	border-radius: 50%;
-	width: 1.1rem;
-	height: 1.1rem;
+	width: 1.3rem;
+	height: 1.3rem;
 	border: var(--base-border);
 	background: #fff;
 	-webkit-transition: background-color 200ms ease-in-out;
 	transition: background-color 200ms ease-in-out;
   }
   
-  .md-task-list-item > input::after {
+  .md-task-list-item>input::after {
 	content: "";
 	position: absolute;
-	top: 4px;
-	left: 0px;
+	top: 2px;
+	left: 2px;
 	width: 0.6rem;
 	height: 0.3rem;
 	border: 2px solid #fff;
@@ -674,12 +684,12 @@ ol {
 	transition: opacity 200ms ease-in-out;
   }
   
-  .md-task-list-item > input:checked::before {
+  .md-task-list-item>input:checked::before {
 	background-color: var(--link-color);
 	border: none;
   }
   
-  .md-task-list-item > input:checked::after {
+  .md-task-list-item>input:checked::after {
 	opacity: 1;
   }
   
@@ -739,7 +749,7 @@ hr {
 
 #write img {
 	margin: 40px auto;
-	box-shadow: 0px 20px 40px 1px hsla(0, 0%, 0%, 0.3);
+	box-shadow: var(--img-shadow);
 	border-radius: 5px;
 }
 
@@ -865,7 +875,7 @@ table {
 
 @media screen and (min-width: 1300px) {
 	#write {
-		box-shadow: 0px 2px 2px 2px hsla(0, 0%, 95%, 0.1), 1px 3px 5px 2px hsla(0, 0%, 85%, 0.2), 2px 4px 5px 2px hsla(0, 0%, 75%, 0.3), 3px 5px 10px 2px hsla(0, 0%, 65%, 0.4);
+		box-shadow: var(--box-shadow);
 		border-radius: 5px;
 	}
 }
@@ -926,7 +936,7 @@ table {
 		padding: 40px 60px;
 		background: var(--write-bg);
 		margin: 3rem auto 3rem;
-		border: 1px solid hsl(0, 0%, 87%);
+		border: none;
 		border-width: 0 1px;
 		border-radius: 5px;
 	}
@@ -1254,6 +1264,15 @@ p.mathjax-block,
 
 a.menu-style-btn:hover {
 	background: var(--active-bg);
+}
+
+#top-titlebar,
+#top-titlebar * {
+    background-color: var(--bg-color);
+}
+
+.megamenu-content {
+    background: var(--bg-color);
 }
 
 /* 标题 */

@@ -16,6 +16,8 @@
 ## 安装
 
 >  建议安装的字体：思源黑体、思源宋体、更纱黑体（term sc），苍耳今楷05。
+>
+>  可选字体：Cascadia code、全字库楷体
 
 > 字体安装（没有区分 Noto 字体和 Sans Hans 字体）：
 >
@@ -33,12 +35,14 @@
 
 ![](typora-theme-review/color.png)
 
-<div style="display:none">
-<div style="display:flex;flex-wrap:wrap;color:#333;"><div style="background:rgb(235,235,235);height:6rem;width:15rem;"><p>rgb(235,235,235)</p></div><div style="background:#fffafa;height:6rem;width:15rem;"><p>#fffafa</p></div><div style="background:rgb(45,36,31);height:6rem;width:15rem;color:rgb(238,229,248)"><p>rgb(45,36,31)</p></div></div>
-<div style="display:flex;flex-wrap:wrap;color:#333;"><div style="background:hsl(0,0%,5%);height:6rem;width:15rem;color:rgb(238,229,248)"><p>hsl(0,0%,5%)</p></div><div style="background:hsl(0,0%,20%);height:6rem;width:15rem;color:rgb(238,229,248)"><p>hsl(0,0%,20%)</p></div><div style="background:hsl(0,0%,35%);height:6rem;width:15rem;color:rgb(238,229,248)"><p>hsl(0,0%,35%)</p></div><div style="background:hsl(0,0%,50%);height:6rem;width:15rem;color:rgb(238,229,248)"><p>hsl(0,0%,50%)</p></div><div style="background:hsl(0,0%,75%);height:6rem;width:15rem;"><p>hsl(0,0%,75%)</p></div><div style="background:hsl(0,0%,80%);height:6rem;width:15rem;"><p>hsl(0,0%,80%)</p></div><div style="background:hsl(0,0%,90%);height:6rem;width:15rem;"><p>hsl(0,0%,90%)</p></div><div style="background:hsl(0,0%,95%);height:6rem;width:15rem;"><p>hsl(0,0%,95%)</p></div><div style="background:hsl(0,0%,98%);height:6rem;width:15rem;"><p>hsl(0,0%,98%)</p></div><div style="background:hsl(0,0%,99%);height:6rem;width:15rem;"><p>hsl(0,0%,99%)</p></div><div style="background:hsl(0,0%,100%);height:6rem;width:15rem;"><p>hsl(0,0%,100%)</p></div></div>
-<div style="display:flex;flex-wrap:wrap;color:#333;"><div style="background:hsl(0,100%,65%);height:6rem;width:15rem;"><p>hsl(0,100%,65%)</p></div><div style="background:hsl(0,100%,75%);height:6rem;width:15rem;"><p>hsl(0,100%,75%)</p></div><div style="background:hsl(215,100%,65%);height:6rem;width:15rem;"><p>hsl(215,100%,65%)</p></div><div style="background:hsl(215,100%,75%);height:6rem;width:15rem;"><p>hsl(215,100%,75%)</p></div><div style="background:hsl(70, 100%, 65%);height:6rem;width:15rem;"><p>hsl(70, 100%, 65%)</p></div><div style="background:hsl(70, 100%, 75%);height:6rem;width:15rem;"><p>hsl(70, 100%, 75%)</p></div></div></div>
-
 ## 更新日志
+
+2020-09-03——`UPDATE`
+
++ 调整了代办事项样式。
++ 调整了代码块样式(仿macOS)。
++ 调整了标题和内容的距离。
++ 修复了部分错误。
 
 2020-08-19——`UPDATE`
 
