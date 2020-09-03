@@ -60,12 +60,12 @@
 	--base-borderl: 4px solid hsl(0, 100%, 65%);
 	--base-borderb: 1px dashed hsl(0, 100%, 65%);
 	--opt-borderb: 1px dashed hsl(215, 100%, 65%);
-	
-    --box-shadow: 0px 20px 40px 1px hsla(0, 0%, 0%, 0.3);
-    --img-shadow: 0px 20px 40px 1px hsla(0, 0%, 0%, 0.3);
-    --code-shadow: 0px 20px 40px 1px hsla(0, 0%, 0%, 0.3);
-    --quota-shadow: 0px 20px 40px 1px hsla(0, 0%, 0%, 0.3);
-	
+
+	--box-shadow: 0px 20px 40px 1px hsla(0, 0%, 0%, 0.3);
+	--img-shadow: 0px 20px 40px 1px hsla(0, 0%, 0%, 0.3);
+	--code-shadow: 0px 20px 40px 1px hsla(0, 0%, 0%, 0.3);
+	--quota-shadow: 0px 20px 40px 1px hsla(0, 0%, 0%, 0.3);
+
 	/* 字体样式援引自 font.css */
 	--base-font: -apple-system, "Noto Sans CJK SC", "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
 
@@ -122,26 +122,39 @@ content {
 	font-size: 1.25rem;
 	line-height: 1.5rem;
 	display: table;
-	margin: auto;
+	margin: 2rem 0;
+	margin-left: -4rem;
 }
 
 .md-toc::before {
-	content: "Contents";
+	content: "目录";
+	font-family: var(--base-font);
 	font-size: 2rem;
+	font-weight: 200;
 	text-align: center;
 	display: block;
-	margin: 2rem auto;
-	font-weight: 800;
-	text-transform: uppercase;
-	letter-spacing: 5px;
+	float: left;
+	padding: 8rem;
+	padding-top: 2rem;
+	background: linear-gradient(-40deg, transparent 49.5%, deeppink 49.5%, deeppink 50.5%, transparent 50.5%) 40px;
+}
+
+.md-toc-content {
+	float: right;
 }
 
 .md-toc-item {
-	display: flex;
-	display: table-row;
+	display: list-item;
+	list-style: none;
+	height: 1.5rem;
 	width: 100%;
-	height: 2.5rem;
+	font-family: var(--title-font);
+	font-weight: 200;
 	vertical-align: baseline;
+}
+
+.md-toc-item .md-toc-inner {
+	padding-left: 2rem;
 }
 
 .md-toc-h1,
@@ -182,9 +195,10 @@ content {
 }
 
 .md-toc-h1 {
-	font: 600 1.5rem var(--title-font);
 	counter-increment: counter_md-toc-h1;
 	counter-reset: counter_md-toc-h2;
+	font: 400 1.3rem var(--title-font);
+	margin-top: 4rem;
 }
 
 .md-toc-h1:before {
@@ -194,6 +208,9 @@ content {
 .md-toc-h2 {
 	counter-increment: counter_md-toc-h2;
 	counter-reset: counter_md-toc-h3;
+	margin-left: 8rem;
+	margin-top: 2rem;
+	font-size: 1.2rem;
 }
 
 .md-toc-h2::before {
@@ -212,6 +229,12 @@ content {
 .md-toc-h4 {
 	counter-increment: counter_md-toc-h4;
 	counter-reset: counter_md-toc-h5;
+}
+
+.md-toc-h3,
+.md-toc-h4 {
+	margin-left: 15rem;
+	font-size: 1rem;
 }
 
 .md-toc-h4::before {
@@ -236,6 +259,15 @@ content {
 	content: counter(counter_md-toc-h3)"."counter(counter_md-toc-h4)"."counter(counter_md-toc-h5)"."counter(counter_md-toc-h6);
 }
 
+.md-toc-h1 *,
+.md-toc-h2 *,
+.md-toc-h3 *,
+.md-toc-h4 * {
+	background: none;
+	text-transform: capitalize;
+	font-size: inherit;
+	font-family: inherit;
+}
 
 .md-toc-h1:before,
 .md-toc-h2::before,
@@ -246,6 +278,9 @@ content {
 	color: initial;
 	display: table-cell;
 	vertical-align: baseline;
+	font-size: 1.2rem !important;
+	font-family: var(--base-font);
+	font-weight: 200;
 }
 
 .md-toc-h1:before,
@@ -552,16 +587,16 @@ mark {
 }
 
 pre.md-fences:before {
-    background: #fc625d;
-    box-shadow: 23px 0 #fdbc40, 45px 0 #35cd4b;
-    left: 15px;
-    margin-top: -2.3rem;
-    position: absolute;
-    border-radius: 50%;
-    content: ' ';
-    height: 12px;
-    width: 12px;
-} 
+	background: #fc625d;
+	box-shadow: 23px 0 #fdbc40, 45px 0 #35cd4b;
+	left: 15px;
+	margin-top: -2.3rem;
+	position: absolute;
+	border-radius: 50%;
+	content: ' ';
+	height: 12px;
+	width: 12px;
+}
 
 pre,
 code,
@@ -636,19 +671,7 @@ ol {
 
 /* todo list */
 
-/* Chrome 29+ */
-@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
-	.task-list-item input:before {
-		margin-top: .3rem;
-	}
-
-	.task-list-item input:checked:before,
-	.task-list-item input[checked]:before {
-		margin-top: .3rem;
-	}
-}
-
-.md-task-list-item > input {
+.md-task-list-item>input {
 	margin-left: -1.5rem;
 	top: 5px;
 }
@@ -656,7 +679,7 @@ ol {
 .md-task-list-item>input::before {
 	content: "";
 	position: absolute;
-	top: -10px;
+	top: -6px;
 	left: -4px;
 	border-radius: 50%;
 	width: 1.3rem;
@@ -665,12 +688,12 @@ ol {
 	background: #fff;
 	-webkit-transition: background-color 200ms ease-in-out;
 	transition: background-color 200ms ease-in-out;
-  }
-  
-  .md-task-list-item>input::after {
+}
+
+.md-task-list-item>input::after {
 	content: "";
 	position: absolute;
-	top: 2px;
+	top: 0px;
 	left: 2px;
 	width: 0.6rem;
 	height: 0.3rem;
@@ -678,25 +701,25 @@ ol {
 	border-top: 0;
 	border-right: 0;
 	-webkit-transform: rotate(-45deg);
-			transform: rotate(-45deg);
+	transform: rotate(-45deg);
 	opacity: 0;
 	-webkit-transition: opacity 200ms ease-in-out;
 	transition: opacity 200ms ease-in-out;
-  }
-  
-  .md-task-list-item>input:checked::before {
+}
+
+.md-task-list-item>input:checked::before {
 	background-color: var(--link-color);
 	border: none;
-  }
-  
-  .md-task-list-item>input:checked::after {
+}
+
+.md-task-list-item>input:checked::after {
 	opacity: 1;
-  }
-  
-  .md-task-list-item.task-list-done {
+}
+
+.md-task-list-item.task-list-done {
 	text-decoration: line-through;
 	color: var(--footer-color);
-  }
+}
 
 /* 块/段落引用 */
 
@@ -740,9 +763,15 @@ blockquote strong {
 /* 一致化 horizontal rule */
 hr {
 	border: none;
-	border-bottom: 1px solid #999;
+	border-bottom: 1px solid var(--link-color);
 	margin: 3rem auto;
-	height: 15px;
+	height: 1px;
+	width: 50%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, .4);
+}
+
+hr.pb {
+	page-break-after: always;
 }
 
 /* img */
@@ -954,29 +983,17 @@ table {
 	 */
 	html,
 	body {
-		border: 1px solid transparent;
+		border: none;
 		height: 99%;
-		page-break-after: avoid;
-		page-break-before: avoid;
-	}
-
-	.md-toc {
-		page-break-after: always;
-		padding: 1rem 2rem;
-	}
-
-	.md-toc:before {
-		margin-bottom: 4rem;
 	}
 
 	#write {
-		box-shadow: 0px 0px 0px 0px transparent;
+		box-shadow: none;
 		border-radius: 0px;
 	}
 
 	#write h1 {
 		margin: 3rem auto;
-		page-break-before: always;
 	}
 
 	#write h1:before,
@@ -991,6 +1008,10 @@ table {
 
 	#write h2 {
 		margin: 2rem auto;
+	}
+
+	p {
+		font-family: var(--title-font);
 	}
 
 	code,
@@ -1009,8 +1030,7 @@ table {
 		padding: 1.5rem;
 		background: var(--quota-bg);
 		border: 0px solid transparent;
-		border: 2px dotted hsl(0, 100%, 65%);
-		border-radius: 5px;
+		border-left: 4px solid hsl(0, 100%, 65%);
 	}
 
 	blockquote blockquote {
@@ -1019,12 +1039,17 @@ table {
 		border-left: 4px solid hsl(0, 100%, 65%);
 	}
 
+	.md-task-list-item>input::before {
+		top: -3px;
+		left: -2px;
+		border-radius: 0;
+	}
+
 	.typora-export * {
 		-webkit-print-color-adjust: exact;
 	}
 
 }
-
 
 .MathJax_Display {
 	font-size: 0.9rem;
@@ -1268,11 +1293,11 @@ a.menu-style-btn:hover {
 
 #top-titlebar,
 #top-titlebar * {
-    background-color: var(--bg-color);
+	background-color: var(--bg-color);
 }
 
 .megamenu-content {
-    background: var(--bg-color);
+	background: var(--bg-color);
 }
 
 /* 标题 */

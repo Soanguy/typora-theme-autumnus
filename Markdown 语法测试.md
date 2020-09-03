@@ -10,7 +10,9 @@
 
 只需要在你想插入目录的地方输入 `[toc]`，即可。下面是本文的目录。
 
-> [toc]
+[toc]
+
+<hr class="pb"/>
 
 当然，如果你的编辑器不支持输入 `[toc]` 来显示目录，那么你可以自己来制作目录。
 
@@ -195,6 +197,8 @@
 ![picture](http://example/example.png)
 ![picture](./picture/pic.png)
 ```
+
+<img src="https://raw.githubusercontent.com/Soanguy/imgbak/master/img/avatar.jpg" style="zoom:50%;" />
 
 同样的，图片可以使用参考式来输入。
 

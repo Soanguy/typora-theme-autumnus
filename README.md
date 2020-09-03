@@ -7,7 +7,7 @@
 + 🔍 显著区分各层级标题
 + 📷 `![no-shadow](图片路径)`： 添加 `no-shadow` 可以为不想添加阴影的图片去掉阴影
 + 🎴 `![normal](图片路径)`：为图片添加 `normal` 可以让图片去掉阴影，同时处于行内而非单独一行。
-+ 导出为 PDF 时，目录页会独占一页；每层一级标题也都会在其前自动添加分页符。
++ 📖导出为 PDF 时，可以添加 `<hr class="pb" />` 来添加分页符。
 
 > ❕注意❕
 >
@@ -29,13 +29,13 @@
 
 下载该主题后，将主题的 `autumnus.css` 文件和 `fluent` 文件夹置于 `C:\Users\{UserName}\AppData\Roaming\Typora\themes` 目录下，重启 Typora 即可在主题选项下启用该主题。若要启用 `fluent` 将 `autumnus.user.css` 一同置于目录下即可启用。
 
-## 主题配色
-
-（备忘）
-
-![](typora-theme-review/color.png)
-
 ## 更新日志
+
+2020-09-04——`UPDATE`
+
++ 优化了 PDF 导出时的样式（目录，TODO，引用，正文字体）。
++ 导出为 PDF 时，可通过添加 横线 来自定分页的位置，不在强制让目录和标题一分页。
++ 修改了目录样式。
 
 2020-09-03——`UPDATE`
 
@@ -53,7 +53,7 @@
 
 2020-08-17——`UPDATE`
 
-+ 调整了导出格式的样式，包括 `PDF`、`HTML`。样式预览：[HTML 格式预览](./typora-theme-review/lorem-ipsum.html)、[PDF 格式预览](./typora-theme-review/lorem-ipsum.pdf)、[fluent 样式的 HTML 格式预览](./typora-theme-review/lorem-ipsum-fluent.html)。
++ 调整了导出格式的样式，包括 `PDF`、`HTML`。
 + 调整了在较小宽度下的显示样式。
 + 取出 `fluent` 样式，在使用时，将 `autumnus.user.css` 置于主题目录下即可。此时的 `fluent` 做为 `autumnus` 的补丁存在。
 
@@ -95,7 +95,9 @@
 `待完成部分`：
 
 - [x] 目录样式优化。
-- [x] 黑夜模式（已创建，[typora-theme-autumnus_dark](https://github.com/Soanguy/typora-theme-autumnus_dark)）
+- [x] 黑夜模式（已创建，[typora-theme-autumnus_dark](https://github.com/Soanguy/typora-theme-autumnus_dark)）。
+- [x] 修改目录样式。
+- [x] 优化 PDF 导出样式。
 
 ## 样式预览
 
