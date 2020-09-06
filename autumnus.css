@@ -61,10 +61,11 @@
 	--base-borderb: 1px dashed hsl(0, 100%, 65%);
 	--opt-borderb: 1px dashed hsl(215, 100%, 65%);
 
+	--base-shadow: 0px 8px 16px hsla(0, 0%, 0%, .2);
 	--box-shadow: 0px 20px 40px 1px hsla(0, 0%, 0%, 0.3);
-	--img-shadow: 0px 20px 40px 1px hsla(0, 0%, 0%, 0.3);
-	--code-shadow: 0px 20px 40px 1px hsla(0, 0%, 0%, 0.3);
-	--quota-shadow: 0px 20px 40px 1px hsla(0, 0%, 0%, 0.3);
+	--img-shadow: var(--box-shadow);
+	--code-shadow: var(--base-shadow);
+	--quota-shadow: var(--base-shadow);
 
 	/* 字体样式援引自 font.css */
 	--base-font: -apple-system, "Noto Sans CJK SC", "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
@@ -112,19 +113,11 @@ content {
 	max-width: 960px;
 	min-height: calc(100vh - 6rem);
 	min-width: calc(100vw - 45rem);
-	padding: 3rem 4rem;
+	padding: 4rem 1rem;
 	text-align: justify;
 }
 
 /* 目录自动编号 */
-
-.md-toc {
-	font-size: 1.25rem;
-	line-height: 1.5rem;
-	display: table;
-	margin: 2rem 0;
-	margin-left: -4rem;
-}
 
 .md-toc::before {
 	content: "目录";
@@ -133,72 +126,83 @@ content {
 	font-weight: 200;
 	text-align: center;
 	display: block;
-	float: left;
+	position: absolute;
+	left: -10rem;
 	padding: 8rem;
 	padding-top: 2rem;
 	background: linear-gradient(-40deg, transparent 49.5%, deeppink 49.5%, deeppink 50.5%, transparent 50.5%) 40px;
 }
 
+.md-toc {
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+	display: table;
+	margin: 4rem auto;
+	margin-left: 4rem !important;
+	max-width: 75%;
+}
+
 .md-toc-content {
-	float: right;
+	line-height: 2rem;
+	left: 4rem;
+	top: 4rem;
+
 }
 
 .md-toc-item {
-	display: list-item;
-	list-style: none;
-	height: 1.5rem;
-	width: 100%;
-	font-family: var(--title-font);
-	font-weight: 200;
-	vertical-align: baseline;
+	font-family: var(--base-font);
 }
 
-.md-toc-item .md-toc-inner {
-	padding-left: 2rem;
+.md-toc-h1 {
+	margin-top: 4rem;
+	font-weight: 300;
+	font-size: 1.2rem;
 }
 
-.md-toc-h1,
-.md-toc-h2,
-.md-toc-h3,
-.md-toc-h4 {
-	margin: .75rem;
+.md-toc-h1 .md-toc-inner {
+	margin-left: 2em;
 }
 
 .md-toc-h2 {
-	margin-left: 1rem;
+	margin-left: 2rem;
+	font-size: 1.1rem;
 }
 
-.md-toc-h3,
-.md-toc-h4 {
+.md-toc-h2,
+.md-toc-h3 {
+	margin-top: 1rem;
+	font-weight: 200;
+}
+
+.md-toc-h2+.md-toc-h3 {
+	margin-left: 8rem;
+}
+
+.md-toc-h3 {
+	display: inline-block;
+	font-size: 1rem;
+}
+
+.md-toc-h3 .md-toc-inner {
+	margin-left: .5rem;
+}
+
+.md-toc-h3::first-of-type {
 	margin-left: 4rem;
 }
 
-.md-toc-item .md-toc-inner {
-	text-decoration: none;
-	color: var(--text-color);
-	border-bottom: none !important;
-	display: table-cell;
-	vertical-align: baseline;
-	padding-left: 3rem;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+.md-toc-h3:after {
+	content: " / ";
 }
 
-.md-toc-h1 .md-toc-inner,
-.md-toc-h2 .md-toc-inner,
-.md-toc-h3 .md-toc-inner,
-.md-toc-h4 .md-toc-inner {
-	margin-left: 1rem !important;
-	word-wrap: normal;
-	word-break: break-all;
+.md-toc-inner {
+	color: var(--text-color);
+	border: none !important;
 }
 
 .md-toc-h1 {
 	counter-increment: counter_md-toc-h1;
 	counter-reset: counter_md-toc-h2;
-	font: 400 1.3rem var(--title-font);
-	margin-top: 4rem;
 }
 
 .md-toc-h1:before {
@@ -208,9 +212,6 @@ content {
 .md-toc-h2 {
 	counter-increment: counter_md-toc-h2;
 	counter-reset: counter_md-toc-h3;
-	margin-left: 8rem;
-	margin-top: 2rem;
-	font-size: 1.2rem;
 }
 
 .md-toc-h2::before {
@@ -226,75 +227,13 @@ content {
 	content: counter(counter_md-toc-h3);
 }
 
-.md-toc-h4 {
-	counter-increment: counter_md-toc-h4;
-	counter-reset: counter_md-toc-h5;
-}
-
-.md-toc-h3,
-.md-toc-h4 {
-	margin-left: 15rem;
-	font-size: 1rem;
-}
-
-.md-toc-h4::before {
-	content: counter(counter_md-toc-h3)"."counter(counter_md-toc-h4);
-}
-
-.md-toc-h5 {
-	counter-increment: counter_md-toc-h5;
-	counter-reset: counter_md-toc-h6;
-}
-
-.md-toc-h5::before {
-	content: counter(counter_md-toc-h3)"."counter(counter_md-toc-h4)"."counter(counter_md-toc-h5);
-}
-
-.md-toc-h6 {
-	counter-increment: counter_md-toc-h6;
-	counter-reset: counter_md-toc-h7;
-}
-
-.md-toc-h6::before {
-	content: counter(counter_md-toc-h3)"."counter(counter_md-toc-h4)"."counter(counter_md-toc-h5)"."counter(counter_md-toc-h6);
-}
-
-.md-toc-h1 *,
-.md-toc-h2 *,
-.md-toc-h3 *,
-.md-toc-h4 * {
-	background: none;
-	text-transform: capitalize;
-	font-size: inherit;
-	font-family: inherit;
-}
-
-.md-toc-h1:before,
+.md-toc-h1::before,
 .md-toc-h2::before,
-.md-toc-h3::before,
-.md-toc-h4::before,
-.md-toc-h5::before,
-.md-toc-h6::before {
-	color: initial;
-	display: table-cell;
-	vertical-align: baseline;
-	font-size: 1.2rem !important;
-	font-family: var(--base-font);
-	font-weight: 200;
+.md-toc-h3::before {
+	display: inline-block;
 }
 
-.md-toc-h1:before,
-.md-toc-h2::before {
-	text-align-last: justify;
-}
-
-.md-toc-h3::before,
-.md-toc-h4::before,
-.md-toc-h5::before,
-.md-toc-h6::before {
-	text-align: right;
-}
-
+.md-toc-h4,
 .md-toc-h5,
 .md-toc-h6 {
 	display: none;
@@ -605,6 +544,7 @@ pre tt,
 .CodeMirror pre {
 	font-family: var(--code-font);
 	font-size: 1rem;
+	font-weight: 300;
 	line-height: 1.5rem;
 	padding: 2px 4px;
 	border-radius: 5px;
@@ -679,7 +619,7 @@ ol {
 .md-task-list-item>input::before {
 	content: "";
 	position: absolute;
-	top: -6px;
+	top: -7px;
 	left: -4px;
 	border-radius: 50%;
 	width: 1.3rem;
@@ -725,8 +665,8 @@ ol {
 
 blockquote {
 	background: var(--quota-bg);
-	margin: 2rem -3.8rem;
-	padding: 2rem 6rem;
+	margin: 2rem auto;
+	padding: 2rem 4rem;
 	font-size: 1.2rem;
 }
 
@@ -767,11 +707,11 @@ hr {
 	margin: 3rem auto;
 	height: 1px;
 	width: 50%;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, .4);
 }
 
 hr.pb {
 	page-break-after: always;
+	border-bottom: 1px solid transparent;
 }
 
 /* img */
@@ -861,13 +801,30 @@ table {
 
 	.md-toc {
 		padding: 0;
-		margin: auto;
+		margin: 0 !important;
+		max-width: 100%;
+
+	}
+
+	.md-toc::before {
+		display: block;
+		position: relative;
+		left: 0;
+		margin-top: 4rem;
+		margin-bottom: 0;
+		padding: 0;
+		background: none;
+	}
+
+	.md-toc-content {
+		top: 0;
+		left: 0;
 	}
 
 	blockquote {
 		background: var(--quota-bg);
-		margin: 2rem -4rem;
-		padding: 2rem 4rem;
+		margin: 2rem -1rem;
+		padding: 2rem;
 	}
 
 	blockquote blockquote {
@@ -990,28 +947,38 @@ table {
 	#write {
 		box-shadow: none;
 		border-radius: 0px;
-	}
-
-	#write h1 {
-		margin: 3rem auto;
+		font-weight: 400;
 	}
 
 	#write h1:before,
-	#write h1:after {
+	#write h1:after,
+	#write blockquote h1:before,
+	#write blockquote h1:after {
 		border: none;
 		height: 0;
 	}
 
-	#write h1:first-of-type {
+	h1:first-of-type {
 		page-break-before: avoid;
 	}
 
-	#write h2 {
+	h2 {
 		margin: 2rem auto;
 	}
 
-	p {
+	#write h3,
+	#write h4,
+	#write h5,
+	#write h6,
+	p,
+	li,
+	td,
+	tr {
 		font-family: var(--title-font);
+	}
+
+	blockquote li {
+		font-family: var(--quota-font);
 	}
 
 	code,
@@ -1026,7 +993,7 @@ table {
 
 	blockquote {
 		position: relative;
-		margin: 2rem 1rem;
+		margin: 2rem auto;
 		padding: 1.5rem;
 		background: var(--quota-bg);
 		border: 0px solid transparent;
@@ -1043,6 +1010,12 @@ table {
 		top: -3px;
 		left: -2px;
 		border-radius: 0;
+	}
+
+	blockquote,
+	img,
+	pre {
+		box-shadow: none;
 	}
 
 	.typora-export * {
