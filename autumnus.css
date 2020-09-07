@@ -27,21 +27,21 @@
 	--tbody-bg: hsl(0, 0%, 96%);
 	/* 表格表体背景色 */
 
-	--text-color: hsl(0, 0%, 20%);
-	/* 默认字体颜色：正文等 */
 	--title-color: hsl(0, 0%, 5%);
 	/* 强调颜色：标题;加强等 */
-	--link-color: hsl(0, 100%, 75%);
-	/* 超链接字体色 */
+	--text-color: hsl(0, 0%, 20%);
+	/* 默认字体颜色：正文等 */
 	--mark-color: hsl(0, 0%, 20%);
 	/* 高亮字体色 */
 	--code-color: hsl(0, 0%, 20%);
-	--codeb-color: hsl(0, 0%, 50%);
-	/* 代码字体色 */
 	--quota-color: hsl(0, 0%, 35%);
 	/* 引用字体色 */
+	--codeb-color: hsl(0, 0%, 50%);
+	/* 代码字体色 */
 	--footer-color: hsl(0, 0%, 50%);
 	/* 脚注字体色 */
+	--link-color: hsl(0, 100%, 75%);
+	/* 超链接字体色 */
 
 	--md-char-color: hsl(0, 100%, 65%);
 	/*markdown 符号的颜色，诸如 # * 等 */
@@ -62,8 +62,8 @@
 	--opt-borderb: 1px dashed hsl(215, 100%, 65%);
 
 	--base-shadow: 0px 8px 16px hsla(0, 0%, 0%, .2);
-	--box-shadow: 0px 20px 40px 1px hsla(0, 0%, 0%, 0.3);
-	--img-shadow: var(--box-shadow);
+	--opt-shadow: 0px 20px 40px 1px hsla(0, 0%, 0%, 0.3);
+	--img-shadow: var(--opt-shadow);
 	--code-shadow: var(--base-shadow);
 	--quota-shadow: var(--base-shadow);
 
@@ -78,7 +78,7 @@
 
 	--quota-font: Georgia, Baskerville, "Liberation Serif", "TW-Kai", '仓耳今楷05-6763', "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
 
-	--code-font: "Cascadia code", "Sarasa Term SC", Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono", Courier;
+	--monospace: "Cascadia code", "Sarasa Term SC", Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono", Courier;
 }
 
 
@@ -542,7 +542,6 @@ code,
 pre tt,
 .md-fences,
 .CodeMirror pre {
-	font-family: var(--code-font);
 	font-size: 1rem;
 	font-weight: 300;
 	line-height: 1.5rem;
@@ -560,7 +559,7 @@ kbd,
 samp,
 tt,
 var {
-	font-family: var(--code-font);
+	font-family: var(--monospace);
 }
 
 /* 代码块下的标题颜色过深。修改为浅蓝 */
@@ -685,19 +684,6 @@ blockquote p {
 blockquote p {
 	color: var(--quota-color);
 	line-height: 1.75rem;
-}
-
-/* 统一引用下其他元素的样式 */
-
-blockquote h1,
-blockquote h2,
-blockquote h3,
-blockquote h4,
-blockquote h5,
-blockquote h6,
-blockquote em,
-blockquote strong {
-	font-family: var(--quota-font) !important;
 }
 
 /* 一致化 horizontal rule */
@@ -861,7 +847,7 @@ table {
 
 @media screen and (min-width: 1300px) {
 	#write {
-		box-shadow: var(--box-shadow);
+		box-shadow: var(--base-shadow);
 		border-radius: 5px;
 	}
 }
@@ -887,7 +873,7 @@ table {
 		padding: 40px 60px;
 		background: var(--write-bg);
 		margin: 3rem auto 3rem;
-		border-width: 0 1px;
+		border: none;
 	}
 
 	.pin-outline #write {
@@ -945,7 +931,6 @@ table {
 	}
 
 	#write {
-		box-shadow: none;
 		border-radius: 0px;
 		font-weight: 400;
 	}
@@ -959,8 +944,9 @@ table {
 		margin-bottom: 1.5rem;
 	}
 
-	#write pre.md-fences,blockquote{
-		margin:1rem auto;
+	#write pre.md-fences,
+	blockquote {
+		margin: 1rem auto;
 	}
 
 	#write h1:before,
@@ -1025,6 +1011,7 @@ table {
 		border-radius: 0;
 	}
 
+	#write,
 	blockquote,
 	img,
 	pre {
@@ -1071,14 +1058,12 @@ p.mathjax-block,
 #typora-source {
 	background: var(--bg-color);
 	color: var(--code-color);
-	font-family: var(--code-font);
+	line-height: 1.5rem;
 }
 
 #typora-source pre {
-	line-height: 1.5rem;
 	border-radius: 0px !important;
 }
-
 
 /** ui for windows **/
 

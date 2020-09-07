@@ -42,6 +42,7 @@ content {
 	margin-left: auto !important;
 	border-left: 4px solid #fb5555;
 	border-right: 4px solid #fb5555;
+	max-width: 100%;
 }
 
 .md-toc::before {
