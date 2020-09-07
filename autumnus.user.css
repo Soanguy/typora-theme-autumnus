@@ -18,7 +18,6 @@ content {
 #write {
 	width: 100%;
 	background: transparent !important;
-	font-size: 18px !important;
 }
 
 #write:after {
@@ -40,10 +39,21 @@ content {
 	border-radius: 0;
 	display: block;
 	padding: 2rem;
-	margin: 2rem -1rem 2rem!important;
+	margin-left: auto !important;
 	border-left: 4px solid #fb5555;
 	border-right: 4px solid #fb5555;
 }
+
+.md-toc::before {
+	left: -5rem;
+	top: 1rem;
+}
+
+.md-toc-content {
+	left: 4rem;
+	top: 2rem;
+}
+
 
 #write div.md-toc-tooltip {
 	left: 0em;
@@ -108,11 +118,15 @@ blockquote blockquote {
 }
 
 @media print {
-	#write {
-		background-color: #f0f0f0;
-		box-shadow: 0px 0px 0px 0px transparent;
-		border-radius: 0px;
+	:root {
+		--bg-color: #fff !important;
+		--write-bg: #fff !important;
 	}
+
+	#write:after {
+		background: #fff;
+	}
+
 }
 
 #top-titlebar,

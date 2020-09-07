@@ -950,6 +950,19 @@ table {
 		font-weight: 400;
 	}
 
+	#write h2,
+	#write h3,
+	#write h4,
+	#write h5,
+	#write h6 {
+		margin-top: 3rem;
+		margin-bottom: 1.5rem;
+	}
+
+	#write pre.md-fences,blockquote{
+		margin:1rem auto;
+	}
+
 	#write h1:before,
 	#write h1:after,
 	#write blockquote h1:before,
