@@ -145,7 +145,7 @@ content {
 .md-toc-content {
 	line-height: 2rem;
 	left: 4rem;
-	top: 4rem;
+	top: 1rem;
 
 }
 
@@ -1343,6 +1343,7 @@ table#typora-help-md-table tr {
 
 #top-titlebar {
 	height: 28px;
+	font-family: var(--base-font);
 }
 
 #w-traffic-lights {
