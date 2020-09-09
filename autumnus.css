@@ -229,7 +229,7 @@ content {
 .md-toc-h2::before,
 .md-toc-h3::before {
 	display: inline-block;
-	color:var(--text-color);
+	color: var(--text-color);
 }
 
 .md-toc-h4,
@@ -1131,23 +1131,9 @@ p.mathjax-block,
 
 /* 侧边栏文档大纲tab标签 激活 */
 
-.info-panel-tab:hover {
-	color: var(--primary-color);
-}
-
-/* 侧边栏文档大纲tab标签 激活 */
+.info-panel-tab:hover,
 .active-tab-outline,
-.active-tab-files {
-	color: var(--primary-color);
-}
-
-/* bugfix */
-#outline-content,
-#file-library {
-	color: var(--text-color);
-}
-
-/* 文件 大纲 激活 */
+.active-tab-files,
 .outline-item:hover {
 	color: var(--primary-color);
 }
@@ -1157,6 +1143,11 @@ p.mathjax-block,
 	color: var(--primary-color);
 }
 
+/* bugfix */
+#outline-content,
+#file-library {
+	color: var(--text-color);
+}
 
 /* 大纲目录自动编号 */
 
@@ -1261,11 +1252,6 @@ a.menu-style-btn:hover {
 	background: var(--active-bg);
 }
 
-#top-titlebar,
-#top-titlebar * {
-	background-color: var(--bg-color);
-}
-
 .megamenu-content {
 	background: var(--bg-color);
 }
@@ -1320,6 +1306,10 @@ a.menu-style-btn:hover {
 
 /* 偏好设定 */
 
+.unibody-window {
+	font-family: var(--base-font);
+}
+
 /* 偏好设定侧边栏 */
 .nav-group-item.active {
 	background: var(--item-hover-bg-color) !important;
@@ -1327,18 +1317,22 @@ a.menu-style-btn:hover {
 }
 
 /* 关于页 */
-
+/* fix */
 table#typora-help-md-table tr {
 	background: transparent;
 }
 
-/* fix */
 .about-content-meta {
 	font-family: var(--title-font);
 }
 
 
 /* titlebar */
+
+#top-titlebar,
+#top-titlebar * {
+	background-color: var(--bg-color);
+}
 
 #top-titlebar {
 	height: 28px;

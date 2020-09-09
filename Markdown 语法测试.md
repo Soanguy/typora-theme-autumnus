@@ -6,7 +6,7 @@
 
 接下来的内容将向您展示如何使用 MarkDown 语法以及其结果样式。
 
-以下内容都是参考自 [Markdown Syntax](http://markdown.tw)项目。
+以下内容都是参考自 [Markdown Syntax](http://markdown.tw) 项目。
 
 ## 向 MarkDown 内插入目录
 
@@ -22,12 +22,11 @@
 目录
 [特殊符号](#special)
 
-
 标题三
 ### <span id="special">特殊符号</span>
 ```
 
-点击这个链接，将跳转到本页的[特殊符号](#special)一节（诸多编辑器可能并没有支持这一功能，将文件导出为 `HTML` 即可跳转）。
+点击这个链接，将跳转到本页的 [特殊符号](#special) 一节（诸多编辑器可能并没有支持这一功能，将文件导出为 `HTML` 即可跳转）。
 
 ## 如何输入标题
 
@@ -123,22 +122,18 @@
 1. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
 
     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
 
 2. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
 
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
 ```
 
 > 1. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
 >
 >    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
->    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
 >
 > 2. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
 >
->    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
 >    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
 
 代办事项的输入标记是 `- [ ] `。注意，在右方括号后和短横线后各有一个空格。
@@ -164,15 +159,12 @@
 
 [辨识该链接的 ID]: 链接的地址
 
-
 [百度一下][百度]
 
 [百度]：http://baidu.com/
 ```
 
 他的效果就像是这样的：[百度一下][百度]
-
-
 
 [百度]: http://baidu.com/
 
@@ -227,11 +219,11 @@
 >
 > ```markdown
 > > 这是第一层引用
-> > (请不要在这里输入任何内容)
+> > （请不要在这里输入任何内容）
 > > > 这是第二层引用
-> > (请不要在这里输入任何内容)
+> > （请不要在这里输入任何内容）
 > > > > 这是三层引用
-> > (请不要在这里输入任何内容)
+> > （请不要在这里输入任何内容）
 > > 这里恢复到一层引用
 > ```
 >
@@ -251,9 +243,7 @@
 
 和标记链接的方式相似。使用`[^辨识脚注的文字]`来在想要标注的地方标注。使用 `[^辨识脚注的文字]: 脚注内容`来说明脚注内容。需要注意的是，冒号后面有一个空格。
 
-正文正文正文[^1]
-
-
+正文正文正文 [^1]
 
 [^1]: 脚注脚注。
 
