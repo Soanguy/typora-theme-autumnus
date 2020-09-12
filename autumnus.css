@@ -681,6 +681,7 @@ blockquote blockquote {
 	padding-left: 2rem;
 	border-left: var(--base-borderl);
 	border-radius: 0;
+	box-shadow: none;
 }
 
 blockquote,
@@ -1320,7 +1321,7 @@ a.menu-style-btn:hover {
 /* 偏好设定侧边栏 */
 .nav-group-item.active {
 	background: var(--item-hover-bg-color) !important;
-	color: (var--primary-color);
+	color: var(--primary-color);
 }
 
 /* 关于页 */
