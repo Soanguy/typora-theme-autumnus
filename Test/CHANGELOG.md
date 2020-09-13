@@ -1,5 +1,12 @@
 ## 更新日志
 
+2020-09-13——`UPDATE`
+
++ 删除了 Fluence 下的图片，改为使用 base64 编码直接引入图片。
++ 停止更新 `fluence`，合并至 `autumnus`。
++ 停止更新 `autumnus-dark`，合并至 `autumnus`。
++ 删除了不同主题下的相同部分的代码，减小文件体积。所有的主题都只依赖 `autumnus.css`。
+
 2020-09-07——`UPDATE`
 
 + 再次调整了 PDF 的导出样式。
