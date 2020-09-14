@@ -1,4 +1,15 @@
 /* 字体样式援引自 font.css */
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 /* 内外边距通常让各个浏览器样式的表现位置不同 */
 body,
 dl,
@@ -100,7 +111,7 @@ body,
 }
 content {
   background: hsl(0, 0%, 100%);
-  min-width: 640px;
+  min-width: 600px;
 }
 #write {
   background: hsl(0, 0%, 100%);
@@ -108,11 +119,11 @@ content {
   min-width: calc(100vw-45rem);
   min-height: calc(100vh-6rem);
   margin: 2rem auto;
-  padding: 4rem 1rem;
+  padding: 4rem;
 }
 #write h1,
 #write h2 {
-  font-family: 'adobe garamond pro', Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+  font-family: "EB Garamond", Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
   font-weight: 800;
   line-height: 3rem;
   text-align: center;
@@ -155,7 +166,7 @@ content {
 #write h5:before,
 #write h6:before {
   font-size: 0.9rem;
-  vertical-align: bottom;
+  vertical-align: middle;
   margin-right: 0.5rem;
   padding: 1px 4px;
   border-radius: 5px;
@@ -238,12 +249,12 @@ content {
   font-family: "Cascadia code", "Sarasa Term SC", Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono", Courier;
   font-size: 0.9rem;
   font-weight: 300;
-  background-color: hsl(0, 0%, 100%);
-  color: hsl(0, 0%, 50%);
+  background-color: hsl(0, 0%, 95%);
+  color: hsl(0, 0%, 30%);
 }
 #write code {
   background-color: hsl(0, 100%, 95%);
-  color: hsl(0, 0%, 25%);
+  color: hsl(0, 0%, 30%);
 }
 #write a,
 #write ins {
@@ -302,9 +313,9 @@ content {
   margin-left: 1rem;
 }
 #write blockquote {
-  background: hsl(0, 100%, 98%);
+  background: hsl(0, 0%, 97%);
   color: hsl(0, 0%, 30%);
-  font-family: 'adobe garamond pro', Baskerville, Georgia, "Liberation Serif", "TW-Kai", '仓耳今楷05-6763', "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+  font-family: "EB Garamond", Baskerville, Georgia, "Liberation Serif", "TW-Kai", '仓耳今楷05-6763', "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
   font-size: 1.2rem;
   box-shadow: 0px 8px 16px hsla(0, 0%, 0%, 0.2);
 }
@@ -315,9 +326,12 @@ content {
   box-shadow: none;
   border-radius: 0;
 }
+#write blockquote pre.md-fences {
+  box-shadow: none;
+}
 #write blockquote p {
   color: hsl(0, 0%, 30%);
-  font-family: 'adobe garamond pro', Baskerville, Georgia, "Liberation Serif", "TW-Kai", '仓耳今楷05-6763', "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+  font-family: "EB Garamond", Baskerville, Georgia, "Liberation Serif", "TW-Kai", '仓耳今楷05-6763', "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
   line-height: 1.75rem;
 }
 #write img {
@@ -352,7 +366,7 @@ content {
 }
 #write table th,
 #write table thead th {
-  background: hsl(0, 0%, 90%);
+  background: hsl(0, 0%, 91%);
 }
 #write table th:hover,
 #write table thead th:hover {
@@ -363,9 +377,9 @@ content {
   border-bottom: none;
 }
 #write table td {
-  background: hsl(0, 0%, 95%);
+  background: hsl(0, 0%, 93%);
   color: hsl(0, 0%, 20%);
-  border: 1px solid hsl(0, 0%, 90%);
+  border: 1px solid hsl(0, 0%, 91%);
 }
 #write table td:hover {
   background: hsl(0, 0%, 99%);
@@ -531,13 +545,82 @@ blockquote .task-list-item input::before {
 @media screen and (max-width: 600px) {
   #write {
     padding: 2rem;
+    line-height: 1.5rem;
   }
-  #write figure > table {
-    width: 100%;
+  #write h1,
+  #write h2 {
+    font-size: 1.5rem;
+    text-align: left;
   }
-  #write h1 {
-    font-size: 2.5rem;
+  #write h3,
+  #write h4,
+  #write h5,
+  #write h6 {
+    font-size: 1rem;
   }
+  #write h1,
+  #write h2,
+  #write h3,
+  #write h4,
+  #write h5,
+  #write h6 {
+    margin: 1.5rem 0;
+  }
+  #write h1:before,
+  #write h2:before,
+  #write h3:before,
+  #write h4:before,
+  #write h5:before,
+  #write h6:before {
+    display: inline;
+    border: none;
+    top: 0;
+    margin-right: 1rem;
+    background: none;
+    color: hsl(0, 100%, 85%);
+  }
+  #write h1::after,
+  #write h2::after,
+  #write h3::after,
+  #write h4::after,
+  #write h5::after,
+  #write h6::after {
+    border: none;
+  }
+  #write h1::before {
+    content: "#";
+  }
+  #write h2::before {
+    content: "##";
+  }
+  #write h3::before {
+    content: "###";
+  }
+  #write p + p {
+    margin: 1rem auto;
+  }
+  #write pre.md-fences {
+    padding: 1rem;
+    box-shadow: none;
+  }
+  #write blockquote {
+    background: hsl(0, 0%, 97%);
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    border-radius: 0;
+    box-shadow: none;
+    border-left: 4px solid hsl(0, 100%, 85%);
+  }
+  #write blockquote blockquote {
+    padding-left: 1rem;
+  }
+  #write blockquote em,
+  #write blockquote strong,
+  #write blockquote mark {
+    font-family: "EB Garamond", Baskerville, Georgia, "Liberation Serif", "TW-Kai", '仓耳今楷05-6763', "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+  }
+}
+@media screen and (max-width: 800px) {
   .md-toc {
     padding: 0;
     margin: 0 !important;
@@ -556,20 +639,36 @@ blockquote .task-list-item input::before {
     top: 0;
     left: 0;
   }
-  blockquote {
-    background: hsl(0, 100%, 98%);
-    margin: 2rem -1rem;
-    padding: 2rem;
-    border-radius: 0;
+}
+@media screen and (max-width: 1000px) {
+  footer.ty-footer {
+    background: hsl(0, 0%, 100%);
+    border-top: 1px solid hsl(0, 0%, 100%);
   }
-  blockquote blockquote {
-    padding-left: 1rem;
+}
+@media screen and (min-width: 1000px) {
+  #write pre.md-fences {
+    border-top: 2rem solid hsl(0, 0%, 20%);
+    display: block;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: 0px 8px 16px hsla(0, 0%, 0%, 0.2);
+  }
+  #write pre.md-fences:before {
+    content: ' ';
+    background: #fc625d;
+    box-shadow: 23px 0 #fdbc40, 45px 0 #35cd4b;
+    border-radius: 50%;
+    margin-top: -2.8rem;
+    position: absolute;
+    left: 15px;
+    height: 12px;
+    width: 12px;
   }
 }
 @media screen and (min-width: 1300px) {
   #write {
     box-shadow: 0px 8px 16px hsla(0, 0%, 0%, 0.2);
-    padding: 4rem;
+    border-radius: 5px;
   }
 }
 @media print {
@@ -590,6 +689,8 @@ blockquote .task-list-item input::before {
   #write {
     border-radius: 0px;
     font-weight: 400;
+    margin: 0;
+    padding: 0;
   }
   #write h2,
   #write h3,
@@ -598,7 +699,7 @@ blockquote .task-list-item input::before {
   #write h6 {
     margin-top: 3rem;
     margin-bottom: 1.5rem;
-    font-family: 'adobe garamond pro', Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+    font-family: "EB Garamond", Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
   }
   #write pre.md-fences,
   #write blockquote {
@@ -615,15 +716,15 @@ blockquote .task-list-item input::before {
   #write li,
   #write td,
   #write tr {
-    font-family: 'adobe garamond pro', Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+    font-family: "EB Garamond", Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
   }
   #write blockquote {
     position: relative;
     margin: 2rem auto;
     padding: 1.5rem;
-    background: hsl(0, 100%, 98%);
+    background: hsl(0, 0%, 97%);
     border: none;
-    border-radius: 5px;
+    border-radius: 0;
     border-left: 4px solid hsl(0, 100%, 85%);
   }
   #write blockquote blockquote {
@@ -632,7 +733,10 @@ blockquote .task-list-item input::before {
     border-left: 4px solid hsl(0, 100%, 85%);
   }
   #write blockquote li {
-    font-family: 'adobe garamond pro', Baskerville, Georgia, "Liberation Serif", "TW-Kai", '仓耳今楷05-6763', "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+    font-family: "EB Garamond", Baskerville, Georgia, "Liberation Serif", "TW-Kai", '仓耳今楷05-6763', "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+  }
+  #write blockquote .task-list-item input::before {
+    top: -1px;
   }
   #write code,
   #write mark {
@@ -641,6 +745,9 @@ blockquote .task-list-item input::before {
   #write mark {
     color: hsl(0, 0%, 20%);
     background-color: hsl(60, 100%, 50%);
+  }
+  .md-toc::before {
+    background: none;
   }
 }
 :root {
@@ -662,6 +769,11 @@ blockquote .task-list-item input::before {
   --select-text-bg-color: hsl(0, 100%, 75%);
   --select-text-font-color: hsl(0, 0%, 100%);
   --active-bg: hsl(0, 0%, 95%);
+  --window-border: hsl(0, 0%, 100%);
+  --control-text-color: hsl(0, 0%, 5%);
+  --control-text-hover-color: hsl(0, 0%, 20%);
+  --text-color: hsl(0, 0%, 20%);
+  --bg-color: hsl(0, 0%, 100%);
 }
 .active-tab-files .info-panel-tab,
 .active-tab-outline .info-panel-tab {
@@ -675,7 +787,7 @@ blockquote .task-list-item input::before {
   font-family: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
 }
 .ty-file-search-match-text {
-  background: hsl(0, 0%, 100%);
+  background: hsl(0, 0%, 95%);
 }
 /* 大纲目录自动编号 */
 .sidebar-content {
@@ -739,6 +851,7 @@ blockquote .task-list-item input::before {
 .md-image > .md-meta:first-of-type:before {
   padding-left: 4px;
 }
+.dropdown-menu,
 .context-menu.dropdown-menu > li > a:focus {
   background-color: var(--active-bg);
 }
@@ -749,7 +862,7 @@ blockquote .task-list-item input::before {
 }
 #typora-source {
   background: hsl(0, 0%, 100%);
-  color: hsl(0, 0%, 25%);
+  color: hsl(0, 0%, 30%);
   line-height: 1.5rem;
 }
 .context-menu.dropdown-menu > li > a:focus {
@@ -773,6 +886,9 @@ blockquote .task-list-item input::before {
 /* bugfix */
 .megamenu-opened .megamenu-menu {
   left: -1px !important;
+}
+#megamenu-menu-list {
+  background: #2f353a;
 }
 .megamenu-content {
   background: hsl(0, 0%, 100%) !important;
