@@ -1,59 +1,29 @@
-/* 
-基础颜色参考
-
-黑白色：hsl(0，0，？%)
-		5 20 35 50 90 95 99 100
-
-红色：hsl(0,100%,65%)
-蓝色：hsl(215,100%,65%)
-*/
-
 :root {
 	--bg-color: hsl(0, 0%, 100%);
 	--write-bg: hsl(0, 0%, 100%);
-	/* 写作背景色 */
 	--link-bg: transparent;
-	/* 超链接背景色 */
 	--mark-bg: hsl(0, 100%, 85%);
-	/* 高亮背景色 */
 	--code-bg: hsl(0, 100%, 95%);
-	/* 代码背景色 */
 	--codeb-bg: hsl(0, 0%, 95%);
-	/* 代码块背景色 */
 	--quota-bg: hsl(0, 0%, 95%);
-	/* 引用背景色 */
 	--thead-bg: hsl(0, 0%, 90%);
-	/* 表格表头背景色 */
 	--tbody-bg: hsl(0, 0%, 96%);
-	/* 表格表体背景色 */
 
 	--title-color: hsl(0, 0%, 5%);
-	/* 强调颜色：标题;加强等 */
 	--text-color: hsl(0, 0%, 20%);
-	/* 默认字体颜色：正文等 */
 	--mark-color: hsl(0, 0%, 20%);
-	/* 高亮字体色 */
 	--code-color: hsl(0, 0%, 20%);
 	--quota-color: hsl(0, 0%, 35%);
-	/* 引用字体色 */
 	--codeb-color: hsl(0, 0%, 50%);
-	/* 代码字体色 */
 	--footer-color: hsl(0, 0%, 50%);
-	/* 脚注字体色 */
 	--link-color: hsl(0, 100%, 75%);
-	/* 超链接字体色 */
 
 	--md-char-color: hsl(0, 100%, 65%);
-	/*markdown 符号的颜色，诸如 # * 等 */
 	--meta-content-color: hsl(0, 0%, 50%);
-	/*change color of meta contents like image text or link address in markdown */
 
 	--link-hover: hsl(0, 100%, 65%);
-	/* 默认hover色：划过小标题;链接时的颜色 */
 	--thead-hover: hsl(0, 0%, 99%);
-	/* 表格hover色：表头 */
 	--tbody-hover: hsl(0, 0%, 99%);
-	/* 表格hover色：表体 */
 
 	--window-border: 1px solid hsl(0, 0%, 95%);
 	--base-border: 1px solid hsl(0, 100%, 65%);
@@ -67,14 +37,11 @@
 	--code-shadow: var(--base-shadow);
 	--quota-shadow: var(--base-shadow);
 
-	/* 字体样式援引自 font.css */
 	--base-font: "Poppins", -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
 
 	--title-font: "EB Garamond", Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
 
 	--em-font: "EB Garamond", Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC"， "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
-
-	/* --quota-font: "Noto Serif CJK SC", Georgia, "Nimbus Roman No9 L", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif; */
 
 	--quota-font: Baskerville, Georgia, "Liberation Serif", "TW-Kai", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
 
@@ -83,8 +50,6 @@
 	--lishu: "金梅新細隸國際碼";
 }
 
-/* 部分样式援自 typo.css,han.css*/
-/* 目录自动编码样式根据官网范例进行些许改动 */
 html {
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
