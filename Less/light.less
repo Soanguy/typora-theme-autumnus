@@ -2,58 +2,63 @@
 @base-bg: hsl(0, 0%, 100%);
 @base-text: hsl(0, 0%, 5%);
 
-@bg-color: @base-bg;
-@write-bg: @base-bg;
-@link-bg: none;
-@mark-bg: @theme-color;
-@code-bg: lighten(@theme-color, 20%);
-@quota-bg: darken(@base-bg, 3%);
-@codeb-bg: darken(@base-bg, 5%);
-@thead-bg: darken(@base-bg, 9%);
-@tbody-bg: darken(@base-bg, 7%);
+:root {
+    --bg-color: @base-bg;
+    --write-bg: @base-bg;
+    --link-bg: none;
+    --mark-bg: @theme-color;
+    --code-bg: lighten(@theme-color, 20%);
+    --quota-bg: darken(@base-bg, 3%);
+    --codeb-bg: darken(@base-bg, 5%);
+    --thead-bg: darken(@base-bg, 9%);
+    --tbody-bg: darken(@base-bg, 7%);
 
-@title-color: @base-text;
-@text-color: lighten(@base-text, 15%);
-@mark-color: lighten(@base-text, 15%);
-@quota-color: lighten(@base-text, 25%);
-@code-color: lighten(@base-text, 25%);
-@codeb-color: lighten(@base-text, 25%);
-@footer-color: lighten(@base-text, 45%);
-@link-color: @theme-color;
+    --title-color: @base-text;
+    --text-color: lighten(@base-text, 15%);
+    --mark-color: lighten(@base-text, 15%);
+    --quota-color: lighten(@base-text, 25%);
+    --code-color: lighten(@base-text, 25%);
+    --codeb-color: lighten(@base-text, 25%);
+    --footer-color: lighten(@base-text, 45%);
+    --link-color: @theme-color;
 
-@md-char-color: lighten(@theme-color, 10%);
-@meta-content-color: darken(@base-text, 45%);
+    --md-char-color: lighten(@theme-color, 10%);
+    --meta-content-color: darken(@base-text, 45%);
 
-@link-hover: lighten(@theme-color, 10%);
-@thead-hover: darken(@base-bg, 1%);
-@tbody-hover: darken(@base-bg, 1%);
+    --link-hover: lighten(@theme-color, 10%);
+    --thead-hover: darken(@base-bg, 1%);
+    --tbody-hover: darken(@base-bg, 1%);
 
-@window-border: 1px solid hsl(0, 0%, 95%);
-@base-border: 1px solid lighten(@theme-color, 10%);
-@base-borderl: 4px solid lighten(@theme-color, 10%);
-@base-borderb: 1px dashed lighten(@theme-color, 10%);
-@opt-borderb: 1px dashed hsl(215, 100%, 65%);
+    --window-border: 1px solid hsl(0, 0%, 95%);
+    --base-border: 1px solid lighten(@theme-color, 10%);
+    --base-borderl: 4px solid lighten(@theme-color, 10%);
+    --base-borderb: 1px dashed lighten(@theme-color, 10%);
+    --opt-borderb: 1px dashed hsl(215, 100%, 65%);
 
-@base-shadow: 0px 8px 16px hsla(0, 0%, 0%, .2);
-@opt-shadow: 0px 8px 16px 1px hsla(0, 0%, 0%, 0.3);
-@img-shadow: @opt-shadow;
-@code-shadow: @base-shadow;
-@quota-shadow: @base-shadow;
+    --base-shadow: 0px 8px 16px hsla(0, 0%, 0%, .2);
+    --opt-shadow: 0px 8px 16px 1px hsla(0, 0%, 0%, 0.3);
+    --img-shadow: var(--opt-shadow);
+    --code-shadow: var(--base-shadow);
+    --quota-shadow: var(--base-shadow);
 
-@base-margin: 1.5rem auto;
-@base-padding: 1px 4px;
-@opt-padding: 1.5rem 2rem;
+    --base-margin: 1.5rem auto;
+    --base-padding: 1px 4px;
+    --opt-padding: 1.5rem 2rem;
 
-/* 字体样式援引自 font.css */
-@base-font: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+    /* 字体样式援引自 font.css */
+    --base-font: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
 
-@title-font: "EB Garamond", Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+    --title-font: "EB Garamond", Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
 
-@em-font: Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+    --em-font: Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
 
-@quota-font: "EB Garamond", Baskerville, Georgia, "Liberation Serif", "TW-Kai", '仓耳今楷05-6763', "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+    --quota-font: "EB Garamond", Baskerville, Georgia, "Liberation Serif", "TW-Kai", '仓耳今楷05-6763', "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
 
-@monospace: "Cascadia code", "Sarasa Term SC", Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono", Courier;
+    --monospace: "Cascadia code", "Sarasa Term SC", Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono", Courier;
+
+    --mermaid-alt-font-family: var(--base-font);
+    --mermaid-font-family: var(--base-font);
+}
 
 *,
 :after,
@@ -136,7 +141,7 @@ button,
 input,
 select,
 textarea {
-    font: 400 1em/1.75 @base-font;
+    font: 400 1em/1.75 var(--base-font);
 }
 
 button::-moz-focus-inner,
@@ -168,22 +173,22 @@ html {
 html,
 body,
 #write {
-    font-family: @base-font;
+    font-family: var(--base-font);
     font-weight: 400;
     font-size: 16px;
     font-size: 1rem;
     line-height: 2rem;
-    color: @text-color;
+    color: var(--text-color);
     text-align: justify;
 }
 
 content {
-    background: @bg-color;
+    background: var(--bg-color);
     min-width: 600px;
 }
 
 #write {
-    background: @write-bg;
+    background: var(--write-bg);
     max-width: 914px;
     min-width: calc(100vw-45rem);
     min-height: calc(100vh-6rem);
@@ -192,7 +197,7 @@ content {
 
     h1,
     h2 {
-        font-family: @title-font;
+        font-family: var(--title-font);
         font-weight: 800;
         line-height: 3rem;
         text-align: center;
@@ -214,12 +219,12 @@ content {
 
         &:before {
             top: -1.5rem;
-            border-top: @opt-borderb;
+            border-top: var(--opt-borderb);
         }
 
         &:after {
             top: 1.5rem;
-            border-top: @base-borderb;
+            border-top: var(--base-borderb);
         }
     }
 
@@ -232,7 +237,7 @@ content {
     h4,
     h5,
     h6 {
-        font-family: @base-font;
+        font-family: var(--base-font);
         font-weight: 600;
         margin: 3rem auto 1.5rem;
 
@@ -240,10 +245,10 @@ content {
             font-size: .9rem;
             vertical-align: middle;
             margin-right: .5rem;
-            padding: @base-padding;
+            padding: var(--base-padding);
             border-radius: 5px;
             background: @theme-color;
-            color: @write-bg;
+            color: var(--write-bg);
         }
     }
 
@@ -286,7 +291,7 @@ content {
     h5 *,
     h6 * {
         background: none;
-        color: @title-color;
+        color: var(--title-color);
         text-decoration: none;
         border: none;
     }
@@ -297,9 +302,9 @@ content {
     pre.md-meta-block,
     figure>table,
     img {
-        margin: @base-margin;
+        margin: var(--base-margin);
         border-radius: 5px;
-        padding: @opt-padding;
+        padding: var(--opt-padding);
     }
 
     p+p {
@@ -315,9 +320,9 @@ content {
     var,
     ins {
         margin: 0 4px;
-        padding: @base-padding;
+        padding: var(--base-padding);
         border-radius: 5px;
-        font-family: @monospace;
+        font-family: var(--monospace);
     }
 
     // YAML
@@ -332,7 +337,7 @@ content {
     pre.md-fences {
         display: block;
         -webkit-overflow-scrolling: touch;
-        box-shadow: @code-shadow;
+        box-shadow: var(--code-shadow);
         white-space: pre;
     }
 
@@ -340,30 +345,30 @@ content {
     pre.md-fences,
     code {
         line-height: 1.5rem;
-        font-family: @monospace;
+        font-family: var(--monospace);
         font-size: .9rem;
         font-weight: 300;
-        background-color: @codeb-bg;
-        color: @codeb-color;
+        background-color: var(--codeb-bg);
+        color: var(--codeb-color);
     }
 
     // code
     code {
-        background-color: @code-bg;
-        color: @code-color;
+        background-color: var(--code-bg);
+        color: var(--code-color);
     }
 
     // 超链接
     a,
     ins {
-        background: @link-bg;
-        color: @link-color;
+        background: var(--link-bg);
+        color: var(--link-color);
         text-decoration: none;
-        border-bottom: @base-borderb;
+        border-bottom: var(--base-borderb);
 
         &:hover {
-            border-bottom-color: @link-color;
-            color: @link-hover;
+            border-bottom-color: var(--link-color);
+            color: var(--link-hover);
             text-decoration: none;
         }
     }
@@ -371,18 +376,18 @@ content {
     // 强调
     strong,
     em {
-        font-family: @em-font;
+        font-family: var(--em-font);
         font-weight: 800;
-        color: @title-color;
+        color: var(--title-color);
     }
 
     em {
-        border-bottom: @opt-borderb;
+        border-bottom: var(--opt-borderb);
     }
 
     mark {
-        background: @mark-bg;
-        color: @mark-color;
+        background: var(--mark-bg);
+        color: var(--mark-color);
     }
 
     //list
@@ -425,16 +430,16 @@ content {
 
     //blockquote
     blockquote {
-        background: @quota-bg;
-        color: @quota-color;
-        font-family: @quota-font;
+        background: var(--quota-bg);
+        color: var(--quota-color);
+        font-family: var(--quota-font);
         font-size: 1.2rem;
-        box-shadow: @quota-shadow;
+        box-shadow: var(--quota-shadow);
 
         blockquote {
             padding: 0;
             padding-left: 2rem;
-            border-left: @base-borderl;
+            border-left: var(--base-borderl);
             box-shadow: none;
             border-radius: 0;
         }
@@ -444,15 +449,15 @@ content {
         }
 
         p {
-            color: @quota-color;
-            font-family: @quota-font;
+            color: var(--quota-color);
+            font-family: var(--quota-font);
             line-height: 1.75rem;
         }
     }
 
     //img
     img {
-        box-shadow: @img-shadow;
+        box-shadow: var(--img-shadow);
         padding: 0;
 
         &[alt="no-shadow"] {
@@ -469,7 +474,7 @@ content {
 
     hr {
         border: none;
-        border-bottom: @base-border;
+        border-bottom: var(--base-border);
         margin: 3rem auto;
         height: 1px;
         width: 50%;
@@ -496,11 +501,11 @@ content {
 
         th,
         thead th {
-            background: @thead-bg;
+            background: var(--thead-bg);
 
             &:hover {
-                background: @thead-hover;
-                color: @link-hover;
+                background: var(--thead-hover);
+                color: var(--link-hover);
             }
         }
 
@@ -509,20 +514,20 @@ content {
         }
 
         td {
-            background: @tbody-bg;
-            color: @text-color;
-            border: 1px solid @thead-bg;
+            background: var(--tbody-bg);
+            color: var(--text-color);
+            border: 1px solid var(--thead-bg);
 
             &:hover {
-                background: @tbody-hover;
-                color: @link-hover;
+                background: var(--tbody-hover);
+                color: var(--link-hover);
             }
         }
     }
 
     sup.md-footnote {
-        padding: @base-padding;
-        color: @footer-color;
+        padding: var(--base-padding);
+        color: var(--footer-color);
         cursor: pointer;
         font-size: .75rem;
     }
@@ -540,7 +545,7 @@ content {
 
     &::before {
         content: "目录";
-        font-family: @base-font;
+        font-family: var(--base-font);
         font-size: 2rem;
         font-weight: 200;
         text-align: center;
@@ -558,11 +563,11 @@ content {
         top: 1rem;
 
         .md-toc-item {
-            font-family: @base-font;
+            font-family: var(--base-font);
         }
 
         .md-toc-inner {
-            color: @text-color  !important;
+            color: var(--text-color) !important;
             border: none !important;
         }
 
@@ -638,7 +643,7 @@ content {
 .md-toc-h2::before,
 .md-toc-h3::before {
     display: inline-block;
-    color: @text-color;
+    color: var(--text-color);
 }
 
 //TODO list
@@ -653,8 +658,8 @@ content {
         display: inline-block;
         vertical-align: middle;
         text-align: center;
-        border: @base-border;
-        background-color: @write-bg;
+        border: var(--base-border);
+        background-color: var(--write-bg);
         margin-left: 0;
         margin-top: -0.5rem;
         border-radius: 50%;
@@ -711,7 +716,7 @@ blockquote .task-list-item input::before {
 
 .md-task-list-item.task-list-done {
     text-decoration: line-through;
-    color: @footer-color;
+    color: var(--footer-color);
 }
 
 //codeblock style
@@ -783,12 +788,12 @@ blockquote .task-list-item input::before {
         }
 
         blockquote {
-            background: @quota-bg;
+            background: var(--quota-bg);
             margin: 1.5rem auto;
             padding: 1.5rem;
             border-radius: 0;
             box-shadow: none;
-            border-left: @base-borderl;
+            border-left: var(--base-borderl);
 
             blockquote {
                 padding-left: 1rem;
@@ -797,7 +802,7 @@ blockquote .task-list-item input::before {
             em,
             strong,
             mark {
-                font-family: @quota-font;
+                font-family: var(--quota-font);
             }
         }
     }
@@ -828,8 +833,8 @@ blockquote .task-list-item input::before {
 
 @media screen and (max-width:1000px) {
     footer.ty-footer {
-        background: @bg-color;
-        border-top: 1px solid @bg-color;
+        background: var(--bg-color);
+        border-top: 1px solid var(--bg-color);
     }
 }
 
@@ -839,7 +844,7 @@ blockquote .task-list-item input::before {
             border-top: 2rem solid hsl(0, 0, 20%);
             display: block;
             -webkit-overflow-scrolling: touch;
-            box-shadow: @code-shadow;
+            box-shadow: var(--code-shadow);
         }
 
         pre.md-fences:before {
@@ -858,7 +863,7 @@ blockquote .task-list-item input::before {
 
 @media screen and (min-width:1300px) {
     #write {
-        box-shadow: @base-shadow ;
+        box-shadow: var(--base-shadow);
         border-radius: 5px;
     }
 }
@@ -896,7 +901,7 @@ blockquote .task-list-item input::before {
         h6 {
             margin-top: 3rem;
             margin-bottom: 1.5rem;
-            font-family: @title-font;
+            font-family: var(--title-font);
         }
 
         pre.md-fences,
@@ -916,26 +921,26 @@ blockquote .task-list-item input::before {
         li,
         td,
         tr {
-            font-family: @title-font;
+            font-family: var(--title-font);
         }
 
         blockquote {
             position: relative;
             margin: 2rem auto;
             padding: 1.5rem;
-            background: @quota-bg;
+            background: var(--quota-bg);
             border: none;
             border-radius: 0;
-            border-left: @base-borderl;
+            border-left: var(--base-borderl);
 
             blockquote {
                 border-radius: 0px;
                 border: none;
-                border-left: @base-borderl;
+                border-left: var(--base-borderl);
             }
 
             li {
-                font-family: @quota-font;
+                font-family: var(--quota-font);
             }
 
             .task-list-item input::before {
@@ -949,7 +954,7 @@ blockquote .task-list-item input::before {
         }
 
         mark {
-            color: @text-color;
+            color: var(--text-color);
             background-color: hsl(60, 100%, 50%);
         }
 
@@ -971,7 +976,7 @@ blockquote .task-list-item input::before {
     /* 树形结构下文件激活边框色 */
     --side-bar-bg-color: darken(@base-bg, 5%);
     /*文件 大纲 侧边栏 背景色*/
-    --item-hover-bg-color: @bg-color;
+    --item-hover-bg-color: var(--bg-color);
     /* 打开文文件夹、正文菜单、最近使用 hover 效果 */
     --item-hover-text-color: @theme-color;
 
@@ -983,11 +988,9 @@ blockquote .task-list-item input::before {
     --select-text-bg-color: @theme-color;
     --select-text-font-color: @base-bg;
     --active-bg: darken(@base-bg, 5%);
-    --window-border: @bg-color;
-    --control-text-color: @title-color;
-    --control-text-hover-color: @text-color;
-    --text-color:@text-color;
-    --bg-color:@bg-color;
+    --window-border: var(--bg-color);
+    --control-text-color: var(--title-color);
+    --control-text-hover-color: var(--text-color);
 }
 
 //sidebar
@@ -1006,11 +1009,11 @@ blockquote .task-list-item input::before {
 
 //serch-result
 .ty-search-item-line {
-    font-family: @base-font;
+    font-family: var(--base-font);
 }
 
 .ty-file-search-match-text {
-    background: @codeb-bg;
+    background: var(--codeb-bg);
 }
 
 /* 大纲目录自动编号 */
@@ -1072,8 +1075,8 @@ blockquote .task-list-item input::before {
 
 //meta
 .md-meta {
-    font-family: @monospace;
-    color: @md-char-color;
+    font-family: var(--monospace);
+    color: var(--md-char-color);
 }
 
 //meta-left,meta-right
@@ -1114,8 +1117,8 @@ blockquote .task-list-item input::before {
 
 // source mode
 #typora-source {
-    background: @bg-color;
-    color: @code-color;
+    background: var(--bg-color);
+    color: var(--code-color);
     line-height: 1.5rem;
 }
 
@@ -1151,14 +1154,14 @@ blockquote .task-list-item input::before {
     left: -1px !important;
 }
 
-#megamenu-menu-list{
+#megamenu-menu-list {
     background: #2f353a;
 }
 
 //megamenu-content
 
 .megamenu-content {
-    background: @bg-color  !important;
+    background: var(--bg-color) !important;
 }
 
 .megamenu-menu-panel {
@@ -1169,17 +1172,17 @@ blockquote .task-list-item input::before {
     }
 
     table tr {
-        background: @bg-color;
+        background: var(--bg-color);
     }
 
     tr:hover {
-        background: darken(@bg-color, 5%);
+        background: darken(@base-bg, 5%);
         color: var(--primary-color) !important;
     }
 }
 
 #recent-file-panel tbody tr:nth-child(2n-1) {
-    background-color: darken(@bg-color, 10%);
+    background-color: darken(@base-bg, 10%);
 }
 
 //theme-page
@@ -1209,19 +1212,19 @@ table#typora-help-md-table tr {
 }
 
 .about-content-meta {
-    font-family: @base-font;
+    font-family: var(--base-font);
 }
 
 //title
 #top-titlebar,
 #top-titlebar * {
-    background-color: @bg-color;
-    color: @text-color;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 #top-titlebar {
     height: 28px;
-    font-family: @base-font;
+    font-family: var(--base-font);
 }
 
 //scroll
@@ -1285,12 +1288,12 @@ table#typora-help-md-table tr {
 }
 
 .md-image>.md-meta {
-    color: @meta-content-color;
+    color: var(--meta-content-color);
 }
 
 //fix
 .unibody-window,
 .ty-preferences .windows,
 uni-preference-panel {
-    font-family: @base-font;
+    font-family: var(--base-font);
 }
