@@ -1,4 +1,10 @@
 :root {
+  --codeb-bg: #263238!important;
+  --code-color: hsl(0, 0%, 60%)!important;
+  --mark-color: hsl(0, 0%, 60%)!important;
+  --footer-color: hsl(0, 0%, 50%)!important;
+}
+:root {
   --bg-color: hsl(0, 0%, 25%);
   --write-bg: hsl(0, 0%, 25%);
   --link-bg: none;
@@ -17,7 +23,7 @@
   --footer-color: hsl(0, 0%, 100%);
   --link-color: hsl(100, 100%, 75%);
   --md-char-color: hsl(100, 100%, 85%);
-  --meta-content-color: hsl(0, 0%, 30%);
+  --meta-content-color: hsl(100, 100%, 85%);
   --link-hover: hsl(100, 100%, 85%);
   --thead-hover: hsl(0, 0%, 24%);
   --tbody-hover: hsl(0, 0%, 24%);
@@ -40,6 +46,8 @@
   --em-font: Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
   --quota-font: "EB Garamond", Baskerville, Georgia, "Liberation Serif", "TW-Kai", '仓耳今楷05-6763', "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
   --monospace: "Cascadia code", "Sarasa Term SC", Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono", Courier;
+  --mermaid-alt-font-family: var(--base-font)!important;
+  --mermaid-font-family: var(--base-font)!important;
 }
 *,
 :after,
@@ -1035,11 +1043,6 @@ table#typora-help-md-table tr {
 .ty-preferences .windows,
 uni-preference-panel {
   font-family: var(--base-font);
-}
-:root {
-  --codeb-bg: #263238;
-  --code-color: hsl(0, 0%, 50%);
-  --mark-color: hsl(0, 0%, 50%);
 }
 .cm-s-inner {
   background-color: #263238;
