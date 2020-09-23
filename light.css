@@ -1100,3 +1100,10 @@ table#typora-help-md-table tr {
 uni-preference-panel {
   font-family: var(--base-font);
 }
+/* 搜索与替换 */
+#md-searchpanel.searchpanel-replace-mode {
+  max-height: 80px;
+}
+.unibody-window #md-searchpanel .btn {
+  line-height: 30px;
+}
