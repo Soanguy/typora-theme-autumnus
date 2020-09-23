@@ -486,14 +486,6 @@ mark {
 
 /* code & codeblock style */
 
-/* #write pre.md-fences {
-	border-top: 1px solid var(--codeb-bg);
-	margin: 2rem auto;
-	padding: 1rem 0.5rem;
-	display: block;
-	-webkit-overflow-scrolling: touch;
-} */
-
 /* codeblock mac style */
 #write pre.md-fences {
 	border-top: 2rem solid var(--mark-color);
