@@ -1,48 +1,42 @@
 :root {
-  --codeb-bg: #263238!important;
-  --code-color: hsl(0, 0%, 60%)!important;
-  --mark-color: hsl(0, 0%, 60%)!important;
-  --footer-color: hsl(0, 0%, 50%)!important;
-}
-:root {
   --bg-color: hsl(0, 0%, 25%);
   --write-bg: hsl(0, 0%, 25%);
   --link-bg: none;
-  --mark-bg: hsl(100, 100%, 75%);
-  --code-bg: hsl(100, 100%, 95%);
+  --mark-bg: hsl(195, 100%, 50%);
+  --code-bg: #263238;
   --quota-bg: hsl(0, 0%, 22%);
-  --codeb-bg: hsl(0, 0%, 20%);
+  --codeb-bg: #263238;
   --thead-bg: hsl(0, 0%, 16%);
   --tbody-bg: hsl(0, 0%, 18%);
-  --title-color: hsl(0, 0%, 75%);
-  --text-color: hsl(0, 0%, 90%);
-  --mark-color: hsl(0, 0%, 90%);
-  --quota-color: hsl(0, 0%, 100%);
-  --code-color: hsl(0, 0%, 100%);
-  --codeb-color: hsl(0, 0%, 100%);
-  --footer-color: hsl(0, 0%, 100%);
-  --link-color: hsl(100, 100%, 75%);
-  --md-char-color: hsl(100, 100%, 85%);
-  --meta-content-color: hsl(100, 100%, 85%);
-  --link-hover: hsl(100, 100%, 85%);
+  --title-color: hsl(0, 0%, 90%);
+  --text-color: hsl(0, 0%, 75%);
+  --mark-color: hsl(0, 0%, 30%);
+  --quota-color: hsl(0, 0%, 50%);
+  --code-color: hsl(0, 0%, 75%);
+  --codeb-color: hsl(0, 0%, 50%);
+  --footer-color: hsl(0, 0%, 30%);
+  --link-color: hsl(195, 100%, 50%);
+  --md-char-color: hsl(195, 100%, 60%);
+  --meta-content-color: hsl(195, 100%, 60%);
+  --link-hover: hsl(195, 100%, 60%);
   --thead-hover: hsl(0, 0%, 24%);
   --tbody-hover: hsl(0, 0%, 24%);
   --window-border: 1px solid hsl(0, 0%, 95%);
-  --base-border: 1px solid hsl(100, 100%, 85%);
-  --base-borderl: 4px solid hsl(100, 100%, 85%);
-  --base-borderb: 1px dashed hsl(100, 100%, 85%);
+  --base-border: 1px solid hsl(195, 100%, 60%);
+  --base-borderl: 4px solid hsl(195, 100%, 60%);
+  --base-borderb: 1px dashed hsl(195, 100%, 60%);
   --opt-borderb: 1px dashed hsl(215, 100%, 65%);
   --base-shadow: 0px 8px 16px hsla(0, 0%, 0%, 0.2);
   --opt-shadow: 0px 8px 16px 1px hsla(0, 0%, 0%, 0.3);
   --img-shadow: var(--opt-shadow);
-  --base-margin: 1.5rem auto;
+  --base-margin: 1rem auto;
   --base-padding: 1px 4px;
   --opt-padding: 1rem;
   /* 字体样式援引自 font.css */
-  --base-font: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
-  --title-font: "EB Garamond", Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
-  --em-font: Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
-  --quota-font: "EB Garamond", Baskerville, Georgia, "Liberation Serif", "TW-Kai", '仓耳今楷05-6763', "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+  --base-font: -apple-system, "Poppins", "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+  --title-font: var(--em-font);
+  --em-font: "EB Garamond", Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+  --quota-font: "EB Garamond", Baskerville, Georgia, "Liberation Serif", "TW-Kai", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", curve, serif;
   --monospace: "Cascadia code", "Sarasa Term SC", Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono", Courier;
   --mermaid-alt-font-family: var(--base-font) !important;
   --mermaid-font-family: var(--base-font) !important;
@@ -153,7 +147,7 @@ body,
   font-weight: 400;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 2rem;
+  line-height: 1.75rem;
   color: var(--text-color);
   text-align: justify;
 }
@@ -179,7 +173,7 @@ content {
 }
 #write h1 {
   font-size: 3rem;
-  margin: 6rem auto 3rem;
+  margin: 3rem auto 4rem;
 }
 #write h1:before,
 #write h1:after {
@@ -199,7 +193,7 @@ content {
 }
 #write h2 {
   font-size: 2rem;
-  margin: 4rem auto 2rem;
+  margin: 2rem auto 1rem;
 }
 #write h3,
 #write h4,
@@ -207,7 +201,7 @@ content {
 #write h6 {
   font-family: var(--base-font);
   font-weight: 600;
-  margin: 3rem auto 1.5rem;
+  margin: 2rem auto 1rem;
 }
 #write h3:before,
 #write h4:before,
@@ -218,7 +212,7 @@ content {
   margin-right: 0.5rem;
   padding: var(--base-padding);
   border-radius: 5px;
-  background: hsl(100, 100%, 75%);
+  background: hsl(195, 100%, 50%);
   color: var(--write-bg);
 }
 #write h3 {
@@ -262,6 +256,10 @@ content {
   margin: var(--base-margin);
   border-radius: 5px;
   padding: var(--opt-padding);
+}
+#write ul,
+#write ol {
+  margin: var(--base-margin);
 }
 #write p + p {
   margin: 1rem auto;
@@ -448,7 +446,7 @@ content {
   font-size: 1.25rem;
   line-height: 1.5rem;
   display: table;
-  margin: 4rem auto;
+  margin: 2rem auto;
   margin-left: 4rem !important;
   max-width: 75%;
 }
@@ -478,7 +476,7 @@ content {
   border: none !important;
 }
 .md-toc .md-toc-content .md-toc-h1 {
-  margin-top: 4rem;
+  margin-top: 2rem;
   font-weight: 300;
   font-size: 1.2rem;
   counter-increment: counter_md-toc-h1;
@@ -557,7 +555,7 @@ content {
 .task-list-item input::after {
   content: "";
   position: absolute;
-  top: 0px;
+  top: 3px;
   left: -2px;
   width: 1rem;
   height: 0.5rem;
@@ -571,7 +569,7 @@ content {
   transition: opacity 200ms ease-in-out;
 }
 .task-list-item input:checked::before {
-  background: hsl(100, 100%, 75%);
+  background: hsl(195, 100%, 50%);
   border: none;
 }
 .task-list-item input:checked::after {
@@ -630,7 +628,7 @@ blockquote .task-list-item input::before {
     top: 0;
     margin-right: 1rem;
     background: none;
-    color: hsl(100, 100%, 85%);
+    color: hsl(195, 100%, 60%);
   }
   #write h1::after,
   #write h2::after,
@@ -863,22 +861,22 @@ blockquote .task-list-item input::before {
   }
 }
 :root {
-  --blur-text-color: hsl(100, 100%, 75%);
+  --blur-text-color: hsl(195, 100%, 50%);
   --active-file-bg-color: hsl(0, 0%, 24%);
   /* 文件列表 当前文件激活 背景色*/
-  --active-file-text-color: hsl(100, 100%, 75%);
-  --active-file-border-color: hsl(100, 100%, 75%);
+  --active-file-text-color: hsl(195, 100%, 50%);
+  --active-file-border-color: hsl(195, 100%, 50%);
   /* 树形结构下文件激活边框色 */
   --side-bar-bg-color: hsl(0, 0%, 20%);
   /*文件 大纲 侧边栏 背景色*/
   --item-hover-bg-color: var(--bg-color);
   /* 打开文文件夹、正文菜单、最近使用 hover 效果 */
-  --item-hover-text-color: hsl(100, 100%, 75%);
-  --primary-color: hsl(100, 100%, 75%);
+  --item-hover-text-color: hsl(195, 100%, 50%);
+  --primary-color: hsl(195, 100%, 50%);
   /* color of primary buttons */
-  --primary-btn-border-color: hsl(100, 100%, 75%);
+  --primary-btn-border-color: hsl(195, 100%, 50%);
   --primary-btn-text-color: hsl(0, 0%, 25%);
-  --select-text-bg-color: hsl(100, 100%, 75%);
+  --select-text-bg-color: hsl(195, 100%, 50%);
   --select-text-font-color: hsl(0, 0%, 25%);
   --active-bg: hsl(0, 0%, 20%);
   --window-border: var(--bg-color);
@@ -892,6 +890,10 @@ blockquote .task-list-item input::before {
 .file-list-item:hover {
   background: var(--item-hover-bg-color);
   color: var(--item-hover-text-color);
+}
+.file-node-content:hover {
+  background: var(--bg-color);
+  color: var(--control-text-hover-color);
 }
 .ty-search-item-line {
   font-family: var(--base-font);
@@ -1029,7 +1031,7 @@ blockquote .task-list-item input::before {
 }
 .nav-group-item.active {
   background: var(--side-bar-bg-color) !important;
-  color: hsl(100, 100%, 75%);
+  color: hsl(195, 100%, 50%);
 }
 table#typora-help-md-table tr {
   background: transparent;
@@ -1058,6 +1060,9 @@ table#typora-help-md-table tr {
   cursor: pointer;
 }
 /* animation */
+.long-btn {
+  text-align: left;
+}
 #write td,
 #megamenu-content td,
 .file-list-item,

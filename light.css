@@ -29,14 +29,14 @@
   --base-shadow: 0px 8px 16px hsla(0, 0%, 0%, 0.2);
   --opt-shadow: 0px 8px 16px 1px hsla(0, 0%, 0%, 0.3);
   --img-shadow: var(--opt-shadow);
-  --base-margin: 1.5rem auto;
+  --base-margin: 1rem auto;
   --base-padding: 1px 4px;
   --opt-padding: 1rem;
   /* 字体样式援引自 font.css */
-  --base-font: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
-  --title-font: "EB Garamond", Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
-  --em-font: Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
-  --quota-font: "EB Garamond", Baskerville, Georgia, "Liberation Serif", "TW-Kai", '仓耳今楷05-6763', "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+  --base-font: -apple-system, "Poppins", "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+  --title-font: var(--em-font);
+  --em-font: "EB Garamond", Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+  --quota-font: "EB Garamond", Baskerville, Georgia, "Liberation Serif", "TW-Kai", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", curve, serif;
   --monospace: "Cascadia code", "Sarasa Term SC", Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono", Courier;
   --mermaid-alt-font-family: var(--base-font) !important;
   --mermaid-font-family: var(--base-font) !important;
@@ -147,7 +147,7 @@ body,
   font-weight: 400;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 2rem;
+  line-height: 1.75rem;
   color: var(--text-color);
   text-align: justify;
 }
@@ -173,7 +173,7 @@ content {
 }
 #write h1 {
   font-size: 3rem;
-  margin: 6rem auto 3rem;
+  margin: 3rem auto 4rem;
 }
 #write h1:before,
 #write h1:after {
@@ -193,7 +193,7 @@ content {
 }
 #write h2 {
   font-size: 2rem;
-  margin: 4rem auto 2rem;
+  margin: 2rem auto 1rem;
 }
 #write h3,
 #write h4,
@@ -201,7 +201,7 @@ content {
 #write h6 {
   font-family: var(--base-font);
   font-weight: 600;
-  margin: 3rem auto 1.5rem;
+  margin: 2rem auto 1rem;
 }
 #write h3:before,
 #write h4:before,
@@ -256,6 +256,10 @@ content {
   margin: var(--base-margin);
   border-radius: 5px;
   padding: var(--opt-padding);
+}
+#write ul,
+#write ol {
+  margin: var(--base-margin);
 }
 #write p + p {
   margin: 1rem auto;
@@ -442,7 +446,7 @@ content {
   font-size: 1.25rem;
   line-height: 1.5rem;
   display: table;
-  margin: 4rem auto;
+  margin: 2rem auto;
   margin-left: 4rem !important;
   max-width: 75%;
 }
@@ -472,7 +476,7 @@ content {
   border: none !important;
 }
 .md-toc .md-toc-content .md-toc-h1 {
-  margin-top: 4rem;
+  margin-top: 2rem;
   font-weight: 300;
   font-size: 1.2rem;
   counter-increment: counter_md-toc-h1;
@@ -551,7 +555,7 @@ content {
 .task-list-item input::after {
   content: "";
   position: absolute;
-  top: 0px;
+  top: 3px;
   left: -2px;
   width: 1rem;
   height: 0.5rem;
@@ -887,6 +891,10 @@ blockquote .task-list-item input::before {
   background: var(--item-hover-bg-color);
   color: var(--item-hover-text-color);
 }
+.file-node-content:hover {
+  background: var(--bg-color);
+  color: var(--control-text-hover-color);
+}
 .ty-search-item-line {
   font-family: var(--base-font);
 }
@@ -1052,6 +1060,9 @@ table#typora-help-md-table tr {
   cursor: pointer;
 }
 /* animation */
+.long-btn {
+  text-align: left;
+}
 #write td,
 #megamenu-content td,
 .file-list-item,
