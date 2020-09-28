@@ -1,4 +1,4 @@
-@import "./opt-autumnus.css";
+@import "./autumnus.css";
 
 :root {
     --bg-color: hsl(0, 0%, 25%);
@@ -52,17 +52,6 @@
     --active-bg: hsl(0, 0%, 5%);
 }
 
-
-@media screen and (min-width: 1300px) {
-    #write {
-        box-shadow: var(--base-shadow);
-        border-radius: 5px;
-    }
-}
-
-.megamenu-content{
-    background: var(--bg-color);
-}
 
 /* 侧边栏文档大纲tab标签 激活 */
 
