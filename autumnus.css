@@ -43,7 +43,7 @@
 
 	--em-font: "EB Garamond", Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC"， "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
 
-	--quota-font: Baskerville, Georgia, "Liberation Serif", "TW-Kai", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+	--quota-font: "EB Garamond", Baskerville, Georgia, "Liberation Serif", "TW-Kai", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
 
 	--monospace: "Cascadia code", "Sarasa Term SC", Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono", Courier;
 
@@ -75,10 +75,9 @@ content {
 }
 
 #write {
-	max-width: 960px;
+	max-width: 914px;
 	min-height: calc(100vh - 6rem);
 	min-width: calc(100vw - 45rem);
-	padding: 4rem 1rem;
 	text-align: justify;
 }
 
@@ -411,7 +410,6 @@ h6 {
 
 /* 让所有块级元素保持相同的间距 */
 
-p+p,
 blockquote,
 pre.md-fences,
 figure>table,
@@ -419,6 +417,10 @@ ul,
 ol,
 #write img {
 	margin: 1.5rem auto;
+}
+
+p+p {
+	margin: 1rem auto;
 }
 
 /* 让行内元素的间距保持一致 */
@@ -814,6 +816,7 @@ figure>table {
 	#write {
 		box-shadow: var(--base-shadow);
 		border-radius: 5px;
+		padding: 4rem 1rem;
 	}
 }
 
@@ -834,7 +837,6 @@ figure>table {
 
 
 	#write {
-		max-width: 1000px;
 		padding: 40px 60px;
 		background: var(--write-bg);
 		margin: 3rem auto 3rem;
@@ -842,7 +844,6 @@ figure>table {
 	}
 
 	.pin-outline #write {
-		max-width: 1000px;
 		background: var(--write-bg);
 		margin: 0 0 0;
 		border: 0;
@@ -869,7 +870,6 @@ figure>table {
 	}
 
 	.pin-outline #write {
-		min-width: 1100px;
 		padding: 40px 60px;
 		background: var(--write-bg);
 		margin: 3rem auto 3rem;
@@ -1105,7 +1105,7 @@ p.mathjax-block,
 	color: var(--primary-color);
 }
 
-.file-list-item:hover {
+.file-list-item:hover,.file-node-content:hover {
 	background-color: var(--bg-color);
 	color: var(--primary-color);
 }

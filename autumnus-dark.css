@@ -77,16 +77,14 @@
 }
 
 .megamenu-menu-panel table tr {
-    background: var(--thead-bg);
+    background: var(--write-bg);
 }
 
 #recent-file-panel tbody tr:nth-child(2n-1) {
     background-color: var(--tbody-bg);
 }
 
-.megamenu-menu-panel tr:hover,
-.megamenu-menu-panel th:hover,
-.megamenu-menu-panel td:hover {
+.megamenu-menu-panel tr:hover {
     background-color: var(--thead-hover) !important;
     color: var(--primary-color) !important;
 }

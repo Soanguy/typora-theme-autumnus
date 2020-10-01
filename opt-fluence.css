@@ -99,13 +99,28 @@ blockquote blockquote {
 	color: var(--text-color) !important;
 }
 
+
+footer.ty-footer {
+	background: transparent;
+	height: 32px;
+}
+
+#footer-word-count-info.dropdown-menu {
+	background: var(--bg-color);
+}
+
 #footer-word-count-info,
 #spell-check-panel {
 	background: var(--bg-color) !important;
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (max-width: 800px) {
+	footer.ty-footer {
+		background: #fff !important;
+	}
+}
 
+@media screen and (min-width: 1300px) {
 	#write {
 		box-shadow: none !important;
 	}

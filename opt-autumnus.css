@@ -14,8 +14,8 @@
 	--link-color: hsl(0, 100%, 75%);
 	--mark-color: hsl(0, 0%, 100%);
 	--code-color: hsl(0, 0%, 20%);
-    
-    --codeb-color: hsl(0, 0%, 50%);
+
+	--codeb-color: hsl(0, 0%, 50%);
 	--quota-color: hsl(0, 0%, 35%);
 	--footer-color: hsl(0, 0%, 50%);
 
@@ -38,7 +38,7 @@
 
 	--em-font: "EB Garamond", Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC"， "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
 
-	--quota-font: Baskerville, Georgia, "Liberation Serif", "TW-Kai", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+	--quota-font: "EB Garamond", Baskerville, Georgia, "Liberation Serif", "TW-Kai", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
 
 	--monospace: "Cascadia code", "Sarasa Term SC", Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono", Courier;
 
@@ -207,6 +207,7 @@ content {
 	color: initial;
 	display: table-cell;
 	vertical-align: baseline;
+	color: var(--text-color);
 }
 
 .md-toc-h1:before,
@@ -360,7 +361,7 @@ h6 {
 
 #write h1::after {
 	top: 1.5rem;
-	border-bottom: var(--base-borderb);
+	border-top: var(--base-borderb);
 }
 
 #write h1,
@@ -672,7 +673,7 @@ sup.md-footnote {
 
 /* 表格样式 */
 
-table {
+figure>table {
 	margin: 1.5rem auto;
 	width: 98%;
 }
@@ -768,13 +769,6 @@ table {
 	}
 }
 
-@media screen and (min-width: 1300px) {
-	#write {
-		box-shadow: 0px 2px 2px 2px hsla(0, 0%, 95%, 0.1), 1px 3px 5px 2px hsla(0, 0%, 85%, 0.2), 2px 4px 5px 2px hsla(0, 0%, 75%, 0.3), 3px 5px 10px 2px hsla(0, 0%, 65%, 0.4);
-		border-radius: 5px;
-	}
-}
-
 @media screen and (min-width: 1100px) {
 
 	body,
@@ -820,6 +814,12 @@ table {
 		background: var(--write-bg);
 	}
 
+	#write {
+		box-shadow: 0px 2px 2px 2px hsla(0, 0%, 95%, 0.1), 1px 3px 5px 2px hsla(0, 0%, 85%, 0.2), 2px 4px 5px 2px hsla(0, 0%, 75%, 0.3), 3px 5px 10px 2px hsla(0, 0%, 65%, 0.4);
+		border-radius: 5px;
+		border: 1px solid var(--write-bg);
+	}
+
 	.typora-node #write {
 		min-height: calc(100% - 6rem);
 	}
@@ -828,7 +828,6 @@ table {
 		padding: 40px 60px;
 		background: var(--write-bg);
 		margin: 3rem auto 3rem;
-		border: 1px solid hsl(0, 0%, 87%);
 		border-width: 0 1px;
 		border-radius: 5px;
 	}
@@ -1049,11 +1048,11 @@ p.mathjax-block,
 	color: var(--primary-color);
 }
 
-.file-list-item:hover {
+.file-list-item:hover,
+.file-node-content:hover {
 	background-color: var(--bg-color);
 	color: var(--primary-color);
 }
-
 
 /* 大纲目录自动编号 */
 
@@ -1175,18 +1174,16 @@ a.menu-style-btn:hover {
 }
 
 /* 最近文档 */
-
 .megamenu-menu-panel table tr {
-	background: hsl(0, 0%, 99%);
+	background: var(--write-bg);
 }
 
 #recent-file-panel tbody tr:nth-child(2n-1) {
-	background-color: hsl(0, 0%, 95%);
+	background-color: var(--tbody-bg);
 }
 
-.megamenu-menu-panel tr:hover,
-.megamenu-menu-panel th:hover,
-.megamenu-menu-panel td:hover {
+.megamenu-menu-panel tr:hover {
+	background-color: var(--thead-hover) !important;
 	color: var(--primary-color) !important;
 }
 
