@@ -340,9 +340,9 @@ h6 {
 
 /* 让每一级标题更加明显，添加标注 */
 #write h1 {
-	font-size: 3rem;
 	margin-top: 6rem;
 	margin-bottom: 3rem;
+	text-align: center;
 }
 
 #write h1:before,
@@ -350,33 +350,33 @@ h6 {
 	content: "";
 	display: block;
 	position: relative;
-	width: 50%;
 	margin: 1rem auto;
+	padding: 1px;
 }
 
 #write h1::before {
-	top: -1.5rem;
-	border-bottom: var(--opt-borderb);
+	border-top: 4px solid var(--title-color);
+	border-bottom: 1px solid var(--title-color);
 }
 
 #write h1::after {
-	top: 1.5rem;
-	border-top: var(--base-borderb);
+	border-bottom: 4px solid var(--title-color);
+	border-top: 1px solid var(--title-color);
 }
 
 #write h1,
 #write h2 {
 	font-family: var(--title-font);
+	font-size: 2rem;
 	font-weight: 800;
 	line-height: 3rem;
-	text-align: center;
 	text-transform: uppercase;
 }
 
 #write h2 {
-	font-size: 2rem;
-	margin: 4rem auto;
-	margin-bottom: 2rem;
+	margin: 4rem auto 2rem;
+	padding-left: 1rem;
+	border-left: 4px solid var(--title-color);
 }
 
 #write h3 {
@@ -536,7 +536,7 @@ var {
 }
 
 .cm-s-inner .CodeMirror-cursor {
-    border-left: solid var(--link-color)!important;
+	border-left: solid var(--link-color) !important;
 }
 
 /* 列表样式 */

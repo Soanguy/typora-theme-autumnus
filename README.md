@@ -32,6 +32,9 @@
 
 以上各风味的区别主要是：
 
-+ Autumnus：引用（宽度较窄）、目录（只显示到三级标题）、代码（mac 样式）、引用和代码（阴影）
-+ opt：引用（宽度较长）、目录、代码（普通风格）、引用和代码（无阴影）
-+ 起点：基本和 autumnus 相同，但背景使用了起点的背景图片，但是 qd-fluence 并未将背景模糊
+![100301130625_0autumnus](https://raw.githubusercontent.com/Soanguy/imgbak/master/img/review-autumnus.png)
+
+![100301141696_0opta](https://raw.githubusercontent.com/Soanguy/imgbak/master/img/review-opta.png)
+
+![100301150898_0qdl](https://raw.githubusercontent.com/Soanguy/imgbak/master/img/review-qdl.png)
+
