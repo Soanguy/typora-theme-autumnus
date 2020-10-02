@@ -520,6 +520,10 @@ code {
 	color: var(--codeb-color);
 }
 
+.cm-s-inner .CodeMirror-cursor {
+    border-left: solid var(--link-color)!important;
+}
+
 /* code style */
 code {
 	background-color: var(--code-bg);

@@ -535,6 +535,10 @@ var {
 	color: hsl(215, 100%, 75%);
 }
 
+.cm-s-inner .CodeMirror-cursor {
+    border-left: solid var(--link-color)!important;
+}
+
 /* 列表样式 */
 ul,
 ol {
