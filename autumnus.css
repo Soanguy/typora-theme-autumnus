@@ -1,3 +1,4 @@
+/* TODO blank toc */
 :root {
 	--bg-color: hsl(0, 0%, 100%);
 	--write-bg: hsl(0, 0%, 100%);
@@ -831,6 +832,7 @@ figure>table {
 	body,
 	#footer-word-count-info,
 	body.pin-outline,
+	.pin-outline #write,
 	.pin-outline #footer-word-count-info,
 	.pin-outline footer {
 		background: var(--write-bg);
@@ -850,8 +852,6 @@ figure>table {
 	}
 
 	.pin-outline #write {
-		background: var(--write-bg);
-		margin: 0 0 0;
 		border: 0;
 		padding-left: 60px;
 		padding-right: 60px;
@@ -865,6 +865,7 @@ figure>table {
 @media screen and (min-width: 1300px) {
 
 	body.pin-outline,
+	.pin-outline #write,
 	.pin-outline #footer-word-count-info,
 	.pin-outline footer,
 	#footer-word-count-info {
@@ -880,7 +881,6 @@ figure>table {
 		background: var(--write-bg);
 		margin: 3rem auto 3rem;
 		border: none;
-		border-width: 0 1px;
 		border-radius: 5px;
 	}
 

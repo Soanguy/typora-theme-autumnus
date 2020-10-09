@@ -181,6 +181,10 @@ content {
   min-width: 400px;
 }
 
+.typora-node #write{
+  min-height: calc(100vh - 6em);
+}
+
 #write {
   max-width: 914px;
   min-width: 400px;
@@ -974,7 +978,7 @@ blockquote .task-list-item input::before {
 }
 
 :root {
-  --blur-text-color: #bf2c24;
+  --blur-text-color: #ccc;
   --active-file-bg-color: hsl(0, 0%, 99%);
   /* 文件列表 当前文件激活 背景色*/
   --active-file-text-color: #bf2c24;
@@ -989,7 +993,7 @@ blockquote .task-list-item input::before {
   /* color of primary buttons */
   --primary-btn-border-color: #bf2c24;
   --primary-btn-text-color: hsl(0, 0%, 100%);
-  --select-text-bg-color: #bf2c24;
+  --select-text-bg-color: #e26f69;
   --select-text-font-color: hsl(0, 0%, 100%);
   --active-bg: hsl(0, 0%, 95%);
   --window-border: var(--bg-color);
@@ -1114,11 +1118,43 @@ blockquote .task-list-item input::before {
   color: var(--primary-color);
 }
 
+/* 源代码模式 */
+
 #typora-source {
   background: var(--bg-color);
   color: var(--code-color);
   line-height: 1.5rem;
 }
+
+/* 通知样式 */
+
+#md-notification{
+  border-radius: 5px;
+}
+
+#md-notification::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  z-index: -111;
+  backdrop-filter: blur(5px);
+  top: 0;
+  width: 100%;
+  min-height: 5rem;
+  -webkit-font-smoothing: antialiased;
+  transition: opacity 1.2s cubic-bezier(.77,0,.175,1);
+}
+
+/* 聚焦模式 */
+.on-focus-mode .md-focus {
+  padding: 1rem;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,.1);
+  background: antiquewhite var(--bg-img);
+  background-blend-mode: overlay;
+  border-radius: 5px;
+}
+
 
 .context-menu.dropdown-menu>li>a:focus {
   background-color: var(--active-bg);
