@@ -8,7 +8,6 @@
 	--tbody-bg: #f8f8f880 !important;
 }
 
-
 .typora-export,
 content {
 	background-color: var(--write-bg);
@@ -24,18 +23,31 @@ content {
 	background: transparent !important;
 }
 
-#write:after {
+.on-focus-mode #write {
+	background: var(--codeb-bg) !important;
+}
+
+content {
+	z-index: -2;
+}
+
+.typora-export:after,
+content:after {
 	content: "";
 	background: rgba(221, 221, 221, 0.5);
 	backdrop-filter: saturate(180%) blur(20px);
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	bottom: 0;
 	right: 0;
-	z-index: -99;
+	z-index: -1;
 	min-height: 100%;
 	border-radius: 5px;
+}
+
+.typora-export{
+	background-attachment: fixed!important;
 }
 
 .md-toc {
@@ -55,7 +67,6 @@ content {
 }
 
 .md-toc-content {
-	left: 4rem;
 	top: 2rem;
 }
 
@@ -91,6 +102,16 @@ content {
 
 blockquote blockquote {
 	background: transparent !important;
+}
+
+.enable-diagrams pre.md-fences[lang=sequence]:not(.md-focus),
+.enable-diagrams pre.md-fences[lang=flow]:not(.md-focus),
+.enable-diagrams pre.md-fences[lang=mermaid]:not(.md-focus) {
+	background: var(--codeb-bg);
+}
+
+.on-focus-mode .md-focus {
+	background: #fafafa80;
 }
 
 .footnotes,

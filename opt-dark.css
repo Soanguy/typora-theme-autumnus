@@ -35,7 +35,7 @@
     --code-shadow: 0px 20px 40px 1px hsla(0, 0%, 0%, 0.3);
     --quota-shadow: 0px 20px 40px 1px hsla(0, 0%, 0%, 0.3);
 
-    --blur-text-color: hsl(100, 100%, 75%);
+    --blur-text-color: #777;
     --active-file-bg-color: hsl(0, 0%, 1%);
     --active-file-text-color: hsl(100, 100%, 75%);
     --active-file-border-color: hsl(100, 100%, 75%);
@@ -59,7 +59,7 @@
     }
 }
 
-.megamenu-content{
+.megamenu-content {
     background: var(--bg-color);
 }
 
@@ -97,6 +97,10 @@
 .megamenu-menu-panel tr:hover {
     background-color: var(--thead-hover) !important;
     color: var(--primary-color) !important;
+}
+
+.on-focus-mode .md-focus {
+    background: #555;
 }
 
 

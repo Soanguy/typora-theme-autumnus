@@ -326,18 +326,6 @@ h6 {
 	color: var(--title-color);
 }
 
-/* 使标题下所有的元素显示为标题样式 */
-#write h1 *,
-#write h2 *,
-#write h3 *,
-#write h4 *,
-#write h5 *,
-#write h6 * {
-	color: var(--title-color) !important;
-	text-decoration: none !important;
-	border-bottom: none !important;
-}
-
 /* 让每一级标题更加明显，添加标注 */
 #write h1 {
 	margin-top: 6rem;
@@ -778,6 +766,7 @@ figure>table {
 	body,
 	#footer-word-count-info,
 	body.pin-outline,
+	.pin-outline #write,
 	.pin-outline #footer-word-count-info,
 	.pin-outline footer {
 		background: var(--write-bg);
@@ -797,8 +786,6 @@ figure>table {
 	}
 
 	.pin-outline #write {
-		background: var(--write-bg);
-		margin: 0 0 0;
 		border: 0;
 		padding-left: 60px;
 		padding-right: 60px;
@@ -812,6 +799,7 @@ figure>table {
 @media screen and (min-width: 1300px) {
 
 	body.pin-outline,
+	.pin-outline #write,
 	.pin-outline #footer-word-count-info,
 	.pin-outline footer,
 	#footer-word-count-info {
@@ -830,9 +818,7 @@ figure>table {
 
 	.pin-outline #write {
 		padding: 40px 60px;
-		background: var(--write-bg);
 		margin: 3rem auto 3rem;
-		border-width: 0 1px;
 		border-radius: 5px;
 	}
 
@@ -874,18 +860,17 @@ figure>table {
 		page-break-before: always;
 	}
 
-	#write h1:before,
-	#write h1:after {
-		border: none;
-		height: 0;
-	}
-
 	#write h1:first-of-type {
 		page-break-before: avoid;
 	}
 
+	#write h1:before,
+	#write h1:after {
+		display: none;
+	}
+
 	#write h2 {
-		margin: 2rem auto;
+		border-left: none;
 	}
 
 	code,
@@ -988,14 +973,6 @@ p.mathjax-block,
 	border: var(--base-border);
 }
 
-#md-notification:before {
-	top: 14px;
-}
-
-#md-notification {
-	background: var(--code-bg);
-}
-
 /* 侧边栏 文件概览和大纲列表 */
 
 :root {
@@ -1027,6 +1004,48 @@ p.mathjax-block,
 .md-meta.md-after {
 	padding-left: 0.2rem;
 	padding-right: 0.2rem;
+}
+
+/* 源代码模式 */
+
+#typora-source {
+	background: var(--bg-color);
+	color: var(--code-color);
+	line-height: 1.5rem;
+}
+
+/* 通知样式 */
+
+#md-notification {
+	border-radius: 5px;
+	background: transparent !important;
+}
+
+#md-notification:before {
+	top: 14px;
+}
+
+#md-notification::after {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	z-index: -111;
+	backdrop-filter: blur(15px);
+	top: 0;
+	width: 100%;
+	min-height: 5rem;
+	-webkit-font-smoothing: antialiased;
+	transition: opacity 1.2s cubic-bezier(.77, 0, .175, 1);
+}
+
+/* 聚焦模式 */
+.on-focus-mode .md-focus {
+	padding: 1rem;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .1);
+	background: antiquewhite var(--bg-img);
+	background-blend-mode: overlay;
+	border-radius: 5px;
 }
 
 /* 侧边栏文档大纲tab标签 激活 */
