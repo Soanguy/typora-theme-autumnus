@@ -470,11 +470,11 @@ content {
   padding: 0;
 }
 
-#write img[alt="no-shadow"] {
+#write img[alt|="no-shadow"] {
   box-shadow: none !important;
 }
 
-#write img[alt="normal"] {
+#write img[alt|="normal"] {
   margin: 0 !important;
   box-shadow: none !important;
 }

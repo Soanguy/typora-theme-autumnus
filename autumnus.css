@@ -682,12 +682,12 @@ hr.pb {
 }
 
 /* 使图片去掉阴影 */
-img[alt="no-shadow"] {
+img[alt|="no-shadow"] {
 	box-shadow: none !important;
 }
 
 /* 使图片去掉所有效果 */
-img[alt="normal"] {
+img[alt|="normal"] {
 	margin: 0 !important;
 	box-shadow: none !important;
 }
