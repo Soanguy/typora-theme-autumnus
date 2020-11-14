@@ -34,9 +34,11 @@
 
 | 风味\主题     | 亮色           | 暗色          | 模糊             |
 | ------------- | -------------- | ------------- | ---------------- |
-| Autumnus 风味 | Autumnus-light | Autumnus-dark | Autumnus-fluence |
-| opt 风味      | opt-light      | opt-dark      | opt-fluence      |
-| 起点风味      | QD-light       | QD-dark       | QD-fluence       |
+| Autumnus 风格 | Autumnus-light | Autumnus-dark | Autumnus-fluence |
+| opt 风格      | opt-light      | opt-dark      | opt-fluence      |
+| 起点风格      | QD-light       | QD-dark       | QD-fluence       |
+
+增加了新的 `less` 风格。该风格主要是对 `autumnus` 进行了些许修改：减少了行距、改变了标题样式等。基本上和 `autumnus` 风格相同。
 
 以上各风味的区别主要是：
 
