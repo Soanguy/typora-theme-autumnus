@@ -1026,6 +1026,9 @@ uni-preference-panel,
 #recent-file-panel tbody tr:nth-child(2n-1) {
   background-color: transparent;
 }
+:root {
+  --rawblock-edit-panel-bd: #9b9b9b1f;
+}
 .cm-s-inner {
   background-color: #263238;
   color: rgba(233, 237, 237);

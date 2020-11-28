@@ -50,6 +50,7 @@
     --select-text-bg-color: hsl(100, 100%, 75%);
     --select-text-font-color: hsl(0, 0%, 0%);
     --active-bg: hsl(0, 0%, 5%);
+    --rawblock-edit-panel-bd: #9b9b9b1f;
 }
 
 

@@ -39,6 +39,7 @@
   --lineheight: 1.75rem;
   --mermaid-alt-font-family: var(--base-font) !important;
   --mermaid-font-family: var(--base-font) !important;
+  --rawblock-edit-panel-bd: #9b9b9b1f;
 }
 
 #write h3:before,
