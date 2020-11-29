@@ -1,4 +1,5 @@
 @import './qd-light.css';
+@import "./autumnus-import/dark-basic.css";
 
 :root {
   --bg-color: hsl(0, 0%, 25%);
@@ -40,6 +41,11 @@
   --mermaid-alt-font-family: var(--base-font) !important;
   --mermaid-font-family: var(--base-font) !important;
   --rawblock-edit-panel-bd: #9b9b9b1f;
+}
+
+/*退出源代码模式hover效果*/
+.typora-sourceview-on #toggle-sourceview-btn:hover{
+	color: var(--item-hover-text-color) !important;
 }
 
 #write h3:before,

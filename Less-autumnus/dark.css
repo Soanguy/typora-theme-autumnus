@@ -1,3 +1,6 @@
+@import "./autumnus-import/basic.css";
+@import "./autumnus-import/dark-basic.css";
+
 :root {
   --bg-color: hsl(0, 0%, 15%);
   --write-bg: hsl(0, 0%, 15%);
@@ -953,7 +956,6 @@ blockquote .task-list-item input::before {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.05);
   background-clip: padding-box;
 }
 [draggable] {

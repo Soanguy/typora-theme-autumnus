@@ -1,0 +1,6 @@
+@import "./patch-scrollbar.css";
+
+/*表格顶行*/
+#write table tr th{
+    border: none;
+}

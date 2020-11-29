@@ -1,3 +1,5 @@
+@import "./autumnus-import/basic.css";
+
 :root {
   --bg-color: hsl(0, 0%, 100%);
   --write-bg: hsl(0, 0%, 100%);

@@ -1,4 +1,6 @@
 @import "./autumnus.css";
+@import "./autumnus-import/fluence-basic.css";
+
 :root {
 	--write-bg: transparent !important;
 	--codeb-bg: #f8f8f880 !important;
