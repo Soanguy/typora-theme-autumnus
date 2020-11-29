@@ -1,5 +1,4 @@
 @import "./opt-autumnus.css";
-@import "./autumnus-import/dark-basic.css";
 
 :root {
     --bg-color: hsl(0, 0%, 25%);
@@ -261,4 +260,18 @@ footer.stopselect.ty-footer {
 
 .md-fences .code-tooltip {
     background-color: #263238;
+}
+
+/*"退出源代码模式"背景*/
+.typora-sourceview-on #toggle-sourceview-btn{
+    background: none;
+}
+/*"退出源代码模式"hover效果*/
+.typora-sourceview-on #toggle-sourceview-btn:hover{
+    background: var(--item-hover-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(250, 250, 250, 0.2);
+	background-clip: padding-box;
 }

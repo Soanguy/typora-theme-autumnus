@@ -1,5 +1,4 @@
 @import "./opt-autumnus.css";
-@import "./autumnus-import/fluence-basic.css";
 
 :root {
 	--write-bg: transparent !important;
@@ -47,8 +46,8 @@ content:after {
 	border-radius: 5px;
 }
 
-.typora-export{
-	background-attachment: fixed!important;
+.typora-export {
+	background-attachment: fixed !important;
 }
 
 .md-toc {
@@ -103,6 +102,16 @@ content:after {
 
 blockquote blockquote {
 	background: transparent !important;
+}
+
+/*表格顶行*/
+#write table tr th {
+	border: none;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(250, 250, 250, 0.2);
+	background-clip: padding-box;
 }
 
 .enable-diagrams pre.md-fences[lang=sequence]:not(.md-focus),

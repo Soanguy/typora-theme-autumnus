@@ -1,5 +1,4 @@
 @import "./autumnus.css";
-@import "./autumnus-import/fluence-basic.css";
 
 :root {
 	--write-bg: transparent !important;
@@ -12,8 +11,8 @@
 .typora-export,
 content {
 	background-color: var(--write-bg);
-	background-size: cover!important;
-	background-attachment: fixed!important;
+	background-size: cover !important;
+	background-attachment: fixed !important;
 }
 
 #write {
@@ -55,6 +54,15 @@ content {
 	top: 2rem;
 }
 
+/*表格顶行*/
+#write table tr th {
+	border: none;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(250, 250, 250, 0.2);
+	background-clip: padding-box;
+}
 
 #write div.md-toc-tooltip {
 	left: 0em;

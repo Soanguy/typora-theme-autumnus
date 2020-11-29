@@ -1,5 +1,3 @@
-@import "./autumnus-import/basic.css";
-
 :root {
   --bg-color: hsl(0, 0%, 100%);
   --write-bg: hsl(0, 0%, 100%);
@@ -428,6 +426,22 @@ table tr:hover {
   background: var(--tbody-hover);
   color: var(--link-hover);
 }
+table tr th {
+  border: 1px solid var(--thead-bg);
+}
+/*表格大小设置输入框(数字居中)*/
+#write .md-grid-board-wrap input {
+  text-align: center !important;
+}
+/*表格大小设置面板(防边界超出)*/
+#write .popover.bottom.md-table-resize-popover {
+  width: auto;
+  max-width: none;
+}
+/*表格大小设置面板中的方框*/
+#write .md-grid-board.md-reset > tbody > tr > td > a {
+  border-bottom: 1px solid var(--table-border-color) !important;
+}
 sup.md-footnote {
   padding: var(--base-padding);
   color: var(--footer-color);
@@ -773,6 +787,10 @@ blockquote .task-list-item input::before {
 }
 .ty-file-search-match-text {
   background: var(--codeb-bg);
+}
+/*搜索*/
+#file-library-search-input {
+  padding-left: 0.4em;
 }
 /* 大纲目录自动编号 */
 .sidebar-content {

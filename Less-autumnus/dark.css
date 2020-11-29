@@ -1,6 +1,3 @@
-@import "./autumnus-import/basic.css";
-@import "./autumnus-import/dark-basic.css";
-
 :root {
   --bg-color: hsl(0, 0%, 15%);
   --write-bg: hsl(0, 0%, 15%);
@@ -956,6 +953,7 @@ blockquote .task-list-item input::before {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.05);
   background-clip: padding-box;
 }
 [draggable] {
@@ -1030,6 +1028,18 @@ uni-preference-panel,
 }
 :root {
   --rawblock-edit-panel-bd: #9b9b9b1f;
+}
+/*"退出源代码模式"背景*/
+.typora-sourceview-on #toggle-sourceview-btn {
+  background: none;
+}
+/*"退出源代码模式"hover效果*/
+.typora-sourceview-on #toggle-sourceview-btn:hover {
+  background: var(--item-hover-bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(250, 250, 250, 0.2);
+  background-clip: padding-box;
 }
 .cm-s-inner {
   background-color: #263238;
