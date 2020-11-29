@@ -1,0 +1,4 @@
+::-webkit-scrollbar-thumb {
+	background: rgba(250, 250, 250, 0.2);
+	background-clip: padding-box;
+}

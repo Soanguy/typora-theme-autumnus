@@ -1,3 +1,6 @@
+@import "./autumnus-import/basic.css";
+@import "./autumnus-import/fluence-basic.css";
+
 :root {
   --write-bg: transparent !important;
   --codeb-bg: #f8f8f880 !important;
@@ -960,7 +963,6 @@ blockquote .task-list-item input::before {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.05);
   background-clip: padding-box;
 }
 [draggable] {

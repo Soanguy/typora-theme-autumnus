@@ -1,4 +1,5 @@
 @import "./opt-autumnus.css";
+@import "./autumnus-import/dark-basic.css";
 
 :root {
     --bg-color: hsl(0, 0%, 25%);
@@ -53,6 +54,11 @@
     --rawblock-edit-panel-bd: #9b9b9b1f;
 }
 
+/*表格中的代码*/
+#write table td>.td-span>span[md-inline="code"]>code,
+#write table tr th>.td-span>span[md-inline="code"]>code{
+    background-color: var(--codeb-bg);
+}
 
 @media screen and (min-width: 1300px) {
     #write {
