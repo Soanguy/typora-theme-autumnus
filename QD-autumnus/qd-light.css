@@ -549,6 +549,10 @@ content {
   border-bottom: 1px solid var(--table-border-color) !important;
 }
 
+.ty-table-edit{
+	margin-top: -12px!important;
+}
+
 /*搜索*/
 #file-library-search-input{
   padding-left: 0.4em;

@@ -442,6 +442,9 @@ table tr th {
 #write .md-grid-board.md-reset > tbody > tr > td > a {
   border-bottom: 1px solid var(--table-border-color) !important;
 }
+.ty-table-edit {
+  margin-top: -16px !important;
+}
 sup.md-footnote {
   padding: var(--base-padding);
   color: var(--footer-color);

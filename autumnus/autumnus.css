@@ -718,6 +718,10 @@ figure>table {
 	width: 98%;
 }
 
+.ty-table-edit{
+	margin-top: -10px!important;
+}
+
 #write table th,
 #write table thead th {
 	background: var(--thead-bg);
