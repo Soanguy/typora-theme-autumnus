@@ -17,12 +17,14 @@ content {
 
 #write {
 	background: transparent !important;
+	z-index:999;
 }
 
 #write:after {
 	content: "";
 	background: rgba(221, 221, 221, 0.5);
 	backdrop-filter: saturate(180%) blur(20px);
+	-webkit-backdrop-filter: saturate(180%) blur(20px);
 	position: absolute;
 	top: 0;
 	left: 0;

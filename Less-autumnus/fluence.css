@@ -449,6 +449,9 @@ table tr th {
 #write .md-grid-board.md-reset > tbody > tr > td > a {
   border-bottom: 1px solid var(--table-border-color) !important;
 }
+.ty-table-edit {
+  margin-top: -16px !important;
+}
 sup.md-footnote {
   padding: var(--base-padding);
   color: var(--footer-color);
@@ -1061,12 +1064,14 @@ content {
 #write {
   width: 100%;
   background: transparent !important;
+  z-index: 999;
 }
 #write:after,
 #typora-sidebar::after {
   content: "";
   background: rgba(221, 221, 221, 0.5);
   backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
   position: absolute;
   top: 0;
   left: 0;

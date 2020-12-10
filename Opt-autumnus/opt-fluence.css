@@ -21,6 +21,7 @@ content {
 #write {
 	width: 100%;
 	background: transparent !important;
+	z-index: 999;
 }
 
 .on-focus-mode #write {
@@ -36,6 +37,7 @@ content:after {
 	content: "";
 	background: rgba(221, 221, 221, 0.5);
 	backdrop-filter: saturate(180%) blur(20px);
+	-webkit-backdrop-filter: saturate(180%) blur(20px);
 	position: fixed;
 	top: 0;
 	left: 0;
