@@ -248,6 +248,7 @@ img {
 ul,
 ol {
   margin: var(--base-margin);
+  margin-left: 2rem;
 }
 p + p {
   margin: 0.5rem auto;
