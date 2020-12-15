@@ -1065,7 +1065,6 @@ content {
 #write {
   width: 100%;
   background: transparent !important;
-  z-index: 999;
 }
 #write:after,
 #typora-sidebar::after {
