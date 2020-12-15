@@ -14,8 +14,8 @@ content {
 	min-width: 640px;
 }
 
-.megamenu-content {
-	background: var(--bg-color);
+#megamenu-content {
+	background: #fafafa;
 }
 
 #write {
