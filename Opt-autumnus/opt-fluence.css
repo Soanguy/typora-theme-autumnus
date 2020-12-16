@@ -21,7 +21,6 @@ content {
 #write {
 	width: 100%;
 	background: transparent !important;
-	z-index: 999;
 }
 
 .on-focus-mode #write {

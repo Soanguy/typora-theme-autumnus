@@ -17,7 +17,6 @@ content {
 
 #write {
 	background: transparent !important;
-	z-index:999;
 }
 
 #write:after {
