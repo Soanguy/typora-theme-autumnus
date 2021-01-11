@@ -32,152 +32,6 @@
   --quota-font: "EB Garamond", Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
   --monospace: "Cascadia code", "Sarasa Term SC", Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono", Courier;
 }
-html {
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  text-rendering: optimizelegibility;
-  -webkit-font-smoothing: initial;
-}
-html,
-body,
-#write {
-  font-family: var(--base-font);
-  font-weight: 400;
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 2rem;
-  background: var(--write-bg);
-  color: var(--text-color);
-}
-content {
-  background-color: var(--write-bg);
-  min-width: 400px;
-}
-.typora-node #write {
-  min-height: calc(100vh - 8em);
-}
-#write {
-  max-width: 914px;
-  min-width: calc(100vw - 45rem);
-  padding: 3rem 4rem;
-  text-align: justify;
-}
-#write * {
-  -webkit-text-stroke: 0.25px;
-}
-/* 目录自动编号 */
-.md-toc {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  display: table;
-  margin: auto;
-}
-.md-toc::before {
-  content: "Contents";
-  font-size: 2rem;
-  text-align: center;
-  display: block;
-  margin: 2rem auto;
-  font-family: var(--title-font);
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-}
-.md-toc-item {
-  display: flex;
-  display: table-row;
-  font-family: var(--title-font);
-  width: 100%;
-  height: 2.5rem;
-}
-.md-toc-item .md-toc-inner {
-  text-decoration: none;
-  color: var(--text-color);
-  border-bottom: none !important;
-  display: table-cell;
-  padding-left: 3rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.md-toc-h1,
-.md-toc-h2,
-.md-toc-h3,
-.md-toc-h4 {
-  margin: 0.75rem;
-  text-align-last: right;
-}
-.md-toc-h1::before,
-.md-toc-h2::before,
-.md-toc-h3::before,
-.md-toc-h4::before {
-  color: initial;
-  display: table-cell;
-  vertical-align: baseline;
-  color: var(--text-color);
-}
-.md-toc-h1 .md-toc-inner,
-.md-toc-h2 .md-toc-inner,
-.md-toc-h3 .md-toc-inner,
-.md-toc-h4 .md-toc-inner {
-  margin-left: 1rem !important;
-  word-wrap: normal;
-  word-break: break-all;
-}
-.md-toc-h5,
-.md-toc-h6 {
-  display: none;
-}
-.md-toc-h2 {
-  margin-left: 1rem;
-}
-.md-toc-h3,
-.md-toc-h4 {
-  margin-left: 4rem;
-}
-.md-toc-h1 {
-  font: 600 1.25em var(--title-font);
-  counter-increment: counter_md-toc-h1;
-  counter-reset: counter_md-toc-h2;
-}
-.md-toc-h1:before {
-  content: "第" counter(counter_md-toc-h1, cjk-ideographic) "章";
-}
-.md-toc-h2 {
-  counter-increment: counter_md-toc-h2;
-  counter-reset: counter_md-toc-h3;
-}
-.md-toc-h2::before {
-  content: "第" counter(counter_md-toc-h2, cjk-ideographic) "节";
-}
-.md-toc-h3 {
-  counter-increment: counter_md-toc-h3;
-  counter-reset: counter_md-toc-h4;
-}
-.md-toc-h3::before {
-  content: counter(counter_md-toc-h3);
-}
-.md-toc-h4 {
-  counter-increment: counter_md-toc-h4;
-  counter-reset: counter_md-toc-h5;
-}
-.md-toc-h4::before {
-  content: counter(counter_md-toc-h3) "." counter(counter_md-toc-h4);
-}
-.md-toc-h5 {
-  counter-increment: counter_md-toc-h5;
-  counter-reset: counter_md-toc-h6;
-}
-.md-toc-h5::before {
-  content: counter(counter_md-toc-h3) "." counter(counter_md-toc-h4) "." counter(counter_md-toc-h5);
-}
-.md-toc-h6 {
-  counter-increment: counter_md-toc-h6;
-  counter-reset: counter_md-toc-h7;
-}
-.md-toc-h6::before {
-  content: counter(counter_md-toc-h3) "." counter(counter_md-toc-h4) "." counter(counter_md-toc-h5) "." counter(counter_md-toc-h6);
-}
 /* 内外边距通常让各个浏览器样式的表现位置不同 */
 body,
 dl,
@@ -260,6 +114,153 @@ fieldset,
 img {
   border: 0;
 }
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html,
+body,
+#write {
+  font-family: var(--base-font);
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 2rem;
+  background: var(--write-bg);
+  color: var(--text-color);
+}
+content {
+  background-color: var(--write-bg);
+  min-width: 400px;
+}
+.typora-node #write {
+  min-height: calc(100vh - 8em);
+}
+#write {
+  max-width: 914px;
+  min-width: calc(100vw - 45rem);
+  padding: 3rem 4rem;
+  text-align: justify;
+}
+#write * {
+  -webkit-text-stroke: 0.25px;
+}
+/* 目录自动编号 */
+.md-toc {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  display: table;
+  margin: auto;
+}
+.md-toc::before {
+  content: "Contents";
+  font-size: 2rem;
+  text-align: center;
+  display: block;
+  margin: 2rem auto;
+  font-family: var(--title-font);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.md-toc .md-toc-item {
+  display: flex;
+  display: table-row;
+  font-family: var(--title-font);
+  width: 100%;
+  height: 2.5rem;
+}
+.md-toc .md-toc-item .md-toc-inner {
+  text-decoration: none;
+  color: var(--text-color);
+  border-bottom: none !important;
+  display: table-cell;
+  padding-left: 3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.md-toc .md-toc-h1,
+.md-toc .md-toc-h2,
+.md-toc .md-toc-h3,
+.md-toc .md-toc-h4 {
+  margin: 0.75rem;
+  text-align-last: right;
+}
+.md-toc .md-toc-h1::before,
+.md-toc .md-toc-h2::before,
+.md-toc .md-toc-h3::before,
+.md-toc .md-toc-h4::before {
+  color: initial;
+  display: table-cell;
+  vertical-align: baseline;
+  color: var(--text-color);
+}
+.md-toc .md-toc-h1 .md-toc-inner,
+.md-toc .md-toc-h2 .md-toc-inner,
+.md-toc .md-toc-h3 .md-toc-inner,
+.md-toc .md-toc-h4 .md-toc-inner {
+  margin-left: 1rem !important;
+  word-wrap: normal;
+  word-break: break-all;
+}
+.md-toc .md-toc-h5,
+.md-toc .md-toc-h6 {
+  display: none;
+}
+.md-toc .md-toc-h2 {
+  margin-left: 1rem;
+}
+.md-toc .md-toc-h3,
+.md-toc .md-toc-h4 {
+  margin-left: 4rem;
+}
+.md-toc .md-toc-h1 {
+  font: 600 1.25em var(--title-font);
+  counter-increment: counter_md-toc-h1;
+  counter-reset: counter_md-toc-h2;
+}
+.md-toc .md-toc-h1:before {
+  content: "第" counter(counter_md-toc-h1, cjk-ideographic) "章";
+}
+.md-toc .md-toc-h2 {
+  counter-increment: counter_md-toc-h2;
+  counter-reset: counter_md-toc-h3;
+}
+.md-toc .md-toc-h2::before {
+  content: "第" counter(counter_md-toc-h2, cjk-ideographic) "节";
+}
+.md-toc .md-toc-h3 {
+  counter-increment: counter_md-toc-h3;
+  counter-reset: counter_md-toc-h4;
+}
+.md-toc .md-toc-h3::before {
+  content: counter(counter_md-toc-h3);
+}
+.md-toc .md-toc-h4 {
+  counter-increment: counter_md-toc-h4;
+  counter-reset: counter_md-toc-h5;
+}
+.md-toc .md-toc-h4:before {
+  content: counter(counter_md-toc-h3) "." counter(counter_md-toc-h4);
+}
+.md-toc .md-toc-h5 {
+  counter-increment: counter_md-toc-h5;
+  counter-reset: counter_md-toc-h6;
+}
+.md-toc .md-toc-h5::before {
+  content: counter(counter_md-toc-h3) "." counter(counter_md-toc-h4) "." counter(counter_md-toc-h5);
+}
+.md-toc .md-toc-h6 {
+  counter-increment: counter_md-toc-h6;
+  counter-reset: counter_md-toc-h7;
+}
+.md-toc .md-toc-h6::before {
+  content: counter(counter_md-toc-h3) "." counter(counter_md-toc-h4) "." counter(counter_md-toc-h5) "." counter(counter_md-toc-h6);
+}
 /* 标题样式 */
 h1,
 h2,
@@ -269,7 +270,13 @@ h5,
 h6 {
   color: var(--title-color);
 }
-/* 让每一级标题更加明显，添加标注 */
+h1,
+h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 3rem;
+  text-transform: uppercase;
+}
 #write h1 {
   margin-top: 6rem;
   margin-bottom: 3rem;
@@ -291,13 +298,6 @@ h6 {
 #write h1::after {
   border-bottom: 4px solid var(--title-color);
   border-top: 1px solid var(--title-color);
-}
-h1,
-h2 {
-  font-size: 2rem;
-  font-weight: 800;
-  line-height: 3rem;
-  text-transform: uppercase;
 }
 #write h2 {
   font-family: var(--title-font);
@@ -751,7 +751,7 @@ p.mathjax-block,
   /* color of primary buttons */
   --primary-btn-border-color: hsl(0, 100%, 75%);
   --primary-btn-text-color: hsl(0, 0%, 100%);
-  --select-text-bg-color: hsl(0, 100%, 75%);
+  --select-text-bg-color: hsla(0, 100%, 75%, 0.8);
   --select-text-font-color: hsl(0, 0%, 100%);
   --active-bg: hsl(0, 0%, 95%);
 }
@@ -777,7 +777,7 @@ p.mathjax-block,
   border-radius: 5px;
   background: transparent !important;
 }
-#md-notification:before {
+#md-notification::before {
   top: 14px;
 }
 #md-notification::after {
