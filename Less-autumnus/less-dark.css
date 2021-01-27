@@ -685,127 +685,16 @@ blockquote .task-list-item input::before {
   }
 }
 @media print {
-  html,
-  body,
-  #write {
-    border: none;
-    font-family: var(--em-font);
-    font-size: 16px;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: var(--lineheight);
-  }
-  .typora-export * {
-    -webkit-print-color-adjust: exact;
-  }
-  #write h1,
-  #write h2,
-  #write h3,
-  #write h4,
-  #write h5,
-  #write h6 {
-    font-weight: 600;
-    margin: 2rem 0 1rem;
-    color: #111;
-    line-height: 2rem;
-    font-family: var(--em-font);
-  }
-  #write h1 {
-    font-size: 1.75rem;
-    line-height: 2.5rem;
-  }
-  #write h1::after {
-    display: none;
-  }
-  #write h2 {
-    font-size: 1.5rem;
-  }
-  #write h3,
-  #write h4,
-  #write h5,
-  #write h6 {
-    font-size: 1.25rem;
-  }
-  #write p {
-    line-height: var(--lineheight);
-    text-indent: 2rem;
-  }
-  #write .task-list-item input::before,
-  #write .task-list-item input::after {
-    top: 1px;
-  }
-  #write blockquote {
-    position: relative;
-    margin: 1rem 2rem;
-    background: none;
-    color: #555;
-    font-weight: 300;
-  }
-  #write blockquote li {
-    font-family: var(--quota-font);
-  }
-  #write blockquote .task-list-item input::before {
-    top: -1px;
-  }
-  #write blockquote blockquote {
-    margin-right: 0;
-    padding-right: 0;
-  }
-  #write blockquote + blockquote {
-    margin-bottom: 1rem;
-  }
-  #write pre.md-fences {
-    background: hsl(0, 0%, 95%);
-  }
-  #write figure > table {
-    background: none;
-    margin: 1.75rem auto;
-  }
-  #write figure > table tr {
-    border-collapse: collapse;
-    border-bottom: 1px solid brown;
-  }
-  #write figure > table tr th,
-  #write figure > table tr td {
-    padding: 0.5rem 0;
-  }
-  #write code,
-  #write mark {
-    padding: 2px;
-    background: none;
-  }
-  #write mark {
-    color: var(--text-color);
-    background-color: hsl(60, 100%, 50%);
+  html {
+    margin: 0;
+    padding: 1cm;
   }
   #write {
-    box-shadow: none;
-    border-radius: 0px;
     margin: 0;
     padding: 0;
   }
-  #write p + p {
-    margin: 0;
-  }
-  #write blockquote,
-  #write pre.md-fences,
-  #write img {
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-  }
-  #write blockquote blockquote {
-    border-left: none;
-  }
-  #write mark {
-    font-family: var(--em-font);
-  }
-  #write table thead th,
-  #write table th,
-  #write table td {
-    background: none;
-    border: none;
-    border-bottom: 1px solid #555;
+  #write * {
+    -webkit-text-stroke: 0px;
   }
 }
 :root {
