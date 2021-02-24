@@ -112,3 +112,32 @@ input[type=search] {
 .task-list-item input:before {
     background: white;
 }
+
+@media (max-width:1300px) {
+    content {
+        background-size: 100%;
+    }
+}
+
+@media (min-width:1101px) {
+    #write {
+        margin-top: 25rem;
+    }
+
+    .typora-node #write {
+        min-height: 2%;
+    }
+    content {
+        background-size: 40%;
+    }
+}
+
+@media (max-width:1100px){
+    #write {
+        margin-top: 0rem;
+    }
+
+    .typora-node #write {
+        min-height: 100%;
+    }
+}

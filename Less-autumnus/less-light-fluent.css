@@ -113,14 +113,13 @@ input[type=search] {
     background: white;
 }
 
-
 @media (max-width:1300px) {
     content {
         background-size: 100%;
     }
 }
 
-@media (min-width:800px) {
+@media (min-width:1101px) {
     #write {
         margin-top: 25rem;
     }
@@ -128,10 +127,17 @@ input[type=search] {
     .typora-node #write {
         min-height: 2%;
     }
-}
-
-@media (min-width:1100px) {
     content {
         background-size: 40%;
+    }
+}
+
+@media (max-width:1100px){
+    #write {
+        margin-top: 0rem;
+    }
+
+    .typora-node #write {
+        min-height: 100%;
     }
 }
