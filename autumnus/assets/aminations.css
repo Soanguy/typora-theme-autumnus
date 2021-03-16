@@ -1,0 +1,44 @@
+
+/* animation */
+#write td,
+#megamenu-content td,
+.file-list-item,
+.megamenu-menu li,
+.btn,
+.long-btn {
+	position: relative;
+	overflow: hidden;
+}
+
+#write td:after,
+#megamenu-content td:after,
+.file-list-item:after,
+.megamenu-menu li:after,
+.btn:after,
+.long-btn:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	background-image: radial-gradient(circle, #666 10%, transparent 10.01%);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	transform: scale(10, 10);
+	opacity: 0;
+	transition: transform .3s, opacity .5s;
+}
+
+#write td:active:after,
+#megamenu-content td:active:after,
+.file-list-item:active:after,
+.megamenu-menu li:active:after,
+.btn:active:after,
+.long-btn:active:after {
+	transform: scale(0, 0);
+	opacity: .3;
+	transition: 0s;
+}

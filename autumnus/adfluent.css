@@ -1,11 +1,12 @@
-@import "autumnus-dark.css";
+@import "adark.css";
 
 :root {
     --side-bar-bg-color: transparent !important;
-    --codeb-bg: hsla(0, 0%, 3%, 0.502) !important;
-    --quota-bg: hsla(0, 0%, 3%, 0.502) !important;
-    --thead-bg: hsla(0, 0%, 3%, 0.502) !important;
-    --tbody-bg: hsla(0, 0%, 3%, 0.502) !important;
+    --bg-code-block: #08080880 !important;
+    --bg-quote: #08080880 !important;
+    --bg-thead: #08080880 !important;
+    --bg-tbody: #08080880 !important;
+    --bg-tbody-opt: #40404080 !important;
 }
 
 content,
@@ -132,12 +133,13 @@ input[type=search] {
     .typora-node #write {
         min-height: 2%;
     }
+
     content {
         background-size: 40%;
     }
 }
 
-@media (max-width:1100px){
+@media (max-width:1100px) {
     #write {
         margin-top: 0rem;
     }

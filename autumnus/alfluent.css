@@ -2,10 +2,11 @@
 
 :root {
     --side-bar-bg-color: transparent !important;
-    --codeb-bg: #f8f8f880 !important;
-    --quota-bg: #f8f8f880 !important;
-    --thead-bg: #f0f0f080 !important;
-    --tbody-bg: #f8f8f880 !important;
+    --bg-code-block: #f8f8f880 !important;
+    --bg-quote: #f8f8f880 !important;
+    --bg-thead: #f0f0f080 !important;
+    --bg-tbody: #f8f8f880 !important;
+    --bg-tbody-opt: #fcfcfc80 !important;
 }
 
 content,
@@ -128,12 +129,13 @@ input[type=search] {
     .typora-node #write {
         min-height: 2%;
     }
+
     content {
         background-size: 40%;
     }
 }
 
-@media (max-width:1100px){
+@media (max-width:1100px) {
     #write {
         margin-top: 0rem;
     }
