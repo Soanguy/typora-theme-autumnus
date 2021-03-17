@@ -1,4 +1,5 @@
 @import "./autumnus.css";
+@import "./assets/dark-code.css";
 
 :root {
     /* color setting */
@@ -21,7 +22,7 @@
 
     --color-quote: var(--color-weak);
     --color-code: var(--color-text);
-    --color-link: var(--color-theme);
+    --color-link: var(--theme-color);
     --color-italic: var(--color-em);
     --color-strong: var(--color-strong);
     --color-highlight: var(--color-weakest);
@@ -34,7 +35,7 @@
     --color-thead-hover: var(--color-weak);
     --color-tbody-hover: var(--color-weak);
 
-    --link-hover-color: #464343;
+    --link-hover-color: var(--theme-color);
     --link-hover-bg: none;
 
     /* background setting */
@@ -143,7 +144,18 @@
 
 /* bugfix */
 
+blockquote code {
+    background: #333;
+}
+
 #write pre.md-fences {
     border: 1px solid #9993;
     border-top: 2rem solid var(--bg-code-block);
+}
+
+.cm-s-inner .CodeMirror-cursors,
+.CodeMirror div.CodeMirror-cursor {
+    background-color: hsl(100, 100%, 75%) !important;
+    border-left: 2px solid hsl(100, 100%, 75%) !important;
+    width: 2px !important;
 }

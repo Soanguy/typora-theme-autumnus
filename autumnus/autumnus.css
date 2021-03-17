@@ -26,7 +26,7 @@
 
     --color-quote: var(--color-weak);
     --color-code: var(--color-text);
-    --color-link: var(--color-theme);
+    --color-link: var(--theme-color);
     --color-italic: var(--color-em);
     --color-strong: var(--color-strong);
     --color-highlight: var(--color-strong);
@@ -73,7 +73,7 @@
     /* font setting:font-weight;font-size;line-height;font-family */
     --font-hei: "Poppins", -apple-system, "Helvetica Neue", Helvetica, "Noto Sans", "Nimbus Sans L", Arial, "Liberation Sans", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
     --font-song: "EB Garamond", Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
-    --font-kai: "EB Garamond", Bas kerville, Georgia, "Liberation Serif", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+    --font-kai: "EB Garamond", Bas kerville, Georgia, "Liberation Serif",  STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
     --font-mono: "Cascadia Code", "Sarasa Term SC", Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono", Courier;
 
     --font-weight: 400;
@@ -98,7 +98,7 @@
     --font-strong: 800 var(--text-font-size) var(--font-song);
     --font-highlight: 400 var(--text-font-size) var(--font-hei);
     --font-strike: 200 var(--text-font-size) var(--font-hei);
-    --font-footnote: 400 0.9rem/1.35rem var(--font-kai);
+    --font-footnote: 400 1.1rem/1.65rem var(--font-kai);
 
     /* margin setting:top;right;bottom;left */
     --margin-h1: 6rem auto 4rem;
@@ -355,7 +355,7 @@ blockquote p {
 
 /* list setting */
 
-#write ul {
+#write ul,ol {
     margin-left: 1.5rem;
 }
 
@@ -489,6 +489,11 @@ ins {
     text-decoration: none;
 }
 
+del{
+    color: var(--color-strike);
+    background: var(--bg-strike);
+}
+
 #write strong {
     font: var(--font-strong);
     background: var(--bg-strong);
@@ -500,6 +505,10 @@ ins {
     background: var(--bg-italic);
     color: var(--color-italic);
     text-decoration: underline dotted;
+}
+
+em strong, strong em {
+    font-weight: 900!important;
 }
 
 #write mark {
@@ -528,8 +537,10 @@ var {
     color: hsl(215, 100%, 75%);
 }
 
-.cm-s-inner .CodeMirror-cursor {
-    border-left: solid var(--color-link) !important;
+.cm-s-inner .CodeMirror-cursors,.CodeMirror div.CodeMirror-cursor {
+    background-color: #ff8080!important;
+    border-left: 2px solid #ff8080!important;
+    width: 2px!important;
 }
 
 /* code-block setting */

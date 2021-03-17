@@ -11,6 +11,27 @@
 
 > 该主题主要测试于  Windows 和 Ubuntu，尚未经过 Mac 平台测试，但应能正常工作。如果出现任何显示错误，请联系我。
 
+## 预览
+
+主题预览可以查看此处：
+
+<details>
+  <summary>alfluent</summary>
+  <img src="https://i.loli.net/2021/03/17/cjY8tZfVwMiLqDC.png" alt="alfluent.png">
+  </details>
+  <details>
+  <summary>adark</summary>
+  <img src="https://i.loli.net/2021/03/17/Mpr71zkiNHhbT8w.jpg" alt="adark"  />
+  </details>
+  <details>
+  <summary>autumnus</summary>
+  <img src="https://i.loli.net/2021/03/17/XCx2LUzVS6DfJEj.jpg" alt="autumnus" />
+  </details>
+  <details>
+  <summary>adfluent</summary>
+   <img src="https://i.loli.net/2021/03/17/CgiI5UM7rbp1oz4.png" alt="adfluent.png" />
+</details>
+
 ## 安装
 
 下载该主题后，打开 `偏好设置→外观→主题→打开主题文件夹`。之后将喜欢的主题文件夹下的 `css` 文件和 `assets` 文件夹复制到该文件夹下，重新进入 `偏好设置→外观→主题` 选择喜欢主题后，重启 Typora 即可。
@@ -19,6 +40,10 @@
 >
 > + `autumus`系列：`autumnus.css` 是该系列主题的根基，该系列主题都依赖该主题。``adark.css` 是其暗黑主题。`alfluent.css` 和 `adfluent.css` 则分别是亮色主题和暗色主题的模糊样式。
 > + `autumnus-opt`、`autumnus-less`、``autumnus-QD` 系列主题的名称和上面的相同。
+
+## 导出
+
+所有的主题都只有亮色模式才可以导出，其他的样式无法导出或导出后会出现显示错误。即可以导出的主题包括：`autumnus`、`autumnus-opt`、`autumnus-less`。
 
 ## 修改主题
 

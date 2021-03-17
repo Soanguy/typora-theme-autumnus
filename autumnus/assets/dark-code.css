@@ -1,13 +1,12 @@
-
 /* code style */
 
 .cm-s-inner {
-    background-color: #263238;
+    background-color: #282c34;
     color: rgba(233, 237, 237, 1);
 }
 
 .cm-s-inner .CodeMirror-gutters {
-    background: #263238;
+    background: #282c34;
     color: rgb(83, 127, 126);
     border: none;
 }
@@ -16,10 +15,6 @@
 .cm-s-inner .CodeMirror-guttermarker-subtle,
 .cm-s-inner .CodeMirror-linenumber {
     color: rgb(83, 127, 126);
-}
-
-.cm-s-inner .CodeMirror-cursor {
-    border-left: 1px solid #f8f8f0;
 }
 
 .cm-s-inner div.CodeMirror-selected {
@@ -47,83 +42,83 @@
 }
 
 .cm-s-inner .cm-keyword {
-    color: rgba(199, 146, 234, 1);
+    color: #c678dd;
 }
 
 .cm-s-inner .cm-operator {
-    color: rgba(233, 237, 237, 1);
+    color: #56b6c2;
 }
 
 .cm-s-inner .cm-variable-2 {
-    color: #80CBC4;
+    color: #e06c75;
 }
 
 .cm-s-inner .cm-variable-3 {
-    color: #82B1FF;
+    color: #be5046;
 }
 
 .cm-s-inner .cm-builtin {
-    color: #DECB6B;
+    color: #98c379;
 }
 
 .cm-s-inner .cm-atom {
-    color: #F77669;
+    color: #d19a66;
 }
 
 .cm-s-inner .cm-number {
-    color: #F77669;
+    color: #d19a66;
 }
 
 .cm-s-inner .cm-def {
-    color: rgba(233, 237, 237, 1);
+    color: #61aeee;
 }
 
 .cm-s-inner .cm-string {
-    color: #C3E88D;
+    color: #98c379;
 }
 
 .cm-s-inner .cm-string-2 {
-    color: #80CBC4;
+    color: #c678dd;
 }
 
 .cm-s-inner .cm-comment {
-    color: #546E7A;
+    color: #818896;
 }
 
 .cm-s-inner .cm-variable {
-    color: #82B1FF;
+    color: #d19a66;
 }
 
 .cm-s-inner .cm-tag {
-    color: #80CBC4;
+    color: #abb2bf;
 }
 
 .cm-s-inner .cm-meta {
-    color: #80CBC4;
+    color: #5c6370;
 }
 
 .cm-s-inner .cm-attribute {
-    color: #FFCB6B;
+    color: #56b6c2;
 }
 
 .cm-s-inner .cm-property {
-    color: #80CBAE;
+    color: #abb2bf;
 }
 
 .cm-s-inner .cm-qualifier {
-    color: #DECB6B;
+    color: #d19a66;
 }
 
 .cm-s-inner .cm-variable-3 {
-    color: #DECB6B;
+    color: #be5046;
 }
 
 .cm-s-inner .cm-tag {
-    color: rgba(255, 83, 112, 1);
+    color: #abb2bf;
 }
 
 .cm-s-inner .cm-error {
-    color: rgba(255, 255, 255, 1.0);
+    color: #be5046;
     background-color: #EC5F67;
 }
 
