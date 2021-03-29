@@ -7,7 +7,7 @@
 .file-list-item:hover,
 .file-node-content:hover,
 .file-node-background:hover {
-    height: 30px;
+    height: auto;
 }
 
 .info-panel-tab:hover,
