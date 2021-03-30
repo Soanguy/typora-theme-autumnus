@@ -73,7 +73,7 @@
     /* font setting:font-weight;font-size;line-height;font-family */
     --font-hei: "Poppins", -apple-system, "Helvetica Neue", Helvetica, "Noto Sans", "Nimbus Sans L", Arial, "Liberation Sans", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
     --font-song: "EB Garamond", Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
-    --font-kai: "EB Garamond", Bas kerville, Georgia, "Liberation Serif",  STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+    --font-kai: "EB Garamond", Bas kerville, Georgia, "Liberation Serif", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
     --font-mono: "Cascadia Code", "Sarasa Term SC", Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono", Courier;
 
     --font-weight: 400;
@@ -122,7 +122,7 @@
     --divide-border: 1px solid #f2f2f2;
     --dashed-border: 1px dashed #4d97ff;
     --dashed-border-opt: 1px dashed #ff4d4d;
-    --window-border:var(--divide-border);
+    --window-border: var(--divide-border);
 
     /* box-shadow */
     --text-shadow: none;
@@ -353,9 +353,39 @@ blockquote p {
     color: var(--color-quote);
 }
 
+blockquote h6 {
+    top: -1rem;
+}
+
+blockquote h6:before {
+    top: -15px;
+    content: "" !important;
+    position: absolute;
+    width: 4px;
+    height: 60px;
+    background: none !important;
+    left: -2rem;
+}
+
+blockquote h6 span:first-child:before {
+    content: " ";
+    position: absolute;
+    left: -2rem;
+    top: -2px;
+    width: .5rem;
+    height: 3rem;
+    display: block;
+    text-align: center;
+    font-family: Poppins, sans-serif;
+    background: var(--theme-color);
+    font-size: xxx-large;
+    font-weight: 600;
+}
+
 /* list setting */
 
-#write ul,ol {
+#write ul,
+ol {
     margin-left: 1.5rem;
 }
 
@@ -489,7 +519,7 @@ ins {
     text-decoration: none;
 }
 
-del{
+del {
     color: var(--color-strike);
     background: var(--bg-strike);
 }
@@ -507,8 +537,9 @@ del{
     text-decoration: underline dotted;
 }
 
-em strong, strong em {
-    font-weight: 900!important;
+em strong,
+strong em {
+    font-weight: 900 !important;
 }
 
 #write mark {
@@ -537,10 +568,11 @@ var {
     color: hsl(215, 100%, 75%);
 }
 
-.cm-s-inner .CodeMirror-cursors,.CodeMirror div.CodeMirror-cursor {
-    background-color: #ff8080!important;
-    border-left: 2px solid #ff8080!important;
-    width: 2px!important;
+.cm-s-inner .CodeMirror-cursors,
+.CodeMirror div.CodeMirror-cursor {
+    background-color: #ff8080 !important;
+    border-left: 2px solid #ff8080 !important;
+    width: 2px !important;
 }
 
 /* code-block setting */
@@ -659,3 +691,18 @@ td.md-reset a {
 }
 
 /* bugfix over */
+@media print {
+    @page {
+        margin: 1cm;
+        padding: 1cm;
+        size: A4;
+    }
+
+    html,
+    body,
+    content,
+    #write {
+        margin: 0;
+        padding: 0;
+    }
+}
