@@ -40,7 +40,7 @@
 
     /* background setting */
     --bg-contents: hsl(0, 0%, 15%);
-    --bg-write: hsl(0, 0%, 25%);
+    --bg-write: hsl(205, 10%, 20%);
     --bg-title: none;
     --bg-title-h1: none;
     --bg-title-h2: none;

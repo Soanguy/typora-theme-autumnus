@@ -57,6 +57,7 @@ a.menu-style-btn:hover {
 
 /* 菜单侧标栏 */
 .megamenu-menu {
+    width: 250px;
     box-shadow: 2px 2px 5px 0 #33333380, 2px 0px 10px 0 #33333380;
 }
 
@@ -67,7 +68,11 @@ a.menu-style-btn:hover {
 
 /* 侧边栏item激活 */
 
-/* bugfix */
+.megamenu-menu-list {
+    position: relative;
+    top: 16px;
+}
+
 .megamenu-menu-list li {
     line-height: 48px;
 }
@@ -111,12 +116,22 @@ a.menu-style-btn:hover {
 /* 主题页 */
 /* 样式预览 */
 
+#theme-preview-grid {
+    max-width: 85%;
+}
+
 .theme-preview-div:hover {
     border-color: #80aaff80;
 }
 
 .theme-preview-div {
+    width: 25%;
+    min-width: 250px;
     border: 4px solid #99999950;
+}
+
+.theme-preview-content {
+    width: 100%;
 }
 
 .theme-preview-div.active,

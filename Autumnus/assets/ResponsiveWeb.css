@@ -1,0 +1,68 @@
+@media (max-width:1100px) {
+
+    html,
+    body,
+    content,
+    #write {
+        background: var(--bg-write);
+    }
+}
+
+@media (min-width:1100px) {
+    #write {
+        box-shadow: var(--block-shadow-strong);
+        border-radius: 5px;
+        margin-top: 5rem;
+        padding: 2rem 4rem;
+    }
+
+    .typora-node #write {
+        min-height: 90%;
+    }
+}
+
+@media (max-width:500px) {
+    #write h1 {
+        font: 200 2.5rem/3.75rem var(--font-hei) !important;
+    }
+
+    #write h1:before,
+    #write h1:after {
+        display: none !important;
+    }
+
+    #write h2 {
+        font: 400 2rem/3rem var(--font-hei) !important;
+    }
+
+    #write h3 {
+        font: 600 1.75rem/2.625rem var(--font-hei) !important;
+    }
+
+    #write h4 {
+        font: 600 1.5rem/2.25rem var(--font-hei) !important;
+    }
+
+    #write h5 {
+        font: 600 1.25rem/1.875rem var(--font-hei) !important;
+    }
+
+    #write h6 {
+        font: 600 1.25rem/1.875rem var(--font-hei) !important;
+    }
+}
+
+@media (max-width: 530px) {
+    .megamenu-menu-list li a {
+        padding-left: 0 !important;
+    }
+}
+
+@media (min-width:600px){
+    .megamenu-content {
+        padding-left: 280px;
+    }
+    .megamenu-menu-list li a {
+        padding-left: 45px;
+    }
+}

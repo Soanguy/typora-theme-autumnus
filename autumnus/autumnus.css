@@ -3,6 +3,7 @@
 @import "./assets/contents.css";
 @import "./assets/sidebar-contents.css";
 @import "./assets/ui-setting.css";
+@import "./assets/ResponsiveWeb.css";
 
 :root {
     /* color setting */
@@ -74,7 +75,8 @@
     --font-hei: "Poppins", -apple-system, "Helvetica Neue", Helvetica, "Noto Sans", "Nimbus Sans L", Arial, "Liberation Sans", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
     --font-song: "EB Garamond", Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
     --font-kai: "EB Garamond", Bas kerville, Georgia, "Liberation Serif", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
-    --font-mono: "Cascadia Code", "Sarasa Term SC", Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono", Courier;
+    --font-mono: "Cascadia Code", "Sarasa Term SC", Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono", Courier, "PingFang SC", "Noto Sans CJK SC";
+    --monospace: var(--font-mono);
 
     --font-weight: 400;
     --font-size: 1rem;
@@ -179,29 +181,6 @@ content {
     max-width: 60rem;
     min-height: calc(100vh - 6rem);
     text-align: justify;
-}
-
-@media (max-width:1100px) {
-
-    html,
-    body,
-    content,
-    #write {
-        background: var(--bg-write);
-    }
-}
-
-@media (min-width:1100px) {
-    #write {
-        box-shadow: var(--block-shadow-strong);
-        border-radius: 5px;
-        margin-top: 5rem;
-        padding: 2rem 4rem;
-    }
-
-    .typora-node #write {
-        min-height: 90%;
-    }
 }
 
 /* title setting */
@@ -383,11 +362,6 @@ blockquote h6 span:first-child:before {
 }
 
 /* list setting */
-
-#write ul,
-ol {
-    margin-left: 1.5rem;
-}
 
 #write ol {
     list-style: decimal-leading-zero;
