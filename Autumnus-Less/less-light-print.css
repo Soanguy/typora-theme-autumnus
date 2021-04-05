@@ -293,7 +293,6 @@ img {
 ul,
 ol {
   margin: var(--base-margin);
-  margin-left: 2rem;
 }
 
 p+p {
@@ -373,7 +372,16 @@ em {
   font-family: var(--em-font);
   font-weight: 800;
   color: var(--title-color);
-  font-size: 1rem !important;
+  font-size: inherit;
+}
+
+ol strong{
+  font-family: "tw-kai";
+  font-size: inherit;
+}
+
+ol em{
+  font-size: 1rem;
 }
 
 em {
@@ -540,7 +548,7 @@ hr {
   width: 50%;
 }
 
-hr .pb {
+hr.pb {
   page-break-after: always;
   border-bottom: none;
 }
@@ -840,6 +848,7 @@ blockquote .task-list-item input::before {
     -webkit-text-stroke: 0px;
   }
 }
+
 :root {
   --blur-text-color: hsl(0, 100%, 90%);
   --active-file-bg-color: hsl(0, 0%, 90%);

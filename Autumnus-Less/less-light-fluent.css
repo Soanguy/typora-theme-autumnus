@@ -11,7 +11,7 @@
 content,
 .on-focus-mode content,
 #typora-sidebar {
-    background-image: url(./background/fans.svg);
+    background-image: url(./assets-less/online-community.svg);
     background-attachment: fixed;
     background-position-x: left;
     background-position-y: center;
