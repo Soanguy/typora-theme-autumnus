@@ -1,4 +1,5 @@
 @import "opt-dark.css";
+@import "./assets-opt/fluent.css";
 
 :root {
     --side-bar-bg-color: transparent !important;
@@ -125,6 +126,10 @@ input[type=search] {
 }
 
 @media (min-width:1101px) {
+    content {
+        background-size: 40%;
+    }
+
     #write {
         margin-top: 25rem;
     }
@@ -132,8 +137,10 @@ input[type=search] {
     .typora-node #write {
         min-height: 2%;
     }
-    content {
-        background-size: 40%;
+
+    .ty-on-typewriter-mode #write {
+        margin-top: 2rem;
+        min-height: calc(100vh - 6rem);
     }
 }
 

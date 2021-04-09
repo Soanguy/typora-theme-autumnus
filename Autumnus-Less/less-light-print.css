@@ -37,9 +37,16 @@
   --base-padding: 1px 4px;
   --opt-padding: 1rem;
   --lineheight: 1.75rem;
-  --base-font: "noto serif cjk sc";
-  --em-font: "noto serif cjk jp";
-  --quota-font: "悠哉字体", serif;
+  --base-font: Lora, Georgia, "Times New Roman", "Noto Serif CJK SC", serif;
+  --base-jp-font: Lora, Georgia, "Times New Roman", "Noto Serif CJK JP", serif;
+  --min-title-font: Lato, "Helvetica Neue", Helvetica, Arial, "Noto Sans CJK SC", sans-serif;
+  --ol-font: "Josefin Sans", "Helvetica Neue", Helvetica, "Segoe Print", "TW-Kai", "STKaiti,", "Kaiti";
+  --ol-jp-font: "Josefin Sans", "Helvetica Neue", Helvetica, "Segoe Print", "A-OTF Kyoukasho ICA Pro", "UD Digi Kyokasho N-R", "TW-Kai";
+  --ul-font: Lora, Georgia, "Times New Roman", "Noto Serif CJK JP", serif;
+  --ul-cn-font: Lora, Georgia, "Times New Roman", "Noto Serif CJK SC", serif;
+  --quota-font: "悠哉字体", "A-OTF Kyoukasho ICA Pro", "TW-Kai";
+  --mono-font: var(--ol-font);
+  --mono-jp-font: var(--ol-jp-font);
   --monospace: "Cascadia code", Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono", Courier;
   --mermaid-alt-font-family: var(--base-font) !important;
   --mermaid-font-family: var(--base-font) !important;
@@ -190,7 +197,7 @@ content {
 
 h1,
 h2 {
-  font-family: var(--title-font);
+  font-family: var(--base-font);
   font-weight: 800;
   line-height: 3rem;
   text-transform: uppercase;
@@ -211,7 +218,7 @@ h2 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin: 2rem auto 1rem;
 }
 
@@ -224,8 +231,8 @@ h4,
 h5,
 h6 {
   font-family: var(--base-font);
-  font-weight: 600;
-  margin: 2rem auto 1rem;
+  font-weight: 800;
+  margin: 1.5rem auto 1rem;
   position: relative;
 }
 
@@ -272,8 +279,9 @@ h5:hover::before {
   content: "H5";
 }
 
-h5 {
-  font-family: "noto sans cjk sc";
+h5,
+h6 {
+  font-family: var(--min-title-font);
 }
 
 h6:hover::before {
@@ -369,19 +377,10 @@ ins {
 
 strong,
 em {
-  font-family: var(--em-font);
+  font-family: inherit;
   font-weight: 800;
   color: var(--title-color);
   font-size: inherit;
-}
-
-ol strong{
-  font-family: "tw-kai";
-  font-size: inherit;
-}
-
-ol em{
-  font-size: 1rem;
 }
 
 em {
@@ -389,18 +388,31 @@ em {
   font-style: normal;
 }
 
+p em {
+  font-family: var(--base-jp-font);
+}
+
+ol em {
+  font-family: var(--ol-jp-font);
+  font-size: 1rem;
+}
+
+ul em {
+  font-family: var(--ul-cn-font);
+}
+
 del {
   color: var(--footer-color);
 }
 
 ul li {
-  font-family: "noto serif cjk jp";
+  font-family: var(--ul-font);
   font-size: 1rem !important;
 }
 
 ol li {
-  font-family: "Josefin Sans", "TW-Kai";
-  font-size: 1.2rem;
+  font-family: var(--ol-font);
+  font-size: 1.2rem !important;
 }
 
 blockquote ol li {
@@ -408,7 +420,7 @@ blockquote ol li {
 }
 
 ol ul li {
-  font-family: "noto serif cjk jp";
+  font-family: var(--ul-font);
   font-size: 1rem !important;
 
 }
@@ -456,6 +468,7 @@ blockquote * {
 blockquote blockquote {
   padding: 0;
   padding-left: 1rem;
+  border: none;
   border-left: var(--base-borderl);
   border-radius: 0;
   box-shadow: none;
@@ -503,7 +516,7 @@ blockquote h6 span:first-child:before {
   background-color: red;
   display: block;
   text-align: center;
-  font-family: Poppins, sans-serif;
+  font-family: var(--quota-font);
   color: white;
   font-size: large;
   font-weight: 600;

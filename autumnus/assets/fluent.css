@@ -115,6 +115,10 @@ input[type=search] {
 }
 
 @media (min-width:1101px) {
+    content {
+        background-size: 40%;
+    }
+
     #write {
         margin-top: 25rem;
     }
@@ -123,8 +127,9 @@ input[type=search] {
         min-height: 2%;
     }
 
-    content {
-        background-size: 40%;
+    .ty-on-typewriter-mode #write {
+        margin-top: 2rem;
+        min-height: calc(100vh - 6rem);
     }
 }
 
@@ -136,4 +141,9 @@ input[type=search] {
     .typora-node #write {
         min-height: 100%;
     }
+}
+
+.ty-on-typewriter-mode #write>[cid]:not(.md-meta-block):last-child {
+    margin-bottom: 15rem!important;
+    padding-bottom: 5rem;
 }

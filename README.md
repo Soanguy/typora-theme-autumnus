@@ -48,7 +48,7 @@
   <summary>Less-dark-fluent</summary>
 <img src="https://i.loli.net/2021/03/31/b9GrRM82Wu6B37O.png" >
 </details>
-## 安装
+##  安装
 
 下载该主题后，打开 `偏好设置→外观→主题→打开主题文件夹`。之后将喜欢的主题文件夹下的 `css` 文件和 `assets` 文件夹复制到该文件夹下，重新进入 `偏好设置→外观→主题` 选择喜欢主题后，重启 Typora 即可。
 
@@ -96,5 +96,3 @@
   + 宋体：Noto Serif CJK SC
   + 楷体：悠哉字体
   + 代码：Cascadia Code
-
-需要注意：新增的 `Less-light-print` 主题并未提供回退字体！！！
