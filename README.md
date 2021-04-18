@@ -5,49 +5,12 @@
 + 📷 `![no-shadow](图片路径)`： 添加 `no-shadow` 可以为不想添加阴影的图片去掉阴影；
 + 🎴 `![normal](图片路径)`：为图片添加 `normal` 可以让图片去掉阴影，同时处于行内而非单独一行；
 + 📖导出为 PDF 时，可以添加 `<hr class="pb" />` 来添加分页符；
-+ ✅Less 主题可以使用 `引用+六级标题` 来实现 注意，`引用+加粗的六级标题`来实现 信息。预览见 [更新日志](#update)
++ ✅Less 主题可以使用 `引用+六级标题` 来实现 注意，`引用+加粗的六级标题`来实现 信息。
 + ⚡调整了代码块的光标颜色，以更加明显。
-+ 🔧每个主题都提供了不同的字体样式。（[可选安装](#font)）
++ 🔧每个主题都提供了不同的字体样式。
 
 > 该主题主要测试于  Windows 和 Ubuntu，尚未经过 Mac 平台测试，但应能正常工作。如果出现任何显示错误，请联系我。
 
-## 预览
-
-主题预览可以查看此处：
-
-<details>
-  <summary>Alfluent</summary>
-  <img src="https://i.loli.net/2021/03/17/cjY8tZfVwMiLqDC.png" alt="alfluent.png">
-  </details>
-  <details>
-  <summary>Adark</summary>
-  <img src="https://i.loli.net/2021/03/17/Mpr71zkiNHhbT8w.jpg" alt="adark"  />
-  </details>
-  <details>
-  <summary>Autumnus</summary>
-  <img src="https://i.loli.net/2021/03/17/XCx2LUzVS6DfJEj.jpg" alt="Autumnus" />
-  </details>
-  <details>
-  <summary>Adfluent</summary>
-   <img src="https://i.loli.net/2021/03/17/CgiI5UM7rbp1oz4.png" alt="adfluent.png" />
-</details>
-<br/>
-<details>
-  <summary>Less-light</summary>
-<img src="https://i.loli.net/2021/03/31/q7oNCebh3zF4anZ.png" >
-</details>
-<details>
-  <summary>Less-light-fluent</summary>
-<img src="https://i.loli.net/2021/03/31/T6BIYZalUDRd8Gv.png" >
-</details>
-<details>
-  <summary>Less-dark</summary>
-<img src="https://i.loli.net/2021/03/31/PU76fXOnLWayh5k.png" >
-</details>
-<details>
-  <summary>Less-dark-fluent</summary>
-<img src="https://i.loli.net/2021/03/31/b9GrRM82Wu6B37O.png" >
-</details>
 ##  安装
 
 下载该主题后，打开 `偏好设置→外观→主题→打开主题文件夹`。之后将喜欢的主题文件夹下的 `css` 文件和 `assets` 文件夹复制到该文件夹下，重新进入 `偏好设置→外观→主题` 选择喜欢主题后，重启 Typora 即可。
@@ -77,22 +40,57 @@
 
 ## <span id="font">关于字体</span>
 
-每个主题所使用的的具体字体如下：
-+ Autumnus
-  + 黑体：Poppins 和 Noto Sans CJK SC
-  + 宋体：EB Garamond 和 Noto Serif CJK SC
-  + 楷体：EB Garamond 和 华文楷体
-  + 代码：Cascadia Code
+  + 可以通过该[链接](https://gitee.com/soanguy/typora-theme-autumnus-font)下载所需字体。
 
-+ Less
-  + 黑体：Raleway Medium 和 Noto Sans CJK SC
-  + 宋体：Lora 和 Noto Serif CJK SC
-  + 楷体：Lora 和 华文楷体
-  + 代码：Cascadia Code
+## 关于 Print 主题的使用
 
-剩下的两个主题也和上面的字体使用情况相差无几。新增的 `Less-light-print` 主题中使用的字体如下：
+1. print 的正文和标题使用宋体，引用使用悠哉字体；
+1. print 主题的有序列表使用的是楷体；无序列表使用的是宋体；
+1. 强行更改行内字体：代码样式可以让字体强行更改为`黑体`，下划线可以让字体强行更改为<u>楷体</u>。
+1. print 主题可以通过为内容添加强调（\* \*）来改变其字体：
 
-  + 黑体：Noto Serif CJK SC
-  + 宋体：Noto Serif CJK SC
-  + 楷体：悠哉字体
-  + 代码：Cascadia Code
+​         正文强调可变为*日文宋体*；<u>下划线</u>；`代码`
+
++ 无序列表强调可变为*中文宋体*；<u>下划线</u>；`代码`
+1.  有序列表强调可变为*日文楷体*；<u>下划线</u>；`代码`
+
+## 预览
+
+主题预览可以查看此处：
+
+<details>
+  <summary>Alfluent</summary>
+  <img src="https://i.loli.net/2021/03/17/cjY8tZfVwMiLqDC.png" alt="alfluent.png">
+  </details>
+  <details>
+  <summary>Adark</summary>
+  <img src="https://i.loli.net/2021/03/17/Mpr71zkiNHhbT8w.jpg" alt="adark"  />
+  </details>
+  <details>
+  <summary>Autumnus</summary>
+  <img src="https://i.loli.net/2021/03/17/XCx2LUzVS6DfJEj.jpg" alt="Autumnus" />
+  </details>
+  <details>
+  <summary>Adfluent</summary>
+   <img src="https://i.loli.net/2021/03/17/CgiI5UM7rbp1oz4.png" alt="adfluent.png" />
+</details>
+
+<br/>
+
+<details>
+  <summary>Less-light</summary>
+<img src="https://i.loli.net/2021/03/31/q7oNCebh3zF4anZ.png" >
+</details>
+<details>
+  <summary>Less-light-fluent</summary>
+<img src="https://i.loli.net/2021/03/31/T6BIYZalUDRd8Gv.png" >
+</details>
+<details>
+  <summary>Less-dark</summary>
+<img src="https://i.loli.net/2021/03/31/PU76fXOnLWayh5k.png" >
+</details>
+<details>
+  <summary>Less-dark-fluent</summary>
+<img src="https://i.loli.net/2021/03/31/b9GrRM82Wu6B37O.png" >
+</details>
+

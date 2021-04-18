@@ -8,15 +8,17 @@
 :root {
     /* color setting */
     --theme-color: #ff8080;
-    --theme-color-weak: hsl(0, 100%, 95%);
+    --theme-color-weak: #ffe5e5;
     --color-text: #333;
     --text-color: var(--color-text);
     --color-em: #111;
     --color-strong: #000;
     --color-weak: #595959;
     --color-weakest: #808080;
+
     --md-char-color: #ff4d4d;
     --meta-content-color: var(--color-weakest);
+
     --color-title: var(--color-em);
     --color-title-h1: var(--color-em);
     --color-title-h2: var(--color-em);
@@ -181,6 +183,10 @@ content {
     max-width: 60rem;
     min-height: calc(100vh - 6rem);
     text-align: justify;
+}
+
+#write * {
+    -webkit-text-stroke: 0.25px;
 }
 
 /* title setting */
@@ -604,7 +610,6 @@ pre.md-fences:before {
 
 /* table setting */
 
-
 #write table th,
 #write table thead th {
     background: var(--bg-thead);
@@ -678,5 +683,9 @@ td.md-reset a {
     #write {
         margin: 0;
         padding: 0;
+    }
+
+    #write * {
+        -webkit-text-stroke: 0px;
     }
 }

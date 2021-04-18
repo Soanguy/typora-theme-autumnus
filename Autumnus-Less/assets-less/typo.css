@@ -2,8 +2,6 @@
 
 /* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
 html {
-  color: #333;
-  background: #fff;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-rendering: optimizelegibility;
@@ -109,9 +107,7 @@ img {
 /* 块/段落引用 */
 blockquote {
   position: relative;
-  color: #999;
   font-weight: 400;
-  border-left: 1px solid #1abc9c;
   padding-left: 1em;
   margin: 1em 3em 1em 2em;
 }
@@ -215,7 +211,6 @@ u,
 /* 标记，类似于手写的荧光笔的作用 */
 mark {
   background: #fffdd1;
-  border-bottom: 1px solid #ffedce;
   padding: 2px;
   margin: 0 5px;
 }
@@ -255,7 +250,6 @@ figcaption {
 strong,
 b {
   font-weight: bold;
-  color: #000;
 }
 
 /* 可拖动文件添加拖动手势 */
@@ -271,7 +265,6 @@ h5,
 h6 {
   font-family: PingFang SC, Verdana, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
   font-weight: 100;
-  color: #000;
   line-height: 1.35;
 }
 

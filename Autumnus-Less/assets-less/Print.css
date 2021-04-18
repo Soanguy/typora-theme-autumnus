@@ -1,0 +1,14 @@
+@media print {
+
+    html,
+    body,
+    content,
+    #write {
+        margin: 0;
+        padding: 0;
+    }
+
+    #write * {
+        -webkit-text-stroke: 0px;
+    }
+}
