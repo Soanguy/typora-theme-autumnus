@@ -10,7 +10,7 @@
     --color-strong: hsl(0, 0%, 95%);
     --color-weak: hsl(0, 0%, 65%);
     --color-weakest: hsl(0, 0%, 50%);
-    --md-char-color: #hsl(100, 100%, 65%)ff4d4d;
+    --md-char-color: var(--theme-color);
     --meta-content-color: var(--color-weakest);
     --color-title: var(--color-em);
     --color-title-h1: var(--color-em);

@@ -11,7 +11,7 @@
 
 > 该主题主要测试于  Windows 和 Ubuntu，尚未经过 Mac 平台测试，但应能正常工作。如果出现任何显示错误，请联系我。
 
-##  安装
+## 安装
 
 下载该主题后，打开 `偏好设置→外观→主题→打开主题文件夹`。之后将喜欢的主题文件夹下的 `css` 文件和 `assets` 文件夹复制到该文件夹下，重新进入 `偏好设置→外观→主题` 选择喜欢主题后，重启 Typora 即可。
 
@@ -26,7 +26,7 @@
 
 ## 修改主题
 
-现在可以更加方便的调整自己的主题了！更改主题的方式可以查看此处。
+现在可以更加方便的调整自己的主题了！更改主题的方式可以查看 [此处](https://github.com/Soanguy/typora-theme-autumnus/wiki)。
 
 ## <span id="update">更新日志</span>
 
@@ -40,7 +40,7 @@
 
 ## <span id="font">关于字体</span>
 
-  + 可以通过该[链接](https://gitee.com/soanguy/typora-theme-autumnus-font)下载所需字体。
++ 可以通过该 [链接](https://gitee.com/soanguy/typora-theme-autumnus-font) 下载所需字体。
 
 ## 关于 Print 主题的使用
 
@@ -52,7 +52,8 @@
 ​         正文强调可变为*日文宋体*；<u>下划线</u>；`代码`
 
 + 无序列表强调可变为*中文宋体*；<u>下划线</u>；`代码`
-1.  有序列表强调可变为*日文楷体*；<u>下划线</u>；`代码`
+
+1. 有序列表强调可变为*日文楷体*；<u>下划线</u>；`代码`
 
 ## 预览
 
@@ -74,7 +75,6 @@
   <summary>Adfluent</summary>
    <img src="https://i.loli.net/2021/03/17/CgiI5UM7rbp1oz4.png" alt="adfluent.png" />
 </details>
-
 <br/>
 
 <details>
@@ -93,4 +93,3 @@
   <summary>Less-dark-fluent</summary>
 <img src="https://i.loli.net/2021/03/31/b9GrRM82Wu6B37O.png" >
 </details>
-

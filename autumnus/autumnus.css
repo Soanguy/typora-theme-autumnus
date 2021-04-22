@@ -7,8 +7,8 @@
 
 :root {
     /* color setting */
-    --theme-color: #ff8080;
-    --theme-color-weak: #ffe5e5;
+    --theme-color: hsl(0, 100%, 75%);
+    --theme-color-weak: hsl(0, 100%, 95%);
     --color-text: #333;
     --text-color: var(--color-text);
     --color-em: #111;
@@ -16,7 +16,7 @@
     --color-weak: #595959;
     --color-weakest: #808080;
 
-    --md-char-color: #ff4d4d;
+    --md-char-color: var(--theme-color);
     --meta-content-color: var(--color-weakest);
 
     --color-title: var(--color-em);

@@ -6,16 +6,16 @@
 @import url(./assets-less/Print.css);
 
 :root {
-  --theme-color: #ff8080;
-  --theme-color-weak: #ffe5e5;
+  --theme-color: hsl(0, 100%, 75%);
+  --theme-color-weak: hsl(0, 100%, 95%);
   --color-text: #333;
   --text-color: var(--color-text);
   --color-em: #0d0d0d;
   --color-strong: #0d0d0d;
   --color-weak: #4d4d4d;
   --color-weakest: #808080;
-  --md-char-color: #ffb3b3;
-  --meta-content-color: #ffb3b3;
+  --md-char-color: var(--theme-color);
+  --meta-content-color: var(--theme-color);
 
   --color-title: var(--color-em);
   --color-title-h1: var(--color-em);
