@@ -47,10 +47,6 @@ content,
   font-weight: 800;
 }
 
-#write h2 {
-  font-family: 2.2rem;
-}
-
 #write h2 span {
   background: linear-gradient(to bottom, transparent 60%, hsl(0, 100%, 95%) 0) no-repeat;
 }

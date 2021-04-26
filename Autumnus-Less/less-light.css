@@ -115,21 +115,16 @@
 
   --text-font: 300 1rem/1.5rem var(--font-hei);
   --text-font-size: 1rem;
-  --font-title: 600 1.25rem/1.875rem var(--font-hei);
-  --font-title-h1: 300 3rem/4.5rem var(--font-hei);
-  --font-title-h2: 300 2rem/3rem var(--font-hei);
-  --font-title-h3: 600 1.75rem/2.625rem var(--font-hei);
+  --font-title: var(--font-hei);
+  --font-title-h1: 300 3rem/4.5rem var(--font-title);
+  --font-title-h2: 300 2rem/3rem var(--font-title);
+  --font-title-h3: 600 1.75rem/2.625rem var(--font-title);
   --font-title-h4: 600 1.5rem/2.25rem var(--font-hei);
   --font-title-h5: 600 1.25rem/1.875rem var(--font-hei);
   --font-title-h6: 600 1.25rem/1.875rem var(--font-hei);
 
   --font-quote: 400 1.2rem/1.8rem var(--font-kai);
   --font-code: 300 0.9rem/1.35rem var(--font-mono);
-  --font-link: 400 var(--text-font-size) var(--font-hei);
-  --font-italic: italic 800 var(--text-font-size) var(--font-song);
-  --font-strong: 800 var(--text-font-size) var(--font-song);
-  --font-highlight: 400 var(--text-font-size) var(--font-hei);
-  --font-strike: 200 var(--text-font-size) var(--font-hei);
   --font-footnote: 400 1.1rem/1.65rem var(--font-kai);
 
   --font-hei: -apple-system, "Raleway Medium", "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
@@ -358,13 +353,6 @@ blockquote p {
   line-height: var(--line-height);
 }
 
-blockquote em,
-blockquote strong,
-blockquote mark,
-blockquote ins {
-  font-size: 1rem;
-}
-
 blockquote h6 {
   padding-left: 1rem;
   margin: 1rem auto !important;
@@ -541,7 +529,6 @@ var,
 strong,
 em {
   padding: var(--padding-text);
-  font: var(--font-code);
 }
 
 a,
@@ -564,16 +551,21 @@ ins {
 }
 
 #write strong {
-  font: var(--font-strong);
   background: var(--bg-strong);
   color: var(--color-strong);
 }
 
 #write em {
-  font: var(--font-italic);
   background: var(--bg-italic);
   color: var(--color-italic);
   border-bottom: var(--opt-borderb);
+}
+
+em,
+strong,
+em strong,
+strong em {
+  font-size: inherit;
 }
 
 em strong,
@@ -587,7 +579,6 @@ del {
 }
 
 #write mark {
-  font: var(--font-highlight);
   background: var(--bg-highlight);
   color: var(--color-highlight);
 }
