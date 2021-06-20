@@ -1,155 +1,783 @@
+@import url(./assets-less/typo.css);
 @import url(./less-light.css);
-@import url(./assets-less/Print.css);
 
 :root {
-  --text-font: Lora, Georgia, "Times New Roman", "Noto Serif CJK SC", serif;
-  --text-font-jp: Lora, Georgia, "Times New Roman", "Noto Serif CJK JP", serif;
-  --title-font: var(--text-font);
-  --min-title-font: Lato, "Helvetica Neue", Helvetica, Arial, "Noto Sans CJK SC", sans-serif;
-  --hei-font: var(--monospace);
-  --ol-font: "Josefin Sans", "Helvetica Neue", Helvetica, "Segoe Print", "TW-Kai", "STKaiti,", "Kaiti";
-  --ol-font-jp: "Josefin Sans", "Helvetica Neue", Helvetica, "Segoe Print", "A-OTF Kyoukasho ICA Pro", "UD Digi Kyokasho N-R", "TW-Kai";
-  --ul-font: Lora, Georgia, "Times New Roman", "Noto Serif CJK JP", serif;
-  --ul-font-cn: Lora, Georgia, "Times New Roman", "Noto Serif CJK SC", serif;
-  --font-quota: "悠哉字体", "A-OTF Kyoukasho ICA Pro", "TW-Kai";
-  --mono-font: var(--ol-font);
-  --mono-font-jp: var(--ol-font-jp);
-  --monospace: "Cascadia code", Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono", Courier, sans-serif;
-
-  --color-text: hsl(0, 0%, 5%);
+  --theme-color: #ff8080;
+  --theme-color-weak: #ffe5e5;
+  --color-text: #000;
+  --text-color: var(--color-text);
   --color-em: #000;
   --color-strong: #000;
-  --color-weak: hsl(0, 0%, 10%);
-  --color-weakest: hsl(0, 0%, 15%);
+  --color-weak: #111;
+  --color-weakest: #333;
+  --color-title: var(--color-em);
+  --color-title-h1: var(--color-em);
+  --color-title-h2: var(--color-em);
+  --color-title-h3: var(--color-em);
+  --color-title-h4: var(--color-em);
+  --color-title-h5: var(--color-em);
+  --color-title-h6: var(--color-em);
+  --color-quote: var(--color-weak);
+  --color-code: var(--color-weak);
+  --color-link: var(--color-weak);
+  --color-italic: var(--color-em);
+  --color-strong: var(--color-strong);
+  --color-highlight: var(--color-text);
+  --color-strike: var(--color-weakest);
+  --color-footnote: var(--color-weakest);
+  --thead-color: var(--color-em);
+  --tbody-color-opt: var(--color-text);
+  --tbody-color: var(--color-text);
+  --color-thead-hover: var(--theme-color);
+  --color-tbody-hover: var(--theme-color);
+  --link-hover-color: #ffb3b3;
+  --link-hover-bg: none;
+  /* background setting */
+  --bg-contents: #fff;
+  --bg-write: #fff;
+  --bg-color: var(--bg-contents);
+  --bg-title: none;
+  --bg-title-h1: none;
+  --bg-title-h2: none;
+  --bg-title-h3: none;
+  --bg-title-h4: none;
+  --bg-title-h5: none;
+  --bg-title-h6: none;
+  --bg-quote: #fff;
+  --bg-code: #fff;
+  --bg-code-block: #fff;
+  --bg-link: none;
+  --bg-italic: none;
+  --bg-strong: none;
+  --bg-highlight: #f2ff80;
+  --bg-strike: none;
+  --bg-footnote: none;
+  --bg-thead: #fff;
+  --bg-tbody-opt: #f6f7fa;
+  --bg-tbody: #fff;
+  --bg-thead-hover: var(--bg-contents);
+  --bg-tbody-hover: var(--bg-contents);
+  --focus-cont-bg: hsl(0, 0%, 95%);
+  --focus-para-bg: hsl(0, 0%, 100%);
+  --window-border: 1px solid #333;
+  --base-border: 1px solid #333;
+  --base-borderl: 4px solid var(--theme-color);
+  --base-borderb: 1px dashed var(--theme-color);
+  --opt-borderb: 1px dashed var(--theme-color);
+  /* box-shadow */
+  --text-shadow: none;
+  --block-shadow: none;
+  --img-shadow: none;
+  --block-shadow-opt: var(--block-shadow);
+  --block-shadow-weak: none;
+  --block-shadow-strong: none;
+  /* margin setting:top;right;bottom;left */
+  --margin-h1: 2rem auto 3rem;
+  --margin-h2: 2rem auto 1rem;
+  --margin-h3: 1.5rem auto 1rem;
+  --margin-h4: 1.5rem auto 1rem;
+  --margin-h5: 1.5rem auto 1rem;
+  --margin-h6: 1.5rem auto 1rem;
+  --margin-text: 0.5rem 0rem;
+  --margin-block: 1rem auto;
+  /* padding-setting */
+  --padding-text: 0px;
+  --padding-block: 0.5rem;
+  --base-margin: 0.5rem auto;
+  --base-padding: 0px;
+  --opt-padding: 0.5rem;
+  --font-weight: 400;
+  --font-size: 0.95rem;
+  --kai-size: 1.05rem;
+  --ol-size: 0.95rem;
+  --line-height: 2rem;
+  --font-title-h1: 900 2.2rem/3.6rem var(--font-title-cn);
+  --font-title-h2: 800 1.8rem/3.6rem var(--font-title-cn);
+  --font-title-h3: 600 1.4rem/2.8rem var(--font-title-cn);
+  --font-title-h4: 400 1.3rem/2.6rem var(--font-hei-cn);
+  --font-title-h5: 600 1.2rem/2.4rem var(--font-hei-cn);
+  --font-title-h6: 600 1.2rem/2.4rem var(--font-hei-cn);
+  --font-quote: 400 1.05rem/2.1rem var(--font-quota-cn);
+  --font-code: 400 0.95rem var(--font-mono);
+  --font-footnote: 400 0.875rem/1.75rem var(--font-kai-cn);
+  --font-title-cn: var(--font-song-cn);
+  --font-title-jp: var(--font-song-jp);
+  --text-font-cn: var(--font-song-cn);
+  --text-font-jp: var(--font-song-jp);
+  --ol-font-cn: var(--font-song-cn);
+  --ol-font-jp: var(--font-song-jp);
+  --ul-font-cn: var(--font-song-cn);
+  --ul-font-jp: var(--font-song-jp);
+  --font-quota-cn: var(--font-kai-cn);
+  --font-quota-jp: var(--font-kai-jp);
+  --font-hei-cn: "Poppins", "Noto Sans CJK SC", sans-serif;
+  --font-hei-jp: "Poppins", "Noto Sans CJK JP", sans-serif;
+  --font-song-cn: "Sabon Next LT Pro", "Noto Serif CJK SC", serif;
+  --font-song-jp: "Sabon Next LT Pro", "Yu Mincho", serif;
+  --font-kai-cn: "EB Garamond", "TW-Kai", serif;
+  --font-kai-jp: "EB Garamond", "EPSON 教科書体Ｍ", "TW-Kai", "kaiti", serif;
+  --font-mono: "Ubuntu", "975 朦胧黑体", sans-serif;
+  --font-fangsong: "Courier New", "方正仿宋_GBK","仿宋";
+  --bookmark: url("data:image/svg+xml;utf8,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%3Cpath%20d%3D%22M4%204.5C4%203.11929%205.11929%202%206.5%202H13.5C14.8807%202%2016%203.11929%2016%204.5V17.5C16%2017.6881%2015.8945%2017.8602%2015.7269%2017.9456C15.5593%2018.0309%2015.358%2018.015%2015.2059%2017.9044L10%2014.1183L4.79409%2017.9044C4.64199%2018.015%204.4407%2018.0309%204.27311%2017.9456C4.10553%2017.8602%204%2017.6881%204%2017.5V4.5Z%22%20fill%3D%22%23311b92%22/%3E%0A%3C/svg%3E%0A");
+  --light-bulb: url("data:image/svg+xml;utf8,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%3Cpath%20d%3D%22M13.073%2015L12.6891%2016.6051C12.5048%2017.3763%2011.8236%2017.935%2011.0181%2017.9947L10.8748%2018H9.12546C8.30655%2018%207.59%2017.4839%207.34866%2016.7385L7.31108%2016.6047L6.928%2015H13.073Z%22%20fill%3D%22%23b0791b%22/%3E%0A%3Cpath%20d%3D%22M10%202C13.3137%202%2016%204.59693%2016%207.80041C16%209.47737%2015.2546%2011.0164%2013.7961%2012.3942C13.7324%2012.4544%2013.6831%2012.5269%2013.6512%2012.6065L13.6251%2012.6883L13.311%2014H10.5002V9.49707C10.5002%209.22093%2010.2764%208.99707%2010.0002%208.99707C9.7241%208.99707%209.50024%209.22093%209.50024%209.49707V14H6.689L6.37626%2012.6886C6.34955%2012.5766%206.29016%2012.4745%206.20516%2012.3942C4.8153%2011.0819%204.07265%209.62354%204.00507%208.03903L4%207.80041L4.00321%207.60894C4.1077%204.49409%206.75257%202%2010%202ZM9.5%206.50238V7.50391C9.5%207.78005%209.72386%208.00391%2010%208.00391C10.2761%208.00391%2010.5%207.78005%2010.5%207.50391V6.50238C10.5%206.22624%2010.2761%206.00238%2010%206.00238C9.72386%206.00238%209.5%206.22624%209.5%206.50238ZM12.8506%207.44332C12.6553%207.24806%2012.3388%207.24806%2012.1435%207.44332L11.4353%208.15151C11.2401%208.34677%2011.2401%208.66335%2011.4353%208.85861C11.6306%209.05388%2011.9472%209.05388%2012.1424%208.85861L12.8506%208.15043C13.0459%207.95517%2013.0459%207.63858%2012.8506%207.44332ZM7.8521%207.44332C7.65684%207.24806%207.34026%207.24806%207.145%207.44332C6.94973%207.63858%206.94973%207.95517%207.145%208.15043L7.85318%208.85861C8.04844%209.05388%208.36503%209.05388%208.56029%208.85861C8.75555%208.66335%208.75555%208.34677%208.56029%208.15151L7.8521%207.44332Z%22%20fill%3D%22%23b0791b%22/%3E%0A%3C/svg%3E%0A");
+  --star: url("data:image/svg+xml;utf8,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%3Cpath%20d%3D%22M9.10433%202.89874C9.47114%202.15549%2010.531%202.1555%2010.8978%202.89874L12.8282%206.81024L17.1448%207.43748C17.9651%207.55666%2018.2926%208.56464%2017.699%209.14317L14.5755%2012.1878L15.3129%2016.487C15.453%2017.3039%2014.5956%2017.9269%2013.8619%2017.5412L10.0011%2015.5114L6.14018%2017.5412C5.40655%2017.9269%204.54913%2017.3039%204.68924%2016.487L5.4266%2012.1878L2.30308%209.14317C1.70956%208.56463%202.03708%207.55666%202.8573%207.43748L7.17389%206.81024L9.10433%202.89874Z%22%20fill%3D%22%23044289%22/%3E%0A%3C/svg%3E%0A");
+  --warn: url("data:image/svg+xml;utf8,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%3Cpath%20d%3D%22M8.68569%202.85232L2.12696%2014.7773C1.57714%2015.777%202.30038%2017.0002%203.44129%2017.0002H16.5587C17.6996%2017.0002%2018.4229%2015.777%2017.8731%2014.7773L11.3143%202.85232C10.7444%201.81615%209.25558%201.81616%208.68569%202.85232ZM10%206.75016C10.4142%206.75016%2010.75%207.08595%2010.75%207.50016V11.5002C10.75%2011.9144%2010.4142%2012.2502%2010%2012.2502C9.58579%2012.2502%209.25%2011.9144%209.25%2011.5002V7.50016C9.25%207.08595%209.58579%206.75016%2010%206.75016ZM10.75%2013.7502C10.75%2014.1644%2010.4142%2014.5002%2010%2014.5002C9.58579%2014.5002%209.25%2014.1644%209.25%2013.7502C9.25%2013.3359%209.58579%2013.0002%2010%2013.0002C10.4142%2013.0002%2010.75%2013.3359%2010.75%2013.7502Z%22%20fill%3D%22%238a2a0d%22/%3E%0A%3C/svg%3E%0A");
+  --note: url("data:image/svg+xml;utf8,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%3Cpath%20d%3D%22M14%203C15.5977%203%2016.9037%204.24892%2016.9949%205.82373L17%206V10H13L12.8237%2010.0051C11.3072%2010.093%2010.093%2011.3072%2010.0051%2012.8237L10%2013V17H6C4.40232%2017%203.09634%2015.7511%203.00509%2014.1763L3%2014V6C3%204.40232%204.24892%203.09634%205.82373%203.00509L6%203H14ZM16.9007%2011.001C16.8232%2011.2376%2016.7018%2011.459%2016.5416%2011.6528L16.4142%2011.7929L11.7929%2016.4142C11.5687%2016.6384%2011.2968%2016.8039%2011.001%2016.9007L11%2013L11.0055%2012.8507C11.078%2011.8676%2011.8612%2011.0821%2012.8433%2011.006L13%2011L16.9007%2011.001Z%22%20fill%3D%22%23004d40%22/%3E%0A%3C/svg%3E%0A");
+}
 
-  --bg-thead: #fcfcfc;
-  --bg-tbody-opt: #ffffff;
-  --bg-tbody: #fcfcfc;
+* {
+  -webkit-font-smoothing: "auto";
+  -webkit-text-stroke-width: calc(calc(40px - 1em) / 170);
 }
 
 html,
-body,
-content,
-#write {
-  font-family: var(--text-font);
-  line-height: 1.75rem;
+body {
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  font-family: var(--text-font-cn);
+  line-height: var(--line-height);
+  background: var(--bg-contents);
+  color: var(--color-text);
 }
 
-#write p em {
-  font-family: var(--text-font-jp);
+body {
+  background: var(--bg-write);
+  -webkit-font-smoothing: antialiased;
+  margin: 2rem auto;
+  padding: 2rem;
 }
 
-#write h1,
-#write h2,
-#write h3,
-#write h4 {
-  font-family: var(--title-font);
-  font-weight: 800;
+h1 *,
+h2 *,
+h3 *,
+h4 *,
+h5 *,
+h6 * {
+  color: var(--color-title) !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
 }
 
-#write h2 span {
+h1 {
+  background: var(--bg-title-h1);
+  color: var(--color-title-h1);
+  font: var(--font-title-h1);
+  margin: var(--margin-h1);
+  text-transform: capitalize;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid var(--theme-color);
+  position: relative;
+  top: 1rem;
+  width: 50%;
+}
+
+h2 {
+  background: var(--bg-title-h2);
+  color: var(--color-title-h2);
+  font: var(--font-title-h2);
+  margin: var(--margin-h2);
+  display: table;
   background: linear-gradient(to bottom, transparent 60%, hsl(0, 100%, 95%) 0) no-repeat;
+  text-transform: capitalize;
 }
 
-#write h4 {
-  border-left: 4px solid hsl(0, 100%, 75%);
+h3 {
+  background: var(--bg-title-h3);
+  color: var(--color-title-h3);
+  font: var(--font-title-h3);
+  margin: var(--margin-h3);
+}
+
+h3:hover::before {
+  content: "H3";
+}
+
+h4 {
+  background: var(--bg-title-h4);
+  color: var(--color-title-h4);
+  font: var(--font-title-h4);
+  margin: var(--margin-h4);
+  border-left: var(--base-borderl);
   padding-left: 1rem;
 }
 
-#write h3,
-#write h4,
-#write h5,
-#write h6 {
-  margin: 1rem auto 0.5rem;
+h4:hover::before {
+  content: "H4";
 }
 
-#write h5,
-#write h6 {
-  font-family: var(--min-title-font);
-  font-weight: 600;
+h5 {
+  background: var(--bg-title-h5);
+  color: var(--color-title-h5);
+  font: var(--font-title-h5);
+  margin: var(--margin-h5);
 }
 
-#write code,
-#write mark,
-#write kbd,
-#write samp,
-#write tt,
-#write var,
-#write a,
-#write strong,
-#write em {
-  padding: 0px 2px;
+h5:hover::before {
+  content: "H5";
 }
 
-#write em,
-#write strong {
-  font-family: inherit;
-  font-size: inherit;
+h6 {
+  background: var(--bg-title-h6);
+  color: var(--color-title-h6);
+  font: var(--font-title-h6);
+  margin: var(--margin-h6);
 }
 
-#write em {
-  font-weight: normal;
-  font-style: normal;
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+}
+
+h3:hover::before,
+h4:hover::before,
+h5:hover::before,
+h6:hover::before {
+  position: absolute;
+  left: -2rem;
+  font-size: 0.9rem !important;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  color: var(--theme-color);
+}
+
+blockquote,
+pre,
+table,
+img {
+  margin: var(--margin-block);
+  padding: var(--padding-block);
+  border-radius: 5px;
+}
+
+p {
+  margin: var(--margin-text);
+  line-height: var(--line-height);
+}
+
+p:not(li p) {
+  text-indent: 2rem;
+}
+
+blockquote {
+  background: var(--bg-quote);
+  font: var(--font-quote);
+  font-size: var(--kai-size);
+  color: var(--color-quote);
+  box-shadow: var(--block-shadow);
+  border: var(--opt-borderb);
+  counter-reset: section;
+}
+
+blockquote blockquote {
+  padding: 0;
+  border: none;
+  padding-left: 1rem;
+  border-left: var(--base-borderl);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+blockquote p {
+  margin: 0.5rem 0;
+}
+
+blockquote ul {
+  font-size: 1rem;
+}
+
+blockquote li {
+  font-size: var(--text-font-size);
+}
+
+blockquote em {
+  font-family: var(--font-kai-jp);
+}
+
+blockquote h1,
+blockquote h2,
+blockquote h3,
+blockquote h4,
+blockquote h5 {
+  background: var(--bg-title-h6);
+  color: var(--color-title-h6);
+  font: var(--font-title-h6);
+  font-family: var(--font-hei-cn);
+  font-weight: bold;
+  margin: var(--margin-h6);
+  text-align: center;
+  margin: 0.5rem auto !important;
+  color: var(--theme-color);
+  border: none;
+}
+
+blockquote h2::before,
+blockquote h3::before,
+blockquote h4::before,
+blockquote h5::before {
+  padding-right: 1rem;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  content: " ";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+blockquote h1::after {
   border-bottom: none;
 }
 
-#write ul li {
-  font-family: var(--ul-font);
-  font-size: 1rem !important;
+blockquote h2 {
+  color: #b0791b;
 }
 
-#write ol li {
-  font-family: var(--ol-font);
-  font-size: 1.2rem !important;
+blockquote h2::before {
+  background-image: var(--light-bulb);
 }
 
-#write ol ul li {
-  font-family: var(--ul-font);
-  font-size: 1rem !important;
+blockquote h3 {
+  color: #311b92;
 }
 
-#write ol em {
-  font-family: var(--ol-font-jp);
-  font-size: 1rem;
-  line-height: 1.75rem;
+blockquote h3::before {
+  background-image: var(--bookmark);
 }
 
-#write ul em {
+blockquote h4 {
+  color: #044289;
+}
+
+blockquote h4::before {
+  background-image: var(--star);
+}
+
+blockquote h5 {
+  color: #004d40;
+}
+
+blockquote h5::before {
+  background-image: var(--note);
+}
+
+blockquote h6 {
+  font-family: "975 朦胧黑体";
+  font-size: x-large;
+  font-weight: 400;
+}
+
+blockquote h6::before {
+  background: none;
+  position: relative;
+  counter-increment: section;
+  content: counter(section)!important;
+  padding-right: 2rem;
+  font-family: "Atilla";
+  font-size: xx-large;
+  left: 0;
+  top: 0;
+}
+
+ul li::marker,
+ol li::marker {
+  font-variant-numeric: tabular-nums;
+  font-variant-numeric: slashed-zero;
+  color: var(--theme-color);
+}
+
+ul {
+  list-style: disc;
+}
+
+ul li {
   font-family: var(--ul-font-cn);
 }
 
-#write blockquote ol li {
-  font-size: 1rem !important;
+ul li::marker {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14pt;
 }
 
-#write blockquote {
-  border: 2px dotted #7f7f7f;
-  background: none;
+ul em {
+  font-family: var(--text-font-jp);
 }
 
-#write blockquote * {
-  font-family: var(--font-quota) !important;
-}
-
-#write blockquote blockquote {
+ul img {
   padding: 0;
-  padding-left: 1rem;
+  box-shadow: var(--img-shadow);
+}
+
+ul ul {
+  list-style: square;
+}
+
+ul ul ul {
+  list-style: circle;
+}
+
+ol {
+  list-style: decimal-leading-zero;
+}
+
+ol em {
+  font-family: var(--ol-font-jp);
+}
+
+ol ol {
+  list-style: lower-latin;
+}
+
+ol ol ol {
+  list-style: lower-roman;
+}
+
+ol li,
+ul ol li {
+  font-family: var(--ol-font-cn);
+  font-size: var(--ol-size);
+}
+
+img {
+  margin: 0.5rem auto;
+}
+
+p img {
+  margin-left: -2rem;
+}
+
+img[alt~="no-shadow"] {
+  box-shadow: none !important;
+}
+
+img[alt~="normal"] {
+  margin: 0 !important;
+  box-shadow: none !important;
+}
+
+img[alt~="25%"] {
+  height: 25%;
+  width: 25%;
+}
+
+img[alt~="50%"] {
+  height: 50%;
+  width: 50%;
+}
+
+img[alt~="75%"] {
+  height: 75%;
+  width: 75%;
+}
+
+img[alt~="85%"] {
+  height: 85%;
+  width: 85%;
+}
+
+img[alt~="95%"] {
+  height: 95%;
+  width: 95%;
+}
+
+figure {
+  text-align: center;
+}
+
+body {
+  counter-reset: section;
+}
+
+h2 {
+  counter-increment: section;
+  counter-reset: subsection;
+}
+
+figcaption {
+  font-family: var(--font-fangsong);
+  text-align: center;
+  counter-increment: subsection;
+}
+
+figcaption:before {
+  content: "Section "counter(section) "."counter(subsection) " ";
+}
+
+hr {
   border: none;
-  border-left: var(--base-borderl);
+  border-bottom: var(--base-border);
+  margin: 3rem auto;
+  height: 1px;
+  width: 50%;
 }
 
-#write blockquote p {
-  font-size: 1rem;
+hr.pb {
+  border-bottom: none;
+  page-break-after: always;
 }
 
-#write code {
-  font-family: var(--hei-font) !important;
-  font-size: 1rem;
-  background: none;
+code,
+mark,
+kbd,
+samp,
+tt,
+var,
+a,
+strong,
+em {
+  padding: var(--padding-text);
 }
 
-#write u {
+#write a {
+  background: var(--bg-link);
+  color: var(--color-link);
   text-decoration: none;
-  font-family: var(--ol-font) !important;
-  font-size: 1.2rem;
+  border-bottom: var(--base-borderb);
+}
+
+#write a:hover {
+  border-bottom-color: var(--color-link);
+  color: var(--link-hover-color);
+  text-decoration: none;
+}
+
+a[href^="http://"]:after {
+  content: " ("attr(href) ") ";
+}
+
+strong {
+  background: var(--bg-strong);
+  color: var(--color-strong);
+}
+
+em {
+  background: var(--bg-italic);
+  color: var(--color-italic);
+  font-style: normal;
+  font-family: var(--text-font-jp);
+}
+
+strong,
+em strong,
+strong em {
+  font-weight: 800 !important;
+  font-style: normal;
+  font-family: inherit;
+}
+
+del,
+s {
+  color: var(--color-strike);
+  background: var(--bg-strike);
+  display: none;
+}
+
+mark {
+  font: var(--font-highlight);
+  background: var(--bg-highlight);
+  color: var(--color-highlight);
+}
+
+samp {
+  font-family: var(--font-fangsong);
+}
+
+ins,
+div.kpt,
+div.practice {
+  display: block;
+  border-left: 4px solid red;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+ins {
+  background: hsl(0, 100%, 95%);
+}
+
+div.kpt {
+  background: #f6f7fa;
+}
+
+div.practice {
+  background: none;
+  padding-left: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+code,
+tt,
+kbd,
+var {
+  font: var(--font-code);
+  background: var(--bg-code);
+  color: var(--color-code);
+  border-radius: 5px;
+}
+
+tt {
+  color: var(--theme-color);
+}
+
+var {
+  background-color: hsl(222, 100%, 70%);
+  padding: 4px;
+  border-radius: 0;
+}
+
+code {
+  background-color: var(--bg-code);
+  color: var(--color-code) !important;
+}
+
+kbd {
+  background-color: #111;
+  color: #fff;
+  font-size: small;
+  padding: 2px;
+}
+
+details {
+  -webkit-box-shadow: 5px 5px 5px 0px #ffe5e5;
+  box-shadow: 5px 5px 5px 0px #ffe5e5;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1.5rem auto;
+  background: var(--bg-quote);
+}
+
+div.intro {
+  font-family: var(--font-kai-cn);
+}
+
+div.intro em {
+  font-family: var(--font-kai-jp) !important;
+}
+
+div.intro p {
+  font-size: large;
+}
+
+ruby {
+  font-family: var(--font-kai-cn) !important;
+  font-size: large;
+}
+
+em ruby,
+em rt {
+  font-family: var(--font-kai-jp) !important;
+}
+
+div.ptb tr {
+  border: 1px solid #fff;
+}
+
+div.ptb tr:nth-child(2n) {
+  background: #fff;
+}
+
+div.ptb tr,
+div.ptb td,
+div.ptb th {
+  border: 1px solid #fff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table caption {
+  border-bottom: none;
+}
+
+table th {
+  font-weight: 800;
+}
+
+table th,
+table td {
+  padding: 0.5rem 1rem;
+  background: transparent;
+}
+
+table td {
+  white-space: nowrap;
+}
+
+table tr,
+table td,
+table th {
+  border-left: 1px solid var(--theme-color-weak);
+}
+
+table thead tr {
+  text-align: left;
+  background: var(--bg-thead);
+}
+
+table thead tr:hover {
+  background: var(--bg-thead-hover);
+  color: var(--color-thead-hover);
+}
+
+table tr {
+  background: var(--bg-tbody);
+  color: var(--tbody-color);
+  border: 1px solid var(--theme-color-weak);
+}
+
+table tr:nth-child(2n) {
+  background: var(--bg-tbody-opt);
+  color: var(--tbody-color-opt);
+}
+
+table tr:hover {
+  background: var(--bg-tbody-hover);
+  color: var(--color-tbody-hover);
+}
+
+@media print {
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  @page {
+    size: A4;
+    margin-top: 20mm;
+    margin-bottom: 20mm;
+    margin-right: 30mm;
+  }
+
+  * {
+    -webkit-text-stroke: 0px;
+  }
+
+  :root {
+    --font-size: 11pt;
+    --kai-size: 12pt;
+    --line-height: 24pt;
+    --font-title-h1: 900 2.2rem/3.6rem var(--font-title-cn);
+    --font-title-h2: 800 1.8rem/3.6rem var(--font-title-cn);
+    --font-title-h3: 600 1.4rem/2.8rem var(--font-title-cn);
+    --font-title-h4: 400 1.3rem/2.6rem var(--font-hei-cn);
+    --font-title-h5: 600 1.2rem/2.4rem var(--font-hei-cn);
+    --font-title-h6: 600 1.2rem/2.4rem var(--font-hei-cn);
+    --font-quote: 400 12pt/26pt var(--font-quota-cn);
+    --font-code: 400 11pt var(--font-mono);
+    --font-footnote: 400 10.5pt/21pt var(--font-kai-cn);
+  }
 }
