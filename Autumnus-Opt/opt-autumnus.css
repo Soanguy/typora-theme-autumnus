@@ -840,12 +840,6 @@ input[type=search],
   border-radius: 5px;
 }
 /* 文件 大纲 激活 */
-.file-list-item,
-.file-node-content,
-.file-tree-node.active > .file-node-background,
-.outline-item {
-  transition: background-color 0.25s linear;
-}
 .file-list-item:hover,
 .file-node-content:hover,
 .file-tree-node.active > .file-node-background,

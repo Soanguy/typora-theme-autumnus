@@ -26,7 +26,7 @@
 > 不同主题名称的含义：
 >
 > + `Autumnus`系列：`Autumnus.css` 是该系列主题的根基，该系列主题都依赖该主题。`Adark.css` 是其暗黑主题。`Alfluent.css` 和 `Adfluent.css` 则分别是亮色主题和暗色主题的模糊样式。
-> + `Autumnus-opt`、`Autumnus-less`、`Autumnus-QD` 系列主题的名称和上面的相同。
+> + `Autumnus-opt`、`Autumnus-less` 系列主题的名称和上面的相同。
 
 ## 导出
 
@@ -37,6 +37,8 @@
 现在可以更加方便的调整自己的主题了！更改主题的方式可以查看 [此处](https://github.com/Soanguy/typora-theme-autumnus/wiki)。
 
 ## <span id="update">更新日志</span>
+
++ 2021.10.2 调整了黑色模式下滚动条的颜色；修复了 `Opt` 主题下的一些 bug。删除了已经不再更新的 `QD`主题。关于 MacOS 上模糊模式无法正常使用的问题尚未解决。本主题主要测试于 `Windows 7` 及以上环境。
 
 + 2021.3.31 `Autumnus` 和 `Less` 一样，现在拥有了新的引用样式，在引用内添加六级标题，或者讲六级标题加粗即可发现。同时，也为 `Less` 主题新增了打印主题，基本上显示的内容就是打印所看到的内容，但是该主题现在只是调增了显示内容，对于 Typora 的 UI 显示还未做进一步调整。
 

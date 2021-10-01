@@ -115,3 +115,8 @@
   --control-text-color: var(--title-color);
   --control-text-hover-color: var(--text-color);
 }
+
+::-webkit-scrollbar-thumb {
+  background: #64646480;
+  background-clip: padding-box;
+}

@@ -154,3 +154,8 @@ blockquote code {
     border-left: 2px solid hsl(100, 100%, 75%) !important;
     width: 2px !important;
 }
+
+::-webkit-scrollbar-thumb {
+    background: #63636380;
+    background-clip: padding-box;
+}
