@@ -13,6 +13,7 @@
   --color-weakest: hsl(0, 0%, 30%);
   --md-char-color: var(--theme-color);
   --meta-content-color: var(--theme-color);
+  --mermaid-theme: dark;
 
   --mark-color: hsl(0, 0%, 30%);
   --code-color: hsl(0, 0%, 75%);
@@ -119,4 +120,13 @@
 ::-webkit-scrollbar-thumb {
   background: #64646480;
   background-clip: padding-box;
+}
+
+.edgePath .path {
+  stroke: var(--theme-color) !important;
+  stroke-width: 1.5px;
+}
+
+.arrowheadPath {
+  fill: var(--theme-color) !important;
 }

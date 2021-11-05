@@ -19,6 +19,7 @@
     --color-title-h4: var(--color-em);
     --color-title-h5: var(--color-em);
     --color-title-h6: var(--color-em);
+    --mermaid-theme: dark;
 
     --color-quote: var(--color-weak);
     --color-code: var(--color-text);

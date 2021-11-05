@@ -15,10 +15,6 @@ ul.dropdown-menu:after,
     background-color: #ffffff80;
 }
 
-.ty-show-notification content, .ty-show-notification content #typora-source {
-    top: 0px;
-}
-
 .menu-item-container a.menu-style-btn{
     background: #f1f1f180;
 }

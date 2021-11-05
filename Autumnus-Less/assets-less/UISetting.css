@@ -45,6 +45,11 @@
 }
 
 /* notification */
+.ty-show-notification content,
+.ty-show-notification content #typora-source {
+    top: 0px;
+}
+
 #md-notification {
     border-radius: 5px;
     background: transparent !important;
@@ -62,6 +67,15 @@
     min-height: 5rem;
     -webkit-font-smoothing: antialiased;
     transition: opacity 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* html-on-edit */
+#write .md-rawblock-on-edit {
+    box-shadow: var(--shadow);
+}
+
+.md-focus .md-rawblock-control:not(.md-rawblock-tooltip) {
+    background: var(--focus-cont-bg);
 }
 
 /* focus mode */
@@ -210,4 +224,19 @@ uni-preference-panel,
 
 #recent-file-panel tbody tr:nth-child(2n-1) {
     background-color: transparent;
+}
+
+.modal-content,
+#ty-surpress-mode-warning-close-btn,
+.btn {
+    border-radius: 15px;
+}
+
+#ty-surpress-mode-warning-close-btn {
+    background: var(--theme-color);
+
+}
+
+#ty-surpress-mode-warning-close-btn:hover {
+    color: #fff;
 }

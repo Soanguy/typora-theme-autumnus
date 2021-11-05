@@ -55,6 +55,7 @@ footer.ty-footer:before,
     z-index: -99;
     min-height: 100%;
     border-radius: 5px;
+    pointer-events: none;
     background-blend-mode: overlay;
 }
 

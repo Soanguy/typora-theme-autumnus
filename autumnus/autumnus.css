@@ -4,6 +4,7 @@
 @import "./assets/sidebar-contents.css";
 @import "./assets/ui-setting.css";
 @import "./assets/ResponsiveWeb.css";
+@import "./assets/mermaid.css";
 
 :root {
     /* color setting */

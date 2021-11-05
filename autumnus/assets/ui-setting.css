@@ -183,3 +183,19 @@ footer.stopselect.ty-footer {
 .ty-preferences * {
     color: var(--text-color);
 }
+
+
+.modal-content,
+#ty-surpress-mode-warning-close-btn,
+.btn {
+    border-radius: 15px;
+}
+
+#ty-surpress-mode-warning-close-btn {
+    background: var(--theme-color);
+
+}
+
+#ty-surpress-mode-warning-close-btn:hover {
+    color: #fff;
+}

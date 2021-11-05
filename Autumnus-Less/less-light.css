@@ -4,49 +4,60 @@
 @import url(./assets-less/SidebarContents.css);
 @import url(./assets-less/ResponsiveWeb.css);
 @import url(./assets-less/Print.css);
+@import url(./assets-less/mermaid.css);
 
 :root {
-  --theme-color: hsl(0, 100%, 75%);
-  --theme-color-weak: hsl(0, 100%, 95%);
+  --theme-color: #ff6666;
+  --theme-color-weak: #ff9999;
+  --theme-color-weaker: #ffcccc;
+  --opt-theme-color: #6666ff;
+  --opt-theme-color-weak: #9999ff;
+  --opt-theme-color-weaker: #ccccff;
+  --optt-theme-color: #66ff66;
+  --optt-theme-color-weak: #99ffdd;
+  --optt-theme-color-weaker: #ccffee;
+  --color-em: #111;
   --color-text: #333;
-  --text-color: var(--color-text);
-  --color-em: #0d0d0d;
-  --color-strong: #0d0d0d;
-  --color-weak: #4d4d4d;
-  --color-weakest: #808080;
-  --md-char-color: var(--theme-color);
-  --meta-content-color: var(--theme-color);
+  --color-weak: #555;
+  --color-weakest: #777;
+  --bg-color-5:#e8e8e8;
+  --bg-color-4:#ededed;
+  --bg-color-3:#f2f2f2;
+  --bg-color-2:#f7f7f7;
+  --bg-color-1:#fcfcfc;
+  --shadow:#00000017 0px 3px 12px;
+  --opt-shadow:#11111a0d 0px 4px 16px,#11111a0d 0px 8px 32px;
+  --optt-shadow: #959da533 0px 8px 24px;
 
   --color-title: var(--color-em);
   --color-title-h1: var(--color-em);
   --color-title-h2: var(--color-em);
-  --color-title-h3: var(--color-em);
-  --color-title-h4: var(--color-em);
-  --color-title-h5: var(--color-em);
-  --color-title-h6: var(--color-em);
+  --color-title-h3: var(--color-text);
+  --color-title-h4: var(--color-text);
+  --color-title-h5: var(--color-text);
+  --color-title-h6: var(--color-text);
 
   --color-quote: var(--color-weak);
   --color-code: var(--color-weak);
   --color-link: var(--theme-color);
   --color-italic: var(--color-em);
-  --color-strong: var(--color-strong);
+  --color-strong: var(--color-em);
   --color-highlight: var(--color-text);
   --color-strike: var(--color-weakest);
   --color-footnote: var(--color-weakest);
 
   --thead-color: var(--color-em);
-  --tbody-color-opt: var(--color-text);
   --tbody-color: var(--color-text);
-  --color-thead-hover: var(--theme-color);
-  --color-tbody-hover: var(--theme-color);
+  --tbody-color-opt: var(--color-text);
+  --color-thead-hover: var(--opt-theme-color);
+  --color-tbody-hover: var(--opt-theme-color-weak);
 
-  --link-hover-color: #ffb3b3;
+  --link-hover-color: var(--opt-theme-color-weak);
   --link-hover-bg: none;
 
   /* background setting */
-  --bg-contents: #ffffff;
-  --bg-write: #ffffff;
-  --bg-color: var(--bg-contents);
+  --bg-contents: var(--bg-color-1);
+  --bg-write: var(--bg-color-1);
   --bg-title: none;
   --bg-title-h1: none;
   --bg-title-h2: none;
@@ -55,9 +66,9 @@
   --bg-title-h5: none;
   --bg-title-h6: none;
 
-  --bg-quote: #f7f7f7;
-  --bg-code: #ffe5e5;
-  --bg-code-block: #f2f2f2;
+  --bg-quote: var(--bg-color-4);
+  --bg-code: var(--bg-color-3);
+  --bg-code-block: var(--bg-color-3);
   --bg-link: none;
   --bg-italic: none;
   --bg-strong: none;
@@ -65,29 +76,26 @@
   --bg-strike: none;
   --bg-footnote: none;
 
-  --bg-thead: #e8e8e8;
-  --bg-tbody-opt: #ededed;
-  --bg-tbody: #fcfcfc;
-  --bg-thead-hover: var(--bg-contents);
-  --bg-tbody-hover: var(--bg-contents);
+  --bg-thead: var(--bg-color-5);
+  --bg-tbody-opt: var(--bg-color-3);
+  --bg-tbody: var(--bg-color-1);
+  --bg-thead-hover: var(--optt-theme-color-weak);
+  --bg-tbody-hover: var(--optt-theme-color-weak);
 
-  --focus-cont-bg: hsl(0, 0%, 95%);
-  --focus-para-bg: hsl(0, 0%, 100%);
+  --focus-cont-bg:  var(--bg-color-3);
+  --focus-para-bg:  var(--bg-color-1);
 
-  --window-border: 1px solid #f2f2f2;
-  --base-border: 1px solid #ffb3b3;
-  --base-borderl: 4px solid #ffb3b3;
-  --base-borderb: 1px dashed #ffb3b3;
-  --opt-borderb: 1px dashed #4da0ff;
+  --window-border: 1px solid var(--bg-color-3);
+  --base-border: 1px solid var(--theme-color-weak);
+  --base-borderl: 4px solid var(--theme-color-weak);
+  --base-borderb: 1px dashed var(--theme-color-weak);
+  --opt-borderb: 1px dashed var(--opt-theme-color);
 
   /* box-shadow */
   --text-shadow: none;
   --block-shadow: none;
-  --img-shadow: 0px 8px 16px 1px #0000004d;
-  --block-shadow-opt: var(--block-shadow);
-  --block-shadow-weak: 0 8px 16px 0 #0000001a;
-  --block-shadow-strong: #00000033 0px 25px 56px 0px, #0000001a 0px 5px 15px 0px;
-  --focus-shadow: 0 8px 16px 0 #0000001a;
+  --img-shadow: var(--shadow);
+  --focus-shadow: var(--opt-shadow);
 
   /* margin setting:top;right;bottom;left */
   --margin-h1: 2rem auto 3rem;
@@ -130,33 +138,38 @@
   --font-hei: -apple-system, "Raleway Medium", "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
   --font-song: "Lora", Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
   --font-kai: "EB Garamond", Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", curve, serif;
-  --font-mono: "Cascadia code", Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono", Courier, sans-serif;
+  --font-mono: "Cascadia code", Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono", Courier,"Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
   --monospace: var(--font-mono);
 
   --mermaid-alt-font-family: var(--base-font) !important;
   --mermaid-font-family: var(--base-font) !important;
+  --md-char-color: var(--theme-color);
+  --meta-content-color: var(--theme-color);
 
   --blur-text-color: hsl(0, 100%, 90%);
-  --active-file-bg-color: hsl(0, 0%, 90%);
+  --active-file-bg-color: var(--bg-color-5);
   /* 文件列表 当前文件激活 背景色*/
-  --active-file-text-color: hsl(0, 100%, 75%);
-  --active-file-border-color: hsl(0, 100%, 75%);
+  --active-file-text-color: var(--theme-color);
+  --active-file-border-color: var(--theme-color);
   /* 树形结构下文件激活边框色 */
-  --side-bar-bg-color: hsl(0, 0%, 95%);
+  --side-bar-bg-color: var(--bg-color-3);
   /*文件 大纲 侧边栏 背景色*/
-  --item-hover-bg-color: hsl(0, 0%, 90%);
+  --item-hover-bg-color: var(--bg-color-5);
   /* 打开文文件夹、正文菜单、最近使用 hover 效果 */
-  --item-hover-text-color: hsl(0, 100%, 75%);
-  --primary-color: hsl(0, 100%, 75%);
+  --item-hover-text-color: var(--theme-color);
+  --primary-color: var(--opt-theme-color);
   /* color of primary buttons */
-  --primary-btn-border-color: hsl(0, 100%, 75%);
-  --primary-btn-text-color: hsl(0, 0%, 100%);
-  --select-text-bg-color: hsl(0, 100%, 85%);
+  --primary-btn-border-color: var(--opt-theme-color);
+  --primary-btn-text-color: var(--theme-color);
+  --select-text-bg-color: var(--theme-color-weaker);
   --select-text-font-color: hsl(0, 0%, 100%);
-  --active-bg: hsl(0, 0%, 95%);
-  --window-border: var(--bg-color);
+  --active-bg: var(--bg-color-3);
+  /* 右键菜单背景色 */
+  --window-border: var(--bg-color-3);
   --control-text-color: var(--color-title);
   --control-text-hover-color: var(--color-text);
+  /* 侧边栏默认字体颜色 */
+  --rawblock-edit-panel-bd:var(--bg-color-5);
 }
 
 html,
@@ -254,7 +267,7 @@ content {
 #write h1::after {
   content: "";
   display: block;
-  border-bottom: 1px solid var(--color-link);
+  border-bottom: 1px solid var(--theme-color-weak);
   position: relative;
   top: 1rem;
   width: 50%;
@@ -364,7 +377,7 @@ blockquote h6:before {
   position: absolute;
   width: 4px;
   height: 60px;
-  background: #e16b6b;
+  background: var(--theme-color);
   left: -15px;
 }
 
@@ -388,14 +401,14 @@ blockquote h6 span:first-child:before {
 blockquote h6 span[md-inline="strong"]:first-child:before {
   content: "i";
   z-index: 1;
-  background: #38a3fd;
+  background: var(--opt-theme-color);
 }
 
 /* list setting */
 
 ul li::marker,
 ol li::marker {
-  color: hsl(0, 100%, 75%);
+  color: var(--theme-color);
 }
 
 ul {
@@ -601,13 +614,13 @@ var {
 /* 代码块下的标题颜色过深。修改为浅蓝 */
 .cm-s-inner .cm-header,
 .cm-s-inner.cm-header {
-  color: hsl(215, 100%, 75%);
+  color: var(--opt-theme-color-weak);
 }
 
 .cm-s-inner .CodeMirror-cursors,
 .CodeMirror div.CodeMirror-cursor {
-  background-color: #ff8080 !important;
-  border-left: 2px solid #ff8080 !important;
+  background-color: var(--opt-theme-color) !important;
+  border-left: 2px solid var(--opt-theme-color) !important;
   width: 2px !important;
 }
 
@@ -645,8 +658,8 @@ code {
 }
 
 details {
-  -webkit-box-shadow: 0 2px 6px rgb(0 0 0%);
-  box-shadow: 0 2px 6px rgb(0 0 0%);
+  -webkit-box-shadow: var(--shadow);
+  box-shadow: var(--shadow);
   transition: all 0.2s ease;
   border: 1px solid transparent;
   border-radius: 4px;
