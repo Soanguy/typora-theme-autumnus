@@ -2,3 +2,15 @@
     margin-bottom: 15rem!important;
     padding-bottom: 5rem;
 }
+
+content{
+    z-index: -1;
+}
+
+#typora-sidebar:before{
+    z-index: 1;
+}
+
+.sidebar-osx-tab{
+    z-index: 99;
+}

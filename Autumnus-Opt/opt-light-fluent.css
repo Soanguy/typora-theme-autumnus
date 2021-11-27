@@ -57,6 +57,7 @@ footer.ty-footer:before,
     display: block;
     width: 100%;
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     position: absolute;
     top: 0;
     left: 0;

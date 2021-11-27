@@ -8,6 +8,18 @@ content,
     background-repeat: no-repeat;
 }
 
+content{
+    z-index: -1;
+}
+
+#typora-sidebar:before{
+    z-index: 1;
+}
+
+.sidebar-osx-tab{
+    z-index: 99;
+}
+
 content,
 .on-focus-mode content {
     background-position-x: center;
@@ -46,6 +58,7 @@ footer.ty-footer:before,
     display: block;
     width: 100%;
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     position: absolute;
     top: 0;
     left: 0;
