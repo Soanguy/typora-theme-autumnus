@@ -102,6 +102,10 @@ ul.dropdown-menu:after,
     z-index: 1;
 }
 
+.modal-backdrop {
+    position: initial;
+}
+
 #typora-sidebar-resizer {
     background: transparent;
     backdrop-filter: blur(55px);

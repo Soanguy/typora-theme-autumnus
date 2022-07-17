@@ -12,12 +12,12 @@
     #write {
         box-shadow: var(--block-shadow-strong);
         border-radius: 5px;
-        margin-top: 5rem;
+        margin: 5rem auto;
         padding: 2rem 4rem;
     }
 
     .typora-node #write {
-        min-height: 90%;
+        min-height: 80%;
     }
 }
 
