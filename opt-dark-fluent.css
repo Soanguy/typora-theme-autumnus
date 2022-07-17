@@ -1,0 +1,18 @@
+@import "opt-dark.css";
+@import "./snippet/fluent.css";
+
+:root {
+    --side-bar-bg-color: transparent !important;
+    --codeb-bg: hsla(0, 0%, 3%, 0.502) !important;
+    --quota-bg: hsla(0, 0%, 3%, 0.502) !important;
+    --thead-bg: hsla(0, 0%, 3%, 0.502) !important;
+    --tbody-bg: hsla(0, 0%, 3%, 0.502) !important;
+    --fluent-bg: url(../assets/customer-support-1.svg);
+    --fluent-bg-size: 50%;
+}
+
+#write:after,
+ul.dropdown-menu:after,
+#typora-sidebar:before {
+    background-color: #00000080;
+}

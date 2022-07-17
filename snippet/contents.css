@@ -1,0 +1,121 @@
+/* 目录自动编号 */
+.md-toc::before {
+	content: "目录";
+	font-family: var(--base-font);
+	font-size: 2rem;
+	font-weight: 200;
+	text-align: center;
+	display: block;
+	position: absolute;
+	left: -10rem;
+	padding: 8rem;
+	padding-top: 2rem;
+	background: linear-gradient(-40deg, transparent 49.5%, deeppink 49.5%, deeppink 50.5%, transparent 50.5%) 40px;
+}
+
+.md-toc {
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+	display: table;
+	margin: 4rem auto;
+	margin-left: 4rem !important;
+	max-width: 75%;
+}
+
+.md-toc-content {
+	line-height: 2rem;
+	left: 4rem;
+	top: 1rem;
+
+}
+
+.md-toc-item {
+	font-family: var(--base-font);
+}
+
+.md-toc-h1 {
+	margin-top: 4rem;
+	font-weight: 300;
+	font-size: 1.2rem;
+}
+
+.md-toc-h1 .md-toc-inner {
+	margin-left: 2em;
+}
+
+.md-toc-h2 {
+	margin-left: 2rem;
+	font-size: 1.1rem;
+}
+
+.md-toc-h2,
+.md-toc-h3 {
+	margin-top: 1rem;
+	font-weight: 200;
+}
+
+.md-toc-h2+.md-toc-h3 {
+	margin-left: 8rem;
+}
+
+.md-toc-h3 {
+	display: inline-block;
+	font-size: 1rem;
+}
+
+.md-toc-h3 .md-toc-inner {
+	margin-left: .5rem;
+}
+
+.md-toc-h3::first-of-type {
+	margin-left: 4rem;
+}
+
+.md-toc-h3:after {
+	content: " / ";
+}
+
+.md-toc-inner {
+	color: var(--text-color);
+	border: none !important;
+}
+
+.md-toc-h1 {
+	counter-increment: counter_md-toc-h1;
+	counter-reset: counter_md-toc-h2;
+}
+
+.md-toc-h1:before {
+	content: "第"counter(counter_md-toc-h1, cjk-ideographic)"章";
+}
+
+.md-toc-h2 {
+	counter-increment: counter_md-toc-h2;
+	counter-reset: counter_md-toc-h3;
+}
+
+.md-toc-h2::before {
+	content: "第"counter(counter_md-toc-h2, cjk-ideographic)"节";
+}
+
+.md-toc-h3 {
+	counter-increment: counter_md-toc-h3;
+	counter-reset: counter_md-toc-h4;
+}
+
+.md-toc-h3::before {
+	content: counter(counter_md-toc-h3);
+}
+
+.md-toc-h1::before,
+.md-toc-h2::before,
+.md-toc-h3::before {
+	display: inline-block;
+	color: var(--text-color);
+}
+
+.md-toc-h4,
+.md-toc-h5,
+.md-toc-h6 {
+	display: none;
+}

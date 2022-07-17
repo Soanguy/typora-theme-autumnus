@@ -1,0 +1,22 @@
+@import "less-light.css";
+@import "./snippet/fluent.css";
+
+:root {
+    --side-bar-bg-color: transparent !important;
+    --bg-code-block: #f8f8f880 !important;
+    --bg-quote: #f8f8f880 !important;
+    --bg-thead: #f0f0f080 !important;
+    --bg-tbody: #f8f8f880 !important;
+    --fluent-bg: url(../assets/online-community.svg);
+    --fluent-bg-size: 35%;
+}
+
+#write:after,
+ul.dropdown-menu:after,
+#typora-sidebar:before {
+    background-color: #ffffff80;
+}
+
+.menu-item-container a.menu-style-btn{
+    background: #f1f1f180;
+}

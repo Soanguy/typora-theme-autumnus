@@ -1,0 +1,201 @@
+/* ui */
+
+#write .md-grid-board-wrap input {
+    text-align: center !important;
+}
+
+.file-list-item:hover,
+.file-node-content:hover,
+.file-node-background:hover {
+    height: auto;
+}
+
+.info-panel-tab:hover,
+.active-tab-outline,
+.active-tab-files,
+.outline-item:hover,
+.context-menu.dropdown-menu>.active>a,
+.context-menu.dropdown-menu>li>a:hover,
+.menu-style-btn.active,
+.file-list-item:hover,
+.file-node-content:hover,
+.file-node-background:hover,
+.megamenu-menu-list:not(.saved) li a:hover,
+.megamenu-menu-list li a.active {
+    color: var(--primary-color);
+}
+
+.file-list-item:hover,
+.file-node-content:hover,
+.file-node-background:hover,
+.context-menu.dropdown-menu>li>a:focus,
+.megamenu-menu-list:not(.saved) li a:hover,
+.megamenu-menu-list li a.active,
+a.menu-style-btn:hover {
+    background-color: var(--active-bg);
+}
+
+.megamenu-content {
+    background: var(--bg-contents);
+}
+
+.megamenu-menu-list:not(.saved) li a:hover,
+.megamenu-menu-list li a.active {
+    display: block !important;
+}
+
+#outline-content,
+#file-library {
+    color: var(--color-text);
+}
+
+#file-library-search-input {
+    padding-left: 0.4em;
+}
+
+/* 一体化模式下菜单页 */
+
+/* 菜单侧标栏 */
+.megamenu-menu {
+    width: 250px;
+    box-shadow: 2px 2px 5px 0 #33333380, 2px 0px 10px 0 #33333380;
+}
+
+/* bugfix */
+.megamenu-opened .megamenu-menu {
+    left: -1px !important;
+}
+
+/* 侧边栏item激活 */
+
+.megamenu-menu-list {
+    position: relative;
+    top: 16px;
+}
+
+.megamenu-menu-list li {
+    line-height: 48px;
+}
+
+.megamenu-menu-list li a {
+    height: 48px;
+}
+
+/* 标题 */
+
+.megamenu-menu-panel h1,
+.megamenu-menu-panel h2 {
+    margin: 2rem auto 3rem;
+}
+
+/* 长形按钮 */
+.long-btn:hover {
+    color: var(--primary-color) !important;
+}
+
+.megamenu-menu-panel .btn {
+    border: var(--base-border);
+}
+
+/* 最近文档 */
+
+.megamenu-menu-panel table tr {
+    background: #ffffff00 !important;
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: var(--active-bg) !important;
+}
+
+.megamenu-menu-panel tr:hover,
+.megamenu-menu-panel th:hover,
+.megamenu-menu-panel td:hover {
+    color: var(--primary-color) !important;
+}
+
+/* 主题页 */
+/* 样式预览 */
+
+#theme-preview-grid {
+    max-width: 85%;
+}
+
+.theme-preview-div:hover {
+    border-color: #80aaff80;
+}
+
+.theme-preview-div {
+    width: 25%;
+    min-width: 250px;
+    border: 4px solid #99999950;
+}
+
+.theme-preview-content {
+    width: 100%;
+}
+
+.theme-preview-div.active,
+.theme-preview-div.active:hover {
+    border-color: var(--primary-color);
+}
+
+/* 偏好设定 */
+
+.unibody-window {
+    font-family: var(--font-hei);
+}
+
+/* 偏好设定侧边栏 */
+.nav-group-item.active {
+    background: var(--item-hover-bg-color) !important;
+    color: var(--primary-color);
+}
+
+/* 关于页 */
+/* fix */
+table#typora-help-md-table tr {
+    background: transparent;
+}
+
+.about-content-meta {
+    font-family: var(--font-title);
+}
+
+footer.stopselect.ty-footer {
+    right: 0;
+}
+
+.md-image>.md-meta {
+    color: var(--meta-content-color);
+}
+
+.megamenu-menu-panel h1,
+.megamenu-menu-panel h2 {
+    color: var(--text-color);
+}
+
+.megamenu-opened #top-titlebar {
+    background-image: none;
+    background: var(--bg-contents);
+    height: 30px;
+}
+
+.ty-preferences * {
+    color: var(--text-color);
+}
+
+
+.modal-content,
+#ty-surpress-mode-warning-close-btn,
+.btn {
+    border-radius: 15px;
+}
+
+#ty-surpress-mode-warning-close-btn {
+    background: var(--theme-color);
+
+}
+
+#ty-surpress-mode-warning-close-btn:hover {
+    color: #fff;
+}

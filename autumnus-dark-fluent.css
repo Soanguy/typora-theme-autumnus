@@ -1,0 +1,19 @@
+@import "./autumnus-dark.css";
+@import "./snippet/fluent.css";
+
+:root {
+    --side-bar-bg-color: transparent !important;
+    --bg-code-block: #08080880 !important;
+    --bg-quote: #08080880 !important;
+    --bg-thead: #08080880 !important;
+    --bg-tbody: #08080880 !important;
+    --bg-tbody-opt: #40404080 !important;
+    --fluent-bg: url(../assets/fans.svg);
+    --fluent-bg-size: 50%;
+}
+
+#write:after,
+ul.dropdown-menu:after,
+#typora-sidebar:before {
+    background-color: #ffffff00;
+}

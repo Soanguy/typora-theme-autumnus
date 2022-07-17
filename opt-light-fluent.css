@@ -1,0 +1,12 @@
+@import "opt-autumnus.css";
+@import url(./snippet/fluent.css);
+
+:root {
+    --side-bar-bg-color: transparent !important;
+    --codeb-bg: #f8f8f880 !important;
+    --quota-bg: #f8f8f880 !important;
+    --thead-bg: #f0f0f080 !important;
+    --tbody-bg: #f8f8f880 !important;
+    --fluent-bg: url(../assets/customer-support-1.svg);
+    --fluent-bg-size: 50%;
+}

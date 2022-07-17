@@ -1,0 +1,13 @@
+@import "./autumnus.css";
+@import "./snippet/fluent.css";
+
+:root {
+    --side-bar-bg-color: transparent !important;
+    --bg-code-block: #f8f8f880 !important;
+    --bg-quote: #f8f8f880 !important;
+    --bg-thead: #f0f0f080 !important;
+    --bg-tbody: #f8f8f880 !important;
+    --bg-tbody-opt: #fcfcfc80 !important;
+    --fluent-bg: url(../assets/fans.svg);
+    --fluent-bg-size: 50%;
+}

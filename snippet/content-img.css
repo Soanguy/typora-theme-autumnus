@@ -1,0 +1,21 @@
+#write blockquote h3::before,
+#write blockquote h4::before,
+#write blockquote h5::before {
+    width: 1.5rem;
+    background: transparent;
+    position: absolute;
+    left: -30px;
+    font-size: 1rem !important;
+}
+
+#write blockquote h3::before {
+    content: url('../assets/thumbs-up.svg');
+}
+
+#write blockquote h4::before{
+    content: url('../assets/bullhorn.svg');
+}
+
+#write blockquote h5::before{
+    content: url('../assets/dog.svg');
+}

@@ -1,0 +1,62 @@
+#write a {
+    background: url(../assets/share.svg);
+    background-repeat: no-repeat !important;
+    background-position: left 0px !important;
+    padding-left: 24px !important;
+    background-size: 20px 20px;
+}
+
+#write a[href$=".doc"],
+#write a[href$=".docx"] {
+    background: url(../assets/file-word.svg);
+}
+
+#write a[href$=".xls"],
+#write a[href$=".xlsx"] {
+    background: url(../assets/file-excel.svg);
+}
+
+#write a[href$=".ppt"],
+#write a[href$=".pptx"] {
+    background: url(../assets/file-powerpoint.svg);
+}
+
+#write a[href$=".pdf"] {
+    background: url(../assets/file-pdf.svg);
+}
+
+#write a[href$=".mp3"] {
+    background: url(../assets/file-audio.svg);
+}
+
+#write a[href$=".wav"] {
+    background: url(../assets/file-waveform.svg);
+}
+
+#write a[href$=".swf"],
+#write a[href$=".mp4"],
+#write a[href$=".mov"],
+#write a[href$=".avi"] {
+    background: url(../assets/file-video.svg);
+}
+
+#write a[href$=".rar"],
+#write a[href$=".zip"],
+#write a[href$=".7z"] {
+    background: url(../assets/file-zipper.svg);
+}
+
+#write a[href$=".css"],
+#write a[href$=".html"],
+#write a[href$=".js"],
+#write a[href$=".php"] {
+    background: url(../assets/file-code.svg);
+}
+
+#write a[href$=".bmp"],
+#write a[href$=".jpg"],
+#write a[href$=".jpeg"],
+#write a[href$=".png"],
+#write a[href$=".gif"]{
+    background: url(../assets/file-image.svg);
+}

@@ -1,0 +1,695 @@
+@import "./snippet/typo.css";
+@import "./snippet/aminations.css";
+@import "./snippet/contents.css";
+@import "./snippet/sidebar-contents.css";
+@import "./snippet/a-ui-setting.css";
+@import "./snippet/a-ResponsiveWeb.css";
+@import "./snippet/mermaid.css";
+@import "./FONT/stylesheet.css";
+@import url(./snippet/content-img.css);
+@import url(./snippet/linkicons.css);
+
+:root {
+    /* color setting */
+    --theme-color: hsl(0, 100%, 75%);
+    --theme-color-weak: hsl(0, 100%, 95%);
+    --theme-color-weaker:hsl(0, 0%, 95%);
+    --color-text: #333;
+    --text-color: var(--color-text);
+    --color-em: #111;
+    --color-strong: #000;
+    --color-weak: #595959;
+    --color-weakest: #808080;
+
+    --md-char-color: var(--theme-color);
+    --meta-content-color: var(--color-weakest);
+
+    --color-title: var(--color-em);
+    --color-title-h1: var(--color-em);
+    --color-title-h2: var(--color-em);
+    --color-title-h3: var(--color-em);
+    --color-title-h4: var(--color-em);
+    --color-title-h5: var(--color-em);
+    --color-title-h6: var(--color-em);
+
+    --color-quote: var(--color-weak);
+    --color-code: var(--color-text);
+    --color-link: var(--theme-color);
+    --color-italic: var(--color-em);
+    --color-strong: var(--color-strong);
+    --color-highlight: var(--color-strong);
+    --color-strike: var(--color-weakest);
+    --color-footnote: var(--color-weak);
+
+    --thead-color: var(--color-em);
+    --tbody-color: var(--color-text);
+    --tbody-color-opt: var(--color-text);
+    --color-thead-hover: var(--color-weak);
+    --color-tbody-hover: var(--color-weak);
+
+    --link-hover-color: #464343;
+    --link-hover-bg: none;
+
+    /* background setting */
+    --bg-contents: var(--theme-color-weaker);
+    --bg-write: #fff;
+    --bg-color: var(--bg-contents);
+    --bg-title: none;
+    --bg-title-h1: none;
+    --bg-title-h2: none;
+    --bg-title-h3: none;
+    --bg-title-h4: none;
+    --bg-title-h5: none;
+    --bg-title-h6: none;
+
+    --bg-quote: var(--theme-color-weaker);
+    --bg-code: var(--theme-color-weak);
+    --bg-code-block: var(--theme-color-weaker);
+    --bg-link: none;
+    --bg-italic: none;
+    --bg-strong: none;
+    --bg-highlight: #ffb3b3;
+    --bg-strike: none;
+    --bg-footnote: none;
+
+    --bg-thead: var(--theme-color-weak);
+    --bg-tbody: var(--bg-write);
+    --bg-tbody-opt: #fcfcfc;
+    --bg-thead-hover: var(--bg-contents);
+    --bg-tbody-hover: var(--bg-contents);
+
+    /* font setting:font-weight;font-size;line-height;font-family */
+    --font-hei: "Poppins", -apple-system, "Helvetica Neue", Helvetica, "Noto Sans", "Nimbus Sans L", Arial, "Liberation Sans", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+    --font-song: "EB Garamond", Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+    --font-kai: "EB Garamond", Bas kerville, Georgia, "Liberation Serif", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+    --font-mono: "Cascadia Code", "Sarasa Term SC", Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono", Courier, "PingFang SC", "Noto Sans CJK SC";
+    --monospace: var(--font-mono);
+
+    --font-weight: 400;
+    --font-size: 1rem;
+    --line-height: 2rem;
+    --font-family: var(--font-hei);
+
+    --text-font: 400 1rem/1.5rem var(--font-hei);
+    --text-font-size: 1rem;
+    --font-title: var(--font-song);
+    --font-title-h1: 900 3rem/4.5rem var(--font-title);
+    --font-title-h2: 800 2.5rem/3.75rem var(--font-title);
+    --font-title-h3: 600 2rem/3rem var(--font-hei);
+    --font-title-h4: 600 1.75rem/2.625rem var(--font-hei);
+    --font-title-h5: 600 1.5rem/2.25rem var(--font-hei);
+    --font-title-h6: 600 1.5rem/2.25rem var(--font-hei);
+
+    --font-quote: 400 1.25rem/1.875rem var(--font-kai);
+    --font-code: 400 0.9rem/1.35rem var(--font-mono);
+    --font-footnote: 400 1.1rem/1.65rem var(--font-kai);
+
+    /* margin setting:top;right;bottom;left */
+    --margin-h1: 6rem auto 4rem;
+    --margin-h2: 4rem auto 2rem;
+    --margin-h3: 2rem auto 1rem;
+    --margin-h4: 2rem auto 1rem;
+    --margin-h5: 2rem auto 1rem;
+    --margin-h6: 2rem auto 1rem;
+
+    --margin-text: 1rem auto;
+    --margin-block: 1.5rem auto;
+
+    /* padding-setting */
+    --padding-text: 1px 4px;
+    --padding-block: 1rem;
+
+    /* border setting */
+    --base-border: 1px solid var(--theme-color);
+    --thin-border: 1px solid hsl(0, 100%, 65%);
+    --thick-border: 4px solid hsl(0, 100%, 65%);
+    --divide-border: 1px solid var(--theme-color-weaker);
+    --dashed-border: 1px dashed hsl(215, 100%, 65%);
+    --dashed-border-opt: 1px dashed hsl(0, 100%, 65%);
+    --window-border: var(--divide-border);
+
+    /* box-shadow */
+    --text-shadow: none;
+    --block-shadow: 0px 8px 16px 1px #0000001a;
+    --block-shadow-opt: 0px 8px 16px #00000044;
+    --block-shadow-weak: 0 8px 16px 0 #b3b3b333;
+    --block-shadow-strong: #00000033 0px 25px 56px 0px, #0000001a 0px 5px 15px 0px;
+
+    /* ui setting */
+    --blur-text-color: hsl(0, 0%, 75%);
+    --active-file-bg-color: hsl(0, 0%, 99%);
+    /* 文件列表 当前文件激活 背景色*/
+    --active-file-text-color: var(--theme-color);
+    --active-file-border-color: var(--theme-color);
+    /* 树形结构下文件激活边框色 */
+    --side-bar-bg-color: var(--theme-color-weaker);
+    /*文件 大纲 侧边栏 背景色*/
+    --item-hover-bg-color: var(--theme-color-weak);
+    /* 打开文文件夹、正文菜单、最近使用 hover 效果 */
+    --item-hover-text-color: inherit;
+
+    --primary-color: var(--theme-color);
+    /* color of primary buttons */
+    --primary-btn-border-color: var(--theme-color);
+    --primary-btn-text-color: #ffffff;
+
+    --select-text-bg-color: var(--theme-color);
+    --select-text-font-color: #ffffff;
+    --active-bg: hsl(0, 0%, 98%);
+    --mermaid-arrow-color:var(--theme-color);
+
+    --control-text-color: var(--color-text);
+}
+
+/* global setting */
+html,
+body,
+content,
+#write {
+    font-size: 16px;
+    font-weight: var(--font-weight);
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    line-height: var(--line-height);
+    background: var(--bg-contents);
+    color: var(--color-text);
+}
+
+content {
+    min-width: 25rem;
+}
+
+#write {
+    background: var(--bg-write);
+    max-width: 60rem;
+    min-height: calc(100vh - 6rem);
+    text-align: justify;
+}
+
+#write * {
+    -webkit-text-stroke: 0.25px;
+}
+
+/* title setting */
+
+#write h1 *,
+#write h2 *,
+#write h3 *,
+#write h4 *,
+#write h5 *,
+#write h6 * {
+    color: var(--color-title) !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+#write h1,
+#write h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#write h1 {
+    background: var(--bg-title-h1);
+    color: var(--color-title-h1);
+    font: var(--font-title-h1);
+    margin: var(--margin-h1);
+}
+
+#write h2 {
+    background: var(--bg-title-h2);
+    color: var(--color-title-h2);
+    font: var(--font-title-h2);
+    margin: var(--margin-h2);
+}
+
+#write h3 {
+    background: var(--bg-title-h3);
+    color: var(--color-title-h3);
+    font: var(--font-title-h3);
+    margin: var(--margin-h3);
+}
+
+#write h4 {
+    background: var(--bg-title-h4);
+    color: var(--color-title-h4);
+    font: var(--font-title-h4);
+    margin: var(--margin-h4);
+}
+
+#write h5 {
+    background: var(--bg-title-h5);
+    color: var(--color-title-h5);
+    font: var(--font-title-h5);
+    margin: var(--margin-h5);
+}
+
+#write h6 {
+    background: var(--bg-title-h6);
+    color: var(--color-title-h6);
+    font: var(--font-title-h6);
+    margin: var(--margin-h6);
+}
+
+#write h1:before,
+#write h1:after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 50%;
+    margin: .5rem auto;
+}
+
+#write h1::before {
+    top: -1.5rem;
+    border-top: var(--dashed-border);
+}
+
+#write h1::after {
+    top: 1.5rem;
+    border-top: var(--dashed-border-opt);
+}
+
+#write h3::before {
+    content: "H3";
+}
+
+#write h4::before {
+    content: "H4";
+}
+
+#write h5::before {
+    content: "H5";
+}
+
+#write h6::before {
+    content: "H6";
+}
+
+#write h3::before,
+#write h4::before,
+#write h5::before,
+#write h6::before {
+    font-size: .9rem !important;
+    vertical-align: bottom;
+    margin-right: .5rem;
+    padding: 2px;
+    border-radius: 5px;
+    background: var(--color-text);
+    color: var(--bg-write);
+}
+
+/* block-element setting */
+
+blockquote,
+pre.md-fences,
+figure>table,
+#write img {
+    margin: var(--margin-block);
+    padding: var(--padding-block);
+}
+
+p {
+    margin: var(--margin-text);
+    line-height: var(--line-height);
+}
+
+/* blockquote setting */
+
+blockquote {
+    background: var(--bg-quote);
+    border-radius: 5px;
+    box-shadow: var(--block-shadow);
+    padding-left: 2rem;
+    border: 1px solid #9993;
+}
+
+blockquote blockquote {
+    padding: 0;
+    padding-left: 2rem;
+    border: none;
+    border-left: var(--thick-border);
+    border-radius: 0;
+    box-shadow: none;
+}
+
+blockquote,
+blockquote p {
+    font: var(--font-quote);
+    color: var(--color-quote);
+}
+
+blockquote h6 {
+    top: -1rem;
+}
+
+blockquote h6:before {
+    top: -15px;
+    content: "" !important;
+    position: absolute;
+    width: 4px;
+    height: 60px;
+    background: none !important;
+    left: -2rem;
+}
+
+blockquote h6 span:first-child:before {
+    content: " ";
+    position: absolute;
+    left: -2rem;
+    top: -2px;
+    width: .5rem;
+    height: 3rem;
+    display: block;
+    text-align: center;
+    font-family: Poppins, sans-serif;
+    background: var(--theme-color);
+    font-size: xxx-large;
+    font-weight: 600;
+}
+
+/* list setting */
+
+#write ol {
+    list-style: decimal-leading-zero;
+}
+
+#write ol ol {
+    list-style-type: lower-roman;
+}
+
+#write ul ul {
+    list-style-type: circle;
+}
+
+/* todo list */
+
+.md-task-list-item>input {
+    margin-left: -1.5rem;
+    top: 5px;
+}
+
+.md-task-list-item>input::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    border-radius: 50%;
+    width: 1.3rem;
+    height: 1.3rem;
+    border: var(--base-border);
+    background: #fff;
+    -webkit-transition: background-color 200ms ease-in-out;
+    transition: background-color 200ms ease-in-out;
+}
+
+.md-task-list-item>input::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 1px;
+    width: 0.6rem;
+    height: 0.3rem;
+    border: 2px solid #fff;
+    border-top: 0;
+    border-right: 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    opacity: 0;
+    -webkit-transition: opacity 200ms ease-in-out;
+    transition: opacity 200ms ease-in-out;
+}
+
+.md-task-list-item>input:checked::before {
+    background: var(--theme-color);
+    border: none;
+}
+
+.md-task-list-item>input:checked::after {
+    opacity: 1;
+}
+
+.md-task-list-item.task-list-done {
+    text-decoration: line-through;
+    color: var(--color-weakest);
+}
+
+/* image setting */
+
+#write img {
+    box-shadow: var(--img-shadow);
+    border-radius: 5px;
+}
+
+/* 使图片去掉阴影 */
+img[alt|="no-shadow"] {
+    box-shadow: none !important;
+}
+
+/* 使图片去掉所有效果 */
+img[alt|="normal"] {
+    margin: 0 !important;
+    box-shadow: none !important;
+}
+
+/* horizontal rule */
+
+hr {
+    border: none;
+    border-bottom: var(--base-border);
+    margin: 2rem auto;
+    height: 1px;
+    width: 50%;
+}
+
+hr.pb {
+    page-break-after: always;
+    border-bottom: 1px solid transparent;
+}
+
+/* inline-element setting */
+
+code,
+mark,
+kbd,
+samp,
+tt,
+var,
+#write a,
+strong,
+em {
+    margin: var(--margin-text);
+    padding: var(--padding-text);
+}
+
+#write a,
+ins {
+    background-color: var(--bg-link);
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+#write a {
+    border-bottom: var(--dashed-border-opt);
+}
+
+#write a:hover {
+    color: var(--link-hover-color);
+    border-bottom-color: var(--link-hover-color);
+    text-decoration: none;
+}
+
+del {
+    color: var(--color-strike);
+    background: var(--bg-strike);
+}
+
+#write strong {
+    background: var(--bg-strong);
+    color: var(--color-strong);
+}
+
+#write em {
+    background: var(--bg-italic);
+    color: var(--color-italic);
+    text-decoration: underline dotted;
+}
+
+em,
+strong,
+em strong,
+strong em {
+  font-size: inherit;
+}
+
+em strong,
+strong em {
+    font-weight: 900 !important;
+}
+
+#write mark {
+    background: var(--bg-highlight);
+    color: var(--color-highlight);
+}
+
+/* code & code-block setting */
+
+#write pre.md-meta-block,
+#write pre.md-fences,
+code,
+kbd,
+samp,
+tt,
+var {
+    font: var(--font-code);
+    background: var(--bg-code);
+    color: var(--color-code);
+}
+
+/* 代码块下的标题颜色过深。修改为浅蓝 */
+.cm-s-inner .cm-header,
+.cm-s-inner.cm-header {
+    color: hsl(215, 100%, 75%);
+}
+
+.cm-s-inner .CodeMirror-cursors,
+.CodeMirror div.CodeMirror-cursor {
+    background-color: var(--theme-color) !important;
+    border-left: 2px solid var(--theme-color) !important;
+    width: 2px !important;
+}
+
+/* code-block setting */
+
+
+#write pre.md-meta-block {
+    min-height: 30px;
+    position: sticky;
+    padding: 1.5rem;
+    margin-top: -1.5rem;
+    margin-bottom: 2rem;
+}
+
+#write pre.md-fences {
+    border-top: 2rem solid var(--bg-code-block);
+    padding: var(--padding-block);
+    display: block;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: var(--block-shadow);
+    margin: var(--margin-block);
+}
+
+#write pre.md-meta-block,
+#write pre.md-fences {
+    font: var(--font-code);
+    border-radius: 5px;
+    background: var(--bg-code-block);
+    color: var(--color-code);
+}
+
+pre.md-fences:before {
+    content: ' ';
+    background: hsl(2, 96%, 68%);
+    box-shadow: 23px 0 #fdbc40, 45px 0 #35cd4b;
+    border-radius: 50%;
+    margin-top: -2.3rem;
+    position: absolute;
+    left: 15px;
+    height: 12px;
+    width: 12px;
+}
+
+/* footenote */
+.footnotes,
+.footnotes em,
+.footnotes strong {
+    background: var(--bg-footnote);
+    color: var(--color-footnote);
+    font: var(--font-footnote);
+}
+
+.footnotes a {
+    color: hsl(215, 100%, 75%);
+}
+
+/* table setting */
+
+#write table th,
+#write table thead th {
+    background: var(--bg-thead);
+    padding: .5rem 1rem;
+    color: var(--thead-color);
+}
+
+#write table caption {
+    border-bottom: none;
+}
+
+#write table td {
+    background: var(--bg-tbody);
+    border: var(--divide-border);
+    padding: var(--padding-block);
+    color: var(--color-text);
+}
+
+#write th:hover {
+    background: var(--bg-thead-hover);
+    color: var(--color-thead-hover);
+}
+
+#write td:hover {
+    background: var(--bg-tbody-hover);
+    color: var(--color-tbody-hover);
+}
+
+table tr:nth-child(2n) {
+    background: var(--bg-tbody-opt);
+    color: var(--tbody-color-opt);
+}
+
+/* bugfix start */
+figure>table {
+    width: 98%;
+}
+
+.ty-table-edit {
+    margin-top: -10px !important;
+}
+
+td.md-reset,
+td.md-reset a {
+    margin: 0 !important;
+    padding: 0 !important;
+    border-bottom: none !important;
+}
+
+.md-grid-board a.md-active,
+.md-grid-board a:hover {
+    border-color: #333;
+    background: #dedede !important;
+}
+
+#write .md-grid-board-wrap input {
+    text-align: center !important;
+}
+
+/* bugfix over */
+@media print {
+    @page {
+        margin: 1cm;
+        padding: 1cm;
+        size: A4;
+    }
+
+    html,
+    body,
+    content,
+    #write {
+        margin: 0;
+        padding: 0;
+    }
+
+    #write * {
+        -webkit-text-stroke: 0px;
+    }
+}
