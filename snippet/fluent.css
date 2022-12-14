@@ -1,12 +1,8 @@
-content{
-    z-index: -1;
-}
-
-#typora-sidebar:before{
+#typora-sidebar:before {
     z-index: 1;
 }
 
-.sidebar-osx-tab{
+.sidebar-osx-tab {
     z-index: 99;
 }
 
@@ -72,7 +68,7 @@ footer.ty-footer:before,
 }
 
 .ty-on-typewriter-mode #write>[cid]:not(.md-meta-block):last-child {
-    margin-bottom: 15rem!important;
+    margin-bottom: 15rem !important;
     padding-bottom: 5rem;
 }
 
