@@ -1,5 +1,7 @@
 # Typora-Theme-Autumnus
 
+> 🎉 最新设计的新拟态主题风格发布了。地址：[Typora-Theme-Neumorphism](https://github.com/Soanguy/Typora-Theme-Neumorphism)
+
 ## 安装
 
 下载该主题后，打开 `偏好设置→外观→主题→打开主题文件夹`。之后将解压后的所有内容复制到该文件夹下，重新进入 `偏好设置→外观→主题` 选择喜欢主题后，重启 Typora 即可。
