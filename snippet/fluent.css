@@ -1,3 +1,8 @@
+/*only for macOS*/
+.mac-os-11 content, .mac-seamless-mode content {
+    z-index: -1;
+}
+
 #typora-sidebar:before {
     z-index: 1;
 }
