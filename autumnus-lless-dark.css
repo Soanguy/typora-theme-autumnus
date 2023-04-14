@@ -1,6 +1,6 @@
-@import url(./snippet/typo.css);
-@import url(./less-light.css);
-@import url(./snippet/l-DarkCode.css);
+@import "./autumnus/snippet/typo.css";
+@import "autumnus-lless-light.css";
+@import "./autumnus/snippet/l-DarkCode.css";
 
 :root {
   --theme-color: #4da0ff;

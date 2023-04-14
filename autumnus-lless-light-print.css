@@ -1,5 +1,5 @@
-@import url(./snippet/typo.css);
-@import url(./less-light.css);
+@import "./autumnus/snippet/typo.css";
+@import "autumnus-lless-light.css";
 
 :root {
   --theme-color: #ff8080;

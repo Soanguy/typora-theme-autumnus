@@ -1,13 +1,13 @@
-@import "./snippet/typo.css";
-@import "./snippet/aminations.css";
-@import "./snippet/contents.css";
-@import "./snippet/sidebar-contents.css";
-@import "./snippet/a-ui-setting.css";
-@import "./snippet/a-ResponsiveWeb.css";
-@import "./snippet/mermaid.css";
-@import "./FONT/stylesheet.css";
-@import url(./snippet/content-img.css);
-@import url(./snippet/linkicons.css);
+@import "./autumnus/snippet/typo.css";
+@import "./autumnus/snippet/aminations.css";
+@import "./autumnus/snippet/contents.css";
+@import "./autumnus/snippet/sidebar-contents.css";
+@import "./autumnus/snippet/a-ui-setting.css";
+@import "./autumnus/snippet/a-ResponsiveWeb.css";
+@import "./autumnus/snippet/mermaid.css";
+@import "./autumnus/FONT/stylesheet.css";
+@import "./autumnus/snippet/content-img.css";
+@import "./autumnus/snippet/linkicons.css";
 
 :root {
     /* color setting */
