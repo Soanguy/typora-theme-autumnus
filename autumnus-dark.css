@@ -1,5 +1,5 @@
-@import "./autumnus.css";
-@import "./snippet/a-dark-code.css";
+@import "autumnus.css";
+@import "./autumnus/snippet/a-dark-code.css";
 
 :root {
     /* color setting */

@@ -1,12 +1,12 @@
-@import url(./snippet/typo.css);
-@import url(./snippet/l-ui-setting.css);
-@import url(./snippet/aminations.css);
-@import url(./snippet/SidebarContents.css);
-@import url(./snippet/l-ResponsiveWeb.css);
-@import url(./snippet/l-Print.css);
-@import url(./snippet/mermaid.css);
-@import url(./FONT/stylesheet.css);
-@import url(./snippet/linkicons.css);
+@import "./autumnus/snippet/typo.css";
+@import "./autumnus/snippet/l-ui-setting.css";
+@import "./autumnus/snippet/aminations.css";
+@import "./autumnus/snippet/SidebarContents.css";
+@import "./autumnus/snippet/l-ResponsiveWeb.css";
+@import "./autumnus/snippet/l-Print.css";
+@import "./autumnus/snippet/mermaid.css";
+@import "./autumnus/FONT/stylesheet.css";
+@import "./autumnus/snippet/linkicons.css";
 
 :root {
   --theme-color: hsl(0, 100%, 70%);

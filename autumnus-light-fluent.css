@@ -1,5 +1,5 @@
-@import "./autumnus.css";
-@import "./snippet/fluent.css";
+@import "autumnus.css";
+@import "./autumnus/snippet/fluent.css";
 
 :root {
     --side-bar-bg-color: transparent !important;
